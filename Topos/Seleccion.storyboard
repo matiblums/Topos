@@ -57,6 +57,14 @@
                                     <segue destination="ch3-YG-rIf" kind="presentation" modalTransitionStyle="crossDissolve" id="vJX-3X-D9c"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-5F-n19">
+                                <rect key="frame" x="335" y="331" width="45" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0Bj-wq-eWG" kind="presentation" modalTransitionStyle="crossDissolve" id="RDv-Tj-zZi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -96,6 +104,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqk-F4-XzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="580"/>
+        </scene>
+        <!--Pelicula-->
+        <scene sceneID="sIf-dY-gSH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pelicula" id="0Bj-wq-eWG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3u-Ib-SeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="704"/>
         </scene>
     </scenes>
     <resources>

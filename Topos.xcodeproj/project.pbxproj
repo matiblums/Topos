@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F45451EE4E99500980DEB /* PeliculaViewController.swift */; };
+		160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160F45471EE4E9A400980DEB /* Pelicula.storyboard */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
 		16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */; };
@@ -23,9 +25,9 @@
 		16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */; };
 		16AF17051EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17041EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg */; };
 		16AF17071EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17061EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg */; };
-		16AF17091EE093C1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.59.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17081EE093C1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.59.jpeg */; };
+		16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17081EE093C1008A9B17 /* audio.jpeg */; };
 		16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */; };
-		16AF170D1EE093E5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.38.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170C1EE093E5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.38.jpeg */; };
+		16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170C1EE093E5008A9B17 /* pelicula.jpeg */; };
 		16AF170F1EE093F0008A9B17 /* MisCuentos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */; };
 		16AF171B1EE0F74B008A9B17 /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17111EE0F74B008A9B17 /* fondo1.jpg */; };
 		16AF171C1EE0F74B008A9B17 /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17121EE0F74B008A9B17 /* fondo2.jpg */; };
@@ -95,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160F45451EE4E99500980DEB /* PeliculaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeliculaViewController.swift; sourceTree = "<group>"; };
+		160F45471EE4E9A400980DEB /* Pelicula.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pelicula.storyboard; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
 		16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.02.49.jpeg"; sourceTree = "<group>"; };
@@ -111,9 +115,9 @@
 		16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GaleriaMusica.jpeg; sourceTree = "<group>"; };
 		16AF17041EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.05.42.jpeg"; sourceTree = "<group>"; };
 		16AF17061EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.05.52.jpeg"; sourceTree = "<group>"; };
-		16AF17081EE093C1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.59.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.05.59.jpeg"; sourceTree = "<group>"; };
+		16AF17081EE093C1008A9B17 /* audio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = audio.jpeg; sourceTree = "<group>"; };
 		16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.06.27.jpeg"; sourceTree = "<group>"; };
-		16AF170C1EE093E5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.38.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.06.38.jpeg"; sourceTree = "<group>"; };
+		16AF170C1EE093E5008A9B17 /* pelicula.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pelicula.jpeg; sourceTree = "<group>"; };
 		16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MisCuentos.jpeg; sourceTree = "<group>"; };
 		16AF17111EE0F74B008A9B17 /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo1.jpg; sourceTree = "<group>"; };
 		16AF17121EE0F74B008A9B17 /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */,
 				16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */,
 				167678921EE4D2F900EED638 /* GrabarAudio.storyboard */,
+				160F45471EE4E9A400980DEB /* Pelicula.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				16EA3D2C1EDD971700B30D72 /* ViewController.swift */,
 				16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
+				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -246,9 +252,9 @@
 				16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */,
 				16AF17041EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg */,
 				16AF17061EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg */,
-				16AF17081EE093C1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.59.jpeg */,
+				16AF17081EE093C1008A9B17 /* audio.jpeg */,
 				16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */,
-				16AF170C1EE093E5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.38.jpeg */,
+				16AF170C1EE093E5008A9B17 /* pelicula.jpeg */,
 				16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */,
 			);
 			name = imagenes;
@@ -465,13 +471,14 @@
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				16BC26D91EE36BC9009C2688 /* topos1.png in Resources */,
 				16AF17211EE0F74B008A9B17 /* fondo7.jpg in Resources */,
+				160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */,
 				16BC26E71EE36BC9009C2688 /* topos15.png in Resources */,
 				16BC26E31EE36BC9009C2688 /* topos11.png in Resources */,
 				16AF17221EE0F74B008A9B17 /* fondo8.jpg in Resources */,
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
 				16BC26E11EE36BC9009C2688 /* topos9.png in Resources */,
 				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
-				16AF170D1EE093E5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.38.jpeg in Resources */,
+				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
 				16AF171B1EE0F74B008A9B17 /* fondo1.jpg in Resources */,
 				16AF16F51EE092A0008A9B17 /* Seleccion.jpeg in Resources */,
@@ -504,7 +511,7 @@
 				16EA3D301EDD971700B30D72 /* Main.storyboard in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,
 				16BC26EB1EE36BC9009C2688 /* topos19.png in Resources */,
-				16AF17091EE093C1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.59.jpeg in Resources */,
+				16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				16BC26E91EE36BC9009C2688 /* topos17.png in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
@@ -536,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
+				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16EA3D2D1EDD971700B30D72 /* ViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
