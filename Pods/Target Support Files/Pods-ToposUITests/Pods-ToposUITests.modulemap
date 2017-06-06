@@ -1,0 +1,6 @@
+framework module Pods_ToposUITests {
+  umbrella header "Pods-ToposUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,848 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19DD5C2A9129221D0407A02D1C31AFD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		1F417BD6C8D940432EE6C825D0D73791 /* Pods-Topos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */; };
+		28DFF44555E33CB34869F8444D8497D8 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */; };
+		360113B1DEB97414284DA529FAF54A6C /* Pods-Topos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ED889FEF91BB7F7E24F87BF46CC32E5 /* Pods-ToposTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFC34444A577C32353144A14C2131B0 /* Pods-ToposTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A545615CA18A7E9EEBFA9696E093BFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		5E4A587FD0F235D2FA14C9CE8DA3E8E2 /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79FB7C0EB11ED85314DAC5720226FA57 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */; };
+		87CE4BAE0DDA93E8D7D9E1B83B585827 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */; };
+		B0170AFAAE0024A2BF3E8FB44BE4E8F0 /* Pods-ToposUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F57151FA5B18761FA7D5221A052265EB /* Pods-ToposUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51D836A42AD1729E4DF986E0DD1C7C0 /* Pods-ToposUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEC1D518353347945131DA2E6515A2E /* Pods-ToposUITests-dummy.m */; };
+		BC73A681CD2C2BE83073081E006381DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		C6F505D43B7937104BFF73447AE9AA64 /* Pods-ToposTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4DE252198F63C6417908EEB9FB2074 /* Pods-ToposTests-dummy.m */; };
+		F011F2B3B04B1F4DDFCB91CEA4046522 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B47D638D4A7569B8365AEEC86BD1386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C22AB8C24695D2305EB18F7E2C814D2A;
+			remoteInfo = SwiftySound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0759DC1B13822C138340851ED75017AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0D6C7C6ECC6CBA2CBA8066405FB291E8 /* Pods-ToposUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18317DD45A821A4AA2EDEA993FA48F26 /* Pods-ToposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposTests.release.xcconfig"; sourceTree = "<group>"; };
+		1AD37702D1EE5999E9378EAFA3A2E5FE /* Pods-ToposTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposTests-resources.sh"; sourceTree = "<group>"; };
+		1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposTests.framework; path = "Pods-ToposTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4DF5C881FE4E232431380540B2E40F /* Pods-Topos-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Topos-acknowledgements.plist"; sourceTree = "<group>"; };
+		2540C5FCFDBCDCE56EA8CD0A2231DF20 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftySound.modulemap; sourceTree = "<group>"; };
+		2853071492A15CB596AB07FDC8B2D67B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFC34444A577C32353144A14C2131B0 /* Pods-ToposTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToposTests-umbrella.h"; sourceTree = "<group>"; };
+		320E938A5A77F280AD66A571CA92D354 /* Pods-Topos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Topos.modulemap"; sourceTree = "<group>"; };
+		32CB95F3A197E4FCC0F0568ED181DD61 /* Pods-ToposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
+		5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySound.framework; path = SwiftySound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6902B41114EC6D8D308FF406CF86C0 /* Pods-ToposTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToposTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		615F85A2FE75720A896070F2C3BB6024 /* Pods-ToposUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToposUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		64267A687DADC32F75E433022964640F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposUITests.framework; path = "Pods-ToposUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FA848D5E568B41590B52A14BE52F61 /* Pods-Topos-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Topos-resources.sh"; sourceTree = "<group>"; };
+		6B073FE94339EDCB83DBE95FBEAEC85E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C16C50B9AB6BB28E647C9FF5DD1898C /* Pods-ToposTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ToposTests.modulemap"; sourceTree = "<group>"; };
+		6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Topos-dummy.m"; sourceTree = "<group>"; };
+		7453F17A89975965D2C479481F7B9D0E /* Pods-ToposUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D9110D4CBFF94609B8C719944C09216 /* Pods-ToposUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToposUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
+		ACEC1D518353347945131DA2E6515A2E /* Pods-ToposUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToposUITests-dummy.m"; sourceTree = "<group>"; };
+		B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Topos.release.xcconfig"; sourceTree = "<group>"; };
+		BB4DE252198F63C6417908EEB9FB2074 /* Pods-ToposTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToposTests-dummy.m"; sourceTree = "<group>"; };
+		BC56528EE0414512AB7FF34245F298CF /* Pods-ToposUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C328D77C0ABE7BD2723A089A64D67282 /* Pods-ToposTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposTests-frameworks.sh"; sourceTree = "<group>"; };
+		C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
+		D192DED88F2DC0E97EBFB172E2208A5A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23E6B887B3F816E16716F74D1E9CCF1 /* Pods-ToposUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ToposUITests.modulemap"; sourceTree = "<group>"; };
+		D4EE39839B3CFB1DCA4C3FFFDCABBACE /* Pods-Topos-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Topos-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D5072FD41AB13FB63DBACBAA951C5B6C /* Pods-Topos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Topos-frameworks.sh"; sourceTree = "<group>"; };
+		D647D925557150CEABAD1D3C329A3456 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Topos.framework; path = "Pods-Topos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D25AB1285B73FE828096CEC1AF7022 /* Pods-ToposUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposUITests-resources.sh"; sourceTree = "<group>"; };
+		EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Topos-umbrella.h"; sourceTree = "<group>"; };
+		F57151FA5B18761FA7D5221A052265EB /* Pods-ToposUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToposUITests-umbrella.h"; sourceTree = "<group>"; };
+		F6D0C94FF4BE3B267C9097CCB5A790B2 /* Pods-Topos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Topos.debug.xcconfig"; sourceTree = "<group>"; };
+		FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
+		FD733248C0184F0B8DE637E052F80FAF /* Pods-ToposTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToposTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E9BE47E54B0647886631EE417F4303B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DD5C2A9129221D0407A02D1C31AFD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80979282E28532A5F7B76FAFA240BDD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FB7C0EB11ED85314DAC5720226FA57 /* AVFoundation.framework in Frameworks */,
+				4A545615CA18A7E9EEBFA9696E093BFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99911FDA593C6C3AD2723583DC108F58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F011F2B3B04B1F4DDFCB91CEA4046522 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E291E89663653E21758B56281C463827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC73A681CD2C2BE83073081E006381DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		179AFCB27188F317D0EC6EE75C4028AA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B073FE94339EDCB83DBE95FBEAEC85E /* Info.plist */,
+				2540C5FCFDBCDCE56EA8CD0A2231DF20 /* SwiftySound.modulemap */,
+				FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */,
+				AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */,
+				D647D925557150CEABAD1D3C329A3456 /* SwiftySound-prefix.pch */,
+				3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftySound";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B81937E2358A876EB30CC711EF4620 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FF26F41114E551114A26449A77711FB /* Pods-ToposUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2853071492A15CB596AB07FDC8B2D67B /* Info.plist */,
+				D23E6B887B3F816E16716F74D1E9CCF1 /* Pods-ToposUITests.modulemap */,
+				7D9110D4CBFF94609B8C719944C09216 /* Pods-ToposUITests-acknowledgements.markdown */,
+				615F85A2FE75720A896070F2C3BB6024 /* Pods-ToposUITests-acknowledgements.plist */,
+				ACEC1D518353347945131DA2E6515A2E /* Pods-ToposUITests-dummy.m */,
+				BC56528EE0414512AB7FF34245F298CF /* Pods-ToposUITests-frameworks.sh */,
+				E9D25AB1285B73FE828096CEC1AF7022 /* Pods-ToposUITests-resources.sh */,
+				F57151FA5B18761FA7D5221A052265EB /* Pods-ToposUITests-umbrella.h */,
+				0D6C7C6ECC6CBA2CBA8066405FB291E8 /* Pods-ToposUITests.debug.xcconfig */,
+				7453F17A89975965D2C479481F7B9D0E /* Pods-ToposUITests.release.xcconfig */,
+			);
+			name = "Pods-ToposUITests";
+			path = "Target Support Files/Pods-ToposUITests";
+			sourceTree = "<group>";
+		};
+		6D0057A1A0172F693AB073A870C38A99 /* SwiftySound */ = {
+			isa = PBXGroup;
+			children = (
+				C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */,
+				179AFCB27188F317D0EC6EE75C4028AA /* Support Files */,
+			);
+			name = SwiftySound;
+			path = SwiftySound;
+			sourceTree = "<group>";
+		};
+		79434270AB64C1F6DB9BBB87E9E29E63 /* Pods-ToposTests */ = {
+			isa = PBXGroup;
+			children = (
+				64267A687DADC32F75E433022964640F /* Info.plist */,
+				6C16C50B9AB6BB28E647C9FF5DD1898C /* Pods-ToposTests.modulemap */,
+				FD733248C0184F0B8DE637E052F80FAF /* Pods-ToposTests-acknowledgements.markdown */,
+				5E6902B41114EC6D8D308FF406CF86C0 /* Pods-ToposTests-acknowledgements.plist */,
+				BB4DE252198F63C6417908EEB9FB2074 /* Pods-ToposTests-dummy.m */,
+				C328D77C0ABE7BD2723A089A64D67282 /* Pods-ToposTests-frameworks.sh */,
+				1AD37702D1EE5999E9378EAFA3A2E5FE /* Pods-ToposTests-resources.sh */,
+				2BFC34444A577C32353144A14C2131B0 /* Pods-ToposTests-umbrella.h */,
+				32CB95F3A197E4FCC0F0568ED181DD61 /* Pods-ToposTests.debug.xcconfig */,
+				18317DD45A821A4AA2EDEA993FA48F26 /* Pods-ToposTests.release.xcconfig */,
+			);
+			name = "Pods-ToposTests";
+			path = "Target Support Files/Pods-ToposTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9804E6EA3E05744B7B8ED985D1E67D26 /* Pods */,
+				BA53E53E77D0787BC4A7432641F4ECD6 /* Products */,
+				C62B4ADC474A1129FA4AE8090665DBE0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD6FC4C711AC55723A08A2487B4CBFC /* Pods-Topos */ = {
+			isa = PBXGroup;
+			children = (
+				D192DED88F2DC0E97EBFB172E2208A5A /* Info.plist */,
+				320E938A5A77F280AD66A571CA92D354 /* Pods-Topos.modulemap */,
+				D4EE39839B3CFB1DCA4C3FFFDCABBACE /* Pods-Topos-acknowledgements.markdown */,
+				1E4DF5C881FE4E232431380540B2E40F /* Pods-Topos-acknowledgements.plist */,
+				6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */,
+				D5072FD41AB13FB63DBACBAA951C5B6C /* Pods-Topos-frameworks.sh */,
+				66FA848D5E568B41590B52A14BE52F61 /* Pods-Topos-resources.sh */,
+				F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */,
+				F6D0C94FF4BE3B267C9097CCB5A790B2 /* Pods-Topos.debug.xcconfig */,
+				B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */,
+			);
+			name = "Pods-Topos";
+			path = "Target Support Files/Pods-Topos";
+			sourceTree = "<group>";
+		};
+		9804E6EA3E05744B7B8ED985D1E67D26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D0057A1A0172F693AB073A870C38A99 /* SwiftySound */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA53E53E77D0787BC4A7432641F4ECD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */,
+				1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */,
+				661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */,
+				5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C62B4ADC474A1129FA4AE8090665DBE0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6FC4C711AC55723A08A2487B4CBFC /* Pods-Topos */,
+				79434270AB64C1F6DB9BBB87E9E29E63 /* Pods-ToposTests */,
+				5FF26F41114E551114A26449A77711FB /* Pods-ToposUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F9B81937E2358A876EB30CC711EF4620 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */,
+				0759DC1B13822C138340851ED75017AC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		325D93165DF54CABFFA2578DB6C82468 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				360113B1DEB97414284DA529FAF54A6C /* Pods-Topos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		857349DD70DB8E0880AB4F9D05DB0F4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0170AFAAE0024A2BF3E8FB44BE4E8F0 /* Pods-ToposUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89F8492D1D49B5B0C0277FC4C6597D23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E4A587FD0F235D2FA14C9CE8DA3E8E2 /* SwiftySound-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5CB953B90F0439C10178186392C8387 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ED889FEF91BB7F7E24F87BF46CC32E5 /* Pods-ToposTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2626EA5DC0C3616B50E6668867062FB5 /* Pods-ToposTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A8206E8F34DFD4F2C1CB81A337181CD /* Build configuration list for PBXNativeTarget "Pods-ToposTests" */;
+			buildPhases = (
+				D7B2A8934DBAB1A3CDC08AD414A109E7 /* Sources */,
+				E291E89663653E21758B56281C463827 /* Frameworks */,
+				D5CB953B90F0439C10178186392C8387 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ToposTests";
+			productName = "Pods-ToposTests";
+			productReference = 1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C5AD0B5B79AC183E0A0D47C50D7D449 /* Pods-Topos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15DF477F465501E26ACD110E37152E36 /* Build configuration list for PBXNativeTarget "Pods-Topos" */;
+			buildPhases = (
+				C25E0C45588BD7CB26506DF4B4E705B5 /* Sources */,
+				5E9BE47E54B0647886631EE417F4303B /* Frameworks */,
+				325D93165DF54CABFFA2578DB6C82468 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				144077BD3530B70D55492595694EE24B /* PBXTargetDependency */,
+			);
+			name = "Pods-Topos";
+			productName = "Pods-Topos";
+			productReference = E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE768BC0083647F60E8087E0226BEFDA /* Build configuration list for PBXNativeTarget "SwiftySound" */;
+			buildPhases = (
+				35A4E23430902B0D58E9A9AD5D0315D7 /* Sources */,
+				80979282E28532A5F7B76FAFA240BDD1 /* Frameworks */,
+				89F8492D1D49B5B0C0277FC4C6597D23 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftySound;
+			productName = SwiftySound;
+			productReference = 5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D46C8C967DCEF8A3D6E5089F190981A0 /* Pods-ToposUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BE091F50D555076DE716ABCD7EE6B0 /* Build configuration list for PBXNativeTarget "Pods-ToposUITests" */;
+			buildPhases = (
+				1645CF9BEAF69195D08A1CAF677738CF /* Sources */,
+				99911FDA593C6C3AD2723583DC108F58 /* Frameworks */,
+				857349DD70DB8E0880AB4F9D05DB0F4D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ToposUITests";
+			productName = "Pods-ToposUITests";
+			productReference = 661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BA53E53E77D0787BC4A7432641F4ECD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C5AD0B5B79AC183E0A0D47C50D7D449 /* Pods-Topos */,
+				2626EA5DC0C3616B50E6668867062FB5 /* Pods-ToposTests */,
+				D46C8C967DCEF8A3D6E5089F190981A0 /* Pods-ToposUITests */,
+				C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1645CF9BEAF69195D08A1CAF677738CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51D836A42AD1729E4DF986E0DD1C7C0 /* Pods-ToposUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35A4E23430902B0D58E9A9AD5D0315D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87CE4BAE0DDA93E8D7D9E1B83B585827 /* Sound.swift in Sources */,
+				28DFF44555E33CB34869F8444D8497D8 /* SwiftySound-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25E0C45588BD7CB26506DF4B4E705B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F417BD6C8D940432EE6C825D0D73791 /* Pods-Topos-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B2A8934DBAB1A3CDC08AD414A109E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F505D43B7937104BFF73447AE9AA64 /* Pods-ToposTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		144077BD3530B70D55492595694EE24B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftySound;
+			target = C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */;
+			targetProxy = 3B47D638D4A7569B8365AEEC86BD1386 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29D9BC73F88EA73DAE9E0DEE53612E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29EBF3457519322A6AB0FAA6525B2828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7453F17A89975965D2C479481F7B9D0E /* Pods-ToposUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ToposUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ToposUITests/Pods-ToposUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ToposUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		31CD6092CBECC013747FA1150052AA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32CB95F3A197E4FCC0F0568ED181DD61 /* Pods-ToposTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ToposTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ToposTests/Pods-ToposTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ToposTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E0D01857F263F55B817A9606AA0B2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D0C94FF4BE3B267C9097CCB5A790B2 /* Pods-Topos.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Topos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Topos/Pods-Topos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Topos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51A79019BA784D35A9E701FD2D93214B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C8E0DF0F337BBE4DC1965EE79693C96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Topos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Topos/Pods-Topos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Topos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E57F6A829F333585684BB94FCDDA54A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18317DD45A821A4AA2EDEA993FA48F26 /* Pods-ToposTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ToposTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ToposTests/Pods-ToposTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ToposTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8F10F1A54627E88B4ABCEBEAC15B162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6C7C6ECC6CBA2CBA8066405FB291E8 /* Pods-ToposUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ToposUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ToposUITests/Pods-ToposUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ToposUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15DF477F465501E26ACD110E37152E36 /* Build configuration list for PBXNativeTarget "Pods-Topos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0D01857F263F55B817A9606AA0B2E8 /* Debug */,
+				7C8E0DF0F337BBE4DC1965EE79693C96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
+				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A8206E8F34DFD4F2C1CB81A337181CD /* Build configuration list for PBXNativeTarget "Pods-ToposTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31CD6092CBECC013747FA1150052AA6E /* Debug */,
+				E57F6A829F333585684BB94FCDDA54A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE768BC0083647F60E8087E0226BEFDA /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A79019BA784D35A9E701FD2D93214B /* Debug */,
+				29D9BC73F88EA73DAE9E0DEE53612E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BE091F50D555076DE716ABCD7EE6B0 /* Build configuration list for PBXNativeTarget "Pods-ToposUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F10F1A54627E88B4ABCEBEAC15B162 /* Debug */,
+				29EBF3457519322A6AB0FAA6525B2828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
