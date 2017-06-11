@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import SwiftySound
 
 private let reuseIdentifier = "Cell"
 
 class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var items = ["fondo1.jpg", "fondo2.jpg", "fondo3.jpg", "fondo4.jpg", "fondo5.jpg", "fondo6.jpg", "fondo7.jpg", "fondo8.jpg", "fondo9.jpg", "fondo10.jpg",]
+    var items = ["clave.png", "clave.png", "clave.png", "clave.png", "clave.png", "clave.png", "clave.png", "clave.png"]
+    
+    var itemsSounds = ["ta1.wav", "ta2.wav", "ta3.wav", "ta4.wav", "ta5.wav", "ta6.wav", "ta7.wav", "ta8.wav"]
 
+    var tocado = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,25 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btnPlay(_ sender: Any) {
+        
+        Sound.play(file: tocado)
+        
+    }
+    
+    @IBAction func btnPausa(_ sender: Any) {
+        
+        Sound.stop(file: tocado)
+        
+    }
+    
+    @IBAction func btnSalir(_ sender: Any) {
+        
+        Sound.stopAll()
+        
+        
+        
+    }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -53,5 +76,20 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         return cell
     }
 
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        Sound.stop(file: tocado)
+        
+        tocado = itemsSounds[indexPath.row]
+        
+        Sound.play(file: tocado)
+        
+        
+    }
+    
+    
+    
+    
 }

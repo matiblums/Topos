@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AudioBot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>FDSoundActivatedRecorder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>FDWaveformViewForked.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>Pods-Topos.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -19,15 +34,90 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Recorder-Recorder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Recorder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SCSiriWaveformView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>SwiftySound.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>SwiftySoundRecorder-SwiftySoundRecorder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>SwiftySoundRecorder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>042FD70EED98D45F25700A3CB378E75F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2626EA5DC0C3616B50E6668867062FB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33E3267A8942D50399801BD44E6DACC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>340027941698BDF2BBB3934DCDC3EE44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D6A2DA17A28EF051FE5D9455A85CE6E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59E0D988D3DD3BF9F634CE63134333CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF60C0B459450BAE1461CC6E833B4E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77ACC5D10A75220BBEF1695BA9DF3278</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BCD51FFDB8EA76FC9064D6F2EBCC5E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8498E25D1C0396052F69EAFDD1D7C909</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EEF551C21B4CC890F6C2F0DF66F1718</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +127,52 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B2278A804BE6FBE459CA9DF374EA6BBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C22AB8C24695D2305EB18F7E2C814D2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CFA75879116D0BF52FE3FDF54D8FC009</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2862FAAB7241A92A8772516880DBC89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D46C8C967DCEF8A3D6E5089F190981A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6065CC2D5D5046FD45C11E68159EC78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEDD28A14B7D9B5318ECC59CD5AB34A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF0735BE81DCBFC88FB0CFC6F1DF5CA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E05065E1DF9332D376A2A4CA047ED27D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF24FDD3064F26EB0EAFCF176B2E8622</key>
 		<dict>
 			<key>primary</key>
 			<true/>
