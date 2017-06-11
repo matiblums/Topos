@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '54D009074F2F570829F4FE7C70627F05'
-               BlueprintName = 'SwiftySound'
+               BlueprintIdentifier = '991C445B77F030F02D7F5422E59753F1'
+               BlueprintName = 'DragDropUI'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftySound.framework'>
+               BuildableName = 'DragDropUI.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

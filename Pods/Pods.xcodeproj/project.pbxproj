@@ -7,94 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19DD5C2A9129221D0407A02D1C31AFD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
-		1F417BD6C8D940432EE6C825D0D73791 /* Pods-Topos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */; };
-		28DFF44555E33CB34869F8444D8497D8 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */; };
-		360113B1DEB97414284DA529FAF54A6C /* Pods-Topos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1539A361422258F898F49A65443D0EBC /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71882DFB1347A21E9D59208C9723A4EC /* Sound.swift */; };
+		1D693462D49186BEE0E66B2B74F0BEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		3C7886335B964157CCC01DADD1EA7106 /* DDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED518AFAF580B3BA857DFCDC92054BFE /* DDProtocol.swift */; };
 		3ED889FEF91BB7F7E24F87BF46CC32E5 /* Pods-ToposTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFC34444A577C32353144A14C2131B0 /* Pods-ToposTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A545615CA18A7E9EEBFA9696E093BFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
-		5E4A587FD0F235D2FA14C9CE8DA3E8E2 /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79FB7C0EB11ED85314DAC5720226FA57 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */; };
-		87CE4BAE0DDA93E8D7D9E1B83B585827 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */; };
+		44EF866A1C527B4DE2A5C16D3E6DB8DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		4C3CB5ABCA006D9913B23B6E4A556BAD /* DDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5395D42FD89349E35F72DCFAC24C3D8 /* DDTableViewCell.swift */; };
+		5A7337B3E849B9B942C24B79C8597B68 /* DragDropUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FAA6C53E3ED456F3FFB28A8DD2A144 /* DragDropUI-dummy.m */; };
+		715BDB19DCCB724764D8B13FF92E6B4F /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1374B18CAFBFBF160B7DB7C2514F1D25 /* SwiftySound-dummy.m */; };
+		777257646C26802C2122B84416B962F8 /* Pods-Topos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */; };
+		84406654A472E24D931FEC66AA1DF147 /* DDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7FE373FD1C7BF5F1335D62AC823E54 /* DDImageView.swift */; };
+		85546CBBE0E5DBBD2CB6C0433C700086 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */; };
+		8DEC239AE4A6EEB7D9EC9373BB7A1C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		9F085B36F707971DCD469A460B79990E /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C72485A4F1884FE1B9F06276E10979DA /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A14810AFA34D90C5FAA2BEBE864175AE /* DDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAC3578A06312132B55E1234BFCFC13 /* DDLabel.swift */; };
+		A18B8CD87464CE8C26F38537F7CC0FF4 /* DDGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AC2F0868704152DAB484AFDB8C31FC /* DDGestureRecognizer.swift */; };
 		B0170AFAAE0024A2BF3E8FB44BE4E8F0 /* Pods-ToposUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F57151FA5B18761FA7D5221A052265EB /* Pods-ToposUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B51D836A42AD1729E4DF986E0DD1C7C0 /* Pods-ToposUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEC1D518353347945131DA2E6515A2E /* Pods-ToposUITests-dummy.m */; };
 		BC73A681CD2C2BE83073081E006381DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		C668DAFF6656A67BA81D6880FCB3A326 /* Pods-Topos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6F505D43B7937104BFF73447AE9AA64 /* Pods-ToposTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4DE252198F63C6417908EEB9FB2074 /* Pods-ToposTests-dummy.m */; };
+		CADF9CEB92B38B5FA03508633F5253BC /* DD+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12C6D4AA9882738EBCE584E23B2410 /* DD+View.swift */; };
+		D6059EB195B4DD363BF282539EBF1F24 /* DDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2BFF8D5143C190A80B9554C46E0B /* DDTextField.swift */; };
+		DDB1C58D09D69A7DF7FDAC0A8EFF74A5 /* DDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91937B8078BCB044F438F0EA4A4D9178 /* DDCollectionViewCell.swift */; };
+		E0C560D0169F09C30FD137C6861554FF /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACA8439C117D582C1BED71743F20E9 /* DDButton.swift */; };
 		F011F2B3B04B1F4DDFCB91CEA4046522 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		F24368DD1565A20CD0A2EDDF132C2CC9 /* DDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A9E8444E068845BBF32AC43D8BAAE /* DDView.swift */; };
+		FDDDA6CA5B2CAFB9C40CF1D959C5D317 /* DragDropUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DC7CC340F6C619194BCBD7C28C11CC2 /* DragDropUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B47D638D4A7569B8365AEEC86BD1386 /* PBXContainerItemProxy */ = {
+		6D4AC97670AB20D4EF0FAB0CE0FA1038 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C22AB8C24695D2305EB18F7E2C814D2A;
+			remoteGlobalIDString = 54D009074F2F570829F4FE7C70627F05;
 			remoteInfo = SwiftySound;
+		};
+		FB6DDFC6FF84B048234CBF667E4C093F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 991C445B77F030F02D7F5422E59753F1;
+			remoteInfo = DragDropUI;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06FDA085996742DAA22187BBC0764060 /* Pods_ToposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposTests.framework; path = "Pods-ToposTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0759DC1B13822C138340851ED75017AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0A27C3182D28D0FA26BA78F2B42E6BEE /* Pods_Topos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Topos.framework; path = "Pods-Topos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6C7C6ECC6CBA2CBA8066405FB291E8 /* Pods-ToposUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1374B18CAFBFBF160B7DB7C2514F1D25 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
 		18317DD45A821A4AA2EDEA993FA48F26 /* Pods-ToposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposTests.release.xcconfig"; sourceTree = "<group>"; };
 		1AD37702D1EE5999E9378EAFA3A2E5FE /* Pods-ToposTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposTests-resources.sh"; sourceTree = "<group>"; };
-		1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposTests.framework; path = "Pods-ToposTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4DF5C881FE4E232431380540B2E40F /* Pods-Topos-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Topos-acknowledgements.plist"; sourceTree = "<group>"; };
-		2540C5FCFDBCDCE56EA8CD0A2231DF20 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftySound.modulemap; sourceTree = "<group>"; };
+		20EE321D59EA82FC7A05331D3D50A467 /* DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DragDropUI.framework; path = DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2853071492A15CB596AB07FDC8B2D67B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFC34444A577C32353144A14C2131B0 /* Pods-ToposTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToposTests-umbrella.h"; sourceTree = "<group>"; };
 		320E938A5A77F280AD66A571CA92D354 /* Pods-Topos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Topos.modulemap"; sourceTree = "<group>"; };
 		32CB95F3A197E4FCC0F0568ED181DD61 /* Pods-ToposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
-		5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySound.framework; path = SwiftySound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F12C6D4AA9882738EBCE584E23B2410 /* DD+View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DD+View.swift"; path = "Source/DD+View.swift"; sourceTree = "<group>"; };
+		4AAC3578A06312132B55E1234BFCFC13 /* DDLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDLabel.swift; path = Source/DDLabel.swift; sourceTree = "<group>"; };
+		4E89F7702C26F5CF5AF7192BA111E88C /* DragDropUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragDropUI-prefix.pch"; sourceTree = "<group>"; };
+		5DC7CC340F6C619194BCBD7C28C11CC2 /* DragDropUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragDropUI-umbrella.h"; sourceTree = "<group>"; };
 		5E6902B41114EC6D8D308FF406CF86C0 /* Pods-ToposTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToposTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E7FE373FD1C7BF5F1335D62AC823E54 /* DDImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDImageView.swift; path = Source/DDImageView.swift; sourceTree = "<group>"; };
 		615F85A2FE75720A896070F2C3BB6024 /* Pods-ToposUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToposUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		64267A687DADC32F75E433022964640F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposUITests.framework; path = "Pods-ToposUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AC2F0868704152DAB484AFDB8C31FC /* DDGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDGestureRecognizer.swift; path = Source/DDGestureRecognizer.swift; sourceTree = "<group>"; };
 		66FA848D5E568B41590B52A14BE52F61 /* Pods-Topos-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Topos-resources.sh"; sourceTree = "<group>"; };
-		6B073FE94339EDCB83DBE95FBEAEC85E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C16C50B9AB6BB28E647C9FF5DD1898C /* Pods-ToposTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ToposTests.modulemap"; sourceTree = "<group>"; };
 		6ED7A332894F4D1DE3CB4F5A0E4FF15E /* Pods-Topos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Topos-dummy.m"; sourceTree = "<group>"; };
+		71882DFB1347A21E9D59208C9723A4EC /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
 		7453F17A89975965D2C479481F7B9D0E /* Pods-ToposUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToposUITests.release.xcconfig"; sourceTree = "<group>"; };
+		788ACE46C4AA5984CCB52A59191076B0 /* DragDropUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DragDropUI.xcconfig; sourceTree = "<group>"; };
 		7D9110D4CBFF94609B8C719944C09216 /* Pods-ToposUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToposUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		91937B8078BCB044F438F0EA4A4D9178 /* DDCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDCollectionViewCell.swift; path = Source/DDCollectionViewCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
+		963A9E8444E068845BBF32AC43D8BAAE /* DDView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDView.swift; path = Source/DDView.swift; sourceTree = "<group>"; };
+		A06883D760032544AA3EE21CABEF0023 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
 		ACEC1D518353347945131DA2E6515A2E /* Pods-ToposUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToposUITests-dummy.m"; sourceTree = "<group>"; };
+		B1ACA8439C117D582C1BED71743F20E9 /* DDButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDButton.swift; path = Source/DDButton.swift; sourceTree = "<group>"; };
+		B45C8E4A0E69AE467F27EBA277E3351E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5395D42FD89349E35F72DCFAC24C3D8 /* DDTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDTableViewCell.swift; path = Source/DDTableViewCell.swift; sourceTree = "<group>"; };
 		B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Topos.release.xcconfig"; sourceTree = "<group>"; };
 		BB4DE252198F63C6417908EEB9FB2074 /* Pods-ToposTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToposTests-dummy.m"; sourceTree = "<group>"; };
 		BC56528EE0414512AB7FF34245F298CF /* Pods-ToposUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposUITests-frameworks.sh"; sourceTree = "<group>"; };
 		C328D77C0ABE7BD2723A089A64D67282 /* Pods-ToposTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposTests-frameworks.sh"; sourceTree = "<group>"; };
-		C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
+		C72485A4F1884FE1B9F06276E10979DA /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
 		D192DED88F2DC0E97EBFB172E2208A5A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D23E6B887B3F816E16716F74D1E9CCF1 /* Pods-ToposUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ToposUITests.modulemap"; sourceTree = "<group>"; };
+		D293F0C6544203B8717BC1FC9A8CF680 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftySound.modulemap; sourceTree = "<group>"; };
 		D4EE39839B3CFB1DCA4C3FFFDCABBACE /* Pods-Topos-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Topos-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D5072FD41AB13FB63DBACBAA951C5B6C /* Pods-Topos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Topos-frameworks.sh"; sourceTree = "<group>"; };
-		D647D925557150CEABAD1D3C329A3456 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
-		E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Topos.framework; path = "Pods-Topos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5B61B60470F583A51D6F7EEDF02CF0 /* SwiftySound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySound.framework; path = SwiftySound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAC2BFF8D5143C190A80B9554C46E0B /* DDTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDTextField.swift; path = Source/DDTextField.swift; sourceTree = "<group>"; };
 		E9D25AB1285B73FE828096CEC1AF7022 /* Pods-ToposUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToposUITests-resources.sh"; sourceTree = "<group>"; };
 		EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		ED518AFAF580B3BA857DFCDC92054BFE /* DDProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDProtocol.swift; path = Source/DDProtocol.swift; sourceTree = "<group>"; };
+		F1ED18C89463C25094768172E1DC7FD2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3647C934D9CC3DACF75866432396394 /* Pods-Topos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Topos-umbrella.h"; sourceTree = "<group>"; };
+		F36E6ED1CB6D53D142D8622AAF0C3A6B /* Pods_ToposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToposUITests.framework; path = "Pods-ToposUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E0C86F31BDF2CD8B2EA0D83EC4BFC4 /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
 		F57151FA5B18761FA7D5221A052265EB /* Pods-ToposUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToposUITests-umbrella.h"; sourceTree = "<group>"; };
 		F6D0C94FF4BE3B267C9097CCB5A790B2 /* Pods-Topos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Topos.debug.xcconfig"; sourceTree = "<group>"; };
-		FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
+		F6FAA6C53E3ED456F3FFB28A8DD2A144 /* DragDropUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DragDropUI-dummy.m"; sourceTree = "<group>"; };
+		FC2AA5C6425D455347F78DF4B4CA6B7A /* DragDropUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DragDropUI.modulemap; sourceTree = "<group>"; };
 		FD733248C0184F0B8DE637E052F80FAF /* Pods-ToposTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToposTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E9BE47E54B0647886631EE417F4303B /* Frameworks */ = {
+		06B5622808483FAB97549D23E3D416E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DD5C2A9129221D0407A02D1C31AFD3 /* Foundation.framework in Frameworks */,
+				8DEC239AE4A6EEB7D9EC9373BB7A1C52 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80979282E28532A5F7B76FAFA240BDD1 /* Frameworks */ = {
+		21D4762BD301BFF88D34685700EACE5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79FB7C0EB11ED85314DAC5720226FA57 /* AVFoundation.framework in Frameworks */,
-				4A545615CA18A7E9EEBFA9696E093BFF /* Foundation.framework in Frameworks */,
+				85546CBBE0E5DBBD2CB6C0433C700086 /* AVFoundation.framework in Frameworks */,
+				1D693462D49186BEE0E66B2B74F0BEE8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7478F6E7BBDC552142FCB408731F14D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EF866A1C527B4DE2A5C16D3E6DB8DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,18 +162,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		179AFCB27188F317D0EC6EE75C4028AA /* Support Files */ = {
+		26C92FE6F6133742669107AABA090FD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B073FE94339EDCB83DBE95FBEAEC85E /* Info.plist */,
-				2540C5FCFDBCDCE56EA8CD0A2231DF20 /* SwiftySound.modulemap */,
-				FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */,
-				AA88844ECDFE237E8E09434E790359B0 /* SwiftySound-dummy.m */,
-				D647D925557150CEABAD1D3C329A3456 /* SwiftySound-prefix.pch */,
-				3A61D1916160E80E190D3C1C9DD8BED5 /* SwiftySound-umbrella.h */,
+				20EE321D59EA82FC7A05331D3D50A467 /* DragDropUI.framework */,
+				0A27C3182D28D0FA26BA78F2B42E6BEE /* Pods_Topos.framework */,
+				06FDA085996742DAA22187BBC0764060 /* Pods_ToposTests.framework */,
+				F36E6ED1CB6D53D142D8622AAF0C3A6B /* Pods_ToposUITests.framework */,
+				DA5B61B60470F583A51D6F7EEDF02CF0 /* SwiftySound.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftySound";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -137,6 +180,29 @@
 				F9B81937E2358A876EB30CC711EF4620 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AA066BB660BDC93C7C4749072F011EF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B45C8E4A0E69AE467F27EBA277E3351E /* Info.plist */,
+				D293F0C6544203B8717BC1FC9A8CF680 /* SwiftySound.modulemap */,
+				F4E0C86F31BDF2CD8B2EA0D83EC4BFC4 /* SwiftySound.xcconfig */,
+				1374B18CAFBFBF160B7DB7C2514F1D25 /* SwiftySound-dummy.m */,
+				A06883D760032544AA3EE21CABEF0023 /* SwiftySound-prefix.pch */,
+				C72485A4F1884FE1B9F06276E10979DA /* SwiftySound-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftySound";
+			sourceTree = "<group>";
+		};
+		5FAAE32C32122B9AC53A5C049ED91C1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AF5D70D1FD5BC79B48E3D5F0628A7EA /* DragDropUI */,
+				FD9C2A41966EF40956D51EF4542260E0 /* SwiftySound */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5FF26F41114E551114A26449A77711FB /* Pods-ToposUITests */ = {
@@ -155,16 +221,6 @@
 			);
 			name = "Pods-ToposUITests";
 			path = "Target Support Files/Pods-ToposUITests";
-			sourceTree = "<group>";
-		};
-		6D0057A1A0172F693AB073A870C38A99 /* SwiftySound */ = {
-			isa = PBXGroup;
-			children = (
-				C6FB45F6AF751F7BE5F2A747A25041BD /* Sound.swift */,
-				179AFCB27188F317D0EC6EE75C4028AA /* Support Files */,
-			);
-			name = SwiftySound;
-			path = SwiftySound;
 			sourceTree = "<group>";
 		};
 		79434270AB64C1F6DB9BBB87E9E29E63 /* Pods-ToposTests */ = {
@@ -190,8 +246,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				9804E6EA3E05744B7B8ED985D1E67D26 /* Pods */,
-				BA53E53E77D0787BC4A7432641F4ECD6 /* Products */,
+				5FAAE32C32122B9AC53A5C049ED91C1C /* Pods */,
+				26C92FE6F6133742669107AABA090FD3 /* Products */,
 				C62B4ADC474A1129FA4AE8090665DBE0 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -214,23 +270,23 @@
 			path = "Target Support Files/Pods-Topos";
 			sourceTree = "<group>";
 		};
-		9804E6EA3E05744B7B8ED985D1E67D26 /* Pods */ = {
+		8AF5D70D1FD5BC79B48E3D5F0628A7EA /* DragDropUI */ = {
 			isa = PBXGroup;
 			children = (
-				6D0057A1A0172F693AB073A870C38A99 /* SwiftySound */,
+				3F12C6D4AA9882738EBCE584E23B2410 /* DD+View.swift */,
+				B1ACA8439C117D582C1BED71743F20E9 /* DDButton.swift */,
+				91937B8078BCB044F438F0EA4A4D9178 /* DDCollectionViewCell.swift */,
+				64AC2F0868704152DAB484AFDB8C31FC /* DDGestureRecognizer.swift */,
+				5E7FE373FD1C7BF5F1335D62AC823E54 /* DDImageView.swift */,
+				4AAC3578A06312132B55E1234BFCFC13 /* DDLabel.swift */,
+				ED518AFAF580B3BA857DFCDC92054BFE /* DDProtocol.swift */,
+				B5395D42FD89349E35F72DCFAC24C3D8 /* DDTableViewCell.swift */,
+				DAAC2BFF8D5143C190A80B9554C46E0B /* DDTextField.swift */,
+				963A9E8444E068845BBF32AC43D8BAAE /* DDView.swift */,
+				DA5C41D4159C65168DD71D5F730D0BA5 /* Support Files */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BA53E53E77D0787BC4A7432641F4ECD6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */,
-				1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */,
-				661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */,
-				5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */,
-			);
-			name = Products;
+			name = DragDropUI;
+			path = DragDropUI;
 			sourceTree = "<group>";
 		};
 		C62B4ADC474A1129FA4AE8090665DBE0 /* Targets Support Files */ = {
@@ -243,6 +299,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		DA5C41D4159C65168DD71D5F730D0BA5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2AA5C6425D455347F78DF4B4CA6B7A /* DragDropUI.modulemap */,
+				788ACE46C4AA5984CCB52A59191076B0 /* DragDropUI.xcconfig */,
+				F6FAA6C53E3ED456F3FFB28A8DD2A144 /* DragDropUI-dummy.m */,
+				4E89F7702C26F5CF5AF7192BA111E88C /* DragDropUI-prefix.pch */,
+				5DC7CC340F6C619194BCBD7C28C11CC2 /* DragDropUI-umbrella.h */,
+				F1ED18C89463C25094768172E1DC7FD2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DragDropUI";
+			sourceTree = "<group>";
+		};
 		F9B81937E2358A876EB30CC711EF4620 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,14 +322,32 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		FD9C2A41966EF40956D51EF4542260E0 /* SwiftySound */ = {
+			isa = PBXGroup;
+			children = (
+				71882DFB1347A21E9D59208C9723A4EC /* Sound.swift */,
+				5AA066BB660BDC93C7C4749072F011EF /* Support Files */,
+			);
+			name = SwiftySound;
+			path = SwiftySound;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		325D93165DF54CABFFA2578DB6C82468 /* Headers */ = {
+		3CE158503CD02A7A8F60543A8FAB95E3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360113B1DEB97414284DA529FAF54A6C /* Pods-Topos-umbrella.h in Headers */,
+				C668DAFF6656A67BA81D6880FCB3A326 /* Pods-Topos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C8D1C3D4062F23EFA20612EC5968EE5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDDDA6CA5B2CAFB9C40CF1D959C5D317 /* DragDropUI-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +359,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89F8492D1D49B5B0C0277FC4C6597D23 /* Headers */ = {
+		C028FA642DE55A58E87CF3E04A7469A4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4A587FD0F235D2FA14C9CE8DA3E8E2 /* SwiftySound-umbrella.h in Headers */,
+				9F085B36F707971DCD469A460B79990E /* SwiftySound-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,34 +392,16 @@
 			);
 			name = "Pods-ToposTests";
 			productName = "Pods-ToposTests";
-			productReference = 1AE257D843B1CFA46F8CF9E6BFD72FE3 /* Pods_ToposTests.framework */;
+			productReference = 06FDA085996742DAA22187BBC0764060 /* Pods_ToposTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9C5AD0B5B79AC183E0A0D47C50D7D449 /* Pods-Topos */ = {
+		54D009074F2F570829F4FE7C70627F05 /* SwiftySound */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15DF477F465501E26ACD110E37152E36 /* Build configuration list for PBXNativeTarget "Pods-Topos" */;
+			buildConfigurationList = B24DCCFB463F7C0D5128036A2CB28612 /* Build configuration list for PBXNativeTarget "SwiftySound" */;
 			buildPhases = (
-				C25E0C45588BD7CB26506DF4B4E705B5 /* Sources */,
-				5E9BE47E54B0647886631EE417F4303B /* Frameworks */,
-				325D93165DF54CABFFA2578DB6C82468 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				144077BD3530B70D55492595694EE24B /* PBXTargetDependency */,
-			);
-			name = "Pods-Topos";
-			productName = "Pods-Topos";
-			productReference = E1970321905368DFBC5A1E6847A68391 /* Pods_Topos.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE768BC0083647F60E8087E0226BEFDA /* Build configuration list for PBXNativeTarget "SwiftySound" */;
-			buildPhases = (
-				35A4E23430902B0D58E9A9AD5D0315D7 /* Sources */,
-				80979282E28532A5F7B76FAFA240BDD1 /* Frameworks */,
-				89F8492D1D49B5B0C0277FC4C6597D23 /* Headers */,
+				23D49B0E2B5009F691FB234E32ABA4B1 /* Sources */,
+				21D4762BD301BFF88D34685700EACE5E /* Frameworks */,
+				C028FA642DE55A58E87CF3E04A7469A4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -339,7 +409,24 @@
 			);
 			name = SwiftySound;
 			productName = SwiftySound;
-			productReference = 5399707BA7604EB22FC74219610D986C /* SwiftySound.framework */;
+			productReference = DA5B61B60470F583A51D6F7EEDF02CF0 /* SwiftySound.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		991C445B77F030F02D7F5422E59753F1 /* DragDropUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EBCC87C42610A6DBD03D7BDDBEFF498 /* Build configuration list for PBXNativeTarget "DragDropUI" */;
+			buildPhases = (
+				759E67DE9A51EB98B73238DE588396F9 /* Sources */,
+				7478F6E7BBDC552142FCB408731F14D9 /* Frameworks */,
+				4C8D1C3D4062F23EFA20612EC5968EE5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragDropUI;
+			productName = DragDropUI;
+			productReference = 20EE321D59EA82FC7A05331D3D50A467 /* DragDropUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D46C8C967DCEF8A3D6E5089F190981A0 /* Pods-ToposUITests */ = {
@@ -356,7 +443,26 @@
 			);
 			name = "Pods-ToposUITests";
 			productName = "Pods-ToposUITests";
-			productReference = 661CC8A0C3FC8F50D7A6C42EA2C3913F /* Pods_ToposUITests.framework */;
+			productReference = F36E6ED1CB6D53D142D8622AAF0C3A6B /* Pods_ToposUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E2B6D116BD92BBA83B216C5B02603A0A /* Pods-Topos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7562E62E8401DB0C5E37228EA92A6781 /* Build configuration list for PBXNativeTarget "Pods-Topos" */;
+			buildPhases = (
+				C111E9D023B4C80DC872007C0B480AAC /* Sources */,
+				06B5622808483FAB97549D23E3D416E4 /* Frameworks */,
+				3CE158503CD02A7A8F60543A8FAB95E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23BF158E230DED02A33FB4E0F1B4336E /* PBXTargetDependency */,
+				C06AAD4562306CBA742EBF1100ECE645 /* PBXTargetDependency */,
+			);
+			name = "Pods-Topos";
+			productName = "Pods-Topos";
+			productReference = 0A27C3182D28D0FA26BA78F2B42E6BEE /* Pods_Topos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -376,14 +482,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BA53E53E77D0787BC4A7432641F4ECD6 /* Products */;
+			productRefGroup = 26C92FE6F6133742669107AABA090FD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C5AD0B5B79AC183E0A0D47C50D7D449 /* Pods-Topos */,
+				991C445B77F030F02D7F5422E59753F1 /* DragDropUI */,
+				E2B6D116BD92BBA83B216C5B02603A0A /* Pods-Topos */,
 				2626EA5DC0C3616B50E6668867062FB5 /* Pods-ToposTests */,
 				D46C8C967DCEF8A3D6E5089F190981A0 /* Pods-ToposUITests */,
-				C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */,
+				54D009074F2F570829F4FE7C70627F05 /* SwiftySound */,
 			);
 		};
 /* End PBXProject section */
@@ -397,20 +504,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35A4E23430902B0D58E9A9AD5D0315D7 /* Sources */ = {
+		23D49B0E2B5009F691FB234E32ABA4B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87CE4BAE0DDA93E8D7D9E1B83B585827 /* Sound.swift in Sources */,
-				28DFF44555E33CB34869F8444D8497D8 /* SwiftySound-dummy.m in Sources */,
+				1539A361422258F898F49A65443D0EBC /* Sound.swift in Sources */,
+				715BDB19DCCB724764D8B13FF92E6B4F /* SwiftySound-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C25E0C45588BD7CB26506DF4B4E705B5 /* Sources */ = {
+		759E67DE9A51EB98B73238DE588396F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F417BD6C8D940432EE6C825D0D73791 /* Pods-Topos-dummy.m in Sources */,
+				CADF9CEB92B38B5FA03508633F5253BC /* DD+View.swift in Sources */,
+				E0C560D0169F09C30FD137C6861554FF /* DDButton.swift in Sources */,
+				DDB1C58D09D69A7DF7FDAC0A8EFF74A5 /* DDCollectionViewCell.swift in Sources */,
+				A18B8CD87464CE8C26F38537F7CC0FF4 /* DDGestureRecognizer.swift in Sources */,
+				84406654A472E24D931FEC66AA1DF147 /* DDImageView.swift in Sources */,
+				A14810AFA34D90C5FAA2BEBE864175AE /* DDLabel.swift in Sources */,
+				3C7886335B964157CCC01DADD1EA7106 /* DDProtocol.swift in Sources */,
+				4C3CB5ABCA006D9913B23B6E4A556BAD /* DDTableViewCell.swift in Sources */,
+				D6059EB195B4DD363BF282539EBF1F24 /* DDTextField.swift in Sources */,
+				F24368DD1565A20CD0A2EDDF132C2CC9 /* DDView.swift in Sources */,
+				5A7337B3E849B9B942C24B79C8597B68 /* DragDropUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C111E9D023B4C80DC872007C0B480AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777257646C26802C2122B84416B962F8 /* Pods-Topos-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +550,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		144077BD3530B70D55492595694EE24B /* PBXTargetDependency */ = {
+		23BF158E230DED02A33FB4E0F1B4336E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DragDropUI;
+			target = 991C445B77F030F02D7F5422E59753F1 /* DragDropUI */;
+			targetProxy = FB6DDFC6FF84B048234CBF667E4C093F /* PBXContainerItemProxy */;
+		};
+		C06AAD4562306CBA742EBF1100ECE645 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftySound;
-			target = C22AB8C24695D2305EB18F7E2C814D2A /* SwiftySound */;
-			targetProxy = 3B47D638D4A7569B8365AEEC86BD1386 /* PBXContainerItemProxy */;
+			target = 54D009074F2F570829F4FE7C70627F05 /* SwiftySound */;
+			targetProxy = 6D4AC97670AB20D4EF0FAB0CE0FA1038 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -471,38 +602,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		29D9BC73F88EA73DAE9E0DEE53612E54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftySound;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -576,7 +675,74 @@
 			};
 			name = Debug;
 		};
-		4E0D01857F263F55B817A9606AA0B2E8 /* Debug */ = {
+		6D611E1D809BD890E3483CA5EC41870A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E0C86F31BDF2CD8B2EA0D83EC4BFC4 /* SwiftySound.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A683A74CA3981B05FB7C8725751E9084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Topos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Topos/Pods-Topos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Topos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7A0382DEEB8FF372245A364EAF58E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6D0C94FF4BE3B267C9097CCB5A790B2 /* Pods-Topos.debug.xcconfig */;
 			buildSettings = {
@@ -612,9 +778,41 @@
 			};
 			name = Debug;
 		};
-		51A79019BA784D35A9E701FD2D93214B /* Debug */ = {
+		B78F74074669B5B5B4FDBBA77D65D637 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB710C9845AA8C6218B43A494D87661C /* SwiftySound.xcconfig */;
+			baseConfigurationReference = 788ACE46C4AA5984CCB52A59191076B0 /* DragDropUI.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DragDropUI/DragDropUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DragDropUI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DragDropUI/DragDropUI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DragDropUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3513F57486F945B823F2B9E898E2EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E0C86F31BDF2CD8B2EA0D83EC4BFC4 /* SwiftySound.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -644,41 +842,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		7C8E0DF0F337BBE4DC1965EE79693C96 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5FBE38F208C9B074FB658A772855CD6 /* Pods-Topos.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Topos/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Topos/Pods-Topos.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Topos;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -759,6 +922,39 @@
 			};
 			name = Release;
 		};
+		E80D475A39FD2D4D645C59A9964723E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 788ACE46C4AA5984CCB52A59191076B0 /* DragDropUI.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DragDropUI/DragDropUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DragDropUI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DragDropUI/DragDropUI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DragDropUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F8F10F1A54627E88B4ABCEBEAC15B162 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D6C7C6ECC6CBA2CBA8066405FB291E8 /* Pods-ToposUITests.debug.xcconfig */;
@@ -797,20 +993,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15DF477F465501E26ACD110E37152E36 /* Build configuration list for PBXNativeTarget "Pods-Topos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E0D01857F263F55B817A9606AA0B2E8 /* Debug */,
-				7C8E0DF0F337BBE4DC1965EE79693C96 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
 				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EBCC87C42610A6DBD03D7BDDBEFF498 /* Build configuration list for PBXNativeTarget "DragDropUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E80D475A39FD2D4D645C59A9964723E0 /* Debug */,
+				B78F74074669B5B5B4FDBBA77D65D637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -824,11 +1020,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE768BC0083647F60E8087E0226BEFDA /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+		7562E62E8401DB0C5E37228EA92A6781 /* Build configuration list for PBXNativeTarget "Pods-Topos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51A79019BA784D35A9E701FD2D93214B /* Debug */,
-				29D9BC73F88EA73DAE9E0DEE53612E54 /* Release */,
+				A7A0382DEEB8FF372245A364EAF58E94 /* Debug */,
+				A683A74CA3981B05FB7C8725751E9084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24DCCFB463F7C0D5128036A2CB28612 /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3513F57486F945B823F2B9E898E2EAF /* Debug */,
+				6D611E1D809BD890E3483CA5EC41870A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

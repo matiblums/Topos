@@ -67,9 +67,16 @@
                                     <segue destination="1ma-b7-qQZ" kind="presentation" modalTransitionStyle="crossDissolve" id="DaU-fd-X8h"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topos1.png" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-4K-x4V" customClass="DDImageView" customModule="DragDropUI">
+                                <rect key="frame" x="386" y="384" width="240" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="miTopo" destination="6aP-4K-x4V" id="ri4-pS-oWs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRm-p1-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,5 +93,6 @@
     </scenes>
     <resources>
         <image name="fondo1.jpg" width="3000" height="1506"/>
+        <image name="topos1.png" width="926" height="1049"/>
     </resources>
 </document>

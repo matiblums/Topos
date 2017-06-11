@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>DragDropUI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>FDSoundActivatedRecorder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -92,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>54D009074F2F570829F4FE7C70627F05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>59E0D988D3DD3BF9F634CE63134333CC</key>
 		<dict>
 			<key>primary</key>
@@ -118,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>8EEF551C21B4CC890F6C2F0DF66F1718</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>991C445B77F030F02D7F5422E59753F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -168,6 +183,11 @@
 			<true/>
 		</dict>
 		<key>E05065E1DF9332D376A2A4CA047ED27D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2B6D116BD92BBA83B216C5B02603A0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

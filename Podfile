@@ -9,6 +9,7 @@ target 'Topos' do
 
   # Pods for Topos
   pod 'SwiftySound'
+  pod 'DragDropUI'
 
   target 'ToposTests' do
     inherit! :search_paths
