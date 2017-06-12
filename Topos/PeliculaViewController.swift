@@ -39,6 +39,7 @@ class PeliculaViewController: UIViewController {
         
         //Sound.stopAll()
        print( sound1?.currentTime)
+        
     }
     
 
