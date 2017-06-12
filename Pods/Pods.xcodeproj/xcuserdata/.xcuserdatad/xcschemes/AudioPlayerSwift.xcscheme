@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9DB0F11B3C76E37413D0D185E69524AB'
-               BlueprintName = 'Pods-Topos'
+               BlueprintIdentifier = 'F3BD3E1AB9BF49844623B36461BC3070'
+               BlueprintName = 'AudioPlayerSwift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Topos.framework'>
+               BuildableName = 'AudioPlayerSwift.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

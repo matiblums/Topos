@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>AudioPlayerSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>DragDropUI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -142,6 +147,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9DB0F11B3C76E37413D0D185E69524AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A38946A207112A39B9C7D9C02594B99F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B2278A804BE6FBE459CA9DF374EA6BBE</key>
 		<dict>
 			<key>primary</key>
@@ -188,6 +203,11 @@
 			<true/>
 		</dict>
 		<key>E2B6D116BD92BBA83B216C5B02603A0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3BD3E1AB9BF49844623B36461BC3070</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import SwiftySound
 
 
 var recordingSession : AVAudioSession!
@@ -52,7 +53,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         ]
         
         //***************************************************************************
-        self.directoryURL()
+        //self.directoryURL()
     }
     
     @IBAction func btnGraba(_ sender: Any) {
@@ -84,7 +85,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     
     @IBAction func btnPlay2(_ sender: Any) {
         
-        
+        /*
         do
         {
             audioPlayer = try AVAudioPlayer(contentsOf: self.directoryURL()! as URL)
@@ -99,6 +100,9 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         catch {
             print("AVAudioPlayer init failed")
         }
+         */
+        
+        Sound.play(url: self.directoryURL()! as URL)
     
     }
     
