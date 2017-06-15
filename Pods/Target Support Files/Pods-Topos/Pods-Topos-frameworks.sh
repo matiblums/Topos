@@ -91,11 +91,13 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AudioPlayerSwift/AudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DragDropUI/DragDropUI.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KDEAudioPlayer/KDEAudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftySound/SwiftySound.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AudioPlayerSwift/AudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DragDropUI/DragDropUI.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KDEAudioPlayer/KDEAudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftySound/SwiftySound.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

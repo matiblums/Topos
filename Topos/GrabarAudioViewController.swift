@@ -10,15 +10,29 @@ import UIKit
 import AVKit
 import AVFoundation
 import SwiftySound
+//import KDEAudioPlayer
+
+import CoreMedia
+import Foundation
 
 
-var recordingSession : AVAudioSession!
-var audioRecorder    :AVAudioRecorder!
-var settings         = [String : Int]()
 
-var audioPlayer : AVAudioPlayer!
+
 class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+    var recordingSession : AVAudioSession!
+    var audioRecorder    :AVAudioRecorder!
+    var settings         = [String : Int]()
+    var audioPlayer : AVAudioPlayer!
+    //var playerGrabado = AudioPlayer()
     
+    @IBOutlet var botonRecOn: UIButton!
+    @IBOutlet var botonPlay: UIButton!
+    @IBOutlet var myProgress: UIProgressView!
+    var updater : CADisplayLink! = nil
+    
+    
+    @IBOutlet var miFondo: UIImageView!
+    @IBOutlet var miTopo: UIImageView!
     
     
     override func viewDidLoad() {
@@ -33,14 +47,14 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
             recordingSession.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
                     if allowed {
-                        print("Allow")
+                        //print("Allow")
                     } else {
-                        print("Dont Allow")
+                        //print("Dont Allow")
                     }
                 }
             }
         } catch {
-            print("failed to record!")
+            //print("failed to record!")
         }
         
         // Audio Settings
@@ -54,11 +68,42 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         //***************************************************************************
         //self.directoryURL()
+        
+        
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        botonPlay.isHidden = true
+        
+        
+        let imgFondo = UserDefaults.standard.string(forKey: "fondo")
+        let imgTopo = UserDefaults.standard.string(forKey: "topo")
+        let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
+        let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
+        let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+        let imageFondo: UIImage = UIImage(named: imgFondo!)!
+        miFondo.image = imageFondo
+        
+        let imageTopo: UIImage = UIImage(named: imgTopo!)!
+        miTopo.image = imageTopo
+        
+        miTopo.frame.origin = pointTopo
+        
     }
     
     @IBAction func btnGraba(_ sender: Any) {
         
         self.startRecording()
+        
+        botonPlay.isHidden = true
+        
+        myProgress.setProgress(0, animated: false)
         
     }
     
@@ -66,11 +111,22 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         self.finishRecording(success: true)
         
+        botonPlay.isHidden = false
+        
     }
     
     
     
     @IBAction func btnPlay(_ sender: Any) {
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+        } catch let error as NSError {
+            print("audioSession error: \(error.localizedDescription)")
+        }
+        
         
        // audioRecorder = try AVAudioRecorder(url: self.directoryURL()! as URL,settings: settings)
         
@@ -81,40 +137,53 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
             audioPlayer.delegate = self
             audioPlayer.play()
         }
+        
+        updater = CADisplayLink(target: self,
+                                        selector: #selector(step))
+        
+        updater.add(to: .current,
+                        forMode: .defaultRunLoopMode)
+        
+        myProgress.setProgress(0, animated: false)
+        
+        botonPlay.isHidden = true
     }
     
-    @IBAction func btnPlay2(_ sender: Any) {
-        
-        /*
-        do
-        {
-            audioPlayer = try AVAudioPlayer(contentsOf: self.directoryURL()! as URL)
-            audioPlayer.prepareToPlay()
-            audioPlayer.volume = 1.0
-            audioPlayer.play()
-        }
-        catch let error as NSError
-        {
-            print(error.localizedDescription)
-        }
-        catch {
-            print("AVAudioPlayer init failed")
-        }
-         */
-        
-        Sound.play(url: self.directoryURL()! as URL)
+ 
     
+    func step(updater: CADisplayLink) {
+        //print(updater.timestamp)
+        let normalizedTime = Float(audioPlayer.currentTime * 1.0 / audioPlayer.duration)
+        
+        myProgress.setProgress(normalizedTime, animated: true)
+        
+        
+       print( myProgress.progress)
+        
+        
+        
     }
     
-  
+    
+    @IBAction func btnSalir(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+        
+    }
     
     //***************************************************************************
     func directoryURL() -> NSURL? {
+        
+        let nombreArchivo = "sound2.m4a"
+        
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = urls[0] as NSURL
-        let soundURL = documentDirectory.appendingPathComponent("sound2.m4a")
-        print(soundURL as Any)
+        let soundURL = documentDirectory.appendingPathComponent(nombreArchivo)
+        
+        UserDefaults.standard.set(nombreArchivo, forKey: "audio")
+        
         return soundURL as NSURL?
     }
     
@@ -138,12 +207,14 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     func finishRecording(success: Bool) {
         audioRecorder.stop()
         if success {
-            print(success)
+            //print(success)
         } else {
             audioRecorder = nil
             print("Somthing Wrong.")
         }
     }
+    
+    
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
@@ -152,8 +223,12 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        print(flag)
+        
+        updater.invalidate()
+        myProgress.setProgress(1, animated: true)
+        botonPlay.isHidden = false
     }
+   
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?){
         print(error.debugDescription)
     }

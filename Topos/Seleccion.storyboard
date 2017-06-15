@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,103 +18,143 @@
                         <viewControllerLayoutGuide type="bottom" id="S3e-b3-8OT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="D4l-6t-05Q">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seleccion.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZL1-Jv-uf8">
-                                <rect key="frame" x="0.0" y="72" width="1024" height="576"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-kz-99L">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-bh-C0x">
-                                <rect key="frame" x="99" y="343" width="129" height="83"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
+                                <rect key="frame" x="155" y="8" width="427" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
+                                    <size key="itemSize" width="200" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6zr-kG-8aV" customClass="SeleccionCollectionViewCell" customModule="Topos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="200" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-tZ-rgx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="200" height="110"/>
+                                        <connections>
+                                            <outlet property="imgGaleria" destination="Hi1-tZ-rgx" id="odc-XC-Eco"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <segue destination="9L9-ip-Rv1" kind="presentation" modalTransitionStyle="crossDissolve" id="MPz-20-USH"/>
+                                    <outlet property="dataSource" destination="cNr-Hu-wUR" id="ic1-5s-hFg"/>
+                                    <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rna-id-pwg">
+                                <rect key="frame" x="237" y="156" width="134" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_topo_vacio"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-5i-0Iu">
-                                <rect key="frame" x="587" y="359" width="129" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-5i-0Iu">
+                                <rect key="frame" x="419" y="153" width="96" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="mzc-et-p2f" kind="presentation" modalTransitionStyle="crossDissolve" id="HjB-xZ-jHQ"/>
-                                </connections>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_musica_vacio"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rna-id-pwg">
-                                <rect key="frame" x="356" y="343" width="129" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jP-G6-PWS">
+                                <rect key="frame" x="559" y="141" width="125" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="4ac-wA-rNa" kind="presentation" modalTransitionStyle="crossDissolve" id="1E6-ub-oMm"/>
-                                </connections>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-5F-n19">
-                                <rect key="frame" x="479" y="545" width="45" height="58"/>
+                                <rect key="frame" x="342" y="326" width="52" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_reproducir_libro"/>
                                 <connections>
-                                    <segue destination="0Bj-wq-eWG" kind="presentation" modalTransitionStyle="crossDissolve" id="RDv-Tj-zZi"/>
+                                    <action selector="elijePelicula:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="fmq-CG-K8M"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jP-G6-PWS">
-                                <rect key="frame" x="839" y="343" width="129" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrx-Tt-4D4">
+                                <rect key="frame" x="40" y="159" width="152" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_fondo_vacio"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-5M-VhI">
+                                <rect key="frame" x="40" y="162" width="152" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_fondo_lleno"/>
                                 <connections>
-                                    <segue destination="ch3-YG-rIf" kind="presentation" modalTransitionStyle="crossDissolve" id="vJX-3X-D9c"/>
+                                    <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="8Ux-Hq-QbA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-G8-ebc">
+                                <rect key="frame" x="237" y="159" width="134" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_topo_lleno"/>
+                                <connections>
+                                    <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="lbX-B3-wRA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-Di-BhM">
+                                <rect key="frame" x="419" y="156" width="96" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_musica_elegido"/>
+                                <connections>
+                                    <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Gdk-td-jcs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-ah-jYb">
+                                <rect key="frame" x="559" y="144" width="125" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_grabar_elegido"/>
+                                <connections>
+                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="dUv-Kr-dGs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAudio" destination="UqJ-ah-jYb" id="oB2-zZ-l2g"/>
+                        <outlet property="btnFondo" destination="i9y-5M-VhI" id="BQk-U1-5w0"/>
+                        <outlet property="btnMusica" destination="cW7-Di-BhM" id="peS-TD-ThU"/>
+                        <outlet property="btnPelicula" destination="OuR-5F-n19" id="KFx-xL-iyx"/>
+                        <outlet property="btnTopo" destination="fe2-G8-ebc" id="d8h-JM-HD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9D-4o-7iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.2421875" y="64.84375"/>
-        </scene>
-        <!--GaleriaFondos-->
-        <scene sceneID="XoX-P2-uwP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GaleriaFondos" id="9L9-ip-Rv1" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75E-Wk-iNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="45" y="581"/>
-        </scene>
-        <!--GaleriaTopos-->
-        <scene sceneID="i59-Es-isz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GaleriaTopos" id="4ac-wA-rNa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cYc-Fw-ZHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="170" y="685"/>
-        </scene>
-        <!--GrabarAudio-->
-        <scene sceneID="Mvj-dC-azB">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GrabarAudio" id="ch3-YG-rIf" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YrZ-PW-hrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="604" y="580"/>
-        </scene>
-        <!--GaleriaMusica-->
-        <scene sceneID="JxY-bA-omH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GaleriaMusica" id="mzc-et-p2f" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xqk-F4-XzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="413" y="580"/>
-        </scene>
-        <!--Pelicula-->
-        <scene sceneID="sIf-dY-gSH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Pelicula" id="0Bj-wq-eWG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j3u-Ib-SeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="373" y="704"/>
+            <point key="canvasLocation" x="372.554347826087" y="63.768115942028992"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Seleccion.jpeg" width="1280" height="720"/>
+        <image name="bt_fondo_lleno" width="390" height="250"/>
+        <image name="bt_fondo_vacio" width="392" height="252"/>
+        <image name="bt_grabar_elegido" width="320" height="340"/>
+        <image name="bt_grabar_vacio" width="321" height="341"/>
+        <image name="bt_musica_elegido" width="239" height="274"/>
+        <image name="bt_musica_vacio" width="243" height="277"/>
+        <image name="bt_reproducir_libro" width="137" height="180"/>
+        <image name="bt_topo_lleno" width="346" height="257"/>
+        <image name="bt_topo_vacio" width="346" height="260"/>
+        <image name="fondo" width="1922" height="1080"/>
     </resources>
 </document>

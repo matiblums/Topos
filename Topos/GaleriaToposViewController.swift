@@ -17,8 +17,10 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var miTopo: DDImageView!
     
+    @IBOutlet weak var miFondo: UIImageView!
     
-    var items = ["topos1.png", "topos2.png", "topos3.png", "topos4.png", "topos5.png", "topos6.png", "topos7.png", "topos8.png", "topos9.png", "topos10.png", "topos11.png", "topos12.png", "topos13.png", "topos14.png", "topos15.png", "topos16.png", "topos17.png", "topos18.png", "topos19.png"]
+    
+    var items = ["topos1", "topos2", "topos3", "topos4", "topos5", "topos6", "topos7", "topos8", "topos9", "topos10", "topos11", "topos12", "topos13", "topos14", "topos15", "topos16", "topos17", "topos18", "topos19"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,17 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miTopo.ddDelegate = self
         
         // Do any additional setup after loading the view.
+        
+        let fondoGuardado = UserDefaults.standard.string(forKey: "fondo")
+        let image: UIImage = UIImage(named: fondoGuardado!)!
+        miFondo.image = image
+        
+        //let imgSel = self.items[0]
+        //let imageTopo: UIImage = UIImage(named: imgSel)!
+        //miTopo.image = imageTopo
+        //let pointTopo = CGPoint(x: 100, y: 100)
+        //miTopo.frame.origin = pointTopo
+        
     }
     
     func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
@@ -34,7 +47,28 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
         print("Dropped Point : ", droppedPoint)
+        
+        
+        
+        
+        
+       
     }
+    
+    @IBAction func btnSalir(_ sender: Any) {
+       // let miY = miTopo.frame.origin.y
+       // let miX = miTopo.frame.origin.x
+        
+        
+        UserDefaults.standard.set(miTopo.frame.origin.x, forKey: "topox")
+        UserDefaults.standard.set(miTopo.frame.origin.y, forKey: "topoy")
+        
+        
+        dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,14 +92,10 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! GaleriaToposCollectionViewCell
         
-        
-        let image: UIImage = UIImage(named: self.items[indexPath.item])!
+        let imgSel = self.items[indexPath.item]
+        let image: UIImage = UIImage(named: imgSel)!
         
         cell.imgGaleria.image = image
-        
-        //cell.myLabel.text = self.items[indexPath.item]
-        //cell.backgroundColor = UIColor.cyan
-        
         
         
         return cell
@@ -73,9 +103,11 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let image: UIImage = UIImage(named: self.items[indexPath.item])!
+        let imgSel = self.items[indexPath.item]
+        let image: UIImage = UIImage(named: imgSel)!
         miTopo.image = image
         
+        UserDefaults.standard.set(imgSel, forKey: "topo")
     }
     
     

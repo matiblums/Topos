@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lHu-Sj-jnG">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,23 +12,23 @@
         <!--Galeria Topos View Controller-->
         <scene sceneID="Mwd-Ib-V0R">
             <objects>
-                <viewController id="lHu-Sj-jnG" customClass="GaleriaToposViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GaleriaTopos" id="lHu-Sj-jnG" customClass="GaleriaToposViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WuU-lS-bhW"/>
                         <viewControllerLayoutGuide type="bottom" id="cyK-Hc-shZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e0F-qC-KFH">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="THe-iS-eHO">
-                                <rect key="frame" x="-1" y="116" width="1025" height="576"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THe-iS-eHO">
+                                <rect key="frame" x="-1" y="0.0" width="737" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="krc-nQ-ARO">
-                                <rect key="frame" x="-1" y="116" width="1025" height="146"/>
+                                <rect key="frame" x="40" y="20" width="654" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="har-9T-RuM">
                                     <size key="itemSize" width="110" height="132"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -60,39 +60,31 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-Zd-vkx">
-                                <rect key="frame" x="958" y="718" width="46" height="30"/>
+                                <rect key="frame" x="656" y="334" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="ok_verde"/>
                                 <connections>
-                                    <segue destination="1ma-b7-qQZ" kind="presentation" modalTransitionStyle="crossDissolve" id="DaU-fd-X8h"/>
+                                    <action selector="btnSalir:" destination="lHu-Sj-jnG" eventType="touchUpInside" id="mhJ-wt-wuq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topos1.png" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-4K-x4V" customClass="DDImageView" customModule="DragDropUI">
-                                <rect key="frame" x="386" y="384" width="240" height="237"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-4K-x4V" customClass="DDImageView" customModule="DragDropUI">
+                                <rect key="frame" x="268" y="107" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="miFondo" destination="THe-iS-eHO" id="lU7-xW-FDV"/>
                         <outlet property="miTopo" destination="6aP-4K-x4V" id="ri4-pS-oWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRm-p1-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.75" y="157.8125"/>
-        </scene>
-        <!--Seleccion-->
-        <scene sceneID="AvQ-JQ-IsJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Seleccion" id="1ma-b7-qQZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kPw-Kz-4pK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-18" y="639"/>
+            <point key="canvasLocation" x="-18.75" y="156.52173913043478"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fondo1.jpg" width="3000" height="1506"/>
-        <image name="topos1.png" width="926" height="1049"/>
+        <image name="ok_verde" width="130" height="130"/>
     </resources>
 </document>

@@ -17,7 +17,7 @@
 		165A0C581EE71B2B000A6788 /* ta6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 165A0C501EE71B2B000A6788 /* ta6.wav */; };
 		165A0C591EE71B2B000A6788 /* ta7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 165A0C511EE71B2B000A6788 /* ta7.wav */; };
 		165A0C5A1EE71B2B000A6788 /* ta8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 165A0C521EE71B2B000A6788 /* ta8.wav */; };
-		165A0C5C1EE73822000A6788 /* clave.png in Resources */ = {isa = PBXBuildFile; fileRef = 165A0C5B1EE73822000A6788 /* clave.png */; };
+		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
 		16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */; };
@@ -38,39 +38,10 @@
 		16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */; };
 		16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170C1EE093E5008A9B17 /* pelicula.jpeg */; };
 		16AF170F1EE093F0008A9B17 /* MisCuentos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */; };
-		16AF171B1EE0F74B008A9B17 /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17111EE0F74B008A9B17 /* fondo1.jpg */; };
-		16AF171C1EE0F74B008A9B17 /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17121EE0F74B008A9B17 /* fondo2.jpg */; };
-		16AF171D1EE0F74B008A9B17 /* fondo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17131EE0F74B008A9B17 /* fondo3.jpg */; };
-		16AF171E1EE0F74B008A9B17 /* fondo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17141EE0F74B008A9B17 /* fondo4.jpg */; };
-		16AF171F1EE0F74B008A9B17 /* fondo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17151EE0F74B008A9B17 /* fondo5.jpg */; };
-		16AF17201EE0F74B008A9B17 /* fondo6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17161EE0F74B008A9B17 /* fondo6.jpg */; };
-		16AF17211EE0F74B008A9B17 /* fondo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17171EE0F74B008A9B17 /* fondo7.jpg */; };
-		16AF17221EE0F74B008A9B17 /* fondo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17181EE0F74B008A9B17 /* fondo8.jpg */; };
-		16AF17231EE0F74B008A9B17 /* fondo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17191EE0F74B008A9B17 /* fondo9.jpg */; };
-		16AF17241EE0F74B008A9B17 /* fondo10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF171A1EE0F74B008A9B17 /* fondo10.jpg */; };
 		16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */; };
 		16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */; };
 		16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */; };
 		16BC26C21EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */; };
-		16BC26D91EE36BC9009C2688 /* topos1.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26C61EE36BC9009C2688 /* topos1.png */; };
-		16BC26DA1EE36BC9009C2688 /* topos2.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26C71EE36BC9009C2688 /* topos2.png */; };
-		16BC26DB1EE36BC9009C2688 /* topos3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26C81EE36BC9009C2688 /* topos3.png */; };
-		16BC26DC1EE36BC9009C2688 /* topos4.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26C91EE36BC9009C2688 /* topos4.png */; };
-		16BC26DD1EE36BC9009C2688 /* topos5.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CA1EE36BC9009C2688 /* topos5.png */; };
-		16BC26DE1EE36BC9009C2688 /* topos6.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CB1EE36BC9009C2688 /* topos6.png */; };
-		16BC26DF1EE36BC9009C2688 /* topos7.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CC1EE36BC9009C2688 /* topos7.png */; };
-		16BC26E01EE36BC9009C2688 /* topos8.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CD1EE36BC9009C2688 /* topos8.png */; };
-		16BC26E11EE36BC9009C2688 /* topos9.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CE1EE36BC9009C2688 /* topos9.png */; };
-		16BC26E21EE36BC9009C2688 /* topos10.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26CF1EE36BC9009C2688 /* topos10.png */; };
-		16BC26E31EE36BC9009C2688 /* topos11.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D01EE36BC9009C2688 /* topos11.png */; };
-		16BC26E41EE36BC9009C2688 /* topos12.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D11EE36BC9009C2688 /* topos12.png */; };
-		16BC26E51EE36BC9009C2688 /* topos13.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D21EE36BC9009C2688 /* topos13.png */; };
-		16BC26E61EE36BC9009C2688 /* topos14.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D31EE36BC9009C2688 /* topos14.png */; };
-		16BC26E71EE36BC9009C2688 /* topos15.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D41EE36BC9009C2688 /* topos15.png */; };
-		16BC26E81EE36BC9009C2688 /* topos16.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D51EE36BC9009C2688 /* topos16.png */; };
-		16BC26E91EE36BC9009C2688 /* topos17.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D61EE36BC9009C2688 /* topos17.png */; };
-		16BC26EA1EE36BC9009C2688 /* topos18.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D71EE36BC9009C2688 /* topos18.png */; };
-		16BC26EB1EE36BC9009C2688 /* topos19.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26D81EE36BC9009C2688 /* topos19.png */; };
 		16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */; };
 		16BC26EF1EE45B6F009C2688 /* SeleccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */; };
 		16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */; };
@@ -123,7 +94,7 @@
 		165A0C501EE71B2B000A6788 /* ta6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ta6.wav; sourceTree = "<group>"; };
 		165A0C511EE71B2B000A6788 /* ta7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ta7.wav; sourceTree = "<group>"; };
 		165A0C521EE71B2B000A6788 /* ta8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ta8.wav; sourceTree = "<group>"; };
-		165A0C5B1EE73822000A6788 /* clave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clave.png; sourceTree = "<group>"; };
+		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
 		16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.02.49.jpeg"; sourceTree = "<group>"; };
@@ -144,39 +115,10 @@
 		16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.06.27.jpeg"; sourceTree = "<group>"; };
 		16AF170C1EE093E5008A9B17 /* pelicula.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pelicula.jpeg; sourceTree = "<group>"; };
 		16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MisCuentos.jpeg; sourceTree = "<group>"; };
-		16AF17111EE0F74B008A9B17 /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo1.jpg; sourceTree = "<group>"; };
-		16AF17121EE0F74B008A9B17 /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
-		16AF17131EE0F74B008A9B17 /* fondo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo3.jpg; sourceTree = "<group>"; };
-		16AF17141EE0F74B008A9B17 /* fondo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo4.jpg; sourceTree = "<group>"; };
-		16AF17151EE0F74B008A9B17 /* fondo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo5.jpg; sourceTree = "<group>"; };
-		16AF17161EE0F74B008A9B17 /* fondo6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo6.jpg; sourceTree = "<group>"; };
-		16AF17171EE0F74B008A9B17 /* fondo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo7.jpg; sourceTree = "<group>"; };
-		16AF17181EE0F74B008A9B17 /* fondo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo8.jpg; sourceTree = "<group>"; };
-		16AF17191EE0F74B008A9B17 /* fondo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo9.jpg; sourceTree = "<group>"; };
-		16AF171A1EE0F74B008A9B17 /* fondo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo10.jpg; sourceTree = "<group>"; };
 		16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaFondos.storyboard; sourceTree = "<group>"; };
 		16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosCollectionViewCell.swift; sourceTree = "<group>"; };
 		16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTopos.storyboard; sourceTree = "<group>"; };
 		16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaToposCollectionViewCell.swift; sourceTree = "<group>"; };
-		16BC26C61EE36BC9009C2688 /* topos1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos1.png; sourceTree = "<group>"; };
-		16BC26C71EE36BC9009C2688 /* topos2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos2.png; sourceTree = "<group>"; };
-		16BC26C81EE36BC9009C2688 /* topos3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos3.png; sourceTree = "<group>"; };
-		16BC26C91EE36BC9009C2688 /* topos4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos4.png; sourceTree = "<group>"; };
-		16BC26CA1EE36BC9009C2688 /* topos5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos5.png; sourceTree = "<group>"; };
-		16BC26CB1EE36BC9009C2688 /* topos6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos6.png; sourceTree = "<group>"; };
-		16BC26CC1EE36BC9009C2688 /* topos7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos7.png; sourceTree = "<group>"; };
-		16BC26CD1EE36BC9009C2688 /* topos8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos8.png; sourceTree = "<group>"; };
-		16BC26CE1EE36BC9009C2688 /* topos9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos9.png; sourceTree = "<group>"; };
-		16BC26CF1EE36BC9009C2688 /* topos10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos10.png; sourceTree = "<group>"; };
-		16BC26D01EE36BC9009C2688 /* topos11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos11.png; sourceTree = "<group>"; };
-		16BC26D11EE36BC9009C2688 /* topos12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos12.png; sourceTree = "<group>"; };
-		16BC26D21EE36BC9009C2688 /* topos13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos13.png; sourceTree = "<group>"; };
-		16BC26D31EE36BC9009C2688 /* topos14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos14.png; sourceTree = "<group>"; };
-		16BC26D41EE36BC9009C2688 /* topos15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos15.png; sourceTree = "<group>"; };
-		16BC26D51EE36BC9009C2688 /* topos16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos16.png; sourceTree = "<group>"; };
-		16BC26D61EE36BC9009C2688 /* topos17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos17.png; sourceTree = "<group>"; };
-		16BC26D71EE36BC9009C2688 /* topos18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos18.png; sourceTree = "<group>"; };
-		16BC26D81EE36BC9009C2688 /* topos19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos19.png; sourceTree = "<group>"; };
 		16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Seleccion.storyboard; sourceTree = "<group>"; };
 		16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionViewController.swift; sourceTree = "<group>"; };
 		16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosViewController.swift; sourceTree = "<group>"; };
@@ -253,8 +195,8 @@
 			children = (
 				16EA3D2E1EDD971700B30D72 /* Main.storyboard */,
 				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
-				16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */,
 				16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */,
+				16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */,
 				16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */,
 				167678921EE4D2F900EED638 /* GrabarAudio.storyboard */,
 				160F45471EE4E9A400980DEB /* Pelicula.storyboard */,
@@ -266,27 +208,33 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				16AC4A581EF18251004011F5 /* Cell */,
 				16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */,
-				16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */,
+				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */,
-				16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */,
-				16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */,
-				16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */,
 				16BC26F21EE49A81009C2688 /* GaleriaToposViewController.swift */,
+				16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
 				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
-				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16EA3D2C1EDD971700B30D72 /* ViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
 		};
+		16AC4A581EF18251004011F5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */,
+				16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */,
+				16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */,
+				1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		16AF16EB1EE07B27008A9B17 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
-				165A0C5B1EE73822000A6788 /* clave.png */,
-				16BC26C51EE36B59009C2688 /* topos */,
-				16AF17101EE0F740008A9B17 /* fondos */,
 				16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */,
 				16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */,
 				16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */,
@@ -307,49 +255,6 @@
 				16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */,
 			);
 			name = imagenes;
-			sourceTree = "<group>";
-		};
-		16AF17101EE0F740008A9B17 /* fondos */ = {
-			isa = PBXGroup;
-			children = (
-				16AF17111EE0F74B008A9B17 /* fondo1.jpg */,
-				16AF17121EE0F74B008A9B17 /* fondo2.jpg */,
-				16AF17131EE0F74B008A9B17 /* fondo3.jpg */,
-				16AF17141EE0F74B008A9B17 /* fondo4.jpg */,
-				16AF17151EE0F74B008A9B17 /* fondo5.jpg */,
-				16AF17161EE0F74B008A9B17 /* fondo6.jpg */,
-				16AF17171EE0F74B008A9B17 /* fondo7.jpg */,
-				16AF17181EE0F74B008A9B17 /* fondo8.jpg */,
-				16AF17191EE0F74B008A9B17 /* fondo9.jpg */,
-				16AF171A1EE0F74B008A9B17 /* fondo10.jpg */,
-			);
-			name = fondos;
-			sourceTree = "<group>";
-		};
-		16BC26C51EE36B59009C2688 /* topos */ = {
-			isa = PBXGroup;
-			children = (
-				16BC26C61EE36BC9009C2688 /* topos1.png */,
-				16BC26C71EE36BC9009C2688 /* topos2.png */,
-				16BC26C81EE36BC9009C2688 /* topos3.png */,
-				16BC26C91EE36BC9009C2688 /* topos4.png */,
-				16BC26CA1EE36BC9009C2688 /* topos5.png */,
-				16BC26CB1EE36BC9009C2688 /* topos6.png */,
-				16BC26CC1EE36BC9009C2688 /* topos7.png */,
-				16BC26CD1EE36BC9009C2688 /* topos8.png */,
-				16BC26CE1EE36BC9009C2688 /* topos9.png */,
-				16BC26CF1EE36BC9009C2688 /* topos10.png */,
-				16BC26D01EE36BC9009C2688 /* topos11.png */,
-				16BC26D11EE36BC9009C2688 /* topos12.png */,
-				16BC26D21EE36BC9009C2688 /* topos13.png */,
-				16BC26D31EE36BC9009C2688 /* topos14.png */,
-				16BC26D41EE36BC9009C2688 /* topos15.png */,
-				16BC26D51EE36BC9009C2688 /* topos16.png */,
-				16BC26D61EE36BC9009C2688 /* topos17.png */,
-				16BC26D71EE36BC9009C2688 /* topos18.png */,
-				16BC26D81EE36BC9009C2688 /* topos19.png */,
-			);
-			name = topos;
 			sourceTree = "<group>";
 		};
 		16EA3D1E1EDD971700B30D72 = {
@@ -550,67 +455,37 @@
 				16AF17051EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg in Resources */,
 				16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
-				16AF17201EE0F74B008A9B17 /* fondo6.jpg in Resources */,
-				16AF171D1EE0F74B008A9B17 /* fondo3.jpg in Resources */,
 				16AF16F71EE09313008A9B17 /* Galeriafondos.jpeg in Resources */,
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				165A0C581EE71B2B000A6788 /* ta6.wav in Resources */,
 				165A0C591EE71B2B000A6788 /* ta7.wav in Resources */,
-				16BC26D91EE36BC9009C2688 /* topos1.png in Resources */,
-				16AF17211EE0F74B008A9B17 /* fondo7.jpg in Resources */,
 				160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */,
-				16BC26E71EE36BC9009C2688 /* topos15.png in Resources */,
-				16BC26E31EE36BC9009C2688 /* topos11.png in Resources */,
-				16AF17221EE0F74B008A9B17 /* fondo8.jpg in Resources */,
 				165A0C5A1EE71B2B000A6788 /* ta8.wav in Resources */,
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
-				165A0C5C1EE73822000A6788 /* clave.png in Resources */,
-				16BC26E11EE36BC9009C2688 /* topos9.png in Resources */,
 				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
 				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
-				16AF171B1EE0F74B008A9B17 /* fondo1.jpg in Resources */,
 				16AF16F51EE092A0008A9B17 /* Seleccion.jpeg in Resources */,
-				16AF17231EE0F74B008A9B17 /* fondo9.jpg in Resources */,
 				16AF16FD1EE09365008A9B17 /* GaleriaTopos.jpeg in Resources */,
-				16BC26E01EE36BC9009C2688 /* topos8.png in Resources */,
 				165A0C561EE71B2B000A6788 /* ta4.wav in Resources */,
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16AF16F31EE09228008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.23.jpeg in Resources */,
-				16AF171C1EE0F74B008A9B17 /* fondo2.jpg in Resources */,
-				16BC26E21EE36BC9009C2688 /* topos10.png in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
-				16AF171F1EE0F74B008A9B17 /* fondo5.jpg in Resources */,
-				16BC26E41EE36BC9009C2688 /* topos12.png in Resources */,
 				16AF170F1EE093F0008A9B17 /* MisCuentos.jpeg in Resources */,
 				165A0C571EE71B2B000A6788 /* ta5.wav in Resources */,
-				16BC26E61EE36BC9009C2688 /* topos14.png in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
-				16BC26DF1EE36BC9009C2688 /* topos7.png in Resources */,
-				16BC26E81EE36BC9009C2688 /* topos16.png in Resources */,
-				16BC26DC1EE36BC9009C2688 /* topos4.png in Resources */,
-				16BC26DE1EE36BC9009C2688 /* topos6.png in Resources */,
-				16BC26DA1EE36BC9009C2688 /* topos2.png in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
-				16BC26E51EE36BC9009C2688 /* topos13.png in Resources */,
-				16AF17241EE0F74B008A9B17 /* fondo10.jpg in Resources */,
-				16AF171E1EE0F74B008A9B17 /* fondo4.jpg in Resources */,
-				16BC26DB1EE36BC9009C2688 /* topos3.png in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
 				16EA3D301EDD971700B30D72 /* Main.storyboard in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,
-				16BC26EB1EE36BC9009C2688 /* topos19.png in Resources */,
 				16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */,
 				165A0C541EE71B2B000A6788 /* ta2.wav in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				165A0C531EE71B2B000A6788 /* ta1.wav in Resources */,
-				16BC26E91EE36BC9009C2688 /* topos17.png in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
-				16BC26EA1EE36BC9009C2688 /* topos18.png in Resources */,
 				16AF17071EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg in Resources */,
-				16BC26DD1EE36BC9009C2688 /* topos5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */,
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,

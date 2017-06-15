@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c8z-Zq-Eck">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,70 +12,78 @@
         <!--Grabar Audio View Controller-->
         <scene sceneID="eF5-cl-Qc4">
             <objects>
-                <viewController id="c8z-Zq-Eck" customClass="GrabarAudioViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrabarAudio" id="c8z-Zq-Eck" customClass="GrabarAudioViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vyq-Qc-i00"/>
                         <viewControllerLayoutGuide type="bottom" id="evu-RH-OYg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zcn-hG-nOl">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-PB-NIz">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-ZV-KWs">
-                                <rect key="frame" x="958" y="718" width="46" height="30"/>
+                                <rect key="frame" x="656" y="334" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Volver"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="ok_verde"/>
                                 <connections>
-                                    <segue destination="tvd-Cs-9GJ" kind="presentation" modalTransitionStyle="crossDissolve" id="cIv-Zu-vAg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-7j-NRs">
-                                <rect key="frame" x="463" y="125" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="btnGraba:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="3rW-fP-gL3"/>
+                                    <action selector="btnSalir:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="hCy-lJ-YQG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-e2-BD8">
-                                <rect key="frame" x="463" y="211" width="46" height="30"/>
+                                <rect key="frame" x="88" y="334" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="play_musica">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="btnPlay:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="ZPD-IR-xcu"/>
+                                    <action selector="btnPlay:" destination="c8z-Zq-Eck" eventType="touchDown" id="yaY-07-XkT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO4-sS-ZlP">
-                                <rect key="frame" x="442" y="407" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-7j-NRs">
+                                <rect key="frame" x="20" y="334" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="grabando">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="btnPlay2:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="cwR-eC-ni0"/>
+                                    <action selector="btnGraba:" destination="c8z-Zq-Eck" eventType="touchDown" id="Pq5-PO-4E7"/>
+                                    <action selector="btnGrabaStop:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="ZXf-y0-Jnv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-ud-HGt">
-                                <rect key="frame" x="540" y="125" width="46" height="30"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-Yo-7jh">
+                                <rect key="frame" x="182" y="363" width="373" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="btnGrabaStop:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="xDk-XC-qyw"/>
-                                </connections>
-                            </button>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wvR-Vs-WSt">
+                                <rect key="frame" x="268" y="107" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="botonPlay" destination="YJj-e2-BD8" id="qLe-DB-x00"/>
+                        <outlet property="botonRecOn" destination="MuZ-7j-NRs" id="ouL-Yx-3K1"/>
+                        <outlet property="miFondo" destination="ZE3-PB-NIz" id="htW-ER-nWm"/>
+                        <outlet property="miTopo" destination="wvR-Vs-WSt" id="W9f-HR-x3I"/>
+                        <outlet property="myProgress" destination="cCt-Yo-7jh" id="SEw-MF-L6W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma7-Ih-BLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="170"/>
-        </scene>
-        <!--Seleccion-->
-        <scene sceneID="qUZ-7Y-h0v">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Seleccion" id="tvd-Cs-9GJ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hUc-1C-as5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="456" y="694"/>
+            <point key="canvasLocation" x="234.78260869565219" y="168.11594202898553"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grabando" width="130" height="130"/>
+        <image name="ok_verde" width="130" height="130"/>
+        <image name="play_musica" width="130" height="129"/>
+    </resources>
 </document>

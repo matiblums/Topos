@@ -11,18 +11,30 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet weak var miFondo: UIImageView!
 
-    var items = ["fondo1.jpg", "fondo2.jpg", "fondo3.jpg", "fondo4.jpg", "fondo5.jpg", "fondo6.jpg", "fondo7.jpg", "fondo8.jpg", "fondo9.jpg", "fondo10.jpg",]
+    var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6", "fondo7", "fondo8", "fondo9", "fondo10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //let imgSel = self.items[0]
+        //let image: UIImage = UIImage(named: imgSel)!
+        //miFondo.image = image
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func btnSalir(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+        
     }
     
 
@@ -42,15 +54,22 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
                                                       for: indexPath) as! GaleriaFondosCollectionViewCell
         
         
-        let image: UIImage = UIImage(named: self.items[indexPath.item])!
+        let imgSel = self.items[indexPath.item]
+        let image: UIImage = UIImage(named: imgSel)!
         
         cell.imgGaleria.image = image
         
-        //cell.myLabel.text = self.items[indexPath.item]
-        //cell.backgroundColor = UIColor.cyan
         
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let imgSel = self.items[indexPath.item]
+        let image: UIImage = UIImage(named: imgSel)!
+        miFondo.image = image
+        
+        UserDefaults.standard.set(imgSel, forKey: "fondo")
+    }
 
 }
