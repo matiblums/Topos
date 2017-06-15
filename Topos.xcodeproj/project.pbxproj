@@ -50,7 +50,6 @@
 		16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */; };
 		16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */; };
 		16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */; };
-		16EA3D2D1EDD971700B30D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D2C1EDD971700B30D72 /* ViewController.swift */; };
 		16EA3D301EDD971700B30D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D2E1EDD971700B30D72 /* Main.storyboard */; };
 		16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */; };
 		16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D341EDD971700B30D72 /* Assets.xcassets */; };
@@ -128,7 +127,6 @@
 		16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaMusicaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16EA3D271EDD971700B30D72 /* Topos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16EA3D2C1EDD971700B30D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16EA3D2F1EDD971700B30D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16EA3D321EDD971700B30D72 /* Topos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Topos.xcdatamodel; sourceTree = "<group>"; };
 		16EA3D341EDD971700B30D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
 				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
-				16EA3D2C1EDD971700B30D72 /* ViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -652,7 +649,6 @@
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
-				16EA3D2D1EDD971700B30D72 /* ViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
 				16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */,
 				16BC26F51EE49CB0009C2688 /* GaleriaMusicaViewController.swift in Sources */,
