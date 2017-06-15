@@ -124,6 +124,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
        // UserDefaults.standard.set(imgSel, forKey: "fondo")
         
+        
         borraDatos()
         
     }
