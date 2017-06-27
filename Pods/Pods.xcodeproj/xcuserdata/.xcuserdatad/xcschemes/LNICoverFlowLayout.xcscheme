@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0DDD99F4DB5AD4C0841BAC3C83E04421'
-               BlueprintName = 'Pods-Topos'
+               BlueprintIdentifier = '254BCBF5BB02ED2B6CC8365B73E798C2'
+               BlueprintName = 'LNICoverFlowLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Topos.framework'>
+               BuildableName = 'LNICoverFlowLayout.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

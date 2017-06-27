@@ -12,6 +12,8 @@ target 'Topos' do
   pod 'DragDropUI'
   pod 'AudioPlayerSwift'
   pod 'KDEAudioPlayer'
+  pod 'LNICoverFlowLayout'
+  
 
   target 'ToposTests' do
     inherit! :search_paths

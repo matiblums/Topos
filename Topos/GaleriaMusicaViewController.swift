@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftySound
+//import SwiftySound
 import KDEAudioPlayer
 
 private let reuseIdentifier = "Cell"
@@ -73,12 +73,14 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
     
     @IBAction func btnPausa(_ sender: Any) {
         
-        Sound.stop(file: tocado)
+        
+        //Sound.stop(file: tocado)
         //Sound.stopAll()
     }
     
     @IBAction func btnSalir(_ sender: Any) {
         
+        playerFondo.stop()
         dismiss(animated: true, completion: nil)
         
         

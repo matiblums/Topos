@@ -12,16 +12,25 @@ private let reuseIdentifier = "Cell"
 
 class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+
     @IBOutlet weak var miFondo: UIImageView!
+    @IBOutlet weak var miGaleria: UICollectionView!
+    
+    @IBOutlet weak var miFondoBotonera: UIView!
 
     var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6", "fondo7", "fondo8", "fondo9", "fondo10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //let imgSel = self.items[0]
-        //let image: UIImage = UIImage(named: imgSel)!
-        //miFondo.image = image
+        
+        let imgSel = self.items[0]
+        let image: UIImage = UIImage(named: imgSel)!
+        miFondo.image = image
+        
+        miGaleria.isHidden = false
+        miFondoBotonera.isHidden = true
+        miFondo.isHidden = true
         
     }
 
@@ -37,7 +46,16 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
         
     }
     
-
+    @IBAction func muestraFondo(_ sender: Any) {
+        
+        miGaleria.isHidden = false
+        miFondoBotonera.isHidden = true
+        miFondo.isHidden = true
+        
+    }
+    
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -68,6 +86,10 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
         let imgSel = self.items[indexPath.item]
         let image: UIImage = UIImage(named: imgSel)!
         miFondo.image = image
+        
+        miGaleria.isHidden = true
+        miFondoBotonera.isHidden = false
+        miFondo.isHidden = false
         
         UserDefaults.standard.set(imgSel, forKey: "fondo")
     }

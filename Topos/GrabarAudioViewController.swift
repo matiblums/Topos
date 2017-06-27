@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
-import SwiftySound
+//import SwiftySound
 //import KDEAudioPlayer
 
 import CoreMedia
@@ -166,6 +166,11 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     
     
     @IBAction func btnSalir(_ sender: Any) {
+        
+        if((audioPlayer) != nil){
+            audioPlayer.stop()
+        }
+        
         
         dismiss(animated: true, completion: nil)
         

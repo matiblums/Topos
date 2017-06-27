@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import LNICoverFlowLayout
 
 private let reuseIdentifier = "Cell"
 
 class SeleccionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6", "fondo7", "fondo8", "fondo9", "fondo10"]
+    var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6"]
+    @IBOutlet var myView: UICollectionView?
+    @IBOutlet var flowLayout: LNICoverFlowLayout?
     
     @IBOutlet var btnFondo: UIButton!
     @IBOutlet var btnTopo: UIButton!
@@ -22,19 +25,45 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        myView?.dataSource = self
+        //myView?.backgroundColor = UIColor.white
+        
+        flowLayout?.maxCoverDegree = 0
+        flowLayout?.coverDensity = 0.25
+        flowLayout?.minCoverScale = 0.50
+        flowLayout?.minCoverOpacity = 0.7
+        
+        borraDatos()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
         cargaBotones ()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func agregaPagina(_ sender: Any) {
+        
+        items.append("fondo0")
+        
+        self.myView?.reloadData()
+        
+        if(items.count>2){
+            myView?.scrollToItem(at: IndexPath(item: items.count-1, section: 0), at: .left, animated: true)
+        }
+        
+        
+        
+        
+        
+      
     }
     
     //*****************************************************************************************

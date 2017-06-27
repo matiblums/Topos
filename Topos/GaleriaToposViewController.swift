@@ -19,6 +19,10 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var miFondo: UIImageView!
     
+    @IBOutlet weak var miGaleria: UICollectionView!
+    
+     @IBOutlet weak var miFondoBotonera: UIView!
+    
     
     var items = ["topos1", "topos2", "topos3", "topos4", "topos5", "topos6", "topos7", "topos8", "topos9", "topos10", "topos11", "topos12", "topos13", "topos14", "topos15", "topos16", "topos17", "topos18", "topos19"]
 
@@ -38,6 +42,11 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         //miTopo.image = imageTopo
         //let pointTopo = CGPoint(x: 100, y: 100)
         //miTopo.frame.origin = pointTopo
+        
+        
+        miGaleria.isHidden = false
+        miFondoBotonera.isHidden = true
+        miTopo.isHidden = true
         
     }
     
@@ -69,6 +78,13 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         
     }
     
+    @IBAction func muestraTopos(_ sender: Any) {
+        
+        miGaleria.isHidden = false
+        miFondoBotonera.isHidden = true
+        miTopo.isHidden = true
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,6 +122,10 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         let imgSel = self.items[indexPath.item]
         let image: UIImage = UIImage(named: imgSel)!
         miTopo.image = image
+        
+        miGaleria.isHidden = true
+        miFondoBotonera.isHidden = false
+        miTopo.isHidden = false
         
         UserDefaults.standard.set(imgSel, forKey: "topo")
     }
