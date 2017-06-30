@@ -59,40 +59,48 @@
                                     <outlet property="delegate" destination="caz-zG-3zB" id="XTT-hm-wng"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_abajo_fondos" translatesAutoresizingMaskIntoConstraints="NO" id="3E7-qg-BCM">
-                                <rect key="frame" x="0.0" y="315" width="736" height="92"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-Ez-a8a">
                                 <rect key="frame" x="268" y="107" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-Wq-sRw">
-                                <rect key="frame" x="20" y="334" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" backgroundImage="play_musica"/>
-                                <connections>
-                                    <action selector="btnPlay:" destination="caz-zG-3zB" eventType="touchUpInside" id="uw8-dr-9Kf"/>
-                                </connections>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgW-VH-Yzu">
-                                <rect key="frame" x="118" y="363" width="500" height="2"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTN-wh-1H1">
-                                <rect key="frame" x="656" y="334" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal" backgroundImage="ok_verde">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnSalir:" destination="caz-zG-3zB" eventType="touchUpInside" id="qda-i5-xfB"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAP-lK-qFL">
+                                <rect key="frame" x="0.0" y="322" width="736" height="92"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_abajo_fondos" translatesAutoresizingMaskIntoConstraints="NO" id="3E7-qg-BCM">
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgW-VH-Yzu">
+                                        <rect key="frame" x="118" y="45" width="500" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTN-wh-1H1">
+                                        <rect key="frame" x="658" y="16" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" backgroundImage="ok_verde">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSalir:" destination="caz-zG-3zB" eventType="touchUpInside" id="qda-i5-xfB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-Wq-sRw" userLabel="Button play">
+                                        <rect key="frame" x="20" y="16" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" backgroundImage="play_musica"/>
+                                        <connections>
+                                            <action selector="btnPlay:" destination="caz-zG-3zB" eventType="touchUpInside" id="uw8-dr-9Kf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="botonOK" destination="jAP-lK-qFL" id="7Zn-Ru-HIb"/>
                         <outlet property="miFondo" destination="ORz-vf-EN2" id="1Gr-0H-yO2"/>
                         <outlet property="miProgress" destination="wgW-VH-Yzu" id="b7R-he-CqB"/>
                         <outlet property="miTopo" destination="eJf-Ez-a8a" id="iVl-R0-VUz"/>

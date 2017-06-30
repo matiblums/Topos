@@ -14,6 +14,8 @@ private let reuseIdentifier = "Cell"
 
 class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AudioPlayerDelegate {
     
+    @IBOutlet var botonOK: UIView!
+    
     var items = ["cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente"]
     
     var itemsSounds = ["ta1", "ta2", "ta3", "ta4", "ta5", "ta6", "ta7", "ta8"]
@@ -35,7 +37,7 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         playerFondo.delegate = self
         
         
-        
+        botonOK.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,6 +129,8 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         
         playerFondo.play(item: itemFondo!)
         playerFondo.volume = 1.0
+        
+        botonOK.isHidden = false
         
         UserDefaults.standard.set(tocado, forKey: "musica")
     }

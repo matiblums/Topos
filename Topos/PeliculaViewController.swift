@@ -13,6 +13,7 @@ import AVFoundation
 import Foundation
 import KDEAudioPlayer
 import SwiftySound
+import CoreData
 
 class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     
@@ -33,6 +34,9 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     //var sound2: AudioPlayer?
     
     
+    var paginas : [Pagina] = []
+    var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
+    var pagina: Pagina?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,18 +86,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         super.viewWillAppear(animated)
 
-        let imgFondo = UserDefaults.standard.string(forKey: "fondo")
-        let imgTopo = UserDefaults.standard.string(forKey: "topo")
-        let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
-        let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
-        let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
-        let imageFondo: UIImage = UIImage(named: imgFondo!)!
-        miFondo.image = imageFondo
-        
-        let imageTopo: UIImage = UIImage(named: imgTopo!)!
-        miTopo.image = imageTopo
-        
-        miTopo.frame.origin = pointTopo
+        Ver ()
     }
     
     //************************************************
@@ -162,13 +155,12 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         dismiss(animated: true, completion: nil)
         
-        
     }
     
 
     @IBAction func btnPlay(_ sender: Any) {
         
-        let musicaGuardada = UserDefaults.standard.string(forKey: "musica")
+        let musicaGuardada = self.pagina?.musica
         
         let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaGuardada, ofType: "wav")!)
         //let itemFondo = AudioItem(mediumQualitySoundURL: playYoda as URL)
@@ -199,7 +191,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     }
     
     func directoryURL() -> NSURL? {
-        let sonidoGuardado = UserDefaults.standard.string(forKey: "audio")
+        let sonidoGuardado = self.pagina?.audio
         
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
@@ -210,7 +202,24 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     }
     
     
+    func Ver (){
+        
+        let fondo = self.pagina?.fondo
+        let topo = self.pagina?.topo
+        let topox = self.pagina?.topox
+        let topoy = self.pagina?.topoy
+        
+        let pointTopo = CGPoint(x: Int(topox!)!, y: Int(topoy!)!)
+        let imageFondo: UIImage = UIImage(named: fondo!)!
+        miFondo.image = imageFondo
+        
+        let imageTopo: UIImage = UIImage(named: topo!)!
+        miTopo.image = imageTopo
+        
+        miTopo.frame.origin = pointTopo
     
+    
+    }
     
     
 }

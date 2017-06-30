@@ -47,11 +47,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_pagina" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-fn-2ip">
+                                                    <rect key="frame" x="57" y="29" width="87" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="200" height="110"/>
                                         <connections>
                                             <outlet property="imgGaleria" destination="Hi1-tZ-rgx" id="odc-XC-Eco"/>
+                                            <outlet property="imgPlay" destination="C0d-fn-2ip" id="fyM-4k-JYU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -74,71 +79,97 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_reproducir_libro"/>
                                 <connections>
-                                    <action selector="elijePelicula:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="fmq-CG-K8M"/>
+                                    <action selector="elijeVideo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="dS3-t3-Byd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-5M-VhI" userLabel="Fondo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
                                 <rect key="frame" x="28" y="162" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_fondo_lleno"/>
+                                <state key="normal" backgroundImage="bt_fondo_vacio"/>
                                 <connections>
-                                    <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="8Ux-Hq-QbA"/>
+                                    <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="DGa-UC-aba"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-ah-jYb" userLabel="Audio">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="Topo Vacio">
+                                <rect key="frame" x="259" y="162" width="119" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_topo_vacio"/>
+                                <connections>
+                                    <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="bhU-DI-mGL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="Musica Vacio">
+                                <rect key="frame" x="456" y="162" width="79" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_musica_vacio"/>
+                                <connections>
+                                    <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="9jJ-vt-ZpF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
                                 <rect key="frame" x="624" y="162" width="85" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_grabar_elegido"/>
+                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
                                 <connections>
-                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="dUv-Kr-dGs"/>
+                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-Di-BhM" userLabel="Musica">
-                                <rect key="frame" x="455.5" y="162" width="79" height="90"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_fondo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-Ct-i7j">
+                                <rect key="frame" x="28" y="162" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_musica_elegido"/>
-                                <connections>
-                                    <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Gdk-td-jcs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-G8-ebc" userLabel="Topo">
-                                <rect key="frame" x="259.5" y="162" width="119" height="90"/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_topo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="F4r-ZN-9PO">
+                                <rect key="frame" x="259" y="162" width="119" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_topo_lleno"/>
-                                <connections>
-                                    <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="lbX-B3-wRA"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_musica_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="PWZ-0M-oPG">
+                                <rect key="frame" x="456" y="162" width="79" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_grabar_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-Xr-MzQ">
+                                <rect key="frame" x="624" y="162" width="85" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="btnAudio" destination="UqJ-ah-jYb" id="oB2-zZ-l2g"/>
-                        <outlet property="btnFondo" destination="i9y-5M-VhI" id="BQk-U1-5w0"/>
-                        <outlet property="btnMusica" destination="cW7-Di-BhM" id="peS-TD-ThU"/>
+                        <outlet property="btnAgrega" destination="cJC-Lq-U5a" id="jTT-Oi-BkV"/>
+                        <outlet property="btnAudio" destination="BMo-Xr-MzQ" id="eQS-2c-KEG"/>
+                        <outlet property="btnAudioVacio" destination="vuc-ao-P4Z" id="q3V-hn-RzO"/>
+                        <outlet property="btnFondo" destination="uEu-Ct-i7j" id="0ja-Wj-TVH"/>
+                        <outlet property="btnFondoVacio" destination="nAd-O6-fUr" id="78f-IM-g1H"/>
+                        <outlet property="btnMusica" destination="PWZ-0M-oPG" id="cd8-oI-1RU"/>
+                        <outlet property="btnMusicaVacio" destination="NEA-ew-ncR" id="e9O-B9-Zlq"/>
                         <outlet property="btnPelicula" destination="OuR-5F-n19" id="KFx-xL-iyx"/>
-                        <outlet property="btnTopo" destination="fe2-G8-ebc" id="d8h-JM-HD4"/>
+                        <outlet property="btnTopo" destination="F4r-ZN-9PO" id="DEG-RY-gEV"/>
+                        <outlet property="btnTopoVacio" destination="IBb-Vt-4Pa" id="uSN-2k-F6L"/>
                         <outlet property="flowLayout" destination="Xid-LQ-Z7v" id="mCk-W5-FIr"/>
                         <outlet property="myView" destination="gN7-zK-jOG" id="Ehp-n2-OKw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9D-4o-7iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371.83098591549299" y="63.75"/>
+            <point key="canvasLocation" x="371.73913043478262" y="62.318840579710148"/>
         </scene>
     </scenes>
     <resources>
         <image name="agregar_pagina" width="130" height="130"/>
         <image name="bt_fondo_lleno" width="390" height="250"/>
+        <image name="bt_fondo_vacio" width="392" height="252"/>
         <image name="bt_grabar_elegido" width="320" height="340"/>
+        <image name="bt_grabar_vacio" width="321" height="341"/>
         <image name="bt_musica_elegido" width="239" height="274"/>
+        <image name="bt_musica_vacio" width="243" height="277"/>
         <image name="bt_reproducir_libro" width="137" height="180"/>
         <image name="bt_topo_lleno" width="346" height="257"/>
+        <image name="bt_topo_vacio" width="346" height="260"/>
         <image name="fondo" width="1922" height="1080"/>
         <image name="fondo2" width="1500" height="753"/>
+        <image name="play_pagina" width="150" height="150"/>
     </resources>
 </document>

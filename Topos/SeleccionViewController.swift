@@ -8,20 +8,35 @@
 
 import UIKit
 import LNICoverFlowLayout
+import CoreData
 
 private let reuseIdentifier = "Cell"
 
 class SeleccionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6"]
+    var items = ["fondo1"]
     @IBOutlet var myView: UICollectionView?
     @IBOutlet var flowLayout: LNICoverFlowLayout?
     
-    @IBOutlet var btnFondo: UIButton!
-    @IBOutlet var btnTopo: UIButton!
-    @IBOutlet var btnMusica: UIButton!
-    @IBOutlet var btnAudio: UIButton!
+    @IBOutlet var btnAgrega: UIButton!
+    
+    @IBOutlet var btnFondo: UIImageView!
+    @IBOutlet var btnTopo: UIImageView!
+    @IBOutlet var btnMusica: UIImageView!
+    @IBOutlet var btnAudio: UIImageView!
     @IBOutlet var btnPelicula: UIButton!
+    
+    @IBOutlet var btnFondoVacio: UIButton!
+    @IBOutlet var btnTopoVacio: UIButton!
+    @IBOutlet var btnMusicaVacio: UIButton!
+    @IBOutlet var btnAudioVacio: UIButton!
+    @IBOutlet var btnPeliculaVacio: UIButton!
+    
+    var paginas : [Pagina] = []
+    var fetchResultsController : NSFetchedResultsController<Pagina>!
+    var pagina : Pagina?
+    
+    var masPaginas = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +51,22 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         borraDatos()
         
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         cargaBotones ()
+        Ver ()
+        self.myView?.reloadData()
         
     }
     override func didReceiveMemoryWarning() {
@@ -49,21 +74,22 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         // Dispose of any resources that can be recreated.
     }
     
+    
+   
+    
     @IBAction func agregaPagina(_ sender: Any) {
         
-        items.append("fondo0")
-        
+        masPaginas = 1
         self.myView?.reloadData()
+        borraDatos()
+        btnFondoVacio.isEnabled = true
         
-        if(items.count>2){
-            myView?.scrollToItem(at: IndexPath(item: items.count-1, section: 0), at: .left, animated: true)
+        if(paginas.count>2){
+            myView?.scrollToItem(at: IndexPath(item: paginas.count, section: 0), at: .left, animated: true)
         }
         
+        btnAgrega.isEnabled = false
         
-        
-        
-        
-      
     }
     
     //*****************************************************************************************
@@ -116,6 +142,18 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(controller, animated: true, completion: nil)
         
     }
+    
+    @IBAction func elijeVideo(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Video", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Video")
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
+    
+    
     //*****************************************************************************************
     
     
@@ -128,33 +166,75 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return items.count
+        return paginas.count + masPaginas
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! SeleccionCollectionViewCell
         
-        
-        let imgSel = self.items[indexPath.item]
-        let image: UIImage = UIImage(named: imgSel)!
-        
-        cell.imgGaleria.image = image
-        
+        if(indexPath.row < paginas.count){
+            
+            let pagina : Pagina!
+            pagina = self.paginas[indexPath.row]
+            let imgSel = pagina.fondo
+            let image: UIImage = UIImage(named: imgSel)!
+            cell.imgGaleria.image = image
+            
+            let image2: UIImage = UIImage(named: "play_pagina")!
+            cell.imgPlay.image = image2
+        }
+        else{
+            
+            
+            let image: UIImage = UIImage(named: "fondo0")!
+            cell.imgGaleria.image = image
+            
+            let image2: UIImage = UIImage(named: "agregar_pagina")!
+            cell.imgPlay.image = image2
+            
+            
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //let imgSel = self.items[indexPath.item]
-        //let image: UIImage = UIImage(named: imgSel)!
-       // miFondo.image = image
         
-       // UserDefaults.standard.set(imgSel, forKey: "fondo")
+        let myIndex = indexPath.row
+        print(myIndex)
+        //myView?.scrollToItem(at: IndexPath(item: myIndex, section: 0), at: .right, animated: true)
         
         
-        borraDatos()
+        if(indexPath.row < paginas.count){
+            
+            let pagina : Pagina!
+            pagina = self.paginas[myIndex]
+            
+            
+            
+            let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
+            controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(controller, animated: true, completion: nil)
+            controller.pagina = pagina
+            
+            
+        }
+        else{
+            
+            //cargaBotones()
+            
+            //borraDatos()
+            //btnFondo.isHidden = false
+            
+        }
+        
+        
+        
+        
+        
         
     }
 
@@ -167,12 +247,19 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         UserDefaults.standard.removeObject(forKey: "musica")
         UserDefaults.standard.removeObject(forKey: "audio")
         
-        btnFondo.isHidden = false
-        
+        btnFondo.isHidden = true
         btnTopo.isHidden = true
         btnMusica.isHidden = true
         btnAudio.isHidden = true
-        btnPelicula.isHidden = true
+        
+       // btnPelicula.isHidden = true
+        
+        btnFondoVacio.isEnabled = false
+        btnTopoVacio.isEnabled = false
+        btnMusicaVacio.isEnabled = false
+        btnAudioVacio.isEnabled = false
+        
+        
         
         cargaBotones ()
     }
@@ -182,23 +269,71 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
         if((UserDefaults.standard.string(forKey: "fondo")) != nil){
-            btnTopo.isHidden = false
+            btnFondo.isHidden = false
+            btnTopoVacio.isEnabled = true
         }
     
         if((UserDefaults.standard.string(forKey: "topo")) != nil){
-            btnMusica.isHidden = false
+            btnTopo.isHidden = false
+            btnMusicaVacio.isEnabled = true
         }
     
         if((UserDefaults.standard.string(forKey: "musica")) != nil){
-            btnAudio.isHidden = false
+            btnMusica.isHidden = false
+            btnAudioVacio.isEnabled = true
         }
     
         if((UserDefaults.standard.string(forKey: "audio")) != nil){
-            btnPelicula.isHidden = false
+            btnAudio.isHidden = false
+            
+            //btnPelicula.isHidden = false
+            masPaginas = 0
+            btnAgrega.isEnabled = true
         }
     
     
     }
     
-    
+    func Ver (){
+        let fetchRequest : NSFetchRequest<Pagina> = NSFetchRequest(entityName: "Pagina")
+        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            
+            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+            
+            
+            do {
+                try fetchResultsController.performFetch()
+                self.paginas = fetchResultsController.fetchedObjects!
+                
+                //let dolencia = dolencias[3]
+                
+                // for name in casos {
+                
+                //   let caso = name
+                //print (caso.caso)
+                
+                
+                // }
+                
+                //self.tableView.refreshControl?.endRefreshing()
+                //tableView.reloadData()
+                
+                //print("---: \(dolencia.nombre) ---: \(dolencias.count)")
+                
+                
+            } catch {
+                print("Error: \(error)")
+            }
+            
+        }
+        
+    }
 }

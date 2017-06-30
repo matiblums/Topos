@@ -14,11 +14,14 @@ import AVFoundation
 
 import CoreMedia
 import Foundation
-
+import CoreData
 
 
 
 class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+    
+    @IBOutlet var botonOK: UIButton!
+    
     var recordingSession : AVAudioSession!
     var audioRecorder    :AVAudioRecorder!
     var settings         = [String : Int]()
@@ -34,6 +37,9 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     @IBOutlet var miFondo: UIImageView!
     @IBOutlet var miTopo: UIImageView!
     
+    var paginas : [Pagina] = []
+    var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
+    var pagina: Pagina?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +76,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         //self.directoryURL()
         
         
-        
+         botonOK.isHidden = true
         
         
     }
@@ -112,7 +118,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         self.finishRecording(success: true)
         
         botonPlay.isHidden = false
-        
+        botonOK.isHidden = false
     }
     
     
@@ -132,7 +138,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         if !audioRecorder.isRecording {
             //audioPlayer = try! AVAudioPlayer(contentsOf: audioRecorder.url)
-            audioPlayer = try! AVAudioPlayer(contentsOf: self.directoryURL()! as URL)
+            audioPlayer = try! AVAudioPlayer(contentsOf: self.directoryURLPlay()! as URL)
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             audioPlayer.play()
@@ -171,16 +177,38 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
             audioPlayer.stop()
         }
         
-        
+        grabar()
         dismiss(animated: true, completion: nil)
         
         
     }
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+    
     
     //***************************************************************************
     func directoryURL() -> NSURL? {
         
-        let nombreArchivo = "sound2.m4a"
+        
+        
+        let random = randomString(length: 8)
+        
+        let nombreArchivo = random + ".m4a"
+        
+        print(nombreArchivo)
         
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
@@ -191,6 +219,27 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         return soundURL as NSURL?
     }
+    
+    func directoryURLPlay() -> NSURL? {
+        
+        
+        
+        //let random = UserDefaults.standard.string(forKey: "audio")
+        
+        let nombreArchivo = UserDefaults.standard.string(forKey: "audio")
+        
+        print(nombreArchivo)
+        
+        let fileManager = FileManager.default
+        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = urls[0] as NSURL
+        let soundURL = documentDirectory.appendingPathComponent(nombreArchivo!)
+        
+        
+        
+        return soundURL as NSURL?
+    }
+    
     
     func startRecording() {
         let audioSession = AVAudioSession.sharedInstance()
@@ -242,5 +291,54 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     }
     
     //***************************************************************************
+    
+    func grabar() {
+        let topo = UserDefaults.standard.string(forKey: "topo")
+        let topox = UserDefaults.standard.integer(forKey: "topox")
+        let topoy = UserDefaults.standard.integer(forKey: "topoy")
+        let fondo = UserDefaults.standard.string(forKey: "fondo")
+        let musica = UserDefaults.standard.string(forKey: "musica")
+        let audio = UserDefaults.standard.string(forKey: "audio")
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        _ = formatter.string(from: date)
+        
+        
+        
+        
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.pagina = NSEntityDescription.insertNewObject(forEntityName: "Pagina", into: context) as? Pagina
+            
+            self.pagina?.topo = topo!
+            self.pagina?.topox = "\(topox)"
+            self.pagina?.topoy = "\(topoy)"
+            self.pagina?.fondo = fondo!
+            self.pagina?.musica = musica!
+            self.pagina?.audio = audio!
+            self.pagina?.fecha = date
+            
+            do {
+                try context.save()
+                print("Grabo OK")
+                
+                
+
+                //let sincronizarcaso = SincronizarCaso()
+                //sincronizarcaso.Iniciar()
+                
+            } catch {
+                print("Ha habido un error al guardar el lugar en Core Data")
+            }
+            
+            
+        }
+        
+    }
+
 }
 

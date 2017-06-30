@@ -29,50 +29,58 @@
                                 <rect key="frame" x="268" y="107" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_abajo_fondos" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-0w-Cvx">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-2t-dmT">
                                 <rect key="frame" x="0.0" y="322" width="736" height="92"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-ZV-KWs">
-                                <rect key="frame" x="656" y="334" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_abajo_fondos" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-0w-Cvx">
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-Yo-7jh">
+                                        <rect key="frame" x="158" y="45" width="492" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-7j-NRs">
+                                        <rect key="frame" x="16" y="16" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="grabando">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGraba:" destination="c8z-Zq-Eck" eventType="touchDown" id="Pq5-PO-4E7"/>
+                                            <action selector="btnGrabaStop:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="ZXf-y0-Jnv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-ZV-KWs">
+                                        <rect key="frame" x="660" y="16" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="ok_verde"/>
+                                        <connections>
+                                            <action selector="btnSalir:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="hCy-lJ-YQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-e2-BD8">
+                                        <rect key="frame" x="84" y="16" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="play_musica">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPlay:" destination="c8z-Zq-Eck" eventType="touchDown" id="yaY-07-XkT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="ok_verde"/>
-                                <connections>
-                                    <action selector="btnSalir:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="hCy-lJ-YQG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-e2-BD8">
-                                <rect key="frame" x="88" y="334" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="play_musica">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPlay:" destination="c8z-Zq-Eck" eventType="touchDown" id="yaY-07-XkT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-7j-NRs">
-                                <rect key="frame" x="20" y="334" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="grabando">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnGraba:" destination="c8z-Zq-Eck" eventType="touchDown" id="Pq5-PO-4E7"/>
-                                    <action selector="btnGrabaStop:" destination="c8z-Zq-Eck" eventType="touchUpInside" id="ZXf-y0-Jnv"/>
-                                </connections>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-Yo-7jh">
-                                <rect key="frame" x="156" y="363" width="492" height="2"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="botonOK" destination="09Z-ZV-KWs" id="C2F-oK-dTQ"/>
                         <outlet property="botonPlay" destination="YJj-e2-BD8" id="qLe-DB-x00"/>
                         <outlet property="botonRecOn" destination="MuZ-7j-NRs" id="ouL-Yx-3K1"/>
                         <outlet property="miFondo" destination="ZE3-PB-NIz" id="htW-ER-nWm"/>

@@ -12,5 +12,6 @@ class SeleccionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imgGaleria: UIImageView!
     @IBOutlet var myLabel: UILabel!
+    @IBOutlet var imgPlay: UIImageView!
     
 }
