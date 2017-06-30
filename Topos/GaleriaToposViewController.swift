@@ -128,9 +128,18 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miTopo.isHidden = false
         
         UserDefaults.standard.set(imgSel, forKey: "topo")
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.white.cgColor
+        
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.clear.cgColor
+    }
     
 
 }

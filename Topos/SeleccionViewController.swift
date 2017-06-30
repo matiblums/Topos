@@ -154,6 +154,16 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     
+    @IBAction func elijeTapa(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Tapa", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Tapa")
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
+    
     //*****************************************************************************************
     
     
@@ -232,12 +242,21 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
         
-        
+        //let cell = collectionView.cellForItem(at: indexPath)
+        //cell?.layer.borderWidth = 2.0
+        //cell?.layer.borderColor = UIColor.white.cgColor
         
         
         
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        //let cell = collectionView.cellForItem(at: indexPath)
+        //cell?.layer.borderWidth = 2.0
+        //cell?.layer.borderColor = UIColor.clear.cgColor
+    }
+    
+    
     func borraDatos(){
         
         UserDefaults.standard.removeObject(forKey: "fondo")

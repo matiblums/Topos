@@ -1,20 +1,35 @@
 //
-//  VideoViewController.swift
+//  TapaViewController.swift
 //  Topos
 //
-//  Created by Matias Blum on 17/6/17.
+//  Created by Matias Blum on 30/6/17.
 //  Copyright © 2017 Matias Blum. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
+import Foundation
+import CoreData
 
-class VideoViewController: UIViewController {
+
+class TapaViewController: UIViewController {
     
+    @IBOutlet var txtCuento: UITextField!
+    @IBOutlet var txtAutor: UITextField!
 
+    
+    var libros : [Libro] = []
+    var fetchResultsController : NSFetchedResultsController<Libro>!
+    var libro : Libro?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

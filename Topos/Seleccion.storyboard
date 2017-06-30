@@ -66,7 +66,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-Lq-U5a" userLabel="Agregar">
-                                <rect key="frame" x="666" y="39" width="50" height="50"/>
+                                <rect key="frame" x="666" y="28" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="agregar_pagina"/>
                                 <connections>
@@ -134,6 +134,14 @@
                                 <rect key="frame" x="624" y="162" width="85" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
+                                <rect key="frame" x="659" y="344" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" backgroundImage="ok_verde"/>
+                                <connections>
+                                    <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -170,6 +178,7 @@
         <image name="bt_topo_vacio" width="346" height="260"/>
         <image name="fondo" width="1922" height="1080"/>
         <image name="fondo2" width="1500" height="753"/>
+        <image name="ok_verde" width="130" height="130"/>
         <image name="play_pagina" width="150" height="150"/>
     </resources>
 </document>

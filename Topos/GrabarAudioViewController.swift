@@ -228,7 +228,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         let nombreArchivo = UserDefaults.standard.string(forKey: "audio")
         
-        print(nombreArchivo)
+        //print(nombreArchivo)
         
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)

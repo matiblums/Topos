@@ -133,9 +133,18 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         botonOK.isHidden = false
         
         UserDefaults.standard.set(tocado, forKey: "musica")
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.white.cgColor
+        
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.clear.cgColor
+    }
     
     //************************************************
     

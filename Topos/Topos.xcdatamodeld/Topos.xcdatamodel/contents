@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Libro" representedClassName=".Libro" syncable="YES">
+        <attribute name="autor" attributeType="String" syncable="YES"/>
+        <attribute name="fecha" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Pagina" representedClassName=".Pagina" syncable="YES">
         <attribute name="audio" attributeType="String" syncable="YES"/>
         <attribute name="fecha" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -10,6 +15,7 @@
         <attribute name="topoy" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Pagina" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Pagina" positionX="-281" positionY="158" width="128" height="148"/>
+        <element name="Libro" positionX="-281" positionY="20" width="128" height="88"/>
     </elements>
 </model>

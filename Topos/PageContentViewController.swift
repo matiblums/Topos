@@ -25,8 +25,6 @@ class PageContentViewController: UIViewController {
     var strTitle: String!
     var strPhotoName: String!
     
-    
-    
     @IBOutlet var miFondo: UIImageView!
     @IBOutlet var miTopo: UIImageView!
     
@@ -43,31 +41,17 @@ class PageContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = UIImage(named: strPhotoName)
-        lblTitle.text = strTitle
-        
-        
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        VerTodo ()
-        
-    }
+  
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-        
-    }
-    
-    override func viewDidLayoutSubviews() {
-   
-        super.viewDidLayoutSubviews()
+         VerTodo ()
         lblTitle.text = "Pagina: " + "\(pageIndex + 1 )"
         startTimer ()
+        
     }
     
     
@@ -95,7 +79,7 @@ class PageContentViewController: UIViewController {
         timer = timer + 1
         
         let prepara = 1
-        let espacio = 5
+        let espacio = 2
         
         let arranca1 = espacio
         let arranca2 = espacio + espacio
@@ -152,8 +136,6 @@ class PageContentViewController: UIViewController {
             break
         }
             
-        
-        
         print(timer)
         
     }
@@ -229,8 +211,6 @@ class PageContentViewController: UIViewController {
         
     }
     
-    
-   
     func directoryURL() -> NSURL? {
         let sonidoGuardado = self.pagina?.audio
         
@@ -238,10 +218,8 @@ class PageContentViewController: UIViewController {
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = urls[0] as NSURL
         let soundURL = documentDirectory.appendingPathComponent(sonidoGuardado!)
-        //print(soundURL as Any)
         return soundURL as NSURL?
     }
-    
     
     func VerTodo (){
         
@@ -258,7 +236,6 @@ class PageContentViewController: UIViewController {
         miTopo.image = imageTopo
         
         miTopo.frame.origin = pointTopo
-        
         
     }
     
