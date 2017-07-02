@@ -11,6 +11,7 @@ import UIKit
 class BibliotecaCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imgGaleria: UIImageView!
-    @IBOutlet var myLabel: UILabel!
+    @IBOutlet var lblTitulo: UILabel!
+    @IBOutlet var lblAutor: UILabel!
     
 }

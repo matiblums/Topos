@@ -59,20 +59,7 @@ class TapaViewController: UIViewController {
 
     @IBAction func elijeBiblioteca(_ sender: Any) {
         
-        UserDefaults.standard.set(txtTitulo.text, forKey: "titulo")
-        UserDefaults.standard.set(txtAutor.text, forKey: "autor")
-        
-        //let tapa = UserDefaults.standard.string(forKey: "tapa")
-        //let titulo = UserDefaults.standard.integer(forKey: "titulo")
-        //let autor = UserDefaults.standard.integer(forKey: "autor")
-        
-        
-        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
-        
-        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        self.present(controller, animated: true, completion: nil)
-        
+        grabar()        
     }
     
     @IBAction func elijeGaleriaTapas(_ sender: Any) {
@@ -84,6 +71,46 @@ class TapaViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
         
     }
+    
+    func grabar() {
+        let titulo = txtTitulo.text
+        let autor = txtAutor.text
+        let tapa = UserDefaults.standard.string(forKey: "tapa")
+        let fecha = Date()
 
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
+            
+            self.libro?.titulo = titulo!
+            self.libro?.autor = autor!
+            self.libro?.tapa = tapa!
+            self.libro?.fecha = fecha
+            
+            
+            do {
+                try context.save()
+                print("Grabo OK")
+                irBiblioteca ()
+                
+            } catch {
+                print("Ha habido un error al guardar el lugar en Core Data")
+            }
+            
+            
+        }
+        
+    }
+    
+    func irBiblioteca () {
+        
+        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
 
 }

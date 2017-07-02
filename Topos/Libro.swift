@@ -11,7 +11,8 @@ import UIKit
 import CoreData
 
 class Libro : NSManagedObject {
-    @NSManaged var nombre : String
+    @NSManaged var titulo : String
     @NSManaged var autor : String
-    @NSManaged var fecha : String
+    @NSManaged var tapa : String
+    @NSManaged var fecha : Date
 }

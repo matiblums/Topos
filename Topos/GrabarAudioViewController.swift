@@ -50,7 +50,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
+            recordingSession.requestRecordPermission() {  allowed in
                 DispatchQueue.main.async {
                     if allowed {
                         //print("Allow")

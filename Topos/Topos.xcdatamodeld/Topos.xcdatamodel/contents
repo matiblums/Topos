@@ -2,9 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Libro" representedClassName=".Libro" syncable="YES">
         <attribute name="autor" attributeType="String" syncable="YES"/>
-        <attribute name="fecha" attributeType="String" syncable="YES"/>
+        <attribute name="fecha" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tapa" attributeType="String" syncable="YES"/>
         <attribute name="titulo" attributeType="String" syncable="YES"/>
-        <relationship name="paginas" optional="YES" toMany="YES" minCount="1" maxCount="10" deletionRule="Nullify" destinationEntity="Pagina" inverseName="libro" inverseEntity="Pagina" syncable="YES"/>
     </entity>
     <entity name="Pagina" representedClassName=".Pagina" syncable="YES">
         <attribute name="audio" attributeType="String" syncable="YES"/>
@@ -14,10 +14,9 @@
         <attribute name="topo" attributeType="String" syncable="YES"/>
         <attribute name="topox" attributeType="String" syncable="YES"/>
         <attribute name="topoy" attributeType="String" syncable="YES"/>
-        <relationship name="libro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Libro" inverseName="paginas" inverseEntity="Libro" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Libro" positionX="-1487" positionY="-1539" width="128" height="103"/>
-        <element name="Pagina" positionX="-1251" positionY="-1600" width="128" height="165"/>
+        <element name="Libro" positionX="-1487" positionY="-1539" width="128" height="105"/>
+        <element name="Pagina" positionX="-1251" positionY="-1600" width="128" height="150"/>
     </elements>
 </model>
