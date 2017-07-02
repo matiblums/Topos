@@ -13,6 +13,7 @@ target 'Topos' do
   pod 'AudioPlayerSwift'
   pod 'KDEAudioPlayer'
   pod 'LNICoverFlowLayout'
+  pod 'IQKeyboardManagerSwift'
   
 
   target 'ToposTests' do

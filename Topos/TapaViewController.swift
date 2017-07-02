@@ -62,9 +62,9 @@ class TapaViewController: UIViewController {
         UserDefaults.standard.set(txtTitulo.text, forKey: "titulo")
         UserDefaults.standard.set(txtAutor.text, forKey: "autor")
         
-        let tapa = UserDefaults.standard.string(forKey: "tapa")
-        let titulo = UserDefaults.standard.integer(forKey: "titulo")
-        let autor = UserDefaults.standard.integer(forKey: "autor")
+        //let tapa = UserDefaults.standard.string(forKey: "tapa")
+        //let titulo = UserDefaults.standard.integer(forKey: "titulo")
+        //let autor = UserDefaults.standard.integer(forKey: "autor")
         
         
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)

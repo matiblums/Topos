@@ -1,6 +1,7 @@
 PODS:
   - AudioPlayerSwift (1.5.1)
   - DragDropUI (1.0.1)
+  - IQKeyboardManagerSwift (4.0.10)
   - KDEAudioPlayer (1.1.0)
   - LNICoverFlowLayout (1.0.1)
   - SwiftySound (0.3.0)
@@ -8,6 +9,7 @@ PODS:
 DEPENDENCIES:
   - AudioPlayerSwift
   - DragDropUI
+  - IQKeyboardManagerSwift
   - KDEAudioPlayer
   - LNICoverFlowLayout
   - SwiftySound
@@ -15,10 +17,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AudioPlayerSwift: 042b801cc88c3ed2ab01ca14ec75eb0cc47f7f14
   DragDropUI: a830fd319f99e75e393af532222da0a18e0d49aa
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   KDEAudioPlayer: b3787f02b6718c2416589a7726f2633cde2cd60e
   LNICoverFlowLayout: e2b3f35b92b343f22fb494f0460989e9f5a55fa1
   SwiftySound: 77f0adcc39815b53c6f66cf998b203b121340300
 
-PODFILE CHECKSUM: 5c79267bc3bc1a1de258b251326761a7763d9a43
+PODFILE CHECKSUM: 1f84cdd767edaf509848ea83e2cfb1ba44341fa3
 
 COCOAPODS: 1.2.0

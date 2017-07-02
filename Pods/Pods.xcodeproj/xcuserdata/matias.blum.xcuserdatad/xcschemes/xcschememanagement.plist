@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>KDEAudioPlayer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -182,6 +187,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>632D19F5764256F0F8F0E95B060AA9C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6BF60C0B459450BAE1461CC6E833B4E1</key>
 		<dict>
 			<key>primary</key>
@@ -247,12 +257,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B5E0E2CA80E46EAFBAF9147DADF19A06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C121CB52E6F2DFF0B4DD151FBA0FEA27</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C22AB8C24695D2305EB18F7E2C814D2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C235F77E101E742652CCF98FFDFA5182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
