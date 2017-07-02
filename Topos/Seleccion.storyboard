@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,21 +12,21 @@
         <!--Seleccion View Controller-->
         <scene sceneID="NWx-YS-1Nv">
             <objects>
-                <viewController id="cNr-Hu-wUR" customClass="SeleccionViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Seleccion" id="cNr-Hu-wUR" customClass="SeleccionViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0A9-bg-Z70"/>
                         <viewControllerLayoutGuide type="bottom" id="S3e-b3-8OT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="D4l-6t-05Q">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-kz-99L">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
-                                <rect key="frame" x="155" y="9" width="427" height="110"/>
+                                <rect key="frame" x="120.5" y="9" width="427" height="99.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v" customClass="LNICoverFlowLayout" customModule="LNICoverFlowLayout">
@@ -37,7 +37,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6zr-kG-8aV" customClass="SeleccionCollectionViewCell" customModule="Topos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                        <rect key="frame" x="0.0" y="-5.5" width="200" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
@@ -66,24 +66,15 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-Lq-U5a" userLabel="Agregar">
-                                <rect key="frame" x="666" y="28" width="50" height="50"/>
+                                <rect key="frame" x="597" y="25" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="agregar_pagina"/>
                                 <connections>
                                     <action selector="agregaPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Zjx-jE-nNY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-5F-n19">
-                                <rect key="frame" x="344.5" y="331" width="48" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_reproducir_libro"/>
-                                <connections>
-                                    <action selector="elijeVideo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="dS3-t3-Byd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
-                                <rect key="frame" x="28" y="162" width="143" height="90"/>
+                                <rect key="frame" x="24.5" y="142.5" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_fondo_vacio"/>
@@ -92,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="Topo Vacio">
-                                <rect key="frame" x="259" y="162" width="119" height="90"/>
+                                <rect key="frame" x="230" y="142.5" width="119" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_topo_vacio"/>
@@ -101,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="Musica Vacio">
-                                <rect key="frame" x="456" y="162" width="79" height="90"/>
+                                <rect key="frame" x="408" y="142.5" width="79" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_musica_vacio"/>
@@ -110,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
-                                <rect key="frame" x="624" y="162" width="85" height="90"/>
+                                <rect key="frame" x="558" y="142.5" width="85" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_grabar_vacio"/>
@@ -119,23 +110,23 @@
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_fondo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-Ct-i7j">
-                                <rect key="frame" x="28" y="162" width="143" height="90"/>
+                                <rect key="frame" x="24.5" y="142.5" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_topo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="F4r-ZN-9PO">
-                                <rect key="frame" x="259" y="162" width="119" height="90"/>
+                                <rect key="frame" x="230" y="142.5" width="119" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_musica_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="PWZ-0M-oPG">
-                                <rect key="frame" x="456" y="162" width="79" height="90"/>
+                                <rect key="frame" x="408" y="142.5" width="79" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_grabar_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-Xr-MzQ">
-                                <rect key="frame" x="624" y="162" width="85" height="90"/>
+                                <rect key="frame" x="558" y="142.5" width="85" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
-                                <rect key="frame" x="659" y="344" width="50" height="50"/>
+                                <rect key="frame" x="597" y="305" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="ok_verde"/>
                                 <connections>
@@ -153,7 +144,7 @@
                         <outlet property="btnFondoVacio" destination="nAd-O6-fUr" id="78f-IM-g1H"/>
                         <outlet property="btnMusica" destination="PWZ-0M-oPG" id="cd8-oI-1RU"/>
                         <outlet property="btnMusicaVacio" destination="NEA-ew-ncR" id="e9O-B9-Zlq"/>
-                        <outlet property="btnPelicula" destination="OuR-5F-n19" id="KFx-xL-iyx"/>
+                        <outlet property="btnTapa" destination="Qpp-Gq-s1I" id="8Dt-Ur-VyR"/>
                         <outlet property="btnTopo" destination="F4r-ZN-9PO" id="DEG-RY-gEV"/>
                         <outlet property="btnTopoVacio" destination="IBb-Vt-4Pa" id="uSN-2k-F6L"/>
                         <outlet property="flowLayout" destination="Xid-LQ-Z7v" id="mCk-W5-FIr"/>
@@ -173,7 +164,6 @@
         <image name="bt_grabar_vacio" width="321" height="341"/>
         <image name="bt_musica_elegido" width="239" height="274"/>
         <image name="bt_musica_vacio" width="243" height="277"/>
-        <image name="bt_reproducir_libro" width="137" height="180"/>
         <image name="bt_topo_lleno" width="346" height="257"/>
         <image name="bt_topo_vacio" width="346" height="260"/>
         <image name="fondo" width="1922" height="1080"/>

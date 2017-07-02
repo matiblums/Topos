@@ -68,21 +68,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="736" height="92"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-d4-MVU">
-                                        <rect key="frame" x="20" y="16" width="102" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="galeria_fondo_blanco"/>
-                                        <connections>
-                                            <action selector="muestraFondo:" destination="gxf-UW-ubR" eventType="touchUpInside" id="hKU-1D-Xyk"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nji-G0-u0m">
-                                        <rect key="frame" x="658" y="16" width="60" height="60"/>
+                                        <rect key="frame" x="667" y="21" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" backgroundImage="ok_verde"/>
                                         <connections>
                                             <action selector="btnSalir:" destination="gxf-UW-ubR" eventType="touchUpInside" id="azW-5z-raG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-d4-MVU">
+                                        <rect key="frame" x="20" y="23" width="78" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="galeria_fondo_blanco"/>
+                                        <connections>
+                                            <action selector="muestraFondo:" destination="gxf-UW-ubR" eventType="touchUpInside" id="hKU-1D-Xyk"/>
                                         </connections>
                                     </button>
                                 </subviews>

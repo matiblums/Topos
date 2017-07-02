@@ -22,6 +22,8 @@
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
+		169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169346221F08669E00BAE79D /* Biblioteca.storyboard */; };
+		169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169346241F0866B600BAE79D /* BibliotecaViewController.swift */; };
 		16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */; };
 		16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */; };
 		16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */; };
@@ -39,7 +41,7 @@
 		16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17081EE093C1008A9B17 /* audio.jpeg */; };
 		16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */; };
 		16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170C1EE093E5008A9B17 /* pelicula.jpeg */; };
-		16AF170F1EE093F0008A9B17 /* MisCuentos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */; };
+		16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF170E1EE093F0008A9B17 /* biblioteca.jpeg */; };
 		16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */; };
 		16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */; };
 		16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */; };
@@ -56,6 +58,10 @@
 		16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB01F05BF8C001DDC07 /* Video.storyboard */; };
 		16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */; };
 		16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */; };
+		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
+		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
+		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
+		16E8E1701F08987000DE1255 /* GaleriaTapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */; };
 		16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */; };
 		16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */; };
 		16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D341EDD971700B30D72 /* Assets.xcassets */; };
@@ -104,6 +110,8 @@
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
+		169346221F08669E00BAE79D /* Biblioteca.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Biblioteca.storyboard; sourceTree = "<group>"; };
+		169346241F0866B600BAE79D /* BibliotecaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaViewController.swift; sourceTree = "<group>"; };
 		16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.02.49.jpeg"; sourceTree = "<group>"; };
 		16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.03.02.jpeg"; sourceTree = "<group>"; };
 		16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.03.10.jpeg"; sourceTree = "<group>"; };
@@ -121,7 +129,7 @@
 		16AF17081EE093C1008A9B17 /* audio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = audio.jpeg; sourceTree = "<group>"; };
 		16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.06.27.jpeg"; sourceTree = "<group>"; };
 		16AF170C1EE093E5008A9B17 /* pelicula.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pelicula.jpeg; sourceTree = "<group>"; };
-		16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MisCuentos.jpeg; sourceTree = "<group>"; };
+		16AF170E1EE093F0008A9B17 /* biblioteca.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biblioteca.jpeg; sourceTree = "<group>"; };
 		16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaFondos.storyboard; sourceTree = "<group>"; };
 		16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosCollectionViewCell.swift; sourceTree = "<group>"; };
 		16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTopos.storyboard; sourceTree = "<group>"; };
@@ -138,6 +146,10 @@
 		16BCBEB01F05BF8C001DDC07 /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tapa.storyboard; sourceTree = "<group>"; };
 		16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapaViewController.swift; sourceTree = "<group>"; };
+		16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaCollectionViewCell.swift; sourceTree = "<group>"; };
+		16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTapas.storyboard; sourceTree = "<group>"; };
+		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
+		16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasViewController.swift; sourceTree = "<group>"; };
 		16EA3D271EDD971700B30D72 /* Topos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16EA3D321EDD971700B30D72 /* Topos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Topos.xcdatamodel; sourceTree = "<group>"; };
@@ -212,15 +224,17 @@
 		167678961EE4E1B000EED638 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
+				169346221F08669E00BAE79D /* Biblioteca.storyboard */,
 				16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */,
-				16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */,
 				16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */,
+				16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */,
+				16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */,
 				167678921EE4D2F900EED638 /* GrabarAudio.storyboard */,
-				160F45471EE4E9A400980DEB /* Pelicula.storyboard */,
 				16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */,
-				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
+				160F45471EE4E9A400980DEB /* Pelicula.storyboard */,
+				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
 				16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */,
+				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -228,17 +242,18 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				16AC4A581EF18251004011F5 /* Cell */,
 				16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */,
-				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
+				169346241F0866B600BAE79D /* BibliotecaViewController.swift */,
 				16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */,
-				16BC26F21EE49A81009C2688 /* GaleriaToposViewController.swift */,
 				16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */,
+				16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */,
+				16BC26F21EE49A81009C2688 /* GaleriaToposViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
-				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
-				16BCBEA21F05B9F4001DDC07 /* ViewController.swift */,
 				16BCBEA41F05B9FE001DDC07 /* PageContentViewController.swift */,
+				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
+				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */,
+				16BCBEA21F05B9F4001DDC07 /* ViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -246,9 +261,11 @@
 		16AC4A581EF18251004011F5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */,
 				16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */,
-				16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */,
 				16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */,
+				16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */,
+				16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */,
 				1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */,
 			);
 			name = Cell;
@@ -274,7 +291,7 @@
 				16AF170A1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg */,
 				16AF170C1EE093E5008A9B17 /* pelicula.jpeg */,
 				16AF16F21EE09228008A9B17 /* tapa.jpeg */,
-				16AF170E1EE093F0008A9B17 /* MisCuentos.jpeg */,
+				16AF170E1EE093F0008A9B17 /* biblioteca.jpeg */,
 			);
 			name = imagenes;
 			sourceTree = "<group>";
@@ -304,6 +321,7 @@
 		16EA3D291EDD971700B30D72 /* Topos */ = {
 			isa = PBXGroup;
 			children = (
+				16AC4A581EF18251004011F5 /* Cell */,
 				163BB7AF1F06C93E00ECA352 /* clases */,
 				165A0C4A1EE71B22000A6788 /* sonidos */,
 				167678961EE4E1B000EED638 /* storyboard */,
@@ -482,6 +500,7 @@
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				165A0C581EE71B2B000A6788 /* ta6.wav in Resources */,
 				165A0C591EE71B2B000A6788 /* ta7.wav in Resources */,
+				16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */,
 				160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */,
 				165A0C5A1EE71B2B000A6788 /* ta8.wav in Resources */,
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
@@ -495,12 +514,13 @@
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
-				16AF170F1EE093F0008A9B17 /* MisCuentos.jpeg in Resources */,
+				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				165A0C571EE71B2B000A6788 /* ta5.wav in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
+				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,
 				16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */,
@@ -678,15 +698,19 @@
 				161D21531F0345650098ADA3 /* Pagina.swift in Sources */,
 				163BB7B11F06C95400ECA352 /* Libro.swift in Sources */,
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
+				169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
 				16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */,
 				16BC26F51EE49CB0009C2688 /* GaleriaMusicaViewController.swift in Sources */,
+				16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */,
 				16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */,
+				16E8E1701F08987000DE1255 /* GaleriaTapasViewController.swift in Sources */,
 				16BC26EF1EE45B6F009C2688 /* SeleccionViewController.swift in Sources */,
 				16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */,
 				16BC26F31EE49A81009C2688 /* GaleriaToposViewController.swift in Sources */,
+				16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */,
 				16BC26C21EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift in Sources */,
 				16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */,
 			);

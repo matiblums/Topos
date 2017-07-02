@@ -17,7 +17,7 @@ import CoreData
 
 class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     
-    @IBOutlet var miProgress: UIProgressView!
+    //@IBOutlet var miProgress: UIProgressView!
     
     @IBOutlet var miFondo: UIImageView!
     @IBOutlet var miTopo: UIImageView!
@@ -41,45 +41,8 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
-        // Do any additional setup after loading the view.
-       // do {
-         //  sound1 = try AudioPlayer(contentsOf: self.directoryURL()! as URL )
-         //} catch {
-           // print("Sound initialization failed")
-        //}
-        
-        //do {
-          //  let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "ta7", ofType: "wav")!)
-           // sound2 = try AudioPlayer(contentsOf: playYoda as URL )
-        //} catch {
-          //  print("Sound initialization failed")
-       // }
-
-        
-       // player.delegate = self
-        //playerFondo.delegate = self
         playerGrabado.delegate = self
-        
-        
-       // let sonidoMicrofono = self.directoryURL()! as URL
-       // let sonidoFondo = "ta8.wav"
-        
-        
-        
-        
-        
-        
-        //Sound.play(url: sonidoMicrofono)
-        //Sound.play(file: sonidoFondo)
-        
-        //sound1?.play()
-        
-       // NotificationCenter.default.addObserver(self, selector: #selector(self.hola), name: AudioPlayer.SoundDidFinishPlayingNotification, object: nil)
 
-        
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -126,7 +89,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         
         
-        miProgress.setProgress(percentageRead / 100, animated: true)
+        //miProgress.setProgress(percentageRead / 100, animated: true)
         
        
         
@@ -157,6 +120,12 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
     }
     
+    @IBAction func btnBorrar(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        Borrar ()
+        
+    }
 
     @IBAction func btnPlay(_ sender: Any) {
         
@@ -186,7 +155,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     @IBAction func btnStop(_ sender: Any) {
         
         //player.stop()
-        miProgress.setProgress(0, animated: false)
+        //miProgress.setProgress(0, animated: false)
         
     }
     
@@ -221,7 +190,43 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     
     }
     
-    
+    func Borrar () {
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+        
+                
+                context.delete(pagina!)
+                
+                
+               
+                
+                do {
+                    try context.save()
+                    print("borrado!")
+                } catch let error as NSError  {
+                    print("Could not save \(error), \(error.userInfo)")
+                } catch {
+                    
+                }
+                
+                
+                
+          
+            
+        }
+
+        
+        
+        
+        
+        
+        
+        //return name
+        
+    }
+
 }
 
 

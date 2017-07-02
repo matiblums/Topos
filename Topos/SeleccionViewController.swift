@@ -32,6 +32,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnAudioVacio: UIButton!
     @IBOutlet var btnPeliculaVacio: UIButton!
     
+    @IBOutlet var btnTapa: UIButton!
+    
     var paginas : [Pagina] = []
     var fetchResultsController : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
@@ -51,8 +53,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         borraDatos()
         
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,6 +67,13 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         cargaBotones ()
         Ver ()
         self.myView?.reloadData()
+        
+        if(paginas.count > 0){
+            btnTapa.isHidden = false
+        }
+        else{
+            btnTapa.isHidden = true
+        }
         
     }
     override func didReceiveMemoryWarning() {
