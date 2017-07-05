@@ -101,11 +101,26 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         
         if(indexPath.row < libros.count){
             
-            let storyboard = UIStoryboard(name: "Video", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! ViewController
-            controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            self.present(controller, animated: true, completion: nil)
-            controller.libro = libros[myIndex]
+            
+            
+            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "agregar_pagina"){
+                
+                let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
+                controller.libro = self.libros[myIndex]
+                controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                self.present(controller, animated: true, completion: nil)
+                
+            }
+            else{
+                
+                let storyboard = UIStoryboard(name: "Video", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! ViewController
+                controller.libro = self.libros[myIndex]
+                controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                self.present(controller, animated: true, completion: nil)
+                
+            }
             
         }
         else{
@@ -113,11 +128,11 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             
             let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
-            
+            controller.libro = miLibro
             controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(controller, animated: true, completion: nil)
             
-            controller.libro = miLibro
+            
          
         }
         
@@ -236,9 +251,9 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func grabarLibro() -> Libro {
-        let titulo = "titulo"
-        let autor = "autor"
-        let tapa = "tapa"
+        let titulo = "Incompleto"
+        let autor = "Incompleto"
+        let tapa = "agregar_pagina"
         let fecha = Date()
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {

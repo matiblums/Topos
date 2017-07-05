@@ -144,10 +144,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let storyboard = UIStoryboard(name: "GrabarAudio", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "GrabarAudio")  as! GrabarAudioViewController
-        
+        controller.libro = self.libro
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
-        controller.libro = self.libro
+        
         
     }
     
@@ -176,10 +176,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let storyboard = UIStoryboard(name: "Tapa", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Tapa") as! TapaViewController
-        
+        controller.libro = self.libro
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
-        controller.libro = self.libro
+        
         
     }
     
@@ -277,9 +277,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
+            controller.pagina = miPagina
             controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(controller, animated: true, completion: nil)
-            controller.pagina = miPagina
+            
             
             
         }
@@ -407,6 +408,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     */
+    
+    /*
     func Ver (){
         let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
         let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
@@ -465,5 +468,5 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
     }
-
+    */
 }

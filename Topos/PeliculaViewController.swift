@@ -222,13 +222,6 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         }
 
         
-        
-        
-        
-        
-        
-        //return name
-        
     }
 
 }

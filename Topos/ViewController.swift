@@ -43,6 +43,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         
         NotificationCenter.default.removeObserver(self, name: PageContentViewController.NotificationIdentifierSinc, object: nil);
         
+        
     }
 
 
@@ -80,6 +81,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         index += 1;
         if (index == cantPagina)
         {
+            //goToFin()
             return nil;
         }
         return getViewControllerAtIndex(index)
@@ -90,7 +92,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
     {
         let miLibro = self.libro
         let miPagina = miLibro!.paginas![index] as! Pagina
-        
+        let totales = miLibro?.paginas?.count
         
         //let pagina : Pagina!
         //pagina = self.paginas[index]
@@ -103,12 +105,13 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         pageContentViewController.strPhotoName = ""
         pageContentViewController.pagina = miPagina
         pageContentViewController.pageIndex = index
+        pageContentViewController.pageTotales = totales!
         
         return pageContentViewController
     }
   
     required init?(coder aDecoder: NSCoder) {
-        super.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
     
     
@@ -129,8 +132,17 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         
         
     }
+    
+    func goToFin(){
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     //*********************
     
+    /*
     func Ver (){
         let fetchRequest : NSFetchRequest<Pagina> = NSFetchRequest(entityName: "Pagina")
         let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
@@ -173,7 +185,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         }
         
     }
-
+    */
     
     
 }

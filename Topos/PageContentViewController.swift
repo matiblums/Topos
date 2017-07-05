@@ -15,6 +15,7 @@ class PageContentViewController: UIViewController {
     
     public static let NotificationIdentifierSinc = Notification.Name(rawValue: "NotificationIdentifierSinc")
     
+    
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,6 +23,7 @@ class PageContentViewController: UIViewController {
     var timer = 0
     
     var pageIndex: Int = 0
+    var pageTotales: Int = 0
     var strTitle: String!
     var strPhotoName: String!
     
@@ -135,6 +137,12 @@ class PageContentViewController: UIViewController {
             player2?.stop()
             stopTimerTest()
             
+            if(pageIndex == pageTotales - 1){
+             
+                finalizar()
+                
+            }
+            
             NotificationCenter.default.post(name: PageContentViewController.NotificationIdentifierSinc, object: self)
             break
             
@@ -215,8 +223,17 @@ class PageContentViewController: UIViewController {
     
     @IBAction func btnSalir(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+        finalizar()
         
+    }
+    
+    func finalizar(){
+        
+        print("finaliza")
+        player1?.stop()
+        player2?.stop()
+        stopTimerTest()
+        dismiss(animated: true, completion: nil)
     }
     
     func directoryURL() -> NSURL? {

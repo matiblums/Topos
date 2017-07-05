@@ -397,7 +397,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         }
         
     }
-    
+    /*
     func Ver (){
         let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
         let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
@@ -453,7 +453,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         }
         
     }
-
+     */
 
 }
 
