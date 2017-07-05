@@ -35,8 +35,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnTapa: UIButton!
     
     var paginas : [Pagina] = []
-    var fetchResultsController : NSFetchedResultsController<Pagina>!
+    //var fetchResultsController : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
+    
+    var libros : [Libro] = []
+    var fetchResultsController : NSFetchedResultsController<Libro>!
+    var libro : Libro?
     
     var masPaginas = 0
     
@@ -65,10 +69,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         super.viewWillAppear(animated)
         cargaBotones ()
-        Ver ()
+        //Ver ()
         self.myView?.reloadData()
         
-        if(paginas.count > 0){
+        let miLibro = self.libro
+        
+        if((miLibro!.paginas?.count)! > 0){
             btnTapa.isHidden = false
         }
         else{
@@ -91,7 +97,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         borraDatos()
         btnFondoVacio.isEnabled = true
         
-        if(paginas.count>2){
+        let miLibro = self.libro
+        
+        
+        
+        if((miLibro!.paginas?.count)!>2){
             myView?.scrollToItem(at: IndexPath(item: paginas.count, section: 0), at: .left, animated: true)
         }
         
@@ -133,10 +143,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBAction func elijeAudio(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "GrabarAudio", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "GrabarAudio")
+        let controller = storyboard.instantiateViewController(withIdentifier: "GrabarAudio")  as! GrabarAudioViewController
         
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
+        controller.libro = self.libro
         
     }
     
@@ -164,10 +175,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBAction func elijeTapa(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Tapa", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Tapa")
+        let controller = storyboard.instantiateViewController(withIdentifier: "Tapa") as! TapaViewController
         
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
+        controller.libro = self.libro
         
     }
     
@@ -183,23 +195,48 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return paginas.count + masPaginas
+        //return paginas.count + masPaginas
+        let miLibro = self.libro
+        let cantPaginas = miLibro!.paginas?.count
+        
+        return cantPaginas! + masPaginas
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! SeleccionCollectionViewCell
         
-        if(indexPath.row < paginas.count){
+        let miLibro = self.libro
+        
+        
+        
+        
+        if(indexPath.row < (miLibro?.paginas?.count)!){
             
-            let pagina : Pagina!
-            pagina = self.paginas[indexPath.row]
-            let imgSel = pagina.fondo
+           // let pagina : Pagina!
+           // pagina = self.paginas[indexPath.row]
+           // let imgSel = pagina.fondo
+           // let image: UIImage = UIImage(named: imgSel)!
+           // cell.imgGaleria.image = image
+            
+           // let image2: UIImage = UIImage(named: "play_pagina")!
+           // cell.imgPlay.image = image2
+            
+            //let pagina : Pagina!
+            //pagina = self.paginas[indexPath.row]
+            
+            let miPagina =  miLibro?.paginas![indexPath.row] as! Pagina
+            
+            let imgSel = miPagina.fondo
             let image: UIImage = UIImage(named: imgSel)!
             cell.imgGaleria.image = image
             
             let image2: UIImage = UIImage(named: "play_pagina")!
             cell.imgPlay.image = image2
+            
+            
         }
         else{
             
@@ -223,19 +260,26 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         print(myIndex)
         //myView?.scrollToItem(at: IndexPath(item: myIndex, section: 0), at: .right, animated: true)
         
+        let miLibro = self.libro
+        let cantPaginas = miLibro!.paginas?.count
         
-        if(indexPath.row < paginas.count){
+        if(indexPath.row < cantPaginas!){
             
-            let pagina : Pagina!
-            pagina = self.paginas[myIndex]
+            let miLibro = self.libro
             
+            //let pagina : Pagina!
+            //pagina = self.paginas[myIndex]
             
+            //let dolencia = libros[1]
+            //let fitSession =  dolencia.paginas![0] as! Pagina
+            
+            let miPagina = miLibro!.paginas![myIndex] as! Pagina
             
             let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
             controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(controller, animated: true, completion: nil)
-            controller.pagina = pagina
+            controller.pagina = miPagina
             
             
         }
@@ -319,7 +363,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
     }
-    
+    /*
     func Ver (){
         let fetchRequest : NSFetchRequest<Pagina> = NSFetchRequest(entityName: "Pagina")
         let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
@@ -362,4 +406,64 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
     }
+    */
+    func Ver (){
+        let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
+        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            
+            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+            
+            
+            do {
+                try fetchResultsController.performFetch()
+                self.libros = fetchResultsController.fetchedObjects!
+                
+               // let dolencia = libros[0]
+          
+               // let fitSession =  dolencia.paginas![0] as! Pagina
+                
+               // self.paginas = dolencia.paginas
+                
+                //print(dolencia.paginas?.count)
+                
+                
+                // cell.textLabel!.text = dateFormatter.string(from: fitSession.date! as Date)
+                
+                //let pagina = libros[0].paginas
+                //let resultado = pagina.topo
+                
+                
+                
+                //let dolencia = dolencias[3]
+                
+                // for name in casos {
+                
+                //   let caso = name
+                //print (caso.caso)
+                
+                
+                // }
+                
+                //self.tableView.refreshControl?.endRefreshing()
+                //tableView.reloadData()
+                
+                //print("---: \(dolencia.nombre) ---: \(dolencias.count)")
+                
+                
+            } catch {
+                print("Error: \(error)")
+            }
+            
+        }
+        
+    }
+
 }

@@ -58,6 +58,7 @@
 		16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB01F05BF8C001DDC07 /* Video.storyboard */; };
 		16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */; };
 		16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */; };
+		16C8BF3D1F0C911C003EFB67 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C8BF3C1F0C911B003EFB67 /* CoreDataStack.swift */; };
 		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
 		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
@@ -146,6 +147,7 @@
 		16BCBEB01F05BF8C001DDC07 /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tapa.storyboard; sourceTree = "<group>"; };
 		16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapaViewController.swift; sourceTree = "<group>"; };
+		16C8BF3C1F0C911B003EFB67 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "../../cursoCoreData/ChicoFit 2/ChicoFit/CoreDataStack.swift"; sourceTree = "<group>"; };
 		16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTapas.storyboard; sourceTree = "<group>"; };
 		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				16C8BF3C1F0C911B003EFB67 /* CoreDataStack.swift */,
 				16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */,
 				169346241F0866B600BAE79D /* BibliotecaViewController.swift */,
 				16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */,
@@ -709,6 +712,7 @@
 				16E8E1701F08987000DE1255 /* GaleriaTapasViewController.swift in Sources */,
 				16BC26EF1EE45B6F009C2688 /* SeleccionViewController.swift in Sources */,
 				16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */,
+				16C8BF3D1F0C911C003EFB67 /* CoreDataStack.swift in Sources */,
 				16BC26F31EE49A81009C2688 /* GaleriaToposViewController.swift in Sources */,
 				16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */,
 				16BC26C21EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift in Sources */,

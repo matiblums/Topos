@@ -102,19 +102,23 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         if(indexPath.row < libros.count){
             
             let storyboard = UIStoryboard(name: "Video", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Video")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! ViewController
             controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(controller, animated: true, completion: nil)
+            controller.libro = libros[myIndex]
             
         }
         else{
+            let miLibro = grabarLibro ()
             
             let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
             
             controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(controller, animated: true, completion: nil)
             
+            controller.libro = miLibro
+         
         }
         
     }
@@ -143,6 +147,19 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             do {
                 try fetchResultsController.performFetch()
                 self.libros = fetchResultsController.fetchedObjects!
+                
+                //let dolencia = libros[1]
+                //let fitSession =  dolencia.paginas![0] as! Pagina
+                
+                //print(fitSession.topo)
+                
+                
+               // cell.textLabel!.text = dateFormatter.string(from: fitSession.date! as Date)
+                
+                //let pagina = libros[0].paginas
+                //let resultado = pagina.topo
+                
+                
                 
                 //let dolencia = dolencias[3]
                 
@@ -218,7 +235,41 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
-    
+    func grabarLibro() -> Libro {
+        let titulo = "titulo"
+        let autor = "autor"
+        let tapa = "tapa"
+        let fecha = Date()
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
+            
+            self.libro?.titulo = titulo
+            self.libro?.autor = autor
+            self.libro?.tapa = tapa
+            self.libro?.fecha = fecha
+            
+            
+            do {
+                try context.save()
+                print("Grabo OK")
+                //irBiblioteca ()
+                
+                
+                
+            } catch {
+                print("Ha habido un error al guardar el lugar en Core Data")
+            }
+            
+            
+        }
+        
+        return libro!
+        
+    }
+
     
     
 }

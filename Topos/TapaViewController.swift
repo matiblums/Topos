@@ -58,8 +58,24 @@ class TapaViewController: UIViewController {
     
 
     @IBAction func elijeBiblioteca(_ sender: Any) {
+        let titulo = txtTitulo.text
+        let autor = txtAutor.text
+        let tapa = UserDefaults.standard.string(forKey: "tapa")
         
-        grabar()        
+        
+        if(titulo == ""){
+            return
+        }
+        
+        if(autor == ""){
+            return
+        }
+        
+        if(tapa == nil){
+            return
+        }
+        
+        grabar()
     }
     
     @IBAction func elijeGaleriaTapas(_ sender: Any) {
@@ -81,7 +97,7 @@ class TapaViewController: UIViewController {
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
             let context = container.viewContext
             
-            self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
+            //self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
             
             self.libro?.titulo = titulo!
             self.libro?.autor = autor!

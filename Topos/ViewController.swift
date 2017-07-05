@@ -17,6 +17,10 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
     var paginas : [Pagina] = []
     var fetchResultsController : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
+    
+    var libros : [Libro] = []
+    var fetchResultsControllerLibro : NSFetchedResultsController<Libro>!
+    var libro : Libro?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
         //arrPageTitle = ["This is The App Guruz", "This is Table Tennis 3D", "This is Hide Secrets"];
         //arrPagePhoto = ["1a.jpg", "2a.jpg", "3a.jpg"];
         
-        Ver()
+        //Ver()
         
         self.dataSource = self
         
@@ -70,8 +74,11 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
             return nil;
         }
         
+        let miLibro = self.libro
+        let cantPagina = miLibro!.paginas?.count
+        
         index += 1;
-        if (index == paginas.count)
+        if (index == cantPagina)
         {
             return nil;
         }
@@ -81,9 +88,12 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
 // MARK:- Other Methods
     func getViewControllerAtIndex(_ index: NSInteger) -> PageContentViewController
     {
+        let miLibro = self.libro
+        let miPagina = miLibro!.paginas![index] as! Pagina
         
-        let pagina : Pagina!
-        pagina = self.paginas[index]
+        
+        //let pagina : Pagina!
+        //pagina = self.paginas[index]
         
         
         // Create a new view controller and pass suitable data.
@@ -91,7 +101,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
 
         pageContentViewController.strTitle = ""
         pageContentViewController.strPhotoName = ""
-        pageContentViewController.pagina = pagina
+        pageContentViewController.pagina = miPagina
         pageContentViewController.pageIndex = index
         
         return pageContentViewController

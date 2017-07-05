@@ -38,6 +38,10 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
     var pagina: Pagina?
     
+    var libros : [Libro] = []
+    var fetchResultsController : NSFetchedResultsController<Libro>!
+    var libro : Libro?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

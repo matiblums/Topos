@@ -38,6 +38,10 @@ class PageContentViewController: UIViewController {
     var fetchResultsController : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
     
+    var libros : [Libro] = []
+    var fetchResultsControllerLibro : NSFetchedResultsController<Libro>!
+    var libro : Libro?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -143,6 +147,8 @@ class PageContentViewController: UIViewController {
     }
     
     func playSound1() {
+        
+        
         let musicaGuardada = self.pagina?.musica
         
       

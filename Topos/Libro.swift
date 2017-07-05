@@ -15,4 +15,5 @@ class Libro : NSManagedObject {
     @NSManaged var autor : String
     @NSManaged var tapa : String
     @NSManaged var fecha : Date
+    @NSManaged var paginas: NSOrderedSet?
 }
