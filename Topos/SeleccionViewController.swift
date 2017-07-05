@@ -180,7 +180,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
         
-        
+         UserDefaults.standard.removeObject(forKey: "tapa")
     }
     
     //*****************************************************************************************
