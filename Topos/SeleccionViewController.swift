@@ -32,6 +32,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnAudioVacio: UIButton!
     @IBOutlet var btnPeliculaVacio: UIButton!
     
+    @IBOutlet var btnPlay: UIButton!
+    
     @IBOutlet var btnTapa: UIButton!
     
     var paginas : [Pagina] = []
@@ -42,7 +44,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     var fetchResultsController : NSFetchedResultsController<Libro>!
     var libro : Libro?
     
-    var masPaginas = 0
+    var masPaginas = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +52,21 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         myView?.dataSource = self
         //myView?.backgroundColor = UIColor.white
         
-        flowLayout?.maxCoverDegree = 0
-        flowLayout?.coverDensity = 0.25
-        flowLayout?.minCoverScale = 0.50
-        flowLayout?.minCoverOpacity = 0.7
+        //flowLayout?.maxCoverDegree = 0
+        //flowLayout?.coverDensity = 0.25
+        //flowLayout?.minCoverScale = 0.20
+        //flowLayout?.minCoverOpacity = 0.7
         
-        borraDatos()
+        //borraDatos()
+        //borraDatos()
+        btnPlay.isEnabled = false
+        
+        
+        let miLibro = self.libro
+        
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
+       
+        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
         
     }
     
@@ -68,7 +79,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        cargaBotones ()
+        
         //Ver ()
         self.myView?.reloadData()
         
@@ -81,6 +92,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             btnTapa.isHidden = true
         }
         
+        cargaBotones()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -91,7 +104,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
    
     
     @IBAction func agregaPagina(_ sender: Any) {
-        
+        /*
         masPaginas = 1
         self.myView?.reloadData()
         borraDatos()
@@ -106,7 +119,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
         btnAgrega.isEnabled = false
-        
+        */
     }
     
     //*****************************************************************************************
@@ -183,6 +196,25 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
          UserDefaults.standard.removeObject(forKey: "tapa")
     }
     
+    
+    @IBAction func playPagina(_ sender: Any) {
+        
+        
+        let indexPaths : NSArray = self.myView!.indexPathsForSelectedItems! as NSArray
+        let indexPath : NSIndexPath = indexPaths[0] as! NSIndexPath
+        
+        let miLibro = self.libro
+        let miPagina = miLibro!.paginas![indexPath.row] as! Pagina
+        
+        let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
+        controller.pagina = miPagina
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    
+    
     //*****************************************************************************************
     
     
@@ -210,45 +242,31 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let miLibro = self.libro
         
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
         
+        if(indexPath.row == paginasTotales - 2){
+            
+            let image: UIImage = UIImage(named: "fondo0")!
+            cell.imgGaleria.image = image
+            
+        }
         
-        if(indexPath.row < (miLibro?.paginas?.count)!){
+        if(indexPath.row == 0 || indexPath.row == paginasTotales - 1){
             
-           // let pagina : Pagina!
-           // pagina = self.paginas[indexPath.row]
-           // let imgSel = pagina.fondo
-           // let image: UIImage = UIImage(named: imgSel)!
-           // cell.imgGaleria.image = image
             
-           // let image2: UIImage = UIImage(named: "play_pagina")!
-           // cell.imgPlay.image = image2
+        }
             
-            //let pagina : Pagina!
-            //pagina = self.paginas[indexPath.row]
+        if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
             
-            let miPagina =  miLibro?.paginas![indexPath.row] as! Pagina
+            let miPagina =  miLibro?.paginas![indexPath.row - 1] as! Pagina
             
             let imgSel = miPagina.fondo
             let image: UIImage = UIImage(named: imgSel)!
             cell.imgGaleria.image = image
             
-            let image2: UIImage = UIImage(named: "play_pagina")!
-            cell.imgPlay.image = image2
-            
-            
         }
-        else{
-            
-            
-            let image: UIImage = UIImage(named: "fondo0")!
-            cell.imgGaleria.image = image
-            
-            let image2: UIImage = UIImage(named: "agregar_pagina")!
-            cell.imgPlay.image = image2
-            
-            
-        }
+        
         
         return cell
     }
@@ -258,39 +276,28 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let myIndex = indexPath.row
         print(myIndex)
-        //myView?.scrollToItem(at: IndexPath(item: myIndex, section: 0), at: .right, animated: true)
         
         let miLibro = self.libro
-        let cantPaginas = miLibro!.paginas?.count
         
-        if(indexPath.row < cantPaginas!){
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
+        
+        
+        
+        if(indexPath.row == paginasTotales - 2){
             
-            let miLibro = self.libro
+            borraDatos()
+            myView?.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
+        }
             
-            //let pagina : Pagina!
-            //pagina = self.paginas[myIndex]
-            
-            //let dolencia = libros[1]
-            //let fitSession =  dolencia.paginas![0] as! Pagina
-            
-            let miPagina = miLibro!.paginas![myIndex] as! Pagina
-            
-            let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
-            controller.pagina = miPagina
-            controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            self.present(controller, animated: true, completion: nil)
-            
+        if(indexPath.row == 0 || indexPath.row == paginasTotales - 1){
             
             
         }
-        else{
             
-            //cargaBotones()
+        if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
             
-            //borraDatos()
-            //btnFondo.isHidden = false
-            
+            muestraDatos()
+            myView?.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
         }
         
         
@@ -308,8 +315,20 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         //cell?.layer.borderColor = UIColor.clear.cgColor
     }
     
+    func muestraDatos(){
+        btnPlay.isEnabled = true
+        
+        
+        btnFondo.isHidden = false
+        btnTopo.isHidden = false
+        btnMusica.isHidden = false
+        btnAudio.isHidden = false
+        
+    }
     
     func borraDatos(){
+        
+        btnPlay.isEnabled = false
         
         UserDefaults.standard.removeObject(forKey: "fondo")
         UserDefaults.standard.removeObject(forKey: "topo")
@@ -330,7 +349,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         btnMusicaVacio.isEnabled = false
         btnAudioVacio.isEnabled = false
         
-        
+        btnFondoVacio.isEnabled = true
         
         cargaBotones ()
     }
@@ -356,10 +375,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
         if((UserDefaults.standard.string(forKey: "audio")) != nil){
             btnAudio.isHidden = false
-            
+            self.myView?.reloadData()
             //btnPelicula.isHidden = false
-            masPaginas = 0
-            btnAgrega.isEnabled = true
+            //masPaginas = 0
+            //btnAgrega.isEnabled = true
         }
     
     

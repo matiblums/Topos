@@ -29,7 +29,7 @@
                                 <rect key="frame" x="120.5" y="9" width="427" height="99.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v" customClass="LNICoverFlowLayout" customModule="LNICoverFlowLayout">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
                                     <size key="itemSize" width="200" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -43,11 +43,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-tZ-rgx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-tZ-rgx">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_pagina" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-fn-2ip">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-fn-2ip">
                                                     <rect key="frame" x="57" y="29" width="87" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -65,14 +65,6 @@
                                     <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-Lq-U5a" userLabel="Agregar">
-                                <rect key="frame" x="597" y="25" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="agregar_pagina"/>
-                                <connections>
-                                    <action selector="agregaPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Zjx-jE-nNY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
                                 <rect key="frame" x="24.5" y="142.5" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -133,17 +125,25 @@
                                     <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
+                                <rect key="frame" x="310" y="325" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="playPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KpU-Ms-Ccn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="btnAgrega" destination="cJC-Lq-U5a" id="jTT-Oi-BkV"/>
                         <outlet property="btnAudio" destination="BMo-Xr-MzQ" id="eQS-2c-KEG"/>
                         <outlet property="btnAudioVacio" destination="vuc-ao-P4Z" id="q3V-hn-RzO"/>
                         <outlet property="btnFondo" destination="uEu-Ct-i7j" id="0ja-Wj-TVH"/>
                         <outlet property="btnFondoVacio" destination="nAd-O6-fUr" id="78f-IM-g1H"/>
                         <outlet property="btnMusica" destination="PWZ-0M-oPG" id="cd8-oI-1RU"/>
                         <outlet property="btnMusicaVacio" destination="NEA-ew-ncR" id="e9O-B9-Zlq"/>
+                        <outlet property="btnPlay" destination="Pwb-5x-S06" id="blk-dj-Hrf"/>
                         <outlet property="btnTapa" destination="Qpp-Gq-s1I" id="8Dt-Ur-VyR"/>
                         <outlet property="btnTopo" destination="F4r-ZN-9PO" id="DEG-RY-gEV"/>
                         <outlet property="btnTopoVacio" destination="IBb-Vt-4Pa" id="uSN-2k-F6L"/>
@@ -157,7 +157,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="agregar_pagina" width="130" height="130"/>
         <image name="bt_fondo_lleno" width="390" height="250"/>
         <image name="bt_fondo_vacio" width="392" height="252"/>
         <image name="bt_grabar_elegido" width="320" height="340"/>
@@ -167,8 +166,6 @@
         <image name="bt_topo_lleno" width="346" height="257"/>
         <image name="bt_topo_vacio" width="346" height="260"/>
         <image name="fondo" width="1922" height="1080"/>
-        <image name="fondo2" width="1500" height="753"/>
         <image name="ok_verde" width="130" height="130"/>
-        <image name="play_pagina" width="150" height="150"/>
     </resources>
 </document>
