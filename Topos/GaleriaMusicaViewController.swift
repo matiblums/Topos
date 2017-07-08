@@ -44,18 +44,26 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         
         super.viewWillAppear(animated)
         
-        let imgFondo = UserDefaults.standard.string(forKey: "fondo")
-        let imgTopo = UserDefaults.standard.string(forKey: "topo")
-        let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
-        let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
-        let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
-        let imageFondo: UIImage = UIImage(named: imgFondo!)!
-        miFondo.image = imageFondo
+        if((UserDefaults.standard.string(forKey: "fondo")) != nil){
+            
+            let imgFondo = UserDefaults.standard.string(forKey: "fondo")
+            let imageFondo: UIImage = UIImage(named: imgFondo!)!
+            miFondo.image = imageFondo
+            
+        }
         
-        let imageTopo: UIImage = UIImage(named: imgTopo!)!
-        miTopo.image = imageTopo
+        if((UserDefaults.standard.string(forKey: "topo")) != nil){
+            
+            let imgTopo = UserDefaults.standard.string(forKey: "topo")
+            let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
+            let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
+            let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+            let imageTopo: UIImage = UIImage(named: imgTopo!)!
+            miTopo.image = imageTopo
+            miTopo.frame.origin = pointTopo
+            
+        }
         
-        miTopo.frame.origin = pointTopo
     }
 
     override func didReceiveMemoryWarning() {

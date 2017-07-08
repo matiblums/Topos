@@ -32,10 +32,14 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miTopo.ddDelegate = self
         
         // Do any additional setup after loading the view.
+        if((UserDefaults.standard.string(forKey: "fondo")) != nil){
+            
+            let fondoGuardado = UserDefaults.standard.string(forKey: "fondo")
+            let image: UIImage = UIImage(named: fondoGuardado!)!
+            miFondo.image = image
+            
+        }
         
-        let fondoGuardado = UserDefaults.standard.string(forKey: "fondo")
-        let image: UIImage = UIImage(named: fondoGuardado!)!
-        miFondo.image = image
         
         //let imgSel = self.items[0]
         //let imageTopo: UIImage = UIImage(named: imgSel)!

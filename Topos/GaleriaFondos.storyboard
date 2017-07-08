@@ -25,6 +25,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-B1-pfW">
+                                <rect key="frame" x="268" y="107" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a6G-r4-23r">
                                 <rect key="frame" x="20" y="20" width="696" height="374"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +99,7 @@
                         <outlet property="miFondo" destination="9ZQ-IQ-lVB" id="HNw-oy-I2d"/>
                         <outlet property="miFondoBotonera" destination="wbD-mq-4Zn" id="3vL-nO-9jJ"/>
                         <outlet property="miGaleria" destination="a6G-r4-23r" id="uk7-T5-F8B"/>
+                        <outlet property="miTopo" destination="OsY-B1-pfW" id="jfq-pN-wCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TiU-jj-sbE" userLabel="First Responder" sceneMemberID="firstResponder"/>

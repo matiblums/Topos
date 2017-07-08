@@ -16,13 +16,26 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var miFondo: UIImageView!
     @IBOutlet weak var miGaleria: UICollectionView!
     
+    @IBOutlet weak var miTopo: UIImageView!
+    
     @IBOutlet weak var miFondoBotonera: UIView!
 
     var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6", "fondo7", "fondo8", "fondo9", "fondo10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if((UserDefaults.standard.string(forKey: "topo")) != nil){
+            
+            let imgTopo = UserDefaults.standard.string(forKey: "topo")
+            let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
+            let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
+            let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+            let imageTopo: UIImage = UIImage(named: imgTopo!)!
+            miTopo.image = imageTopo
+            miTopo.frame.origin = pointTopo
+            
+        }
         
         let imgSel = self.items[0]
         let image: UIImage = UIImage(named: imgSel)!

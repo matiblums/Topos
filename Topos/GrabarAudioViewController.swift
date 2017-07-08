@@ -94,19 +94,26 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         botonPlay.isHidden = true
         
         
-        let imgFondo = UserDefaults.standard.string(forKey: "fondo")
-        let imgTopo = UserDefaults.standard.string(forKey: "topo")
-        let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
-        let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
-        let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
-        let imageFondo: UIImage = UIImage(named: imgFondo!)!
-        miFondo.image = imageFondo
+        if((UserDefaults.standard.string(forKey: "fondo")) != nil){
+            
+            let imgFondo = UserDefaults.standard.string(forKey: "fondo")
+            let imageFondo: UIImage = UIImage(named: imgFondo!)!
+            miFondo.image = imageFondo
+            
+        }
         
-        let imageTopo: UIImage = UIImage(named: imgTopo!)!
-        miTopo.image = imageTopo
-        
-        miTopo.frame.origin = pointTopo
-        
+        if((UserDefaults.standard.string(forKey: "topo")) != nil){
+            
+            let imgTopo = UserDefaults.standard.string(forKey: "topo")
+            let topoxGuardada = UserDefaults.standard.integer(forKey: "topox")
+            let topoyGuardada = UserDefaults.standard.integer(forKey: "topoy")
+            let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+            let imageTopo: UIImage = UIImage(named: imgTopo!)!
+            miTopo.image = imageTopo
+            miTopo.frame.origin = pointTopo
+            
+        }
+    
     }
     
     @IBAction func btnGraba(_ sender: Any) {
@@ -183,7 +190,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
             audioPlayer.stop()
         }
         
-        grabar()
+        //grabar()
         dismiss(animated: true, completion: nil)
         
         
@@ -297,7 +304,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     }
     
     //***************************************************************************
-    
+    /*
     func grabar() {
         
         
@@ -312,10 +319,6 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         _ = formatter.string(from: date)
-        
-        
-        
-        
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
             let context = container.viewContext
@@ -366,94 +369,6 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         }
         
     }
-    
-    func grabarLibro() {
-        let titulo = "titulo"
-        let autor = "autor"
-        let tapa = "tapa"
-        let fecha = Date()
-        
-        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
-            let context = container.viewContext
-            
-            //self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
-            
-            self.libro?.titulo = titulo
-            self.libro?.autor = autor
-            self.libro?.tapa = tapa
-            self.libro?.fecha = fecha
-            
-            
-            do {
-                try context.save()
-                print("Grabo OK")
-                //irBiblioteca ()
-                
-            } catch {
-                print("Ha habido un error al guardar el lugar en Core Data")
-            }
-            
-            
-        }
-        
-    }
-    /*
-    func Ver (){
-        let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
-        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        
-        
-        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
-            let context = container.viewContext
-            
-            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            
-            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
-            
-            
-            do {
-                try fetchResultsController.performFetch()
-                self.libros = fetchResultsController.fetchedObjects!
-                
-                let dolencia = libros[1]
-                let fitSession =  dolencia.paginas![0] as! Pagina
-                
-                print(fitSession.topo)
-                
-                
-                // cell.textLabel!.text = dateFormatter.string(from: fitSession.date! as Date)
-                
-                //let pagina = libros[0].paginas
-                //let resultado = pagina.topo
-                
-                
-                
-                //let dolencia = dolencias[3]
-                
-                // for name in casos {
-                
-                //   let caso = name
-                //print (caso.caso)
-                
-                
-                // }
-                
-                //self.tableView.refreshControl?.endRefreshing()
-                //tableView.reloadData()
-                
-                //print("---: \(dolencia.nombre) ---: \(dolencias.count)")
-                
-                
-            } catch {
-                print("Error: \(error)")
-            }
-            
-        }
-        
-    }
-     */
-
+    */
 }
 

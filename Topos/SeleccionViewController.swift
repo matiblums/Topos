@@ -19,12 +19,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var flowLayout: LNICoverFlowLayout?
     
     @IBOutlet var btnAgrega: UIButton!
+    @IBOutlet var btnCierraPagina: UIButton!
     
-    @IBOutlet var btnFondo: UIImageView!
-    @IBOutlet var btnTopo: UIImageView!
-    @IBOutlet var btnMusica: UIImageView!
-    @IBOutlet var btnAudio: UIImageView!
-    @IBOutlet var btnPelicula: UIButton!
+    
     
     @IBOutlet var btnFondoVacio: UIButton!
     @IBOutlet var btnTopoVacio: UIButton!
@@ -37,7 +34,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnTapa: UIButton!
     
     var paginas : [Pagina] = []
-    //var fetchResultsController : NSFetchedResultsController<Pagina>!
+    var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
     
     var libros : [Libro] = []
@@ -213,7 +210,17 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(controller, animated: true, completion: nil)
     }
     
-    
+    @IBAction func cerrarPagina(_ sender: Any) {
+        grabar()
+        borraDatos()
+        self.myView?.reloadData()
+        let miLibro = self.libro
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
+        
+        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
+        
+        
+    }
     
     //*****************************************************************************************
     
@@ -240,20 +247,33 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! SeleccionCollectionViewCell
         
-        let miLibro = self.libro
         
+        let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
         
         if(indexPath.row == paginasTotales - 2){
             
-            let image: UIImage = UIImage(named: "fondo0")!
-            cell.imgGaleria.image = image
+            if((UserDefaults.standard.string(forKey: "fondo")) != nil){
+                
+                let image: UIImage = UIImage(named: UserDefaults.standard.string(forKey: "fondo")!)!
+                cell.imgGaleria.image = image
+                
+            }
+            else{
+                
+                let image: UIImage = UIImage(named: "fondo0")!
+                cell.imgGaleria.image = image
+                
+            }
+            
             
         }
         
         if(indexPath.row == 0 || indexPath.row == paginasTotales - 1){
             
+            //let image: UIImage = UIImage(named: "fondo0")!
+            cell.imgGaleria.image = nil
             
         }
             
@@ -319,10 +339,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         btnPlay.isEnabled = true
         
         
-        btnFondo.isHidden = false
-        btnTopo.isHidden = false
-        btnMusica.isHidden = false
-        btnAudio.isHidden = false
+       // btnFondo.isHidden = false
+       // btnTopo.isHidden = false
+       // btnMusica.isHidden = false
+      //  btnAudio.isHidden = false
         
     }
     
@@ -337,155 +357,114 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         UserDefaults.standard.removeObject(forKey: "musica")
         UserDefaults.standard.removeObject(forKey: "audio")
         
-        btnFondo.isHidden = true
-        btnTopo.isHidden = true
-        btnMusica.isHidden = true
-        btnAudio.isHidden = true
+        //btnFondo.isHidden = true
+        //btnTopo.isHidden = true
+        //btnMusica.isHidden = true
+        //btnAudio.isHidden = true
         
        // btnPelicula.isHidden = true
         
-        btnFondoVacio.isEnabled = false
-        btnTopoVacio.isEnabled = false
-        btnMusicaVacio.isEnabled = false
-        btnAudioVacio.isEnabled = false
+        //btnFondoVacio.isEnabled = false
+        //btnTopoVacio.isEnabled = false
+        //btnMusicaVacio.isEnabled = false
+        //btnAudioVacio.isEnabled = false
         
-        btnFondoVacio.isEnabled = true
+        //btnFondoVacio.isEnabled = true
         
-        cargaBotones ()
+        //cargaBotones ()
     }
     
    func cargaBotones (){
     
-    
-    
         if((UserDefaults.standard.string(forKey: "fondo")) != nil){
-            btnFondo.isHidden = false
-            btnTopoVacio.isEnabled = true
+            
+            if((UserDefaults.standard.string(forKey: "topo")) != nil){
+                
+                if((UserDefaults.standard.string(forKey: "musica")) != nil){
+                    
+                    if((UserDefaults.standard.string(forKey: "audio")) != nil){
+                        
+                        btnCierraPagina.isEnabled = true
+        
+                    }
+                }
+    
+            }
+        }
+        else{
+            
+          btnCierraPagina.isEnabled = false
+            
         }
     
-        if((UserDefaults.standard.string(forKey: "topo")) != nil){
-            btnTopo.isHidden = false
-            btnMusicaVacio.isEnabled = true
-        }
-    
-        if((UserDefaults.standard.string(forKey: "musica")) != nil){
-            btnMusica.isHidden = false
-            btnAudioVacio.isEnabled = true
-        }
-    
-        if((UserDefaults.standard.string(forKey: "audio")) != nil){
-            btnAudio.isHidden = false
-            self.myView?.reloadData()
-            //btnPelicula.isHidden = false
-            //masPaginas = 0
-            //btnAgrega.isEnabled = true
-        }
-    
-    
+        self.myView?.reloadData()
     }
-    /*
-    func Ver (){
-        let fetchRequest : NSFetchRequest<Pagina> = NSFetchRequest(entityName: "Pagina")
-        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+    
+    //***************************************************************************
+    
+    func grabar() {
         
         
+        let topo = UserDefaults.standard.string(forKey: "topo")
+        let topox = UserDefaults.standard.integer(forKey: "topox")
+        let topoy = UserDefaults.standard.integer(forKey: "topoy")
+        let fondo = UserDefaults.standard.string(forKey: "fondo")
+        let musica = UserDefaults.standard.string(forKey: "musica")
+        let audio = UserDefaults.standard.string(forKey: "audio")
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        _ = formatter.string(from: date)
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
             let context = container.viewContext
             
-            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            self.pagina = NSEntityDescription.insertNewObject(forEntityName: "Pagina", into: context) as? Pagina
             
-            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+            
+            
+            self.pagina?.topo = topo!
+            self.pagina?.topox = "\(topox)"
+            self.pagina?.topoy = "\(topoy)"
+            self.pagina?.fondo = fondo!
+            self.pagina?.musica = musica!
+            self.pagina?.audio = audio!
+            self.pagina?.fecha = date
+            
+            
+            
+            
+            // let fitEntity = NSEntityDescription.entity(forEntityName: "FitSession", in: managedContext)
+            // let fitSession = FitSession(entity: fitEntity!, insertInto: managedContext)
+            // fitSession.date = Date()
+            
+            
+            let fitnessSessions = self.libro?.paginas!.mutableCopy() as! NSMutableOrderedSet
+            fitnessSessions.add(self.pagina as Any)
+            
+            self.libro?.paginas = fitnessSessions.copy() as? NSOrderedSet
+            
+            
+            
             
             
             do {
-                try fetchResultsController.performFetch()
-                self.paginas = fetchResultsController.fetchedObjects!
-                
-                //let dolencia = dolencias[3]
-                
-                // for name in casos {
-                
-                //   let caso = name
-                //print (caso.caso)
+                try context.save()
+                print("Grabo OK")
                 
                 
-                // }
                 
-                //self.tableView.refreshControl?.endRefreshing()
-                //tableView.reloadData()
-                
-                //print("---: \(dolencia.nombre) ---: \(dolencias.count)")
-                
+                //let sincronizarcaso = SincronizarCaso()
+                //sincronizarcaso.Iniciar()
                 
             } catch {
-                print("Error: \(error)")
+                print("Ha habido un error al guardar el lugar en Core Data")
             }
+            
             
         }
         
     }
-    */
-    
-    /*
-    func Ver (){
-        let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
-        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        
-        
-        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
-            let context = container.viewContext
-            
-            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            
-            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
-            
-            
-            do {
-                try fetchResultsController.performFetch()
-                self.libros = fetchResultsController.fetchedObjects!
-                
-               // let dolencia = libros[0]
-          
-               // let fitSession =  dolencia.paginas![0] as! Pagina
-                
-               // self.paginas = dolencia.paginas
-                
-                //print(dolencia.paginas?.count)
-                
-                
-                // cell.textLabel!.text = dateFormatter.string(from: fitSession.date! as Date)
-                
-                //let pagina = libros[0].paginas
-                //let resultado = pagina.topo
-                
-                
-                
-                //let dolencia = dolencias[3]
-                
-                // for name in casos {
-                
-                //   let caso = name
-                //print (caso.caso)
-                
-                
-                // }
-                
-                //self.tableView.refreshControl?.endRefreshing()
-                //tableView.reloadData()
-                
-                //print("---: \(dolencia.nombre) ---: \(dolencias.count)")
-                
-                
-            } catch {
-                print("Error: \(error)")
-            }
-            
-        }
-        
-    }
-    */
+
 }

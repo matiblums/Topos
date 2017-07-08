@@ -101,22 +101,6 @@
                                     <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_fondo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-Ct-i7j">
-                                <rect key="frame" x="24.5" y="142.5" width="143" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_topo_lleno" translatesAutoresizingMaskIntoConstraints="NO" id="F4r-ZN-9PO">
-                                <rect key="frame" x="230" y="142.5" width="119" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_musica_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="PWZ-0M-oPG">
-                                <rect key="frame" x="408" y="142.5" width="79" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bt_grabar_elegido" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-Xr-MzQ">
-                                <rect key="frame" x="558" y="142.5" width="85" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
                                 <rect key="frame" x="597" y="305" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -125,10 +109,18 @@
                                     <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
-                                <rect key="frame" x="310" y="325" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
+                                <rect key="frame" x="277" y="287" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cerrar pagina"/>
+                                <connections>
+                                    <action selector="cerrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="eFj-I9-VxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
+                                <rect key="frame" x="286" y="325" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Pagina"/>
                                 <connections>
                                     <action selector="playPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KpU-Ms-Ccn"/>
                                 </connections>
@@ -137,15 +129,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="btnAudio" destination="BMo-Xr-MzQ" id="eQS-2c-KEG"/>
                         <outlet property="btnAudioVacio" destination="vuc-ao-P4Z" id="q3V-hn-RzO"/>
-                        <outlet property="btnFondo" destination="uEu-Ct-i7j" id="0ja-Wj-TVH"/>
+                        <outlet property="btnCierraPagina" destination="zsB-G9-mGH" id="jMt-8F-Dab"/>
                         <outlet property="btnFondoVacio" destination="nAd-O6-fUr" id="78f-IM-g1H"/>
-                        <outlet property="btnMusica" destination="PWZ-0M-oPG" id="cd8-oI-1RU"/>
                         <outlet property="btnMusicaVacio" destination="NEA-ew-ncR" id="e9O-B9-Zlq"/>
                         <outlet property="btnPlay" destination="Pwb-5x-S06" id="blk-dj-Hrf"/>
                         <outlet property="btnTapa" destination="Qpp-Gq-s1I" id="8Dt-Ur-VyR"/>
-                        <outlet property="btnTopo" destination="F4r-ZN-9PO" id="DEG-RY-gEV"/>
                         <outlet property="btnTopoVacio" destination="IBb-Vt-4Pa" id="uSN-2k-F6L"/>
                         <outlet property="flowLayout" destination="Xid-LQ-Z7v" id="mCk-W5-FIr"/>
                         <outlet property="myView" destination="gN7-zK-jOG" id="Ehp-n2-OKw"/>
@@ -153,17 +142,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9D-4o-7iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371.73913043478262" y="62.318840579710148"/>
+            <point key="canvasLocation" x="371.06446776611699" y="61.600000000000001"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bt_fondo_lleno" width="390" height="250"/>
         <image name="bt_fondo_vacio" width="392" height="252"/>
-        <image name="bt_grabar_elegido" width="320" height="340"/>
         <image name="bt_grabar_vacio" width="321" height="341"/>
-        <image name="bt_musica_elegido" width="239" height="274"/>
         <image name="bt_musica_vacio" width="243" height="277"/>
-        <image name="bt_topo_lleno" width="346" height="257"/>
         <image name="bt_topo_vacio" width="346" height="260"/>
         <image name="fondo" width="1922" height="1080"/>
         <image name="ok_verde" width="130" height="130"/>
