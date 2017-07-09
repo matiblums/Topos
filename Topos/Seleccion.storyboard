@@ -158,6 +158,14 @@
                                     <action selector="btnDer:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="cZn-iJ-vd6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-jz-3Vs">
+                                <rect key="frame" x="406" y="337" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ir a Biblioteca"/>
+                                <connections>
+                                    <action selector="elijeBiblioteca:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Xqv-s8-K3l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

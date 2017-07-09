@@ -86,18 +86,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         super.viewWillAppear(animated)
         
-        //Ver ()
-        self.myView?.reloadData()
-        
-        let miLibro = self.libro
-        
-        if((miLibro!.paginas?.count)! > 0){
-            btnTapa.isHidden = false
-        }
-        else{
-            btnTapa.isHidden = true
-        }
-        
         cargaBotones()
         
     }
@@ -190,6 +178,16 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
+    @IBAction func elijeBiblioteca(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func elijeTapa(_ sender: Any) {
         
@@ -205,12 +203,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     @IBAction func playPagina(_ sender: Any) {
         
-        
-        let indexPaths : NSArray = self.myView!.indexPathsForSelectedItems! as NSArray
-        let indexPath : NSIndexPath = indexPaths[0] as! NSIndexPath
-        
         let miLibro = self.libro
-        let miPagina = miLibro!.paginas![indexPath.row - 1] as! Pagina
+        let miPagina = miLibro!.paginas![contPagina] as! Pagina
         
         let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
@@ -226,45 +220,55 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
-        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
+        contPagina = paginasTotales - 2
         
+        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
         cargaBotones ()
     }
     
     @IBAction func btnIzq(_ sender: Any) {
         
-        let miLibro = self.libro
-        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
-        
-        
-        
         if(contPagina > 1){
             
             contPagina -= 1
-            
-            myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
+            tocaGaleria ()
             
         }
-        
-        print(contPagina)
-        
     }
+    
     @IBAction func btnDer(_ sender: Any) {
         
         let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
-        
-        
         if(contPagina < paginasTotales - 2){
             
             contPagina += 1
+            tocaGaleria ()
             
+        }
+    }
+    
+    
+    func tocaGaleria () {
+        myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
+        let miLibro = self.libro
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
+        
+        if(contPagina == paginasTotales - 2){
+            
+            cargaBotones ()
             myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
             
         }
         
-        print(contPagina)
+        if(contPagina > 0 && contPagina < paginasTotales - 2){
+            
+            muestraDatos()
+            myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
+            
+        }
+
     }
     //*****************************************************************************************
     
@@ -355,54 +359,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        let myIndex = indexPath.row
-        print(myIndex)
-        
-        let miLibro = self.libro
-        
-        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
-        
-        
-        
-        if(indexPath.row == paginasTotales - 2){
-            
-            cargaBotones ()
-            
-            
-            
-            myView?.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
-        }
-            
-        if(indexPath.row == 0 || indexPath.row == paginasTotales - 1){
-            
-            btnPlay.isEnabled = false
-            
-            checkFondo.isHidden = true
-            checkTopo.isHidden = true
-            checkMusica.isHidden = true
-            checkAudio.isHidden = true
-            
-            btnFondoVacio.isEnabled = false
-            btnTopoVacio.isEnabled = false
-            btnMusicaVacio.isEnabled = false
-            btnAudioVacio.isEnabled = false
-            
-        }
-            
-        if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
-            
-            muestraDatos()
-            myView?.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
-            
-        }
-        
-        
-        //let cell = collectionView.cellForItem(at: indexPath)
-        //cell?.layer.borderWidth = 2.0
-        //cell?.layer.borderColor = UIColor.white.cgColor
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -466,6 +422,18 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
    func cargaBotones (){
+        self.myView?.reloadData()
+    
+        let miLibro = self.libro
+    
+        if((miLibro!.paginas?.count)! > 0){
+            btnTapa.isHidden = false
+        }
+        else{
+            btnTapa.isHidden = true
+        }
+    
+    
         btnPlay.isEnabled = false
         btnFondoVacio.isEnabled = true
         btnTopoVacio.isEnabled = true
