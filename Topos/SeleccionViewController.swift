@@ -13,7 +13,7 @@ import CoreData
 private let reuseIdentifier = "Cell"
 
 class SeleccionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     @IBOutlet var checkFondo: UIImageView!
     @IBOutlet var checkTopo: UIImageView!
     @IBOutlet var checkMusica: UIImageView!
@@ -71,7 +71,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
         contPagina = paginasTotales - 2
-       
+        
         myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
         
     }
@@ -94,27 +94,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         // Dispose of any resources that can be recreated.
     }
     
-    
-   
-    
-    @IBAction func agregaPagina(_ sender: Any) {
-        /*
-        masPaginas = 1
-        self.myView?.reloadData()
-        borraDatos()
-        btnFondoVacio.isEnabled = true
-        
-        let miLibro = self.libro
-        
-        
-        
-        if((miLibro!.paginas?.count)!>2){
-            myView?.scrollToItem(at: IndexPath(item: paginas.count, section: 0), at: .left, animated: true)
-        }
-        
-        btnAgrega.isEnabled = false
-        */
-    }
     
     //*****************************************************************************************
     @IBAction func elijeFondo(_ sender: Any) {
@@ -197,7 +176,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
         
-         UserDefaults.standard.removeObject(forKey: "tapa")
+        UserDefaults.standard.removeObject(forKey: "tapa")
     }
     
     
@@ -264,11 +243,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         if(contPagina > 0 && contPagina < paginasTotales - 2){
             
+            
             muestraDatos()
             myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
             
         }
-
+        
     }
     //*****************************************************************************************
     
@@ -332,7 +312,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                 cell.imgTopo.image = nil
                 
             }
-
+            
         }
         
         if(indexPath.row == 0 || indexPath.row == paginasTotales - 1){
@@ -341,7 +321,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             cell.imgGaleria.image = nil
             cell.imgTopo.image = nil
         }
-            
+        
         if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
             
             let miPagina =  miLibro?.paginas![indexPath.row - 1] as! Pagina
@@ -368,6 +348,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func muestraDatos(){
+        btnCierraPagina.isEnabled = false
         btnPlay.isEnabled = true
         
         checkFondo.isHidden = false
@@ -380,10 +361,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         btnMusicaVacio.isEnabled = false
         btnAudioVacio.isEnabled = false
         
-       // btnFondo.isHidden = false
-       // btnTopo.isHidden = false
-       // btnMusica.isHidden = false
-      //  btnAudio.isHidden = false
+        // btnFondo.isHidden = false
+        // btnTopo.isHidden = false
+        // btnMusica.isHidden = false
+        //  btnAudio.isHidden = false
         
     }
     
@@ -409,7 +390,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         //btnMusica.isHidden = true
         //btnAudio.isHidden = true
         
-       // btnPelicula.isHidden = true
+        // btnPelicula.isHidden = true
         
         //btnFondoVacio.isEnabled = false
         //btnTopoVacio.isEnabled = false
@@ -421,25 +402,25 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         //cargaBotones ()
     }
     
-   func cargaBotones (){
+    func cargaBotones (){
         self.myView?.reloadData()
-    
+        
         let miLibro = self.libro
-    
+        
         if((miLibro!.paginas?.count)! > 0){
             btnTapa.isHidden = false
         }
         else{
             btnTapa.isHidden = true
         }
-    
-    
+        
+        
         btnPlay.isEnabled = false
         btnFondoVacio.isEnabled = true
         btnTopoVacio.isEnabled = true
         btnMusicaVacio.isEnabled = true
         btnAudioVacio.isEnabled = true
-    
+        
         if((UserDefaults.standard.string(forKey: "fondo")) != nil){
             
             if((UserDefaults.standard.string(forKey: "topo")) != nil){
@@ -449,61 +430,61 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                     if((UserDefaults.standard.string(forKey: "audio")) != nil){
                         
                         btnCierraPagina.isEnabled = true
-        
+                        
                     }
                 }
-    
+                
             }
         }
         else{
             
-          btnCierraPagina.isEnabled = false
+            btnCierraPagina.isEnabled = false
             
         }
-    
-    
+        
+        
         if((UserDefaults.standard.string(forKey: "fondo")) != nil){
             
             checkFondo.isHidden = false
-    
+            
         }
         else{
             
             checkFondo.isHidden = true
         }
-    
+        
         if((UserDefaults.standard.string(forKey: "topo")) != nil){
-        
+            
             checkTopo.isHidden = false
-        
+            
         }
         else{
             
             checkTopo.isHidden = true
             
         }
-    
-    
+        
+        
         if((UserDefaults.standard.string(forKey: "musica")) != nil){
-        
+            
             checkMusica.isHidden = false
-        
+            
         }
         else{
             
             checkMusica.isHidden = true
         }
-    
+        
         if((UserDefaults.standard.string(forKey: "audio")) != nil){
-        
+            
             checkAudio.isHidden = false
-        
+            
         }
         else{
             
             checkAudio.isHidden = true
         }
-    
+        
         self.myView?.reloadData()
     }
     
@@ -573,5 +554,5 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
     }
-
+    
 }
