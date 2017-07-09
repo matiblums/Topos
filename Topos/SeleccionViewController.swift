@@ -54,14 +54,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewDidLoad()
         
         myView?.dataSource = self
-        //myView?.backgroundColor = UIColor.white
         
         //flowLayout?.maxCoverDegree = 0
         //flowLayout?.coverDensity = 0.25
         //flowLayout?.minCoverScale = 0.20
         //flowLayout?.minCoverOpacity = 0.7
         
-        //borraDatos()
         borraDatos()
         btnPlay.isEnabled = false
         
