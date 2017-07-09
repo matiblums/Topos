@@ -88,6 +88,12 @@ class TapaViewController: UIViewController {
         
     }
     
+    @IBAction func elijeVolver(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     func grabar() {
         let titulo = txtTitulo.text
         let autor = txtAutor.text
