@@ -9,11 +9,11 @@
 import UIKit
 import AVFoundation
 import Photos
-import CoreData
 
- var avPlayer: AVPlayer!
 
-class CompartirViewController: UIViewController {
+
+class CompartirController: UIViewController {
+    var avPlayer: AVPlayer!
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
@@ -21,41 +21,22 @@ class CompartirViewController: UIViewController {
     var videosArray = [NSURL]()
     
     var videoFinal = NSURL()
-    
-    var paginas : [Pagina] = []
-    var fetchResultsController : NSFetchedResultsController<Pagina>!
-    var pagina : Pagina?
-    
-    var libros : [Libro] = []
-    var fetchResultsControllerLibro : NSFetchedResultsController<Libro>!
-    var libro : Libro?
-    
+  
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
-       
+    
     }
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
         let path1 = Bundle.main.path(forResource: image as String, ofType: "jpg")!
         
-        
-        
-        let sonidoGuardado = audioUrl
-        
-        let fileManager = FileManager.default
-        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = urls[0] as NSURL
-        let soundURL = documentDirectory.appendingPathComponent(sonidoGuardado as String)
-        
-        
-        let playAudio1 = soundURL
+        let playAudio1 = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioUrl as String, ofType: "m4a")!)
         
         var photosArray = [String]()
         
-        let asset = AVURLAsset(url: playAudio1!)
+        let asset = AVURLAsset(url: playAudio1 as URL)
         let duration = Int(CMTimeGetSeconds(asset.duration))
         
         
@@ -96,16 +77,7 @@ class CompartirViewController: UIViewController {
         var mergedAudioVideoURl = NSURL()
         
         let playAudio1 = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaUrl as String, ofType: "wav")!)
-        
-        let sonidoGuardado = audioUrl
-        
-        let fileManager = FileManager.default
-        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = urls[0] as NSURL
-        let soundURL = documentDirectory.appendingPathComponent(sonidoGuardado as String)
-        
-        
-        //let playAudio2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioUrl as String, ofType: "m4a")!)
+        let playAudio2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioUrl as String, ofType: "m4a")!)
         
         
         let mixComposition : AVMutableComposition = AVMutableComposition()
@@ -118,7 +90,7 @@ class CompartirViewController: UIViewController {
         //start merge
         let aVideoAsset : AVAsset = AVAsset(url: videoUrl as URL)
         let aAudioAsset : AVAsset = AVAsset(url: playAudio1 as URL)
-        let aAudioAsset2 : AVAsset = AVAsset(url: soundURL!)
+        let aAudioAsset2 : AVAsset = AVAsset(url: playAudio2 as URL)
         
         mutableCompositionVideoTrack.append(mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid))
         
@@ -150,13 +122,7 @@ class CompartirViewController: UIViewController {
         let mutableVideoComposition : AVMutableVideoComposition = AVMutableVideoComposition()
         mutableVideoComposition.frameDuration = CMTimeMake(1, 30)
         mutableVideoComposition.renderSize = CGSize(width: 1280, height: 720)
-        
-        let random = randomString(length: 8)
-        
-        let nombreArchivo = random
-        
-        
-        mergedAudioVideoURl = NSURL(fileURLWithPath: NSHomeDirectory() + "/Documents/FinalVideo\(nombreArchivo).mp4")
+        mergedAudioVideoURl = NSURL(fileURLWithPath: NSHomeDirectory() + "/Documents/FinalVideo\(num).mp4")
         
         
         
@@ -260,12 +226,7 @@ class CompartirViewController: UIViewController {
         
       
         let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
-        
-        let random = randomString(length: 8)
-        
-        let nombreArchivo = random + ".mp4"
-        
-        mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
+        mergeVideoURL = documentDirectoryURL.appendingPathComponent("MergeVideo.mp4")! as URL as NSURL
         
         let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
         assetExport?.outputFileType = AVFileTypeMPEG4
@@ -301,21 +262,7 @@ class CompartirViewController: UIViewController {
     
     //******************************************************************************************************************************
     
-    func randomString(length: Int) -> String {
-        
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let len = UInt32(letters.length)
-        
-        var randomString = ""
-        
-        for _ in 0 ..< length {
-            let rand = arc4random_uniform(len)
-            var nextChar = letters.character(at: Int(rand))
-            randomString += NSString(characters: &nextChar, length: 1) as String
-        }
-        
-        return randomString
-    }
+    
     
     func mergeAudioFiles(audioFileUrls: NSArray) {
         var mergeAudioURL = NSURL()
@@ -420,29 +367,11 @@ class CompartirViewController: UIViewController {
    
 
     
-    @IBAction func creaVideo(_ sender: Any){
+    @IBAction func creaVideo(_ sender: Any) {
         
-        let miLibro = self.libro
-        
-        let totales = miLibro?.paginas?.count
-    
-        let num = totales
-        
-        var imagesArray = [NSString]()
-        var musicaArray = [NSString]()
-        var audioArray = [NSString]()
-        
-        for i in 0...Int(num!)-1{
-            
-            let miPagina = miLibro!.paginas![i] as! Pagina
-            
-            imagesArray.append(miPagina.fondo as NSString)
-            musicaArray.append(miPagina.musica as NSString)
-            
-            
-            audioArray.append(miPagina.audio as NSString)
-        
-        }
+        var imagesArray = ["fondo1", "fondo1"]
+        var musicaArray = ["ta1", "ta2"]
+        var audioArray = ["audio1", "audio1"]
         
         
         for i in 0 ..< imagesArray.count {
@@ -455,7 +384,6 @@ class CompartirViewController: UIViewController {
     
     @IBAction func muestraVideo(_ sender: Any) {
         
-        
         verVideo(url: self.videoFinal)
         
     }
@@ -465,7 +393,6 @@ class CompartirViewController: UIViewController {
         salvaVideo(url: self.videoFinal)
         
     }
-    
     
 }
 
