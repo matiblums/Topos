@@ -46,7 +46,15 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
 
-    
+     @IBAction func elijeCompartir(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
+        controller.libro = self.libros[0]
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

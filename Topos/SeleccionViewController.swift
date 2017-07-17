@@ -323,10 +323,20 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
             
             let miPagina =  miLibro?.paginas![indexPath.row - 1] as! Pagina
-            
             let imgSel = miPagina.fondo
             let image: UIImage = UIImage(named: imgSel)!
             cell.imgGaleria.image = image
+            
+            
+            let imgTopo = miPagina.topo
+            let topoxGuardada = Int(miPagina.topox)! / 2
+            let topoyGuardada = Int(miPagina.topoy)! / 2
+            
+            
+            let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+            let imageTopo: UIImage = UIImage(named: imgTopo)!
+            cell.imgTopo.image = imageTopo
+            cell.imgTopo.frame.origin = pointTopo
             
         }
         

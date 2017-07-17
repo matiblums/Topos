@@ -58,6 +58,20 @@
 		16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB01F05BF8C001DDC07 /* Video.storyboard */; };
 		16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */; };
 		16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */; };
+		16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A7D1F1C55430076F381 /* Compartir.storyboard */; };
+		16CB0A851F1C55BE0076F381 /* audio1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A801F1C55BE0076F381 /* audio1.m4a */; };
+		16CB0A861F1C55BE0076F381 /* audio2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A811F1C55BE0076F381 /* audio2.m4a */; };
+		16CB0A871F1C55BE0076F381 /* audio3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A821F1C55BE0076F381 /* audio3.m4a */; };
+		16CB0A881F1C55BE0076F381 /* FinalVideo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A831F1C55BE0076F381 /* FinalVideo1.mp4 */; };
+		16CB0A891F1C55BE0076F381 /* FinalVideo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A841F1C55BE0076F381 /* FinalVideo2.mp4 */; };
+		16CB0A8D1F1C55CB0076F381 /* CompartirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */; };
+		16CB0A8E1F1C55CB0076F381 /* TimeLapseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */; };
+		16CB0A8F1F1C55CB0076F381 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8C1F1C55CB0076F381 /* UIImageExtension.swift */; };
+		16CB0A951F1C56FB0076F381 /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A901F1C56FB0076F381 /* fondo1.jpg */; };
+		16CB0A961F1C56FB0076F381 /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A911F1C56FB0076F381 /* fondo2.jpg */; };
+		16CB0A971F1C56FB0076F381 /* fondo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A921F1C56FB0076F381 /* fondo3.jpg */; };
+		16CB0A981F1C56FB0076F381 /* fondo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A931F1C56FB0076F381 /* fondo4.jpg */; };
+		16CB0A991F1C56FB0076F381 /* fondo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A941F1C56FB0076F381 /* fondo5.jpg */; };
 		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
 		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
@@ -146,6 +160,20 @@
 		16BCBEB01F05BF8C001DDC07 /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tapa.storyboard; sourceTree = "<group>"; };
 		16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapaViewController.swift; sourceTree = "<group>"; };
+		16CB0A7D1F1C55430076F381 /* Compartir.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compartir.storyboard; sourceTree = "<group>"; };
+		16CB0A801F1C55BE0076F381 /* audio1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio1.m4a; sourceTree = "<group>"; };
+		16CB0A811F1C55BE0076F381 /* audio2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio2.m4a; sourceTree = "<group>"; };
+		16CB0A821F1C55BE0076F381 /* audio3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio3.m4a; sourceTree = "<group>"; };
+		16CB0A831F1C55BE0076F381 /* FinalVideo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalVideo1.mp4; sourceTree = "<group>"; };
+		16CB0A841F1C55BE0076F381 /* FinalVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalVideo2.mp4; sourceTree = "<group>"; };
+		16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartirViewController.swift; sourceTree = "<group>"; };
+		16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLapseBuilder.swift; sourceTree = "<group>"; };
+		16CB0A8C1F1C55CB0076F381 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		16CB0A901F1C56FB0076F381 /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo1.jpg; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/Assets.xcassets/fondo1.imageset/fondo1.jpg"; sourceTree = "<group>"; };
+		16CB0A911F1C56FB0076F381 /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo2.jpg; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/Assets.xcassets/fondo2.imageset/fondo2.jpg"; sourceTree = "<group>"; };
+		16CB0A921F1C56FB0076F381 /* fondo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo3.jpg; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/Assets.xcassets/fondo3.imageset/fondo3.jpg"; sourceTree = "<group>"; };
+		16CB0A931F1C56FB0076F381 /* fondo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo4.jpg; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/Assets.xcassets/fondo4.imageset/fondo4.jpg"; sourceTree = "<group>"; };
+		16CB0A941F1C56FB0076F381 /* fondo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo5.jpg; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/Assets.xcassets/fondo5.imageset/fondo5.jpg"; sourceTree = "<group>"; };
 		16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTapas.storyboard; sourceTree = "<group>"; };
 		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -235,6 +263,7 @@
 				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
 				16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */,
 				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
+				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -242,6 +271,9 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */,
+				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
+				16CB0A8C1F1C55CB0076F381 /* UIImageExtension.swift */,
 				16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */,
 				169346241F0866B600BAE79D /* BibliotecaViewController.swift */,
 				16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */,
@@ -296,6 +328,23 @@
 			name = imagenes;
 			sourceTree = "<group>";
 		};
+		16CB0A7F1F1C559D0076F381 /* assests */ = {
+			isa = PBXGroup;
+			children = (
+				16CB0A801F1C55BE0076F381 /* audio1.m4a */,
+				16CB0A811F1C55BE0076F381 /* audio2.m4a */,
+				16CB0A821F1C55BE0076F381 /* audio3.m4a */,
+				16CB0A831F1C55BE0076F381 /* FinalVideo1.mp4 */,
+				16CB0A841F1C55BE0076F381 /* FinalVideo2.mp4 */,
+				16CB0A901F1C56FB0076F381 /* fondo1.jpg */,
+				16CB0A911F1C56FB0076F381 /* fondo2.jpg */,
+				16CB0A921F1C56FB0076F381 /* fondo3.jpg */,
+				16CB0A931F1C56FB0076F381 /* fondo4.jpg */,
+				16CB0A941F1C56FB0076F381 /* fondo5.jpg */,
+			);
+			name = assests;
+			sourceTree = "<group>";
+		};
 		16EA3D1E1EDD971700B30D72 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +370,7 @@
 		16EA3D291EDD971700B30D72 /* Topos */ = {
 			isa = PBXGroup;
 			children = (
+				16CB0A7F1F1C559D0076F381 /* assests */,
 				16AC4A581EF18251004011F5 /* Cell */,
 				163BB7AF1F06C93E00ECA352 /* clases */,
 				165A0C4A1EE71B22000A6788 /* sonidos */,
@@ -492,33 +542,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
 				165A0C551EE71B2B000A6788 /* ta3.wav in Resources */,
 				16AF17051EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg in Resources */,
 				16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */,
+				16CB0A951F1C56FB0076F381 /* fondo1.jpg in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
+				16CB0A881F1C55BE0076F381 /* FinalVideo1.mp4 in Resources */,
+				16CB0A871F1C55BE0076F381 /* audio3.m4a in Resources */,
 				16AF16F71EE09313008A9B17 /* Galeriafondos.jpeg in Resources */,
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				165A0C581EE71B2B000A6788 /* ta6.wav in Resources */,
 				165A0C591EE71B2B000A6788 /* ta7.wav in Resources */,
 				16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */,
+				16CB0A961F1C56FB0076F381 /* fondo2.jpg in Resources */,
 				160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */,
 				165A0C5A1EE71B2B000A6788 /* ta8.wav in Resources */,
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
 				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
+				16CB0A981F1C56FB0076F381 /* fondo4.jpg in Resources */,
 				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
 				16AF16F51EE092A0008A9B17 /* Seleccion.jpeg in Resources */,
 				16AF16FD1EE09365008A9B17 /* GaleriaTopos.jpeg in Resources */,
+				16CB0A891F1C55BE0076F381 /* FinalVideo2.mp4 in Resources */,
 				165A0C561EE71B2B000A6788 /* ta4.wav in Resources */,
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
+				16CB0A991F1C56FB0076F381 /* fondo5.jpg in Resources */,
 				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				165A0C571EE71B2B000A6788 /* ta5.wav in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
+				16CB0A861F1C55BE0076F381 /* audio2.m4a in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
@@ -528,8 +587,10 @@
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				165A0C531EE71B2B000A6788 /* ta1.wav in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
+				16CB0A851F1C55BE0076F381 /* audio1.m4a in Resources */,
 				16AF17071EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg in Resources */,
 				16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */,
+				16CB0A971F1C56FB0076F381 /* fondo3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,16 +764,19 @@
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
 				16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */,
+				16CB0A8D1F1C55CB0076F381 /* CompartirViewController.swift in Sources */,
 				16BC26F51EE49CB0009C2688 /* GaleriaMusicaViewController.swift in Sources */,
 				16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */,
 				16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */,
 				16E8E1701F08987000DE1255 /* GaleriaTapasViewController.swift in Sources */,
 				16BC26EF1EE45B6F009C2688 /* SeleccionViewController.swift in Sources */,
+				16CB0A8E1F1C55CB0076F381 /* TimeLapseBuilder.swift in Sources */,
 				16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */,
 				16BC26F31EE49A81009C2688 /* GaleriaToposViewController.swift in Sources */,
 				16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */,
 				16BC26C21EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift in Sources */,
 				16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */,
+				16CB0A8F1F1C55CB0076F381 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -91,6 +91,14 @@
                                     <action selector="elijeBorrar:" destination="p61-xO-QHf" eventType="touchUpInside" id="JO2-EO-7ay"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s9-tD-nYk">
+                                <rect key="frame" x="462" y="38" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Compartir"/>
+                                <connections>
+                                    <action selector="elijeCompartir:" destination="p61-xO-QHf" eventType="touchUpInside" id="T1U-OX-0wy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
