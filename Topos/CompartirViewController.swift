@@ -113,7 +113,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             }
             
         }, success: { (url) -> Void in
-            print("SUCCESS: \(url)")
+            //print("SUCCESS: \(url)")
             DispatchQueue.main.async{
                 //self.progressLabel.isHidden = true
                 //self.progressView.isHidden = true
@@ -207,9 +207,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         assetExport.exportAsynchronously { () -> Void in
             switch assetExport.status {
             case AVAssetExportSessionStatus.completed:
-                print("-----Merge mutable video with trimmed audio exportation complete.\(mergedAudioVideoURl)")
+                //print("-----Merge mutable video with trimmed audio exportation complete.\(mergedAudioVideoURl)")
                 //self.videoFirst = mergedAudioVideoURl as NSURL
-                print("de \(num) aa \(numTotal)")
+                //print("de \(num) aa \(numTotal)")
                 self.almacenaVideos(miVideo:  mergedAudioVideoURl, position: num, total: numTotal)
                 
             case  AVAssetExportSessionStatus.failed:
@@ -299,48 +299,40 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
       
         let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
-        
         let random = randomString(length: 8)
-        
         let nombreArchivo = random + ".mp4"
-        
         mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
-        
         let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
         assetExport?.outputFileType = AVFileTypeMPEG4
         assetExport?.outputURL = mergeVideoURL as URL
         removeFileAtURLIfExists(url: mergeVideoURL)
         
         
-        assetExport?.exportAsynchronously(completionHandler:
-            {
-                switch assetExport!.status
-                {
-                case AVAssetExportSessionStatus.failed:
-                    print("failed \(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.cancelled:
-                    print("cancelled \(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.unknown:
-                    print("unknown\(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.waiting:
-                    print("waiting\(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.exporting:
-                    print("exporting\(String(describing: assetExport?.error))")
-                default:
+        
+        assetExport?.exportAsynchronously(completionHandler:{
+            
+                switch assetExport!.status{
                     
-                    
-                    print("-----Merge Video exportation complete.\(mergeVideoURL)")
-                    self.videoFinal = mergeVideoURL
-                    
-                    
-                    
-                    self.stopAnimating()
-                    
-                    self.viewTapa.isHidden = false
-                    //self.verVideo(url: self.videoFinal)
-                }
-        })
-    }
+                    case AVAssetExportSessionStatus.failed:
+                        print("failed \(String(describing: assetExport?.error))")
+                    case AVAssetExportSessionStatus.cancelled:
+                        print("cancelled \(String(describing: assetExport?.error))")
+                    case AVAssetExportSessionStatus.unknown:
+                        print("unknown\(String(describing: assetExport?.error))")
+                    case AVAssetExportSessionStatus.waiting:
+                        print("waiting\(String(describing: assetExport?.error))")
+                    case AVAssetExportSessionStatus.exporting:
+                        print("exporting\(String(describing: assetExport?.error))")
+                    default:
+                        DispatchQueue.main.async() {
+                           // print("-----Merge Video exportation complete.\(mergeVideoURL)")
+                            self.videoFinal = mergeVideoURL
+                            self.stopAnimating()
+                            self.viewTapa.isHidden = false
+                        }
+                    }
+            })
+        }
 
     
     //******************************************************************************************************************************
@@ -455,6 +447,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             }
             else{
                 
+                self.stopAnimating()
+                
+                let alertController = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
                 
             }
         }

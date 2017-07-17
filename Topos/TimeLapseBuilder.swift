@@ -114,7 +114,7 @@ open class TimeLapseBuilder: NSObject {
         
         
         while (!remainingPhotoURLs.isEmpty) {
-          print("\(videoWriterInput.isReadyForMoreMediaData) : \(remainingPhotoURLs.count)")
+          //print("\(videoWriterInput.isReadyForMoreMediaData) : \(remainingPhotoURLs.count)")
           
           if (videoWriterInput.isReadyForMoreMediaData) {
             let nextPhotoURL = remainingPhotoURLs.remove(at: 0)
@@ -134,7 +134,7 @@ open class TimeLapseBuilder: NSObject {
             
             frameCount += 1
             
-            print("\(CMTimeGetSeconds(presentationTime)) : \(currentProgress.completedUnitCount)|\(currentProgress.totalUnitCount)")
+           // print("\(CMTimeGetSeconds(presentationTime)) : \(currentProgress.completedUnitCount)|\(currentProgress.totalUnitCount)")
             
             currentProgress.completedUnitCount = frameCount
             progress(currentProgress)
@@ -144,7 +144,7 @@ open class TimeLapseBuilder: NSObject {
         let endTime = Date.timeIntervalSinceReferenceDate
         let elapsedTime: TimeInterval = endTime - startTime
         
-        print("rendering time \(self.stringFromTimeInterval(elapsedTime))")
+        //print("rendering time \(self.stringFromTimeInterval(elapsedTime))")
 
         
         videoWriterInput.markAsFinished()
