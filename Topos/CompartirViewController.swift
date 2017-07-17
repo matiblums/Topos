@@ -11,12 +11,23 @@ import AVFoundation
 import Photos
 import CoreData
 
- var avPlayer: AVPlayer!
+
+
 
 class CompartirViewController: UIViewController {
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
+    
+    @IBOutlet weak var viewVideo: UIView!
+    
+    @IBOutlet weak var btnPlayTotal: UIButton!
+    
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnPause: UIButton!
+    @IBOutlet weak var btnGuardar: UIButton!
+    
+    var avPlayer: AVPlayer!
     
     var videosArray = [NSURL]()
     
@@ -34,7 +45,18 @@ class CompartirViewController: UIViewController {
     
         super.viewDidLoad()
         
-       
+        btnPlay.isHidden = true
+        btnPause.isHidden = true
+        btnGuardar.isHidden = true
+        btnPlayTotal.isHidden = true
+        
+        //creaVideo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        creaVideo()
+        
     }
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
@@ -292,14 +314,16 @@ class CompartirViewController: UIViewController {
                     
                     print("-----Merge Video exportation complete.\(mergeVideoURL)")
                     self.videoFinal = mergeVideoURL
-                    
-                    
+                     self.btnPlayTotal.isHidden = false
+                    //self.verVideo(url: self.videoFinal)
                 }
         })
     }
 
     
     //******************************************************************************************************************************
+    
+    
     
     func randomString(length: Int) -> String {
         
@@ -365,7 +389,7 @@ class CompartirViewController: UIViewController {
                     
                     
                     print("-----Merge audio exportation complete.\(mergeAudioURL)")
-                    
+                   
                     
                     
                 }
@@ -408,24 +432,38 @@ class CompartirViewController: UIViewController {
     //***************************************************************************************************************************
     func verVideo(url: NSURL){
         
-        // let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        
+        
+        
+        
+        
+        
+        avPlayer = AVPlayer(url: url as URL)
+        let playerLayer = AVPlayerLayer()
+        playerLayer.player = avPlayer
+        playerLayer.frame = self.viewVideo.bounds
+        playerLayer.backgroundColor = UIColor.clear.cgColor
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        self.viewVideo.layer.addSublayer(playerLayer)
+        avPlayer.play()
+        
+        
+        /*
+        //let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         avPlayer = AVPlayer(url: url as URL)
         let playerLayer = AVPlayerLayer(player: avPlayer)
         playerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 3.0 / 4.0)
         self.view.layer.addSublayer(playerLayer)
         avPlayer.play()
-        
+        */
     }
     
-   
-
-    
-    @IBAction func creaVideo(_ sender: Any){
+    func creaVideo(){
         
         let miLibro = self.libro
         
         let totales = miLibro?.paginas?.count
-    
+        
         let num = totales
         
         var imagesArray = [NSString]()
@@ -441,7 +479,7 @@ class CompartirViewController: UIViewController {
             
             
             audioArray.append(miPagina.audio as NSString)
-        
+            
         }
         
         
@@ -450,6 +488,16 @@ class CompartirViewController: UIViewController {
             createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl:audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
             
         }
+        
+        
+    }
+    
+   
+
+    
+    @IBAction func creaVideo(_ sender: Any){
+        
+        creaVideo()
         
     }
     
@@ -466,6 +514,47 @@ class CompartirViewController: UIViewController {
         
     }
     
+    @IBAction func elijeVolver(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func elijePlayTotal(_ sender: Any){
+        
+        btnPlay.isHidden = true
+        btnPause.isHidden = false
+        btnGuardar.isHidden = false
+        btnPlayTotal.isHidden = true
+        
+        self.verVideo(url: self.videoFinal)
+        
+        
+        
+    }
+    
+    @IBAction func elijePlay(_ sender: Any){
+        
+        btnPlay.isHidden = true
+        btnPause.isHidden = false
+        avPlayer.play()
+        
+    }
+    
+    @IBAction func elijePausa(_ sender: Any){
+        
+        btnPlay.isHidden = false
+        btnPause.isHidden = true
+        avPlayer.pause()
+        
+    }
+    
+    @IBAction func elijeStop(_ sender: Any){
+        
+        avPlayer.pause()
+        avPlayer = nil
+        
+    }
     
 }
 
