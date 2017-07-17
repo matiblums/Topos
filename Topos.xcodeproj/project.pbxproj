@@ -75,11 +75,6 @@
 		16CB0AAE1F1C87060076F381 /* ta1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAB1F1C87060076F381 /* ta1.wav */; };
 		16CB0AAF1F1C87060076F381 /* ta2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAC1F1C87060076F381 /* ta2.wav */; };
 		16CB0AB01F1C87060076F381 /* ta3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAD1F1C87060076F381 /* ta3.wav */; };
-		16CB0AB11F1C87D00076F381 /* audio1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA61F1C86F10076F381 /* audio1.m4a */; };
-		16CB0AB21F1C87D50076F381 /* audio2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA71F1C86F10076F381 /* audio2.m4a */; };
-		16CB0AB31F1C87D80076F381 /* audio3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA81F1C86F10076F381 /* audio3.m4a */; };
-		16CB0AB41F1C87DF0076F381 /* FinalVideo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA91F1C86F10076F381 /* FinalVideo1.mp4 */; };
-		16CB0AB51F1C87E20076F381 /* FinalVideo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAA1F1C86F10076F381 /* FinalVideo2.mp4 */; };
 		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
 		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
@@ -182,11 +177,6 @@
 		16CB0A9E1F1C7F270076F381 /* fondo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo7.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo7.imageset/fondo7.jpg"; sourceTree = "<group>"; };
 		16CB0AA01F1C7F350076F381 /* fondo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo9.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo9.imageset/fondo9.jpg"; sourceTree = "<group>"; };
 		16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo10.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo10.imageset/fondo10.jpg"; sourceTree = "<group>"; };
-		16CB0AA61F1C86F10076F381 /* audio1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio1.m4a; sourceTree = "<group>"; };
-		16CB0AA71F1C86F10076F381 /* audio2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio2.m4a; sourceTree = "<group>"; };
-		16CB0AA81F1C86F10076F381 /* audio3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio3.m4a; sourceTree = "<group>"; };
-		16CB0AA91F1C86F10076F381 /* FinalVideo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalVideo1.mp4; sourceTree = "<group>"; };
-		16CB0AAA1F1C86F10076F381 /* FinalVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalVideo2.mp4; sourceTree = "<group>"; };
 		16CB0AAB1F1C87060076F381 /* ta1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta1.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta1.wav"; sourceTree = "<group>"; };
 		16CB0AAC1F1C87060076F381 /* ta2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta2.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta2.wav"; sourceTree = "<group>"; };
 		16CB0AAD1F1C87060076F381 /* ta3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta3.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta3.wav"; sourceTree = "<group>"; };
@@ -347,11 +337,6 @@
 		16CB0A7F1F1C559D0076F381 /* assests */ = {
 			isa = PBXGroup;
 			children = (
-				16CB0AA61F1C86F10076F381 /* audio1.m4a */,
-				16CB0AA71F1C86F10076F381 /* audio2.m4a */,
-				16CB0AA81F1C86F10076F381 /* audio3.m4a */,
-				16CB0AA91F1C86F10076F381 /* FinalVideo1.mp4 */,
-				16CB0AAA1F1C86F10076F381 /* FinalVideo2.mp4 */,
 				16CB0AAB1F1C87060076F381 /* ta1.wav */,
 				16CB0AAC1F1C87060076F381 /* ta2.wav */,
 				16CB0AAD1F1C87060076F381 /* ta3.wav */,
@@ -566,11 +551,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16CB0AB51F1C87E20076F381 /* FinalVideo2.mp4 in Resources */,
-				16CB0AB41F1C87DF0076F381 /* FinalVideo1.mp4 in Resources */,
-				16CB0AB31F1C87D80076F381 /* audio3.m4a in Resources */,
-				16CB0AB21F1C87D50076F381 /* audio2.m4a in Resources */,
-				16CB0AB11F1C87D00076F381 /* audio1.m4a in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
 				165A0C551EE71B2B000A6788 /* ta3.wav in Resources */,
 				16AF17051EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg in Resources */,
