@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 		<key>NextLevelSessionExporter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -117,6 +122,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>063700D621F6E716E3088A509067DB7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>08D05098F4317FE2682428FFA4BF5F51</key>
 		<dict>
 			<key>primary</key>
@@ -162,7 +172,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4C67514EA7D98658F641516ED8328206</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CC03D7FA8AF83B53B6841422D8EBBDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

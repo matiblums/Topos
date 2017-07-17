@@ -14,6 +14,7 @@ target 'Topos' do
   pod 'KDEAudioPlayer'
   pod 'LNICoverFlowLayout'
   pod 'IQKeyboardManagerSwift'
+  pod 'NVActivityIndicatorView'
   
 
   target 'ToposTests' do

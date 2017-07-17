@@ -10,11 +10,11 @@ import UIKit
 import AVFoundation
 import Photos
 import CoreData
+import NVActivityIndicatorView
 
 
 
-
-class CompartirViewController: UIViewController {
+class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
@@ -56,6 +56,10 @@ class CompartirViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         creaVideo()
+        
+        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
+        
+        self.startAnimating()
         
     }
     
@@ -315,6 +319,8 @@ class CompartirViewController: UIViewController {
                     print("-----Merge Video exportation complete.\(mergeVideoURL)")
                     self.videoFinal = mergeVideoURL
                      self.btnPlayTotal.isHidden = false
+                    
+                    self.stopAnimating()
                     //self.verVideo(url: self.videoFinal)
                 }
         })
