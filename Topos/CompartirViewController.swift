@@ -332,9 +332,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     print("-----Merge Video exportation complete.\(mergeVideoURL)")
                     self.videoFinal = mergeVideoURL
                     
-                    self.viewTapa.isHidden = false
+                    
                     
                     self.stopAnimating()
+                    
+                    self.viewTapa.isHidden = false
                     //self.verVideo(url: self.videoFinal)
                 }
         })
@@ -445,7 +447,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 self.stopAnimating()
                 
                 
-                let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Tu Video se ha Guardado en el Carrete", message: nil, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
