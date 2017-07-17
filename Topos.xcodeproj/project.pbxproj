@@ -72,9 +72,6 @@
 		16CB0A9F1F1C7F270076F381 /* fondo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A9E1F1C7F270076F381 /* fondo7.jpg */; };
 		16CB0AA11F1C7F350076F381 /* fondo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA01F1C7F350076F381 /* fondo9.jpg */; };
 		16CB0AA31F1C7F3B0076F381 /* fondo10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */; };
-		16CB0AAE1F1C87060076F381 /* ta1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAB1F1C87060076F381 /* ta1.wav */; };
-		16CB0AAF1F1C87060076F381 /* ta2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAC1F1C87060076F381 /* ta2.wav */; };
-		16CB0AB01F1C87060076F381 /* ta3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAD1F1C87060076F381 /* ta3.wav */; };
 		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
 		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
@@ -177,9 +174,6 @@
 		16CB0A9E1F1C7F270076F381 /* fondo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo7.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo7.imageset/fondo7.jpg"; sourceTree = "<group>"; };
 		16CB0AA01F1C7F350076F381 /* fondo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo9.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo9.imageset/fondo9.jpg"; sourceTree = "<group>"; };
 		16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo10.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo10.imageset/fondo10.jpg"; sourceTree = "<group>"; };
-		16CB0AAB1F1C87060076F381 /* ta1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta1.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta1.wav"; sourceTree = "<group>"; };
-		16CB0AAC1F1C87060076F381 /* ta2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta2.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta2.wav"; sourceTree = "<group>"; };
-		16CB0AAD1F1C87060076F381 /* ta3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ta3.wav; path = "../../../Desktop/imagesToVideo-master/ImagesToVideo/ta3.wav"; sourceTree = "<group>"; };
 		16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTapas.storyboard; sourceTree = "<group>"; };
 		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -337,9 +331,6 @@
 		16CB0A7F1F1C559D0076F381 /* assests */ = {
 			isa = PBXGroup;
 			children = (
-				16CB0AAB1F1C87060076F381 /* ta1.wav */,
-				16CB0AAC1F1C87060076F381 /* ta2.wav */,
-				16CB0AAD1F1C87060076F381 /* ta3.wav */,
 				16CB0A901F1C56FB0076F381 /* fondo1.jpg */,
 				16CB0A911F1C56FB0076F381 /* fondo2.jpg */,
 				16CB0A921F1C56FB0076F381 /* fondo3.jpg */,
@@ -568,7 +559,6 @@
 				165A0C5A1EE71B2B000A6788 /* ta8.wav in Resources */,
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
 				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
-				16CB0AAE1F1C87060076F381 /* ta1.wav in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
 				16CB0A9B1F1C7F140076F381 /* fondo6.jpg in Resources */,
 				16CB0A981F1C56FB0076F381 /* fondo4.jpg in Resources */,
@@ -586,7 +576,6 @@
 				165A0C571EE71B2B000A6788 /* ta5.wav in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
-				16CB0AB01F1C87060076F381 /* ta3.wav in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
@@ -597,7 +586,6 @@
 				165A0C541EE71B2B000A6788 /* ta2.wav in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				165A0C531EE71B2B000A6788 /* ta1.wav in Resources */,
-				16CB0AAF1F1C87060076F381 /* ta2.wav in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16AF17071EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg in Resources */,
 				16CB0A9D1F1C7F200076F381 /* fondo8.jpg in Resources */,

@@ -140,19 +140,19 @@ extension UIImage {
         fallthrough
     case .downMirrored:  // EXIF = 4
         transform = transform.translatedBy(x: newSize.width, y: newSize.height)
-        transform = transform.rotated(by: CGFloat(M_PI))
+        transform = transform.rotated(by: CGFloat(Double.pi))
         break
     case .left:          // EXIF = 6
         fallthrough
     case .leftMirrored:  // EXIF = 5
         transform = transform.translatedBy(x: newSize.width, y: 0)
-        transform = transform.rotated(by: CGFloat(M_PI_2))
+        transform = transform.rotated(by: CGFloat(Double.pi))
         break
     case .right:         // EXIF = 8
         fallthrough
     case .rightMirrored: // EXIF = 7
         transform = transform.translatedBy(x: 0, y: newSize.height)
-        transform = transform.rotated(by: -CGFloat(M_PI_2))
+        transform = transform.rotated(by: -CGFloat(Double.pi))
         break
     default:
         break

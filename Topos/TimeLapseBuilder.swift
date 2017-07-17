@@ -46,7 +46,7 @@ open class TimeLapseBuilder: NSObject {
     self.outputSize = outputSize
     var error: NSError?
     
-    let startTime = Date.timeIntervalSinceReferenceDate
+    //let startTime = Date.timeIntervalSinceReferenceDate
     
     let fileManager = FileManager.default
     let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
@@ -141,8 +141,8 @@ open class TimeLapseBuilder: NSObject {
           }
         }
         
-        let endTime = Date.timeIntervalSinceReferenceDate
-        let elapsedTime: TimeInterval = endTime - startTime
+        //let endTime = Date.timeIntervalSinceReferenceDate
+        //let elapsedTime: TimeInterval = endTime - startTime
         
         //print("rendering time \(self.stringFromTimeInterval(elapsedTime))")
 
