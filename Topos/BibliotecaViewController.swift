@@ -121,9 +121,16 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
                 
             }
             else{
-                
+                /*
                 let storyboard = UIStoryboard(name: "Video", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! ViewController
+                controller.libro = self.libros[myIndex]
+                controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                self.present(controller, animated: true, completion: nil)
+                */
+                
+                let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
                 controller.libro = self.libros[myIndex]
                 controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
                 self.present(controller, animated: true, completion: nil)

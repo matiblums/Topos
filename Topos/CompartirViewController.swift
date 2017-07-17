@@ -14,10 +14,8 @@ import NVActivityIndicatorView
 
 
 
-class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
+class CompartirViewController: UIViewController , NVActivityIndicatorViewable, AVAudioPlayerDelegate{
 
-    @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var progressLabel: UILabel!
     
     @IBOutlet weak var viewVideo: UIView!
     
@@ -26,6 +24,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnPause: UIButton!
     @IBOutlet weak var btnGuardar: UIButton!
+    @IBOutlet weak var btnCompartir: UIButton!
+    
+    var documentController : UIDocumentInteractionController!
     
     var avPlayer: AVPlayer!
     
@@ -49,19 +50,26 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         btnPause.isHidden = true
         btnGuardar.isHidden = true
         btnPlayTotal.isHidden = true
+        btnCompartir.isHidden = true
         
-        //creaVideo()
+        
+        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
+        
+        self.startAnimating()
+        
+        
+        
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         creaVideo()
         
-        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
-        
-        self.startAnimating()
-        
     }
+    
+   
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
@@ -95,15 +103,15 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         tlb.build(outputSize: CGSize(width: 1000, height: 502), progress: { (progress) -> Void in
             
             DispatchQueue.main.async{
-                self.progressLabel.text = "rendering \(progress.completedUnitCount) of \(progress.totalUnitCount) frames"
-                self.progressView.setProgress(Float(progress.fractionCompleted), animated: true)
+                //self.progressLabel.text = "rendering \(progress.completedUnitCount) of \(progress.totalUnitCount) frames"
+                //self.progressView.setProgress(Float(progress.fractionCompleted), animated: true)
             }
             
         }, success: { (url) -> Void in
             print("SUCCESS: \(url)")
             DispatchQueue.main.async{
-                self.progressLabel.isHidden = true
-                self.progressView.isHidden = true
+                //self.progressLabel.isHidden = true
+                //self.progressView.isHidden = true
                 
                 self.mergeMutableVideoWithAudio(videoUrl: url as NSURL, musicaUrl: musicaUrl, audioUrl: audioUrl, num: num, numTotal: numTotal )
                 
@@ -318,7 +326,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
                     
                     print("-----Merge Video exportation complete.\(mergeVideoURL)")
                     self.videoFinal = mergeVideoURL
-                     self.btnPlayTotal.isHidden = false
+                    self.btnPlayTotal.isHidden = false
+                    self.btnGuardar.isHidden = false
+                    self.btnCompartir.isHidden = false
                     
                     self.stopAnimating()
                     //self.verVideo(url: self.videoFinal)
@@ -421,28 +431,38 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
     //***************************************************************************************************************************
     
     func salvaVideo(url: NSURL){
+        self.startAnimating()
         
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url as URL)
         }) { saved, error in
             if saved {
+                
+                self.stopAnimating()
+                
+                
                 let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
+                
+            }
+            else{
+                
+                
             }
         }
   
     }
     
+    func comparteVideo(url: NSURL){
+    
+        documentController = UIDocumentInteractionController(url: url as URL)
+        documentController.presentOptionsMenu(from: self.btnCompartir.frame, in: self.view, animated: true)
+    }
+    
     //***************************************************************************************************************************
     func verVideo(url: NSURL){
-        
-        
-        
-        
-        
-        
         
         avPlayer = AVPlayer(url: url as URL)
         let playerLayer = AVPlayerLayer()
@@ -454,6 +474,14 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         avPlayer.play()
         
         
+        //NotificationCenter.default.addObserver(self, selector: Selector(("playerDidFinishPlaying:")),
+                                              // name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer)
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidStartPlaying(note:)),name: NSNotification.Name.AVPlayerItemNewAccessLogEntry, object: avPlayer.currentItem)
+        
+        
         /*
         //let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         avPlayer = AVPlayer(url: url as URL)
@@ -462,6 +490,24 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         self.view.layer.addSublayer(playerLayer)
         avPlayer.play()
         */
+    }
+    
+    
+    
+    func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+        
+        btnGuardar.isHidden = false
+        btnPlayTotal.isHidden = false
+        btnPlay.isHidden = true
+        btnPause.isHidden = true
+        btnCompartir.isHidden = false
+        
+    }
+    
+    func playerDidStartPlaying(note: NSNotification) {
+        
+        
     }
     
     func creaVideo(){
@@ -530,8 +576,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         
         btnPlay.isHidden = true
         btnPause.isHidden = false
-        btnGuardar.isHidden = false
+        btnGuardar.isHidden = true
         btnPlayTotal.isHidden = true
+        btnCompartir.isHidden = true
         
         self.verVideo(url: self.videoFinal)
         
@@ -559,6 +606,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable{
         
         avPlayer.pause()
         avPlayer = nil
+        
+    }
+    
+    @IBAction func elijeComparte(_ sender: Any){
+        
+        comparteVideo(url: self.videoFinal)
         
     }
     

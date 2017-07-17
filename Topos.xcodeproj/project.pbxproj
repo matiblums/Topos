@@ -72,7 +72,6 @@
 		16CB0A9F1F1C7F270076F381 /* fondo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A9E1F1C7F270076F381 /* fondo7.jpg */; };
 		16CB0AA11F1C7F350076F381 /* fondo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA01F1C7F350076F381 /* fondo9.jpg */; };
 		16CB0AA31F1C7F3B0076F381 /* fondo10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */; };
-		16CB0AA51F1C86840076F381 /* CompartirController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0AA41F1C86840076F381 /* CompartirController.swift */; };
 		16CB0AAE1F1C87060076F381 /* ta1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAB1F1C87060076F381 /* ta1.wav */; };
 		16CB0AAF1F1C87060076F381 /* ta2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAC1F1C87060076F381 /* ta2.wav */; };
 		16CB0AB01F1C87060076F381 /* ta3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0AAD1F1C87060076F381 /* ta3.wav */; };
@@ -183,7 +182,6 @@
 		16CB0A9E1F1C7F270076F381 /* fondo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo7.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo7.imageset/fondo7.jpg"; sourceTree = "<group>"; };
 		16CB0AA01F1C7F350076F381 /* fondo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo9.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo9.imageset/fondo9.jpg"; sourceTree = "<group>"; };
 		16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo10.jpg; path = "Assets.xcassets/seccion fondos/fondos/fondo10.imageset/fondo10.jpg"; sourceTree = "<group>"; };
-		16CB0AA41F1C86840076F381 /* CompartirController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartirController.swift; sourceTree = "<group>"; };
 		16CB0AA61F1C86F10076F381 /* audio1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio1.m4a; sourceTree = "<group>"; };
 		16CB0AA71F1C86F10076F381 /* audio2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio2.m4a; sourceTree = "<group>"; };
 		16CB0AA81F1C86F10076F381 /* audio3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio3.m4a; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				16CB0AA41F1C86840076F381 /* CompartirController.swift */,
 				16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */,
 				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
 				16CB0A8C1F1C55CB0076F381 /* UIImageExtension.swift */,
@@ -800,7 +797,6 @@
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
 				16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */,
 				16CB0A8D1F1C55CB0076F381 /* CompartirViewController.swift in Sources */,
-				16CB0AA51F1C86840076F381 /* CompartirController.swift in Sources */,
 				16BC26F51EE49CB0009C2688 /* GaleriaMusicaViewController.swift in Sources */,
 				16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */,
 				16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */,
