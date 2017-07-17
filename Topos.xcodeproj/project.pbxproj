@@ -82,6 +82,25 @@
 		16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */; };
 		16EA3D431EDD971800B30D72 /* ToposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D421EDD971800B30D72 /* ToposTests.swift */; };
 		16EA3D4E1EDD971800B30D72 /* ToposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */; };
+		16FFD71B1F1D779900B4B2C3 /* topos1.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD71A1F1D779900B4B2C3 /* topos1.png */; };
+		16FFD71D1F1D77A400B4B2C3 /* topos2.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD71C1F1D77A400B4B2C3 /* topos2.png */; };
+		16FFD71F1F1D77AD00B4B2C3 /* topos3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD71E1F1D77AD00B4B2C3 /* topos3.png */; };
+		16FFD7301F1D77E700B4B2C3 /* topos4.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7201F1D77E700B4B2C3 /* topos4.png */; };
+		16FFD7311F1D77E700B4B2C3 /* topos5.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7211F1D77E700B4B2C3 /* topos5.png */; };
+		16FFD7321F1D77E700B4B2C3 /* topos6.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7221F1D77E700B4B2C3 /* topos6.png */; };
+		16FFD7331F1D77E700B4B2C3 /* topos7.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7231F1D77E700B4B2C3 /* topos7.png */; };
+		16FFD7341F1D77E700B4B2C3 /* topos8.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7241F1D77E700B4B2C3 /* topos8.png */; };
+		16FFD7351F1D77E700B4B2C3 /* topos9.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7251F1D77E700B4B2C3 /* topos9.png */; };
+		16FFD7361F1D77E700B4B2C3 /* topos10.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7261F1D77E700B4B2C3 /* topos10.png */; };
+		16FFD7371F1D77E700B4B2C3 /* topos11.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7271F1D77E700B4B2C3 /* topos11.png */; };
+		16FFD7381F1D77E700B4B2C3 /* topos12.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7281F1D77E700B4B2C3 /* topos12.png */; };
+		16FFD7391F1D77E700B4B2C3 /* topos13.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7291F1D77E700B4B2C3 /* topos13.png */; };
+		16FFD73A1F1D77E700B4B2C3 /* topos14.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72A1F1D77E700B4B2C3 /* topos14.png */; };
+		16FFD73B1F1D77E700B4B2C3 /* topos15.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72B1F1D77E700B4B2C3 /* topos15.png */; };
+		16FFD73C1F1D77E700B4B2C3 /* topos16.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72C1F1D77E700B4B2C3 /* topos16.png */; };
+		16FFD73D1F1D77E700B4B2C3 /* topos17.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72D1F1D77E700B4B2C3 /* topos17.png */; };
+		16FFD73E1F1D77E700B4B2C3 /* topos18.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72E1F1D77E700B4B2C3 /* topos18.png */; };
+		16FFD73F1F1D77E700B4B2C3 /* topos19.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD72F1F1D77E700B4B2C3 /* topos19.png */; };
 		C401907662A20D37A2552CF0 /* Pods_ToposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A4A2B8BBDDA8CD7924CA2E /* Pods_ToposUITests.framework */; };
 		CD94E1C1E18A562C64F27470 /* Pods_ToposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5762CC9574420B77C63DFB3A /* Pods_ToposTests.framework */; };
 		FF6DEC4EB6E2846A3C726354 /* Pods_Topos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2662A8CDC72B3C983ECF85A3 /* Pods_Topos.framework */; };
@@ -190,6 +209,25 @@
 		16EA3D491EDD971800B30D72 /* ToposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposUITests.swift; sourceTree = "<group>"; };
 		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FFD71A1F1D779900B4B2C3 /* topos1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos1.png; path = "Assets.xcassets/seccion topos/topos/topos1.imageset/topos1.png"; sourceTree = "<group>"; };
+		16FFD71C1F1D77A400B4B2C3 /* topos2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos2.png; path = "Assets.xcassets/seccion topos/topos/topos2.imageset/topos2.png"; sourceTree = "<group>"; };
+		16FFD71E1F1D77AD00B4B2C3 /* topos3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos3.png; path = "Assets.xcassets/seccion topos/topos/topos3.imageset/topos3.png"; sourceTree = "<group>"; };
+		16FFD7201F1D77E700B4B2C3 /* topos4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos4.png; path = "Assets.xcassets/seccion topos/topos/topos4.imageset/topos4.png"; sourceTree = "<group>"; };
+		16FFD7211F1D77E700B4B2C3 /* topos5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos5.png; path = "Assets.xcassets/seccion topos/topos/topos5.imageset/topos5.png"; sourceTree = "<group>"; };
+		16FFD7221F1D77E700B4B2C3 /* topos6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos6.png; path = "Assets.xcassets/seccion topos/topos/topos6.imageset/topos6.png"; sourceTree = "<group>"; };
+		16FFD7231F1D77E700B4B2C3 /* topos7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos7.png; path = "Assets.xcassets/seccion topos/topos/topos7.imageset/topos7.png"; sourceTree = "<group>"; };
+		16FFD7241F1D77E700B4B2C3 /* topos8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos8.png; path = "Assets.xcassets/seccion topos/topos/topos8.imageset/topos8.png"; sourceTree = "<group>"; };
+		16FFD7251F1D77E700B4B2C3 /* topos9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos9.png; path = "Assets.xcassets/seccion topos/topos/topos9.imageset/topos9.png"; sourceTree = "<group>"; };
+		16FFD7261F1D77E700B4B2C3 /* topos10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos10.png; path = "Assets.xcassets/seccion topos/topos/topos10.imageset/topos10.png"; sourceTree = "<group>"; };
+		16FFD7271F1D77E700B4B2C3 /* topos11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos11.png; path = "Assets.xcassets/seccion topos/topos/topos11.imageset/topos11.png"; sourceTree = "<group>"; };
+		16FFD7281F1D77E700B4B2C3 /* topos12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos12.png; path = "Assets.xcassets/seccion topos/topos/topos12.imageset/topos12.png"; sourceTree = "<group>"; };
+		16FFD7291F1D77E700B4B2C3 /* topos13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos13.png; path = "Assets.xcassets/seccion topos/topos/topos13.imageset/topos13.png"; sourceTree = "<group>"; };
+		16FFD72A1F1D77E700B4B2C3 /* topos14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos14.png; path = "Assets.xcassets/seccion topos/topos/topos14.imageset/topos14.png"; sourceTree = "<group>"; };
+		16FFD72B1F1D77E700B4B2C3 /* topos15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos15.png; path = "Assets.xcassets/seccion topos/topos/topos15.imageset/topos15.png"; sourceTree = "<group>"; };
+		16FFD72C1F1D77E700B4B2C3 /* topos16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos16.png; path = "Assets.xcassets/seccion topos/topos/topos16.imageset/topos16.png"; sourceTree = "<group>"; };
+		16FFD72D1F1D77E700B4B2C3 /* topos17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos17.png; path = "Assets.xcassets/seccion topos/topos/topos17.imageset/topos17.png"; sourceTree = "<group>"; };
+		16FFD72E1F1D77E700B4B2C3 /* topos18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos18.png; path = "Assets.xcassets/seccion topos/topos/topos18.imageset/topos18.png"; sourceTree = "<group>"; };
+		16FFD72F1F1D77E700B4B2C3 /* topos19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topos19.png; path = "Assets.xcassets/seccion topos/topos/topos19.imageset/topos19.png"; sourceTree = "<group>"; };
 		17496829FF09058168DC82A8 /* Pods-Topos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Topos/Pods-Topos.release.xcconfig"; sourceTree = "<group>"; };
 		2662A8CDC72B3C983ECF85A3 /* Pods_Topos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5762CC9574420B77C63DFB3A /* Pods_ToposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +344,8 @@
 		16AF16EB1EE07B27008A9B17 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				16FFD7411F1D781900B4B2C3 /* topos */,
+				16FFD7401F1D77FE00B4B2C3 /* fondo */,
 				16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */,
 				16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */,
 				16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */,
@@ -331,16 +371,8 @@
 		16CB0A7F1F1C559D0076F381 /* assests */ = {
 			isa = PBXGroup;
 			children = (
-				16CB0A901F1C56FB0076F381 /* fondo1.jpg */,
-				16CB0A911F1C56FB0076F381 /* fondo2.jpg */,
-				16CB0A921F1C56FB0076F381 /* fondo3.jpg */,
-				16CB0A931F1C56FB0076F381 /* fondo4.jpg */,
-				16CB0A941F1C56FB0076F381 /* fondo5.jpg */,
-				16CB0A9A1F1C7F140076F381 /* fondo6.jpg */,
-				16CB0A9E1F1C7F270076F381 /* fondo7.jpg */,
-				16CB0A9C1F1C7F200076F381 /* fondo8.jpg */,
-				16CB0AA01F1C7F350076F381 /* fondo9.jpg */,
-				16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */,
+				165A0C4A1EE71B22000A6788 /* sonidos */,
+				16AF16EB1EE07B27008A9B17 /* imagenes */,
 			);
 			name = assests;
 			sourceTree = "<group>";
@@ -373,10 +405,8 @@
 				16CB0A7F1F1C559D0076F381 /* assests */,
 				16AC4A581EF18251004011F5 /* Cell */,
 				163BB7AF1F06C93E00ECA352 /* clases */,
-				165A0C4A1EE71B22000A6788 /* sonidos */,
 				167678961EE4E1B000EED638 /* storyboard */,
 				167678971EE4E1D000EED638 /* controller */,
-				16AF16EB1EE07B27008A9B17 /* imagenes */,
 				16EA3D341EDD971700B30D72 /* Assets.xcassets */,
 				16EA3D391EDD971700B30D72 /* Info.plist */,
 				16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */,
@@ -400,6 +430,49 @@
 				16EA3D4F1EDD971800B30D72 /* Info.plist */,
 			);
 			path = ToposUITests;
+			sourceTree = "<group>";
+		};
+		16FFD7401F1D77FE00B4B2C3 /* fondo */ = {
+			isa = PBXGroup;
+			children = (
+				16CB0A901F1C56FB0076F381 /* fondo1.jpg */,
+				16CB0A911F1C56FB0076F381 /* fondo2.jpg */,
+				16CB0A921F1C56FB0076F381 /* fondo3.jpg */,
+				16CB0A931F1C56FB0076F381 /* fondo4.jpg */,
+				16CB0A941F1C56FB0076F381 /* fondo5.jpg */,
+				16CB0A9A1F1C7F140076F381 /* fondo6.jpg */,
+				16CB0A9E1F1C7F270076F381 /* fondo7.jpg */,
+				16CB0A9C1F1C7F200076F381 /* fondo8.jpg */,
+				16CB0AA01F1C7F350076F381 /* fondo9.jpg */,
+				16CB0AA21F1C7F3B0076F381 /* fondo10.jpg */,
+			);
+			name = fondo;
+			sourceTree = "<group>";
+		};
+		16FFD7411F1D781900B4B2C3 /* topos */ = {
+			isa = PBXGroup;
+			children = (
+				16FFD71A1F1D779900B4B2C3 /* topos1.png */,
+				16FFD71C1F1D77A400B4B2C3 /* topos2.png */,
+				16FFD71E1F1D77AD00B4B2C3 /* topos3.png */,
+				16FFD7201F1D77E700B4B2C3 /* topos4.png */,
+				16FFD7211F1D77E700B4B2C3 /* topos5.png */,
+				16FFD7221F1D77E700B4B2C3 /* topos6.png */,
+				16FFD7231F1D77E700B4B2C3 /* topos7.png */,
+				16FFD7241F1D77E700B4B2C3 /* topos8.png */,
+				16FFD7251F1D77E700B4B2C3 /* topos9.png */,
+				16FFD7261F1D77E700B4B2C3 /* topos10.png */,
+				16FFD7271F1D77E700B4B2C3 /* topos11.png */,
+				16FFD7281F1D77E700B4B2C3 /* topos12.png */,
+				16FFD7291F1D77E700B4B2C3 /* topos13.png */,
+				16FFD72A1F1D77E700B4B2C3 /* topos14.png */,
+				16FFD72B1F1D77E700B4B2C3 /* topos15.png */,
+				16FFD72C1F1D77E700B4B2C3 /* topos16.png */,
+				16FFD72D1F1D77E700B4B2C3 /* topos17.png */,
+				16FFD72E1F1D77E700B4B2C3 /* topos18.png */,
+				16FFD72F1F1D77E700B4B2C3 /* topos19.png */,
+			);
+			name = topos;
 			sourceTree = "<group>";
 		};
 		370FD09335035C513B9646E0 /* Pods */ = {
@@ -542,13 +615,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FFD7341F1D77E700B4B2C3 /* topos8.png in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
 				165A0C551EE71B2B000A6788 /* ta3.wav in Resources */,
 				16AF17051EE093A1008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.42.jpeg in Resources */,
 				16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */,
+				16FFD73F1F1D77E700B4B2C3 /* topos19.png in Resources */,
 				16CB0A951F1C56FB0076F381 /* fondo1.jpg in Resources */,
+				16FFD7321F1D77E700B4B2C3 /* topos6.png in Resources */,
+				16FFD71F1F1D77AD00B4B2C3 /* topos3.png in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16AF16F71EE09313008A9B17 /* Galeriafondos.jpeg in Resources */,
+				16FFD7381F1D77E700B4B2C3 /* topos12.png in Resources */,
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				16CB0AA11F1C7F350076F381 /* fondo9.jpg in Resources */,
 				165A0C581EE71B2B000A6788 /* ta6.wav in Resources */,
@@ -560,7 +638,10 @@
 				16AF16FB1EE0935B008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.01.jpeg in Resources */,
 				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
+				16FFD7301F1D77E700B4B2C3 /* topos4.png in Resources */,
 				16CB0A9B1F1C7F140076F381 /* fondo6.jpg in Resources */,
+				16FFD7311F1D77E700B4B2C3 /* topos5.png in Resources */,
+				16FFD73B1F1D77E700B4B2C3 /* topos15.png in Resources */,
 				16CB0A981F1C56FB0076F381 /* fondo4.jpg in Resources */,
 				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
@@ -570,17 +651,27 @@
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
+				16FFD7371F1D77E700B4B2C3 /* topos11.png in Resources */,
 				16CB0A9F1F1C7F270076F381 /* fondo7.jpg in Resources */,
 				16CB0A991F1C56FB0076F381 /* fondo5.jpg in Resources */,
+				16FFD73C1F1D77E700B4B2C3 /* topos16.png in Resources */,
 				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				165A0C571EE71B2B000A6788 /* ta5.wav in Resources */,
+				16FFD7361F1D77E700B4B2C3 /* topos10.png in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
+				16FFD71B1F1D779900B4B2C3 /* topos1.png in Resources */,
+				16FFD71D1F1D77A400B4B2C3 /* topos2.png in Resources */,
+				16FFD7331F1D77E700B4B2C3 /* topos7.png in Resources */,
+				16FFD7351F1D77E700B4B2C3 /* topos9.png in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
+				16FFD73A1F1D77E700B4B2C3 /* topos14.png in Resources */,
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
+				16FFD73E1F1D77E700B4B2C3 /* topos18.png in Resources */,
 				16CB0AA31F1C7F3B0076F381 /* fondo10.jpg in Resources */,
+				16FFD7391F1D77E700B4B2C3 /* topos13.png in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,
 				16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */,
 				165A0C541EE71B2B000A6788 /* ta2.wav in Resources */,
@@ -589,6 +680,7 @@
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16AF17071EE093AF008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.52.jpeg in Resources */,
 				16CB0A9D1F1C7F200076F381 /* fondo8.jpg in Resources */,
+				16FFD73D1F1D77E700B4B2C3 /* topos17.png in Resources */,
 				16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */,
 				16CB0A971F1C56FB0076F381 /* fondo3.jpg in Resources */,
 			);
