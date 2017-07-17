@@ -24,7 +24,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
      @IBOutlet weak var miFondoBotonera: UIView!
     
     
-    var items = ["topos1", "topos2", "topos3", "topos4", "topos5", "topos6", "topos7", "topos8", "topos9", "topos10", "topos11", "topos12", "topos13", "topos14", "topos15", "topos16", "topos17", "topos18", "topos19"]
+    var items = ["topos1.png", "topos2.png", "topos3.png", "topos4.png", "topos5.png", "topos6.png", "topos7.png", "topos8.png", "topos9.png", "topos10.png", "topos11.png", "topos12.png", "topos13.png", "topos14.png", "topos15.png", "topos16.png", "topos17.png", "topos18.png", "topos19.png"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

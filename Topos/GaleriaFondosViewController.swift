@@ -20,7 +20,7 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
     
     @IBOutlet weak var miFondoBotonera: UIView!
 
-    var items = ["fondo1", "fondo2", "fondo3", "fondo4", "fondo5", "fondo6", "fondo7", "fondo8", "fondo9", "fondo10"]
+    var items = ["fondo1.jpg", "fondo2.jpg", "fondo3.jpg", "fondo4.jpg", "fondo5.jpg", "fondo6.jpg", "fondo7.jpg", "fondo8.jpg", "fondo9.jpg", "fondo10.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -288,7 +288,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             }
             else{
                 
-                let image: UIImage = UIImage(named: "fondo0")!
+                let image: UIImage = UIImage(named: "fondo0.png")!
                 cell.imgGaleria.image = image
                 
             }

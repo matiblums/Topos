@@ -78,7 +78,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
-        let path1 = Bundle.main.path(forResource: image as String, ofType: "jpg")!
+        
+        let path1 = Bundle.main.path(forResource: image as String, ofType: "")!
         
         
         
