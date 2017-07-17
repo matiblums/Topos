@@ -19,12 +19,19 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBOutlet weak var viewVideo: UIView!
     
+    @IBOutlet weak var viewTapa: UIView!
+    
     @IBOutlet weak var btnPlayTotal: UIButton!
     
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnPause: UIButton!
     @IBOutlet weak var btnGuardar: UIButton!
     @IBOutlet weak var btnCompartir: UIButton!
+    
+    
+    @IBOutlet weak var imgTapa: UIImageView!
+    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var lblAutor: UILabel!
     
     var documentController : UIDocumentInteractionController!
     
@@ -48,9 +55,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         btnPlay.isHidden = true
         btnPause.isHidden = true
-        btnGuardar.isHidden = true
-        btnPlayTotal.isHidden = true
-        btnCompartir.isHidden = true
+        viewTapa.isHidden = true
         
         
         NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
@@ -326,9 +331,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     
                     print("-----Merge Video exportation complete.\(mergeVideoURL)")
                     self.videoFinal = mergeVideoURL
-                    self.btnPlayTotal.isHidden = false
-                    self.btnGuardar.isHidden = false
-                    self.btnCompartir.isHidden = false
+                    
+                    self.viewTapa.isHidden = false
                     
                     self.stopAnimating()
                     //self.verVideo(url: self.videoFinal)
@@ -497,11 +501,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
         
-        btnGuardar.isHidden = false
-        btnPlayTotal.isHidden = false
+        viewTapa.isHidden = false
         btnPlay.isHidden = true
         btnPause.isHidden = true
-        btnCompartir.isHidden = false
         
     }
     
@@ -513,6 +515,16 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     func creaVideo(){
         
         let miLibro = self.libro
+        
+        let miAutor = self.libro?.autor
+        let miTitulo = self.libro?.titulo
+        let miTapa = self.libro?.tapa
+        lblAutor.text = miAutor
+        lblTitulo.text = miTitulo
+        let image: UIImage = UIImage(named: miTapa!)!
+        imgTapa.image = image
+        
+        
         
         let totales = miLibro?.paginas?.count
         
@@ -576,9 +588,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         btnPlay.isHidden = true
         btnPause.isHidden = false
-        btnGuardar.isHidden = true
-        btnPlayTotal.isHidden = true
-        btnCompartir.isHidden = true
+        viewTapa.isHidden = true
         
         self.verVideo(url: self.videoFinal)
         
