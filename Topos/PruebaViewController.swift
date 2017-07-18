@@ -22,6 +22,8 @@ class PruebaViewController: UIViewController {
         
         compositeFilter.setValue(volleyballImage,
                                  forKey: kCIInputImageKey)
+        
+        
         compositeFilter.setValue(otherImage,
                                  forKey: kCIInputBackgroundImageKey)
         

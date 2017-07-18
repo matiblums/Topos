@@ -74,14 +74,95 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
     
+    func creaVideo(){
+        
+
+ 
+ 
+        let miLibro = self.libro
+ 
+        let miAutor = self.libro?.autor
+        let miTitulo = self.libro?.titulo
+        let miTapa = self.libro?.tapa
+        lblAutor.text = miAutor
+        lblTitulo.text = miTitulo
+        let image: UIImage = UIImage(named: miTapa!)!
+        imgTapa.image = image
+        
+        
+        
+        let totales = miLibro?.paginas?.count
+        
+        let num = totales
+        var imagesArray = [NSString]()
+        var musicaArray = [NSString]()
+        var audioArray = [NSString]()
+        
+    
+        
+        for i in 0...Int(num!)-1{
+ 
+            let miPagina = miLibro!.paginas![i] as! Pagina
+            
+            //imagesArray.append(miPagina.fondo as NSString)
+            
+            //******************************************************************************************************
+            let miFondo = miPagina.fondo
+            let miTopo = miPagina.topo
+            
+            let volleyballImage = CIImage(image: UIImage(named:miFondo)!)
+            let otherImage = CIImage(image: UIImage(named:miTopo)!)
+            
+            let compositeFilter = CIFilter(name: "CIAdditionCompositing")!
+            compositeFilter.setValue(volleyballImage,
+                                     forKey: kCIInputImageKey)
+            compositeFilter.setValue(otherImage,
+                                     forKey: kCIInputBackgroundImageKey)
+            let random = randomString(length: 8)
+            let nombreArchivo = random
+            if let compositeImage = compositeFilter.outputImage{
+                //let image2: UIImage = UIImage(ciImage: compositeImage)
+                //imgGaleria.image = image
+                //imgGaleria.image = image2
+                if let data = UIImagePNGRepresentation(convert(cmage: compositeImage)) {
+                    
+                    
+                    let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
+                    try? data.write(to: filename)
+                }
+                
+            }
+            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
+            //let newImage = UIImage(contentsOfFile: filename.path)!
+            //imgGaleria.image = newImage
+            //******************************************************************************************************
+            
+            imagesArray.append(filename.path as NSString)
+
+            
+            musicaArray.append(miPagina.musica as NSString)
+            audioArray.append(miPagina.audio as NSString)
+            
+        }
+        
+        
+        for i in 0 ..< imagesArray.count {
+            
+            createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl:audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
+            
+        }
+        
+        
+    }
+
    
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
         
-        let path1 = Bundle.main.path(forResource: image as String, ofType: "")!
+        //let path1 = Bundle.main.path(forResource: image as String, ofType: "")!
         
-        
+        let path1 = image
         
         let sonidoGuardado = audioUrl
         
@@ -100,7 +181,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         for _ in 0...duration {
-            photosArray.append(path1)
+            //photosArray.append(path1)
+            photosArray.append(path1 as String)
         }
         
         let tlb = TimeLapseBuilder(photoURLs: photosArray)
@@ -513,51 +595,19 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
     
-    func creaVideo(){
-        
-        let miLibro = self.libro
-        
-        let miAutor = self.libro?.autor
-        let miTitulo = self.libro?.titulo
-        let miTapa = self.libro?.tapa
-        lblAutor.text = miAutor
-        lblTitulo.text = miTitulo
-        let image: UIImage = UIImage(named: miTapa!)!
-        imgTapa.image = image
-        
-        
-        
-        let totales = miLibro?.paginas?.count
-        
-        let num = totales
-        
-        var imagesArray = [NSString]()
-        var musicaArray = [NSString]()
-        var audioArray = [NSString]()
-        
-        for i in 0...Int(num!)-1{
-            
-            let miPagina = miLibro!.paginas![i] as! Pagina
-            
-            imagesArray.append(miPagina.fondo as NSString)
-            musicaArray.append(miPagina.musica as NSString)
-            
-            
-            audioArray.append(miPagina.audio as NSString)
-            
-        }
-        
-        
-        for i in 0 ..< imagesArray.count {
-            
-            createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl:audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
-            
-        }
-        
-        
-    }
     
-   
+    func convert(cmage:CIImage) -> UIImage
+    {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
 
     
     @IBAction func creaVideo(_ sender: Any){
