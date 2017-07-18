@@ -39,7 +39,8 @@ class PruebaViewController: UIViewController {
         let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
         let newImage = UIImage(contentsOfFile: filename.path)!
         imgGaleria.image = newImage
-       
+        
+        
     }
     
     func convert(cmage:CIImage) -> UIImage
