@@ -57,28 +57,20 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         btnPause.isHidden = true
         viewTapa.isHidden = true
         
-        
         NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
-        
         self.startAnimating()
         
-        
-        
-        
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
+        super.viewDidAppear(animated)
         creaVideo()
         
     }
     
     func creaVideo(){
         
-
- 
- 
         let miLibro = self.libro
  
         let miAutor = self.libro?.autor
@@ -303,7 +295,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(videosArray.count == 0){
             
-            for _ in 0...100 {
+            for _ in 0...99 {
                 videosArray.append(miVideo)
             }
             
@@ -311,10 +303,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         videosArray.insert(miVideo, at: position)
         
-        if(videosArray.count == total + 101){
+        if(videosArray.count == total + 100){
             
             let  mas = videosArray.count - 1
-            let  menos = 0 + total
+            let  menos = total
             
             var i = mas
             

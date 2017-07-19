@@ -19,7 +19,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var checkMusica: UIImageView!
     @IBOutlet var checkAudio: UIImageView!
     
-    var items = ["fondo1"]
+     
     @IBOutlet var myView: UICollectionView?
     @IBOutlet var flowLayout: LNICoverFlowLayout?
     
@@ -48,7 +48,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     var masPaginas = 3
     
-    var contPagina = 1
+    var contPagina = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,7 +181,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBAction func playPagina(_ sender: Any) {
         
         let miLibro = self.libro
-        let miPagina = miLibro!.paginas![contPagina] as! Pagina
+        let miPagina = miLibro!.paginas![contPagina - 1] as! Pagina
         
         let storyboard = UIStoryboard(name: "Pelicula", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Pelicula") as! PeliculaViewController
