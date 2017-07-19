@@ -18,7 +18,7 @@ class PruebaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        image = self.mergedImageWith(frontImage: UIImage.init(named: "topos1.png"), backgroundImage: UIImage.init(named: "fondo2.jpg"))
+        image = self.mergedImageWith(frontImage: UIImage.init(named: "topos1.png"), backgroundImage: UIImage.init(named: "fondo2.jpg"), Topox: 0, Topoy: 0)
         //imgGaleria.image = image
         
         if let data = UIImagePNGRepresentation(image) {
@@ -30,41 +30,7 @@ class PruebaViewController: UIViewController {
         let newImage = UIImage(contentsOfFile: filename.path)!
         imgGaleria.image = newImage
         
-        //let urls = [filename.path]
-        
-       
-        
-        /*
-        //[filter1 setValue:[imageForeground imageByApplyingTransform:CGAffineTransformMakeTranslation(100, 100)] forKey:kCIInputImageKey]
-
-
-        let otherImage = CIImage(image: UIImage(named:"WhatsApp Image 2017-05-19 at 17.02.49.jpeg")!)
-        let volleyballImage = CIImage(image: UIImage(named:"topos2.png")!)
-        let compositeFilter = CIFilter(name: "CIAdditionCompositing")!
-        
-        
-        
-        compositeFilter.setValue(volleyballImage, forKey: kCIInputImageKey)
-        compositeFilter.setValue(otherImage, forKey: kCIInputBackgroundImageKey)
-        
-        if let compositeImage = compositeFilter.outputImage{
-            //let image2: UIImage = UIImage(ciImage: compositeImage)
-            //imgGaleria.image = image
-            //imgGaleria.image = image2
-            if let data = UIImagePNGRepresentation(convert(cmage: compositeImage)) {
-                let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
-                try? data.write(to: filename)
-                let newImage = UIImage(contentsOfFile: filename.path)!
-                imgGaleria.image = newImage
-            }
-            
-        }
-        
-        //let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
-        //let newImage = UIImage(contentsOfFile: filename.path)!
-        //imgGaleria.image = newImage
-        */
-        
+             
     }
     
    
@@ -74,7 +40,10 @@ class PruebaViewController: UIViewController {
         return documentsDirectory
     }
 
-    func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?) -> UIImage{
+    func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?, Topox: CGFloat, Topoy: CGFloat) -> UIImage{
+        
+        let topox = Topox
+        let topoy = Topoy
         
         if (backgroundImage == nil) {
             return frontImage!
@@ -93,7 +62,7 @@ class PruebaViewController: UIViewController {
         
         //frontImage?.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height).insetBy(dx: size.width * 0.2, dy: size.height * 0.2))
         
-        frontImage?.draw(in: CGRect.init(x: 0, y: 0, width: size2.width, height: size2.height).insetBy(dx: size2.width * 0.0, dy: size2.height * 0.0))
+        frontImage?.draw(in: CGRect.init(x: topox, y: topoy, width: size2.width, height: size2.height).insetBy(dx: size2.width * 0.0, dy: size2.height * 0.0))
         
         
         let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!

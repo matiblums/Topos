@@ -103,45 +103,20 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         for i in 0...Int(num!)-1{
  
             let miPagina = miLibro!.paginas![i] as! Pagina
-            
-            //imagesArray.append(miPagina.fondo as NSString)
-            
-          
             //******************************************************************************************************
             let miFondo = miPagina.fondo
             let miTopo = miPagina.topo
-            let random = randomString(length: 8)
-            let nombreArchivo = random
-            /*
-            let volleyballImage = CIImage(image: UIImage(named:miFondo)!)
-            let otherImage = CIImage(image: UIImage(named:miTopo)!)
+            let miTopoX = miPagina.topox
+            let miTopoY = miPagina.topoy
             
-            let compositeFilter = CIFilter(name: "CIAdditionCompositing")!
-            compositeFilter.setValue(volleyballImage,
-                                     forKey: kCIInputImageKey)
-            compositeFilter.setValue(otherImage,
-                                     forKey: kCIInputBackgroundImageKey)
+            let cgFloatTopoX : CGFloat? = Double(miTopoX).map{ CGFloat($0) }
+            let cgFloatTopoY : CGFloat? = Double(miTopoY).map{ CGFloat($0) }
+            
+            
             let random = randomString(length: 8)
             let nombreArchivo = random
-            if let compositeImage = compositeFilter.outputImage{
-                //let image2: UIImage = UIImage(ciImage: compositeImage)
-                //imgGaleria.image = image
-                //imgGaleria.image = image2
-                if let data = UIImagePNGRepresentation(convert(cmage: compositeImage)) {
-                    
-                    
-                    let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
-                    try? data.write(to: filename)
-                }
-                
-            }
-            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
-            //let newImage = UIImage(contentsOfFile: filename.path)!
-            //imgGaleria.image = newImage
- */
             //******************************************************************************************************
-            let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: "topos1.png"), backgroundImage: UIImage.init(named: "fondo2.jpg"))
-            //imgGaleria.image = image
+            let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: UIImage.init(named: miFondo), Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
             
             if let data = UIImagePNGRepresentation(imageOK) {
                 let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
@@ -149,14 +124,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             }
             
             let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
-            //let newImage = UIImage(contentsOfFile: filename.path)!
-            //imgGaleria.image = newImage
+
             //******************************************************************************************************
-            
             
             imagesArray.append(filename.path as NSString)
 
-            
             musicaArray.append(miPagina.musica as NSString)
             audioArray.append(miPagina.audio as NSString)
             
@@ -620,7 +592,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
 
     
     
-    func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?) -> UIImage{
+    func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?, Topox: CGFloat, Topoy: CGFloat) -> UIImage{
+        
+        let topox = Topox
+        let topoy = Topoy
         
         if (backgroundImage == nil) {
             return frontImage!
@@ -639,7 +614,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         //frontImage?.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height).insetBy(dx: size.width * 0.2, dy: size.height * 0.2))
         
-        frontImage?.draw(in: CGRect.init(x: 0, y: 0, width: size2.width, height: size2.height).insetBy(dx: size2.width * 0.0, dy: size2.height * 0.0))
+        frontImage?.draw(in: CGRect.init(x: topox, y: topoy, width: size2.width, height: size2.height).insetBy(dx: size2.width * 0.0, dy: size2.height * 0.0))
         
         
         let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
