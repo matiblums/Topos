@@ -57,19 +57,43 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         btnPause.isHidden = true
         viewTapa.isHidden = true
         
-        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
-        self.startAnimating()
+        
+        
+        
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        creaVideo()
+        verificaVIdeo()
         
     }
     
+    func verificaVIdeo(){
+        
+        let miFile = self.libro?.file
+        
+        if(miFile?.isEmpty)!{
+            
+            creaVideo()
+            
+        }
+        else{
+            
+            creaVideo()
+            
+        }
+        
+        
+    }
+    
+    
     func creaVideo(){
+        
+        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
+        self.startAnimating()
         
         let miLibro = self.libro
  
@@ -330,10 +354,25 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         let mixComposition = AVMutableComposition()
         
+        var duracionDesde = kCMTimeZero
         
         for i in 0 ..< videoFileUrls.count {
             
             
+            let firstAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
+            
+            do {
+                try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
+            } catch _ {
+                print("Failed to load first track")
+        }
+            
+        duracionDesde = duracionDesde + firstAsset.duration
+            
+        
+        
+            
+            /*
             
             if(i == 0){
                 
@@ -358,7 +397,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 
                 
             }
-            
+            */
         }
         
       
@@ -390,6 +429,24 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     default:
                         DispatchQueue.main.async() {
                            // print("-----Merge Video exportation complete.\(mergeVideoURL)")
+                        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+                            let context = container.viewContext
+                            
+                            let url = NSURL(string: mergeVideoURL.absoluteString!)
+                            
+                            self.libro?.file = (url?.path)!
+                            
+                            do {
+                                try context.save()
+                                print("Grabo OK")
+                                
+                                
+                            } catch {
+                                print("Ha habido un error al guardar el lugar en Core Data")
+                            }
+                            
+                        }
+                            
                             self.videoFinal = mergeVideoURL
                             self.stopAnimating()
                             self.viewTapa.isHidden = false
@@ -531,6 +588,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //***************************************************************************************************************************
     func verVideo(url: NSURL){
+        btnPlay.isHidden = true
+        btnPause.isHidden = false
+        viewTapa.isHidden = true
         
         avPlayer = AVPlayer(url: url as URL)
         let playerLayer = AVPlayerLayer()
@@ -643,9 +703,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePlayTotal(_ sender: Any){
         
-        btnPlay.isHidden = true
-        btnPause.isHidden = false
-        viewTapa.isHidden = true
+        
         
         self.verVideo(url: self.videoFinal)
         

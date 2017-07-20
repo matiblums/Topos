@@ -3,6 +3,7 @@
     <entity name="Libro" representedClassName=".Libro" syncable="YES">
         <attribute name="autor" attributeType="String" syncable="YES"/>
         <attribute name="fecha" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="file" attributeType="String" syncable="YES"/>
         <attribute name="tapa" attributeType="String" syncable="YES"/>
         <attribute name="titulo" attributeType="String" syncable="YES"/>
         <relationship name="paginas" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pagina" inverseName="libro" inverseEntity="Pagina" syncable="YES"/>
@@ -18,7 +19,7 @@
         <relationship name="libro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Libro" inverseName="paginas" inverseEntity="Libro" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Libro" positionX="-1487" positionY="-1539" width="128" height="120"/>
+        <element name="Libro" positionX="-1487" positionY="-1539" width="128" height="135"/>
         <element name="Pagina" positionX="-1251" positionY="-1600" width="128" height="165"/>
     </elements>
 </model>

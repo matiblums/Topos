@@ -95,6 +95,7 @@ class TapaViewController: UIViewController {
     }
     
     func grabar() {
+        let file = ""
         let titulo = txtTitulo.text
         let autor = txtAutor.text
         let tapa = UserDefaults.standard.string(forKey: "tapa")
@@ -105,6 +106,7 @@ class TapaViewController: UIViewController {
             
             //self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
             
+            self.libro?.file = file
             self.libro?.titulo = titulo!
             self.libro?.autor = autor!
             self.libro?.tapa = tapa!
