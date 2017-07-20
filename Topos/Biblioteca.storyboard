@@ -80,17 +80,6 @@
                                     <outlet property="delegate" destination="p61-xO-QHf" id="eZr-gh-hwQ"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bME-hW-X15">
-                                <rect key="frame" x="596" y="28" width="51" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_eliminar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="elijeBorrar:" destination="p61-xO-QHf" eventType="touchUpInside" id="JO2-EO-7ay"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -104,7 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bt_eliminar" width="51" height="50"/>
         <image name="fondo" width="1922" height="1080"/>
         <image name="libro" width="221" height="288"/>
     </resources>

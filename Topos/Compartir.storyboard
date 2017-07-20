@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoK-Zs-UH8" userLabel="Btn Guardar">
-                                        <rect key="frame" x="493" y="185.5" width="84" height="42"/>
+                                        <rect key="frame" x="468" y="185.5" width="84" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="Compartir">
@@ -95,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-es-dn4">
-                                <rect key="frame" x="20" y="353" width="84" height="42"/>
+                                <rect key="frame" x="348" y="354" width="84" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Pausa">
@@ -106,7 +106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE1-3T-4xz">
-                                <rect key="frame" x="20" y="353" width="84" height="42"/>
+                                <rect key="frame" x="349" y="353" width="84" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Play">
@@ -114,6 +114,17 @@
                                 </state>
                                 <connections>
                                     <action selector="elijePlay:" destination="S3u-yD-3vm" eventType="touchUpInside" id="XJb-gY-o29"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ym-Zr-Q2b" userLabel="btn eliminar">
+                                <rect key="frame" x="22" y="347" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_eliminar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="elijeBorrar:" destination="S3u-yD-3vm" eventType="touchUpInside" id="19P-bJ-p9t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,10 +145,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3S-gW-Pyl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.54722638680661" y="266.39999999999998"/>
+            <point key="canvasLocation" x="231" y="135"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bt_eliminar" width="51" height="50"/>
         <image name="ok_verde" width="130" height="130"/>
     </resources>
 </document>

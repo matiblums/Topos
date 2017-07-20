@@ -52,6 +52,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miFondoBotonera.isHidden = true
         miTopo.isHidden = true
         
+        
     }
     
     func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
@@ -88,6 +89,10 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miFondoBotonera.isHidden = true
         miTopo.isHidden = true
         
+    }
+    
+    @IBAction func scaleImage(_ sender: UIPinchGestureRecognizer) {
+        miTopo.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
 
     override func didReceiveMemoryWarning() {

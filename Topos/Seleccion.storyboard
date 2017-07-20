@@ -62,27 +62,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
-                                <rect key="frame" x="597" y="305" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="496" y="291" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="ok_verde"/>
                                 <connections>
                                     <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
-                                <rect key="frame" x="277" y="287" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cerrar pagina"/>
-                                <connections>
-                                    <action selector="cerrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="eFj-I9-VxS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
-                                <rect key="frame" x="286" y="325" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Pagina"/>
-                                <connections>
-                                    <action selector="playPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KpU-Ms-Ccn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-li-CcV">
@@ -101,36 +85,8 @@
                                 <rect key="frame" x="243" y="343" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M">
-                                <rect key="frame" x="0.0" y="140" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="&lt;"/>
-                                <connections>
-                                    <action selector="btnIzq:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="YmL-jb-w83"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-wV-PwC">
-                                <rect key="frame" x="627" y="140" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="btnDer:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="cZn-iJ-vd6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-jz-3Vs">
-                                <rect key="frame" x="406" y="337" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ir a Biblioteca"/>
-                                <connections>
-                                    <action selector="elijeBiblioteca:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Xqv-s8-K3l"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
-                                <rect key="frame" x="43" y="60" width="580" height="188"/>
+                                <rect key="frame" x="0.0" y="60" width="667" height="188"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
@@ -168,6 +124,57 @@
                                     <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
+                                <rect key="frame" x="421" y="283" width="67" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <action selector="cerrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="eFj-I9-VxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M" userLabel="btn Izq">
+                                <rect key="frame" x="0.0" y="60" width="150" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <connections>
+                                    <action selector="btnIzq:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="YmL-jb-w83"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-wV-PwC" userLabel="btn der">
+                                <rect key="frame" x="517" y="60" width="150" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <connections>
+                                    <action selector="btnDer:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="cZn-iJ-vd6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
+                                <rect key="frame" x="319" y="293" width="46" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="bt_reproducir_libro"/>
+                                <connections>
+                                    <action selector="playPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KpU-Ms-Ccn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-jz-3Vs" userLabel="btn biblioteca">
+                                <rect key="frame" x="569" y="293" width="78" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="galeria_fondo_blanco"/>
+                                <connections>
+                                    <action selector="elijeBiblioteca:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Xqv-s8-K3l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK">
+                                <rect key="frame" x="373" y="289" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_eliminar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -193,11 +200,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bt_eliminar" width="51" height="50"/>
         <image name="bt_fondo_vacio" width="392" height="252"/>
         <image name="bt_grabar_vacio" width="321" height="341"/>
         <image name="bt_musica_vacio" width="243" height="277"/>
+        <image name="bt_reproducir_libro" width="137" height="180"/>
         <image name="bt_topo_vacio" width="346" height="260"/>
+        <image name="exit" width="300" height="300"/>
         <image name="fondo" width="1922" height="1080"/>
+        <image name="galeria_fondo_blanco" width="152" height="90"/>
         <image name="ok_verde" width="130" height="130"/>
     </resources>
 </document>

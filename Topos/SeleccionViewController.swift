@@ -191,16 +191,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     @IBAction func cerrarPagina(_ sender: Any) {
-        grabar()
-        borraDatos()
-        self.myView?.reloadData()
-        let miLibro = self.libro
-        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
-        contPagina = paginasTotales - 2
+        cerrar ()
         
-        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
-        cargaBotones ()
     }
     
     @IBAction func btnIzq(_ sender: Any) {
@@ -226,6 +219,20 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
     }
     
+    func cerrar () {
+        
+        grabar()
+        borraDatos()
+        self.myView?.reloadData()
+        let miLibro = self.libro
+        let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
+        
+        contPagina = paginasTotales - 2
+        
+        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
+        cargaBotones ()
+        
+    }
     
     func tocaGaleria () {
         myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)

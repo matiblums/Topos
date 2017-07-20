@@ -39,7 +39,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     var videosArray = [NSURL]()
     
-    var videoFinal = NSURL()
+    //var videoFinal = NSURL()
+    
+    //var videoFinalStr = NSString()
     
     var paginas : [Pagina] = []
     var fetchResultsController : NSFetchedResultsController<Pagina>!
@@ -82,13 +84,28 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
         else{
             
-            creaVideo()
+            cargaVideo()
             
         }
         
         
     }
     
+    func cargaVideo(){
+        
+        let miAutor = self.libro?.autor
+        let miTitulo = self.libro?.titulo
+        let miTapa = self.libro?.tapa
+        lblAutor.text = miAutor
+        lblTitulo.text = miTitulo
+        let image: UIImage = UIImage(named: miTapa!)!
+        imgTapa.image = image
+
+        
+        self.viewTapa.isHidden = false
+        
+        
+    }
     
     func creaVideo(){
         
@@ -290,7 +307,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let assetExport: AVAssetExportSession = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)!
         assetExport.outputFileType = AVFileTypeMPEG4
         assetExport.outputURL = mergedAudioVideoURl as URL
-        removeFileAtURLIfExists(url: mergedAudioVideoURl)
+        //removeFileAtURLIfExists(url: mergedAudioVideoURl)
         assetExport.shouldOptimizeForNetworkUse = true
         assetExport.exportAsynchronously { () -> Void in
             switch assetExport.status {
@@ -432,9 +449,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
                             let context = container.viewContext
                             
-                            let url = NSURL(string: mergeVideoURL.absoluteString!)
+                            let url = mergeVideoURL.absoluteString! as NSString
                             
-                            self.libro?.file = (url?.path)!
+                            self.libro?.file = url as String
                             
                             do {
                                 try context.save()
@@ -447,7 +464,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                             
                         }
                             
-                            self.videoFinal = mergeVideoURL
+                            //self.videoFinalStr = mergeVideoURL.absoluteString! as NSString
+                            //self.videoFinal = NSURL(string: self.videoFinalStr as String)!
+                            
+                        
                             self.stopAnimating()
                             self.viewTapa.isHidden = false
                         }
@@ -592,6 +612,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         btnPause.isHidden = false
         viewTapa.isHidden = true
         
+        //let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        
         avPlayer = AVPlayer(url: url as URL)
         let playerLayer = AVPlayerLayer()
         playerLayer.player = avPlayer
@@ -675,23 +697,32 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         return newImage
     }
     
-    
-    @IBAction func creaVideo(_ sender: Any){
+    func borrar () {
         
-        creaVideo()
-        
-    }
-    
-    @IBAction func muestraVideo(_ sender: Any) {
-        
-        
-        verVideo(url: self.videoFinal)
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            context.delete(self.libro!)
+                    
+            do {
+                try context.save()
+                print("borrado!")
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            } catch {
+                    
+            }
+                
+        }
         
     }
     
     @IBAction func grabaVideo(_ sender: Any) {
         
-        salvaVideo(url: self.videoFinal)
+        let videoGuardado = self.libro?.file
+        let videoFinal = NSURL(string: videoGuardado!)!
+        
+        salvaVideo(url: videoFinal)
         
     }
     
@@ -701,13 +732,24 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
     
+    @IBAction func elijeBorrar(_ sender: Any) {
+        
+        let videoGuardado = self.libro?.file
+        let videoFinal = NSURL(string: videoGuardado!)!
+        removeFileAtURLIfExists(url: videoFinal)
+        
+        
+        borrar ()
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     @IBAction func elijePlayTotal(_ sender: Any){
         
+        let videoGuardado = self.libro?.file
+        let videoFinal = NSURL(string: videoGuardado!)!
         
-        
-        self.verVideo(url: self.videoFinal)
-        
-        
+        verVideo(url: videoFinal)
         
     }
     
@@ -736,10 +778,19 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijeComparte(_ sender: Any){
         
-        comparteVideo(url: self.videoFinal)
+        let videoGuardado = self.libro?.file
+        let videoFinal = NSURL(string: videoGuardado!)!
+        
+        comparteVideo(url: videoFinal)
         
     }
     
 }
+
+
+
+
+
+
 
 

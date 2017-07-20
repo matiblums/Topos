@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>DIOCollectionView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
 		<key>DragDropUI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>IGRPhotoTweaks.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
@@ -58,6 +68,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+		<key>PhotoTweaks.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
 		</dict>
 		<key>Pods-Topos.xcscheme</key>
 		<dict>
@@ -137,6 +152,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1037A77BAAFA8D11FFAF1A650E8A3858</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>166BB646445BE6693A2B1ACDF66A3E30</key>
 		<dict>
 			<key>primary</key>
@@ -173,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BE30745AE10E316C75E52389D98B951</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -237,6 +262,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>92DB0FD1DAF97094E79E9B33084F7FA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>98EFD1B8535CB42C6B27223EBF5360E3</key>
 		<dict>
 			<key>primary</key>
@@ -272,6 +302,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A802E425599FA277D2AC37C85D4A2E41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AABEF1B38B36FA35B1C8D3F561EA137E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B2278A804BE6FBE459CA9DF374EA6BBE</key>
 		<dict>
 			<key>primary</key>
@@ -293,6 +333,11 @@
 			<true/>
 		</dict>
 		<key>C235F77E101E742652CCF98FFDFA5182</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C677F6D7D3A9D1607830A11E1B6593F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -327,6 +372,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D69CAEAB092EB3F005A0B1AF4B0001A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DEDD28A14B7D9B5318ECC59CD5AB34A4</key>
 		<dict>
 			<key>primary</key>
@@ -347,7 +397,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>F2CB5BC1E5CA869279B32D317D42AC38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F3BD3E1AB9BF49844623B36461BC3070</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9D8E3B9629D5A8F285E3365441EEE8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
