@@ -11,6 +11,8 @@ import UIKit
 import CoreData
 
 class Pagina : NSManagedObject {
+    @NSManaged var file1 : String
+    @NSManaged var file2 : String
     @NSManaged var audio : String
     @NSManaged var fondo : String
     @NSManaged var musica : String

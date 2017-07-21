@@ -276,6 +276,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             
             self.libro = NSEntityDescription.insertNewObject(forEntityName: "Libro", into: context) as? Libro
             
+            self.libro?.file = ""
             self.libro?.titulo = titulo
             self.libro?.autor = autor
             self.libro?.tapa = tapa

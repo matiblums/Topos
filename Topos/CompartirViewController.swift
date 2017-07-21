@@ -317,6 +317,36 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 //print("de \(num) aa \(numTotal)")
                 self.almacenaVideos(miVideo:  mergedAudioVideoURl, position: num, total: numTotal)
                 
+                
+            //**********************************************************************************************************
+                
+                if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+                    let context = container.viewContext
+                    
+                    let miLibro = self.libro
+                    let miPagina = miLibro!.paginas![num] as! Pagina
+                    
+                    let url1 = videoUrl.absoluteString! as NSString
+                    let url2 = mergedAudioVideoURl.absoluteString! as NSString
+         
+                    miPagina.file1 = url1 as String
+                    miPagina.file2 = url2 as String
+                    
+                    
+                    do {
+                        try context.save()
+                        print("Grabo OK")
+                        
+                        
+                    } catch {
+                        print("Ha habido un error al guardar el lugar en Core Data")
+                    }
+                    
+                }
+                
+             //**********************************************************************************************************
+                
+                
             case  AVAssetExportSessionStatus.failed:
                 print("failed \(String(describing: assetExport.error))")
             case AVAssetExportSessionStatus.cancelled:
@@ -738,6 +768,25 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let videoFinal = NSURL(string: videoGuardado!)!
         removeFileAtURLIfExists(url: videoFinal)
         
+        
+        let miLibro = self.libro
+        
+        let paginasTotales = (miLibro?.paginas?.count)!
+        
+        
+        for i in 0...paginasTotales - 1{
+            
+            let miPagina = miLibro!.paginas![i] as! Pagina
+            
+            let videoGuardado1 = miPagina.file1
+            let videoFinal1 = NSURL(string: videoGuardado1)!
+            removeFileAtURLIfExists(url: videoFinal1)
+            
+            let videoGuardado2 = miPagina.file2
+            let videoFinal2 = NSURL(string: videoGuardado2)!
+            removeFileAtURLIfExists(url: videoFinal2)
+            
+        }
         
         borrar ()
         dismiss(animated: true, completion: nil)
