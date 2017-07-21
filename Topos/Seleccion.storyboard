@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -124,14 +124,6 @@
                                     <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
-                                <rect key="frame" x="421" y="283" width="67" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="exit"/>
-                                <connections>
-                                    <action selector="cerrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="eFj-I9-VxS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M" userLabel="btn Izq">
                                 <rect key="frame" x="0.0" y="60" width="150" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -151,7 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
-                                <rect key="frame" x="319" y="293" width="46" height="47"/>
+                                <rect key="frame" x="292" y="112" width="82" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="bt_reproducir_libro"/>
@@ -167,13 +159,29 @@
                                     <action selector="elijeBiblioteca:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Xqv-s8-K3l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK">
-                                <rect key="frame" x="373" y="289" width="51" height="50"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK" userLabel="btn eliminar">
+                                <rect key="frame" x="443" y="73" width="51" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_eliminar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="borrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="s4i-F5-tF2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
+                                <rect key="frame" x="292" y="112" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ok_verde"/>
+                                <connections>
+                                    <action selector="cerrarPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="eFj-I9-VxS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2F-pq-aHj">
+                                <rect key="frame" x="398" y="273" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="exit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,6 +189,7 @@
                     <connections>
                         <outlet property="btnAudioVacio" destination="vuc-ao-P4Z" id="q3V-hn-RzO"/>
                         <outlet property="btnCierraPagina" destination="zsB-G9-mGH" id="jMt-8F-Dab"/>
+                        <outlet property="btnEliminar" destination="ysk-8j-bRK" id="KJe-N8-qvW"/>
                         <outlet property="btnFondoVacio" destination="nAd-O6-fUr" id="78f-IM-g1H"/>
                         <outlet property="btnMusicaVacio" destination="NEA-ew-ncR" id="e9O-B9-Zlq"/>
                         <outlet property="btnPlay" destination="Pwb-5x-S06" id="blk-dj-Hrf"/>

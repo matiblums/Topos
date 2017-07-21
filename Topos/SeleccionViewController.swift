@@ -19,14 +19,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var checkMusica: UIImageView!
     @IBOutlet var checkAudio: UIImageView!
     
-     
     @IBOutlet var myView: UICollectionView?
     @IBOutlet var flowLayout: LNICoverFlowLayout?
     
     @IBOutlet var btnAgrega: UIButton!
     @IBOutlet var btnCierraPagina: UIButton!
-    
-    
     
     @IBOutlet var btnFondoVacio: UIButton!
     @IBOutlet var btnTopoVacio: UIButton!
@@ -35,6 +32,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnPeliculaVacio: UIButton!
     
     @IBOutlet var btnPlay: UIButton!
+    @IBOutlet var btnEliminar: UIButton!
     
     @IBOutlet var btnTapa: UIButton!
     
@@ -61,8 +59,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         //flowLayout?.minCoverOpacity = 0.7
         
         borraDatos()
-        btnPlay.isEnabled = false
-        
+        btnPlay.isHidden = true
+        btnEliminar.isHidden = true
         
         let miLibro = self.libro
         
@@ -85,7 +83,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewWillAppear(animated)
         
         cargaBotones()
-        
+        tocaGaleria ()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -196,6 +194,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
+    @IBAction func borrarPagina(_ sender: Any) {
+        
+        Borrar ()
+        
+    }
+    
     @IBAction func btnIzq(_ sender: Any) {
         
         if(contPagina > 1){
@@ -218,6 +222,34 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
         }
     }
+    
+    func Borrar () {
+        
+        let miLibro = self.libro
+        let miPagina =  miLibro?.paginas![contPagina - 1] as! Pagina
+        
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            context.delete(miPagina)
+            
+            do {
+                try context.save()
+                print("borrado!")
+                tocaGaleria ()
+                self.myView?.reloadData()
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            } catch {
+                
+            }
+            
+        }
+        
+        
+    }
+
     
     func cerrar () {
         
@@ -363,8 +395,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func muestraDatos(){
-        btnCierraPagina.isEnabled = false
-        btnPlay.isEnabled = true
+        btnCierraPagina.isHidden = true
+        btnPlay.isHidden = false
+        btnEliminar.isHidden = false
         
         checkFondo.isHidden = false
         checkTopo.isHidden = false
@@ -391,7 +424,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         checkAudio.isHidden = true
         
         
-        btnPlay.isEnabled = false
+        btnPlay.isHidden = true
+        btnEliminar.isHidden = true
         
         UserDefaults.standard.removeObject(forKey: "fondo")
         UserDefaults.standard.removeObject(forKey: "topo")
@@ -430,7 +464,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
         
-        btnPlay.isEnabled = false
+        btnPlay.isHidden = true
+        btnEliminar.isHidden = true
         btnFondoVacio.isEnabled = true
         btnTopoVacio.isEnabled = true
         btnMusicaVacio.isEnabled = true
@@ -444,7 +479,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                     
                     if((UserDefaults.standard.string(forKey: "audio")) != nil){
                         
-                        btnCierraPagina.isEnabled = true
+                        btnCierraPagina.isHidden = false
                         
                     }
                 }
@@ -453,7 +488,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         else{
             
-            btnCierraPagina.isEnabled = false
+            btnCierraPagina.isHidden = true
             
         }
         
