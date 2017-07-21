@@ -223,6 +223,31 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 //self.progressLabel.isHidden = true
                 //self.progressView.isHidden = true
                 
+                if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+                    let context = container.viewContext
+                    
+                    let miLibro = self.libro
+                    let miPagina = miLibro!.paginas![num] as! Pagina
+                    
+                    //let url1 = image.absoluteString! as NSString
+                    
+                    let url1 = "file://\(image)"
+                    
+                    miPagina.filePng = url1 as String
+                    
+                    
+                    do {
+                        try context.save()
+                        print("Grabo OK")
+                        
+                        
+                    } catch {
+                        print("Ha habido un error al guardar el lugar en Core Data")
+                    }
+                    
+                }
+                
+                
                 self.mergeMutableVideoWithAudio(videoUrl: url as NSURL, musicaUrl: musicaUrl, audioUrl: audioUrl, num: num, numTotal: numTotal )
                 
             }
@@ -329,8 +354,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     let url1 = videoUrl.absoluteString! as NSString
                     let url2 = mergedAudioVideoURl.absoluteString! as NSString
          
-                    miPagina.file1 = url1 as String
-                    miPagina.file2 = url2 as String
+                    miPagina.fileVideo1 = url1 as String
+                    miPagina.fileVideo2 = url2 as String
                     
                     
                     do {
@@ -778,13 +803,17 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             
             let miPagina = miLibro!.paginas![i] as! Pagina
             
-            let videoGuardado1 = miPagina.file1
+            let videoGuardado1 = miPagina.fileVideo1
             let videoFinal1 = NSURL(string: videoGuardado1)!
             removeFileAtURLIfExists(url: videoFinal1)
             
-            let videoGuardado2 = miPagina.file2
+            let videoGuardado2 = miPagina.fileVideo2
             let videoFinal2 = NSURL(string: videoGuardado2)!
             removeFileAtURLIfExists(url: videoFinal2)
+            
+            let pngGuardado = miPagina.filePng
+            let pngFinal = NSURL(string: pngGuardado)!
+            removeFileAtURLIfExists(url: pngFinal)
             
         }
         
