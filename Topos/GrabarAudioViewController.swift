@@ -47,6 +47,8 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     var fetchResultsController : NSFetchedResultsController<Libro>!
     var libro : Libro?
     
+    var random = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,6 +87,10 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
          botonOK.isHidden = true
         //grabarLibro()
         //Ver()
+        
+        
+        random = randomString(length: 8)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -217,7 +223,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
         
         
         
-        let random = randomString(length: 8)
+        //let random = randomString(length: 8)
         
         let nombreArchivo = random + ".m4a"
         
@@ -302,73 +308,6 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     internal func audioPlayerBeginInterruption(_ player: AVAudioPlayer){
         print(player.debugDescription)
     }
-    
-    //***************************************************************************
-    /*
-    func grabar() {
-        
-        
-        let topo = UserDefaults.standard.string(forKey: "topo")
-        let topox = UserDefaults.standard.integer(forKey: "topox")
-        let topoy = UserDefaults.standard.integer(forKey: "topoy")
-        let fondo = UserDefaults.standard.string(forKey: "fondo")
-        let musica = UserDefaults.standard.string(forKey: "musica")
-        let audio = UserDefaults.standard.string(forKey: "audio")
-        
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        _ = formatter.string(from: date)
-        
-        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
-            let context = container.viewContext
-            
-            self.pagina = NSEntityDescription.insertNewObject(forEntityName: "Pagina", into: context) as? Pagina
-            
-            
-            
-            self.pagina?.topo = topo!
-            self.pagina?.topox = "\(topox)"
-            self.pagina?.topoy = "\(topoy)"
-            self.pagina?.fondo = fondo!
-            self.pagina?.musica = musica!
-            self.pagina?.audio = audio!
-            self.pagina?.fecha = date
-            
-            
-            
-            
-           // let fitEntity = NSEntityDescription.entity(forEntityName: "FitSession", in: managedContext)
-           // let fitSession = FitSession(entity: fitEntity!, insertInto: managedContext)
-           // fitSession.date = Date()
-            
-            
-            let fitnessSessions = self.libro?.paginas!.mutableCopy() as! NSMutableOrderedSet
-            fitnessSessions.add(self.pagina as Any)
-            
-            self.libro?.paginas = fitnessSessions.copy() as? NSOrderedSet
-            
-        
-            
-            
-            
-            do {
-                try context.save()
-                print("Grabo OK")
-                
-                
-
-                //let sincronizarcaso = SincronizarCaso()
-                //sincronizarcaso.Iniciar()
-                
-            } catch {
-                print("Ha habido un error al guardar el lugar en Core Data")
-            }
-            
-            
-        }
-        
-    }
-    */
+   
 }
 

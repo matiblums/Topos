@@ -353,9 +353,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     
                     let url1 = videoUrl.absoluteString! as NSString
                     let url2 = mergedAudioVideoURl.absoluteString! as NSString
+                    let url3 = soundURL!.absoluteString as NSString
          
                     miPagina.fileVideo1 = url1 as String
                     miPagina.fileVideo2 = url2 as String
+                    miPagina.fileAudio = url3 as String
                     
                     
                     do {
@@ -814,6 +816,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let pngGuardado = miPagina.filePng
             let pngFinal = NSURL(string: pngGuardado)!
             removeFileAtURLIfExists(url: pngFinal)
+            
+            let audioGuardado = miPagina.fileAudio
+            let audioFinal = NSURL(string: audioGuardado)!
+            removeFileAtURLIfExists(url: audioFinal)
             
         }
         

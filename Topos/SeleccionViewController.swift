@@ -525,6 +525,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             self.pagina = NSEntityDescription.insertNewObject(forEntityName: "Pagina", into: context) as? Pagina
             
+            self.pagina?.fileAudio = ""
             self.pagina?.filePng = ""
             self.pagina?.fileVideo1 = ""
             self.pagina?.fileVideo2 = ""

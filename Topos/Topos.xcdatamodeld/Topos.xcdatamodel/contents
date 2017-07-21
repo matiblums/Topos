@@ -11,6 +11,7 @@
     <entity name="Pagina" representedClassName=".Pagina" syncable="YES">
         <attribute name="audio" attributeType="String" syncable="YES"/>
         <attribute name="fecha" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fileAudio" attributeType="String" syncable="YES"/>
         <attribute name="filePng" attributeType="String" syncable="YES"/>
         <attribute name="fileVideo1" attributeType="String" syncable="YES"/>
         <attribute name="fileVideo2" attributeType="String" syncable="YES"/>
@@ -23,6 +24,6 @@
     </entity>
     <elements>
         <element name="Libro" positionX="-1487" positionY="-1539" width="128" height="135"/>
-        <element name="Pagina" positionX="-1251" positionY="-1600" width="128" height="210"/>
+        <element name="Pagina" positionX="-1251" positionY="-1600" width="128" height="225"/>
     </elements>
 </model>
