@@ -72,6 +72,8 @@
 		16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */; };
 		16EA3D431EDD971800B30D72 /* ToposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D421EDD971800B30D72 /* ToposTests.swift */; };
 		16EA3D4E1EDD971800B30D72 /* ToposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */; };
+		16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */; };
+		16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */; };
 		16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */; };
 		16FFD7A81F1D7A6100B4B2C3 /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD79D1F1D7A6100B4B2C3 /* fondo1.jpg */; };
 		16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD79E1F1D7A6100B4B2C3 /* fondo2.jpg */; };
@@ -202,6 +204,8 @@
 		16EA3D491EDD971800B30D72 /* ToposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposUITests.swift; sourceTree = "<group>"; };
 		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Libreria.storyboard; sourceTree = "<group>"; };
+		16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreriaViewController.swift; sourceTree = "<group>"; };
 		16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo0.png; sourceTree = "<group>"; };
 		16FFD79D1F1D7A6100B4B2C3 /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo1.jpg; sourceTree = "<group>"; };
 		16FFD79E1F1D7A6100B4B2C3 /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16FFD7D81F1D95B600B4B2C3 /* Prueba.storyboard */,
+				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */,
 				16BCBEA21F05B9F4001DDC07 /* ViewController.swift */,
 				16FFD7DA1F1D95D000B4B2C3 /* PruebaViewController.swift */,
+				16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
+				16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */,
 				16AF16F71EE09313008A9B17 /* Galeriafondos.jpeg in Resources */,
 				16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */,
 				16FFD7C51F1D7A6C00B4B2C3 /* topos1.png in Resources */,
@@ -866,6 +873,7 @@
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
 				169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
+				16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16FFD7DB1F1D95D000B4B2C3 /* PruebaViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,

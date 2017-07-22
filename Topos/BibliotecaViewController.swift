@@ -45,6 +45,18 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         self.miGaleria?.reloadData()
         
     }
+    
+    @IBAction func btnSalir(_ sender: Any) {
+
+        let storyboard = UIStoryboard(name: "Libreria", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Libreria")
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    
+    }
+
+    
 
      @IBAction func elijeCompartir(_ sender: Any) {
         
@@ -93,7 +105,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         }
         else{
             
-            let image: UIImage = UIImage(named: "agregar_pagina")!
+            let image: UIImage = UIImage(named: "agregar_libro")!
             cell.imgGaleria.image = image
             
         }
@@ -111,7 +123,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             
             
             
-            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "agregar_pagina"){
+            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "agregar_libro"){
                 
                 let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
@@ -268,7 +280,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     func grabarLibro() -> Libro {
         let titulo = "Incompleto"
         let autor = "Incompleto"
-        let tapa = "agregar_pagina"
+        let tapa = "agregar_libro"
         let fecha = Date()
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
