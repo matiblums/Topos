@@ -64,10 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let container = NSPersistentContainer(name: "Topos")
         
-        let description = NSPersistentStoreDescription()
-        description.shouldInferMappingModelAutomatically = true
-        description.shouldMigrateStoreAutomatically = true
-        container.persistentStoreDescriptions = [description]
+       // let description = NSPersistentStoreDescription()
+       // description.shouldInferMappingModelAutomatically = true
+       // description.shouldMigrateStoreAutomatically = true
+        //container.persistentStoreDescriptions = [description]
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {

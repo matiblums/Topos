@@ -85,7 +85,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         else{
             
             cargaVideo()
-            
         }
         
         
@@ -152,11 +151,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: UIImage.init(named: miFondo), Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
             
             if let data = UIImagePNGRepresentation(imageOK) {
-                let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
+                let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-\(miFondo).png")
                 try? data.write(to: filename)
             }
             
-            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)copy.png")
+            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-\(miFondo).png")
 
             //******************************************************************************************************
             
@@ -181,7 +180,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
-        
+        print(image, " -- ", num)
         //let path1 = Bundle.main.path(forResource: image as String, ofType: "")!
         
         let path1 = image
@@ -238,11 +237,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     
                     do {
                         try context.save()
-                        print("Grabo OK")
+                       // print("Grabo OK")
                         
                         
                     } catch {
-                        print("Ha habido un error al guardar el lugar en Core Data")
+                       // print("Ha habido un error al guardar el lugar en Core Data")
                     }
                     
                 }
@@ -261,6 +260,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     //***************************************************************************************************************************
     
     func mergeMutableVideoWithAudio(videoUrl:NSURL, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
+        
+        print("\(videoUrl)------\(num)")
         
         var mergedAudioVideoURl = NSURL()
         
@@ -325,7 +326,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let nombreArchivo = random
         
         
-        mergedAudioVideoURl = NSURL(fileURLWithPath: NSHomeDirectory() + "/Documents/FinalVideo\(nombreArchivo).mp4")
+        mergedAudioVideoURl = NSURL(fileURLWithPath: NSHomeDirectory() + "/Documents/FinalVideo---\(num)-\(nombreArchivo).mp4")
         
         
         
@@ -341,7 +342,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 //self.videoFirst = mergedAudioVideoURl as NSURL
                 //print("de \(num) aa \(numTotal)")
                 self.almacenaVideos(miVideo:  mergedAudioVideoURl, position: num, total: numTotal)
-                
+                print("---\(mergedAudioVideoURl)")
                 
             //**********************************************************************************************************
                 
@@ -362,11 +363,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                     
                     do {
                         try context.save()
-                        print("Grabo OK")
+                       // print("Grabo OK")
                         
                         
                     } catch {
-                        print("Ha habido un error al guardar el lugar en Core Data")
+                       // print("Ha habido un error al guardar el lugar en Core Data")
                     }
                     
                 }
@@ -389,19 +390,23 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //*******************************************************************************************************
     
+    var cuentaVideos = 0
     func almacenaVideos(miVideo: NSURL, position: Int, total: Int){
         
-        if(videosArray.count == 0){
+     
+        if(cuentaVideos == 0){
             
             for _ in 0...99 {
                 videosArray.append(miVideo)
             }
             
         }
-        
+        videosArray.remove(at: position)
         videosArray.insert(miVideo, at: position)
+        cuentaVideos = cuentaVideos + 1
         
-        if(videosArray.count == total + 100){
+        
+        if(cuentaVideos == total){
             
             let  mas = videosArray.count - 1
             let  menos = total
@@ -416,7 +421,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
-        
     }
     
     
@@ -512,11 +516,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                             
                             do {
                                 try context.save()
-                                print("Grabo OK")
+                                //print("Grabo OK")
                                 
                                 
                             } catch {
-                                print("Ha habido un error al guardar el lugar en Core Data")
+                                //print("Ha habido un error al guardar el lugar en Core Data")
                             }
                             
                         }
