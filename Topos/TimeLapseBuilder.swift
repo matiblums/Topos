@@ -41,7 +41,7 @@ open class TimeLapseBuilder: NSObject {
         return randomString
     }
     
-  open func build(outputSize: CGSize, progress: @escaping ((Progress) -> Void), success: @escaping ((URL) -> Void), failure: ((NSError) -> Void)) {
+    open func build(file: NSString, outputSize: CGSize, progress: @escaping ((Progress) -> Void), success: @escaping ((URL) -> Void), failure: ((NSString) -> Void)) {
 
     self.outputSize = outputSize
     var error: NSError?
@@ -163,7 +163,9 @@ open class TimeLapseBuilder: NSObject {
     }
     
     if let error = error {
-      failure(error)
+        
+        let miError = "\(file) ----------- \(error)"
+        failure(miError as NSString)
     }
   }
   

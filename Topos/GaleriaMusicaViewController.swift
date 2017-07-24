@@ -18,7 +18,7 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
     
     var items = ["cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente", "cancion_transparente"]
     
-    var itemsSounds = ["ta1", "ta2", "ta3", "ta4", "ta5", "ta6", "ta7", "ta8"]
+    var itemsSounds = ["TA1_Intro", "TA2_cuarto ", "TA3_mar", "TA4_selva", "TA5", "TA6", "TA7_espacio", "TA8"]
 
     var tocado = ""
     

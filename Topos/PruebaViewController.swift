@@ -51,9 +51,9 @@ class PruebaViewController: UIViewController {
         
         //let size = self.view.frame.size
         
-        let size = CGSize(width: 3000, height: 1506)
+        let size = CGSize(width: 667, height: 375)
         
-        let size2 = CGSize(width: 926, height: 1049)
+        let size2 = CGSize(width: 190, height: 200)
         
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)

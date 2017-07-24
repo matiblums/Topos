@@ -15,7 +15,8 @@ import NVActivityIndicatorView
 
 
 class CompartirViewController: UIViewController , NVActivityIndicatorViewable, AVAudioPlayerDelegate{
-
+    
+    
     
     @IBOutlet weak var viewVideo: UIView!
     
@@ -51,6 +52,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     var fetchResultsControllerLibro : NSFetchedResultsController<Libro>!
     var libro : Libro?
     
+    var imagesArray = [NSString]()
+    var musicaArray = [NSString]()
+    var audioArray = [NSString]()
+    
+    var controlaCantidad = Int()
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -59,10 +66,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         btnPause.isHidden = true
         viewTapa.isHidden = true
         
-        
-        
-        
-        
+        controlaCantidad = 0
         
     }
     
@@ -83,7 +87,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             
         }
         else{
-            
+            //creaVideo()
             cargaVideo()
         }
         
@@ -126,9 +130,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let totales = miLibro?.paginas?.count
         
         let num = totales
-        var imagesArray = [NSString]()
-        var musicaArray = [NSString]()
-        var audioArray = [NSString]()
+        //var imagesArray = [NSString]()
+        //var musicaArray = [NSString]()
+        //var audioArray = [NSString]()
         
     
         
@@ -151,11 +155,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: UIImage.init(named: miFondo), Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
             
             if let data = UIImagePNGRepresentation(imageOK) {
-                let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-\(miFondo).png")
+                let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
                 try? data.write(to: filename)
             }
             
-            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-\(miFondo).png")
+            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
 
             //******************************************************************************************************
             
@@ -167,20 +171,29 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
         
         
+        creaLoop(i : 0)
+        
+        /*
         for i in 0 ..< imagesArray.count {
-            
+        
             createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl:audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
-            
         }
+        */
         
         
     }
-
+    
+    func creaLoop(i : Int) {
+        
+        createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl: audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
+        
+        
+    }
    
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
-        print(image, " -- ", num)
+        //print(image, " -- ", num)
         //let path1 = Bundle.main.path(forResource: image as String, ofType: "")!
         
         let path1 = image
@@ -209,7 +222,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let tlb = TimeLapseBuilder(photoURLs: photosArray)
         
         
-        tlb.build(outputSize: CGSize(width: 1000, height: 502), progress: { (progress) -> Void in
+        let miWidthFondo = self.view.frame.size.width
+        let miHeightFondo = self.view.frame.size.height
+        
+        tlb.build(file: image, outputSize: CGSize(width: miWidthFondo, height: miHeightFondo), progress: {
+            
+            (progress) -> Void in
             
             DispatchQueue.main.async{
                 //self.progressLabel.text = "rendering \(progress.completedUnitCount) of \(progress.totalUnitCount) frames"
@@ -221,6 +239,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             DispatchQueue.main.async{
                 //self.progressLabel.isHidden = true
                 //self.progressView.isHidden = true
+                
+                self.controlaCantidad = self.controlaCantidad + 1
                 
                 if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
                     let context = container.viewContext
@@ -249,10 +269,25 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 
                 self.mergeMutableVideoWithAudio(videoUrl: url as NSURL, musicaUrl: musicaUrl, audioUrl: audioUrl, num: num, numTotal: numTotal )
                 
+                
+                if(self.controlaCantidad < numTotal){
+                    
+                    self.creaLoop(i : self.controlaCantidad)
+                    
+                }
+                else{
+                    
+                    
+                    
+                }
+                
+                
             }
             
         }) { (error) -> Void in
             print(error)
+            self.stopAnimating()
+            dismiss(animated: true, completion: nil)
         }
         
     }
@@ -261,7 +296,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func mergeMutableVideoWithAudio(videoUrl:NSURL, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
-        print("\(videoUrl)------\(num)")
+        //print("\(videoUrl)------\(num)")
         
         var mergedAudioVideoURl = NSURL()
         
@@ -314,12 +349,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             
         }
         
-        
+        let miWidthFondo = self.view.frame.size.width
+        let miHeightFondo = self.view.frame.size.height
         
         totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero,aVideoAssetTrack.timeRange.duration )
         let mutableVideoComposition : AVMutableVideoComposition = AVMutableVideoComposition()
         mutableVideoComposition.frameDuration = CMTimeMake(1, 30)
-        mutableVideoComposition.renderSize = CGSize(width: 1280, height: 720)
+        mutableVideoComposition.renderSize = CGSize(width: miWidthFondo, height: miHeightFondo)
         
         let random = randomString(length: 8)
         
@@ -342,7 +378,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 //self.videoFirst = mergedAudioVideoURl as NSURL
                 //print("de \(num) aa \(numTotal)")
                 self.almacenaVideos(miVideo:  mergedAudioVideoURl, position: num, total: numTotal)
-                print("---\(mergedAudioVideoURl)")
+                //print("---\(mergedAudioVideoURl)")
                 
             //**********************************************************************************************************
                 
@@ -390,10 +426,20 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //*******************************************************************************************************
     
-    var cuentaVideos = 0
+    //var cuentaVideos = 0
     func almacenaVideos(miVideo: NSURL, position: Int, total: Int){
         
-     
+        videosArray.append(miVideo)
+        
+        
+        if(position == total - 1){
+            
+            mergeVideoFiles(videoFileUrls: videosArray as NSArray)
+            
+        }
+        
+        
+     /*
         if(cuentaVideos == 0){
             
             for _ in 0...99 {
@@ -421,6 +467,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
+ 
+         */
+ 
     }
     
     
@@ -738,9 +787,15 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         //let size = self.view.frame.size
         
-        let size = CGSize(width: 3000, height: 1506)
+        let miWidthFondo = self.view.frame.size.width
+        let miHeightFondo = self.view.frame.size.height
         
-        let size2 = CGSize(width: 926, height: 1049)
+        let miWidthTopo = 176
+        let miHeightTopo = 200
+        
+        let size = CGSize(width: miWidthFondo, height: miHeightFondo)
+        
+        let size2 = CGSize(width: miWidthTopo, height: miHeightTopo)
         
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
