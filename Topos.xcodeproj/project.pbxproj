@@ -24,6 +24,19 @@
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
 		169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169346221F08669E00BAE79D /* Biblioteca.storyboard */; };
 		169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169346241F0866B600BAE79D /* BibliotecaViewController.swift */; };
+		16981A2C1F3A970B006CEDAA /* edicion05-01_ref.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2B1F3A970B006CEDAA /* edicion05-01_ref.jpg */; };
+		16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */; };
+		16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */; };
+		16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */; };
+		16981A3C1F3AB224006CEDAA /* edicion05_flecha_der.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */; };
+		16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */; };
+		16981A3E1F3AB224006CEDAA /* edicion05_fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A321F3AB224006CEDAA /* edicion05_fondo.png */; };
+		16981A3F1F3AB224006CEDAA /* edicion05_fondos.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A331F3AB224006CEDAA /* edicion05_fondos.png */; };
+		16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A341F3AB224006CEDAA /* edicion05_musica.png */; };
+		16981A411F3AB224006CEDAA /* edicion05_personajes.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A351F3AB224006CEDAA /* edicion05_personajes.png */; };
+		16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A361F3AB224006CEDAA /* edicion05_play.png */; };
+		16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A371F3AB224006CEDAA /* edicion05_salir.png */; };
+		16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A381F3AB224006CEDAA /* edicion05_voz.png */; };
 		16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */; };
 		16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */; };
 		16AF16F11EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */; };
@@ -150,6 +163,19 @@
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
 		169346221F08669E00BAE79D /* Biblioteca.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Biblioteca.storyboard; sourceTree = "<group>"; };
 		169346241F0866B600BAE79D /* BibliotecaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaViewController.swift; sourceTree = "<group>"; };
+		16981A2B1F3A970B006CEDAA /* edicion05-01_ref.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "edicion05-01_ref.jpg"; sourceTree = "<group>"; };
+		16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pg.png; sourceTree = "<group>"; };
+		16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_borrar_pg.png; sourceTree = "<group>"; };
+		16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_cerrar_libro.png; sourceTree = "<group>"; };
+		16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_der.png; sourceTree = "<group>"; };
+		16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_izq.png; sourceTree = "<group>"; };
+		16981A321F3AB224006CEDAA /* edicion05_fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_fondo.png; sourceTree = "<group>"; };
+		16981A331F3AB224006CEDAA /* edicion05_fondos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_fondos.png; sourceTree = "<group>"; };
+		16981A341F3AB224006CEDAA /* edicion05_musica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_musica.png; sourceTree = "<group>"; };
+		16981A351F3AB224006CEDAA /* edicion05_personajes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_personajes.png; sourceTree = "<group>"; };
+		16981A361F3AB224006CEDAA /* edicion05_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_play.png; sourceTree = "<group>"; };
+		16981A371F3AB224006CEDAA /* edicion05_salir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_salir.png; sourceTree = "<group>"; };
+		16981A381F3AB224006CEDAA /* edicion05_voz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_voz.png; sourceTree = "<group>"; };
 		16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.02.49.jpeg"; sourceTree = "<group>"; };
 		16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.03.02.jpeg"; sourceTree = "<group>"; };
 		16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.03.10.jpeg"; sourceTree = "<group>"; };
@@ -360,6 +386,19 @@
 			children = (
 				16FFD7411F1D781900B4B2C3 /* topos */,
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
+				16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */,
+				16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */,
+				16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */,
+				16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */,
+				16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */,
+				16981A321F3AB224006CEDAA /* edicion05_fondo.png */,
+				16981A331F3AB224006CEDAA /* edicion05_fondos.png */,
+				16981A341F3AB224006CEDAA /* edicion05_musica.png */,
+				16981A351F3AB224006CEDAA /* edicion05_personajes.png */,
+				16981A361F3AB224006CEDAA /* edicion05_play.png */,
+				16981A371F3AB224006CEDAA /* edicion05_salir.png */,
+				16981A381F3AB224006CEDAA /* edicion05_voz.png */,
+				16981A2B1F3A970B006CEDAA /* edicion05-01_ref.jpg */,
 				16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */,
 				16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */,
 				16AF16F01EE07F65008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.10.jpeg */,
@@ -656,29 +695,38 @@
 				16FFD7D01F1D7A6C00B4B2C3 /* topos12.png in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
 				16FFD7D21F1D7A6C00B4B2C3 /* topos14.png in Resources */,
+				16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */,
 				16193BC91F2652FD003B2C09 /* TA8.wav in Resources */,
 				16FFD7D11F1D7A6C00B4B2C3 /* topos13.png in Resources */,
 				16FFD7B11F1D7A6100B4B2C3 /* fondo10.jpg in Resources */,
+				16981A3C1F3AB224006CEDAA /* edicion05_flecha_der.png in Resources */,
 				16FFD7D51F1D7A6C00B4B2C3 /* topos17.png in Resources */,
 				16FFD7CE1F1D7A6C00B4B2C3 /* topos10.png in Resources */,
 				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
 				16AF16F51EE092A0008A9B17 /* Seleccion.jpeg in Resources */,
+				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16AF16FD1EE09365008A9B17 /* GaleriaTopos.jpeg in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
+				16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */,
+				16981A3F1F3AB224006CEDAA /* edicion05_fondos.png in Resources */,
+				16981A411F3AB224006CEDAA /* edicion05_personajes.png in Resources */,
 				16FFD7AC1F1D7A6100B4B2C3 /* fondo5.jpg in Resources */,
+				16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
 				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				16FFD7A81F1D7A6100B4B2C3 /* fondo1.jpg in Resources */,
 				16FFD7AD1F1D7A6100B4B2C3 /* fondo6.jpg in Resources */,
+				16981A2C1F3A970B006CEDAA /* edicion05-01_ref.jpg in Resources */,
 				16FFD7D71F1D7A6C00B4B2C3 /* topos19.png in Resources */,
 				16FFD7D91F1D95B600B4B2C3 /* Prueba.storyboard in Resources */,
+				16981A3E1F3AB224006CEDAA /* edicion05_fondo.png in Resources */,
 				16FFD7D61F1D7A6C00B4B2C3 /* topos18.png in Resources */,
 				16FFD7B01F1D7A6100B4B2C3 /* fondo9.jpg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
@@ -688,13 +736,17 @@
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16193BC51F2652FD003B2C09 /* TA4_selva.wav in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
+				16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */,
 				16193BC71F2652FD003B2C09 /* TA6.wav in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,
 				16FFD7D41F1D7A6C00B4B2C3 /* topos16.png in Resources */,
 				16AF17091EE093C1008A9B17 /* audio.jpeg in Resources */,
+				16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */,
 				16FFD7AF1F1D7A6100B4B2C3 /* fondo8.jpg in Resources */,
 				16FFD7AE1F1D7A6100B4B2C3 /* fondo7.jpg in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
+				16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */,
+				16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */,
 				16193BC21F2652FD003B2C09 /* TA1_Intro.wav in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,97 +18,34 @@
                         <viewControllerLayoutGuide type="bottom" id="S3e-b3-8OT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="D4l-6t-05Q">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-kz-99L">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
-                                <rect key="frame" x="8.5" y="244" width="74" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_fondo_vacio"/>
-                                <connections>
-                                    <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="DGa-UC-aba"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="Topo Vacio">
-                                <rect key="frame" x="77" y="243.5" width="67" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_topo_vacio"/>
-                                <connections>
-                                    <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="bhU-DI-mGL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="Musica Vacio">
-                                <rect key="frame" x="146.5" y="242" width="44" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_musica_vacio"/>
-                                <connections>
-                                    <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="9jJ-vt-ZpF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
-                                <rect key="frame" x="201.5" y="247.5" width="39" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
-                                <connections>
-                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
-                                <rect key="frame" x="416.5" y="242" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="ok_verde"/>
-                                <connections>
-                                    <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-li-CcV">
-                                <rect key="frame" x="27" y="290" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-dK-P8e">
-                                <rect key="frame" x="93" y="290" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="aky-uw-Nl4">
-                                <rect key="frame" x="154.5" y="288.5" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="FgN-ru-2GU">
-                                <rect key="frame" x="205" y="288.5" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
-                                <rect key="frame" x="0.0" y="42.5" width="568" height="188"/>
+                                <rect key="frame" x="0.0" y="44" width="667" height="222"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
-                                    <size key="itemSize" width="333" height="188"/>
+                                    <size key="itemSize" width="387" height="222"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6zr-kG-8aV" customClass="SeleccionCollectionViewCell" customModule="Topos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="387" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="333" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="387" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-tZ-rgx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="188"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="223"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-uW-fPf">
-                                                    <rect key="frame" x="116" y="44" width="100" height="100"/>
+                                                    <rect key="frame" x="118" y="50.5" width="111.5" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -124,46 +61,110 @@
                                     <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M" userLabel="btn Izq">
-                                <rect key="frame" x="0.0" y="42.5" width="150" height="188"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edicion05-01_ref.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-kz-99L">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-li-CcV">
+                                <rect key="frame" x="32" y="345" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-dK-P8e">
+                                <rect key="frame" x="110" y="345" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="aky-uw-Nl4">
+                                <rect key="frame" x="183" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="FgN-ru-2GU">
+                                <rect key="frame" x="242" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
+                                <rect key="frame" x="174" y="289" width="74" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_fondo_vacio"/>
+                                <connections>
+                                    <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="DGa-UC-aba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="Topo Vacio">
+                                <rect key="frame" x="266" y="286" width="67" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_topo_vacio"/>
+                                <connections>
+                                    <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="bhU-DI-mGL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="Musica Vacio">
+                                <rect key="frame" x="359" y="278" width="44" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_musica_vacio"/>
+                                <connections>
+                                    <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="9jJ-vt-ZpF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
+                                <rect key="frame" x="455" y="286" width="39" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
+                                <connections>
+                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
+                                <rect key="frame" x="587" y="299" width="38" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="edicion05_cerrar_libro.png"/>
+                                <connections>
+                                    <action selector="elijeTapa:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="5Vw-0C-q9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M" userLabel="btn Izq">
+                                <rect key="frame" x="0.0" y="44" width="150" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="btnIzq:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="YmL-jb-w83"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-wV-PwC" userLabel="btn der">
-                                <rect key="frame" x="418" y="42.5" width="150" height="188"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-wV-PwC" userLabel="btn der">
+                                <rect key="frame" x="517" y="44" width="150" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="btnDer:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="cZn-iJ-vd6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06">
-                                <rect key="frame" x="242.5" y="91" width="82" height="84"/>
+                                <rect key="frame" x="295" y="126" width="67" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="bt_reproducir_libro"/>
+                                <state key="normal" backgroundImage="edicion05_play.png"/>
                                 <connections>
                                     <action selector="playPagina:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KpU-Ms-Ccn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-jz-3Vs" userLabel="btn biblioteca">
-                                <rect key="frame" x="473.5" y="244" width="78" height="46"/>
+                                <rect key="frame" x="37" y="298" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="galeria_fondo_blanco"/>
+                                <state key="normal" backgroundImage="edicion05_salir.png"/>
                                 <connections>
                                     <action selector="elijeBiblioteca:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="Xqv-s8-K3l"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK" userLabel="btn eliminar">
-                                <rect key="frame" x="372" y="60.5" width="51" height="50"/>
+                                <rect key="frame" x="463" y="59" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_eliminar">
+                                <state key="normal" backgroundImage="edicion05_borrar_pg.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -171,7 +172,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-G9-mGH">
-                                <rect key="frame" x="242.5" y="91" width="82" height="82"/>
+                                <rect key="frame" x="565" y="117" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ok_verde"/>
                                 <connections>
@@ -179,7 +180,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2F-pq-aHj">
-                                <rect key="frame" x="330.5" y="222" width="82" height="82"/>
+                                <rect key="frame" x="93" y="278" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="exit"/>
                             </button>
@@ -209,15 +210,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bt_eliminar" width="51" height="50"/>
         <image name="bt_fondo_vacio" width="392" height="252"/>
         <image name="bt_grabar_vacio" width="321" height="341"/>
         <image name="bt_musica_vacio" width="243" height="277"/>
-        <image name="bt_reproducir_libro" width="137" height="180"/>
         <image name="bt_topo_vacio" width="346" height="260"/>
+        <image name="edicion05-01_ref.jpg" width="1334" height="750"/>
+        <image name="edicion05_borrar_pg.png" width="93" height="93"/>
+        <image name="edicion05_cerrar_libro.png" width="73" height="90"/>
+        <image name="edicion05_play.png" width="136" height="136"/>
+        <image name="edicion05_salir.png" width="94" height="90"/>
         <image name="exit" width="300" height="300"/>
-        <image name="fondo" width="1922" height="1080"/>
-        <image name="galeria_fondo_blanco" width="152" height="90"/>
         <image name="ok_verde" width="130" height="130"/>
     </resources>
 </document>
