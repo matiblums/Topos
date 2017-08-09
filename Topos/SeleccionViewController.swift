@@ -36,6 +36,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     @IBOutlet var btnTapa: UIButton!
     
+    @IBOutlet var btnIzq: UIButton!
+    @IBOutlet var btnDer: UIButton!
+    
     var paginas : [Pagina] = []
     var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
@@ -57,6 +60,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         //flowLayout?.coverDensity = 0.25
         //flowLayout?.minCoverScale = 0.20
         //flowLayout?.minCoverOpacity = 0.7
+        
+         //btnCierraPagina.isHidden = false
         
         borraDatos()
         btnPlay.isHidden = true
@@ -188,9 +193,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func cerrarPagina(_ sender: Any) {
+    @IBAction func agregarPagina(_ sender: Any) {
         
-        cerrar ()
+        agregar ()
         
     }
     
@@ -208,6 +213,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             tocaGaleria ()
             
         }
+
     }
     
     @IBAction func btnDer(_ sender: Any) {
@@ -254,6 +260,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     func cerrar () {
         
         grabar()
+        
+    }
+    
+    func agregar () {
+        
         borraDatos()
         self.myView?.reloadData()
         let miLibro = self.libro
@@ -316,6 +327,27 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
+        if(contPagina == 1){
+            
+            btnIzq.setBackgroundImage(UIImage(named:""), for: UIControlState.normal)
+            btnDer.setBackgroundImage(UIImage(named:"edicion05_flecha_der.png"), for: UIControlState.normal)
+            
+        }
+        
+        if(contPagina == paginasTotales - 2){
+            
+            btnIzq.setBackgroundImage(UIImage(named:"edicion05_flecha_izq.png"), for: UIControlState.normal)
+            btnDer.setBackgroundImage(UIImage(named:""), for: UIControlState.normal)
+            
+        }
+        
+        if(paginasTotales == masPaginas){
+            
+            btnIzq.setBackgroundImage(UIImage(named:""), for: UIControlState.normal)
+            btnDer.setBackgroundImage(UIImage(named:""), for: UIControlState.normal)
+            
+        }
+        
         
         if(indexPath.row == paginasTotales - 2){
             
@@ -329,6 +361,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                 
                 let image: UIImage = UIImage(named: "fondo0.png")!
                 cell.imgGaleria.image = image
+                btnDer.setBackgroundImage(UIImage(named:"edicion05_agregar_pg.png"), for: UIControlState.normal)
                 
             }
             
@@ -357,6 +390,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             //let image: UIImage = UIImage(named: "fondo0")!
             cell.imgGaleria.image = nil
             cell.imgTopo.image = nil
+            
+            
         }
         
         if(indexPath.row > 0 && indexPath.row < paginasTotales - 2){
@@ -395,7 +430,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func muestraDatos(){
-        btnCierraPagina.isHidden = true
+       // btnCierraPagina.isHidden = true
         btnPlay.isHidden = false
         btnEliminar.isHidden = false
         
@@ -479,7 +514,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                     
                     if((UserDefaults.standard.string(forKey: "audio")) != nil){
                         
-                        btnCierraPagina.isHidden = false
+                        cerrar ()
+                        borraDatos()
                         
                     }
                 }
@@ -488,7 +524,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         else{
             
-            btnCierraPagina.isHidden = true
+            //btnCierraPagina.isHidden = true
             
         }
         
