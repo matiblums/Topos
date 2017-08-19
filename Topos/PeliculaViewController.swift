@@ -204,15 +204,16 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     
         
         let musicaGuardada = self.pagina?.musica
-        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaGuardada, ofType: "wav")!)
+        let playYoda = URL(fileURLWithPath: Bundle.main.path(forResource: musicaGuardada, ofType: "wav")!)
         //Sound.play(url: playYoda as URL, numberOfLoops: 10)
         
-        let mySound = Sound(url: playYoda as URL)
-        mySound?.play()
-        //mySound.volume = 0.5
+        //let mySound = Sound(url: playYoda as URL)!
+        //mySound.play()
+       // mySound?.volume = 1.0
         
-        
-        
+        let itemFondo = AudioItem(mediumQualitySoundURL: playYoda as URL)
+        playerFondo.play(item: itemFondo!)
+        playerFondo.volume = 0.1
         
         let itemGrabado = AudioItem(mediumQualitySoundURL: self.directoryURL()! as URL)
         playerGrabado.play(item: itemGrabado!)

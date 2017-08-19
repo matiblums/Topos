@@ -126,16 +126,29 @@ open class Sound {
         var myPlayers: [Player] = []
         myPlayers.reserveCapacity(playersPerSound)
         for _ in 0..<playersPerSound {
-            if let player = try? Sound.playerClass.init(contentsOf: url) {
+            do {
+                let player = try Sound.playerClass.init(contentsOf: url)
                 myPlayers.append(player)
+            } catch let error {
+                print("SwiftySound initialization error: \(error)")
             }
         }
         if myPlayers.count == 0 {
             return nil
         }
         players = myPlayers
-        Sound.sounds[url] = self
+        NotificationCenter.default.addObserver(self, selector: #selector(Sound.stopNoteRcv), name: Sound.stopNotificationName, object: nil)
     }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Sound.stopNotificationName, object: nil)
+    }
+
+    @objc private func stopNoteRcv() {
+        stop()
+    }
+
+    private static let stopNotificationName = Notification.Name("com.moonlightapps.SwiftySound.stopNotification")
 
     // MARK: - Main play method
 
@@ -143,14 +156,13 @@ open class Sound {
     ///
     /// - Parameter numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
-    @discardableResult public func play(numberOfLoops: Int = 0) -> Bool {
+    @discardableResult public func play(numberOfLoops: Int = 0, completion: PlayerCompletion? = nil) -> Bool {
         if !Sound.enabled {
             return false
         }
         let player = players[counter]
         counter = (counter + 1) % players.count
-        player.numberOfLoops = numberOfLoops
-        return player.play()
+        return player.play(numberOfLoops: numberOfLoops, completion: completion)
     }
 
     // MARK: - Stop playing
@@ -160,6 +172,15 @@ open class Sound {
         for player in players {
             player.stop()
         }
+    }
+
+    // MARK: - Prepare sound
+
+    /// Prepare the sound for playback
+    ///
+    /// - Returns: True if the sound has been prepared, false in case of error
+    @discardableResult public func prepare() -> Bool {
+        return players[counter].prepare()
     }
 
     // MARK: - Convenience static methods
@@ -191,6 +212,7 @@ open class Sound {
         var sound = sounds[url]
         if sound == nil {
             sound = Sound(url: url)
+            sounds[url] = sound
         }
         return sound?.play(numberOfLoops: numberOfLoops) ?? false
     }
@@ -210,6 +232,19 @@ open class Sound {
         }
     }
 
+    /// Sound volume.
+    /// A value in the range 0.0 to 1.0, with 0.0 representing the minimum volume and 1.0 representing the maximum volume.
+    public var volume: Float {
+        get {
+            return players[counter].volume
+        }
+        set {
+            for player in players {
+                player.volume = newValue
+            }
+        }
+    }
+
     /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
@@ -224,9 +259,7 @@ open class Sound {
 
     /// Stop playing all sounds.
     public static func stopAll() {
-        for sound in sounds.values {
-            sound.stop()
-        }
+        NotificationCenter.default.post(name: stopNotificationName, object: nil)
     }
 
     // MARK: - Private helper method
@@ -241,25 +274,61 @@ public protocol Player: class {
 
     /// Play the sound.
     ///
+    /// - Parameters:
+    ///   - numberOfLoops: Number of loops.
+    ///   - completion: Complation handler.
     /// - Returns: true if the sound was played successfully. False otherwise.
-    func play() -> Bool
+    func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool
 
     /// Stop playing the sound.
     func stop()
+
+    /// Prepare the sound.
+    func prepare() -> Bool
 
     /// Create a Player for sound url.
     ///
     /// - Parameter url: sound url.
     init(contentsOf url: URL) throws
 
-    /// Number of loops.
-    var numberOfLoops: Int { get set }
-
     /// Duration of the sound.
     var duration: TimeInterval { get }
+
+    /// Sound volume.
+    var volume: Float { get set }
 }
 
-extension AVAudioPlayer: Player {}
+fileprivate var associatedCallbackKey = "com.moonlightapps.SwiftySound.associatedCallbackKey"
+
+public typealias PlayerCompletion = ((Bool) -> ())
+
+extension AVAudioPlayer: Player, AVAudioPlayerDelegate {
+
+    public func prepare() -> Bool {
+        return prepareToPlay()
+    }
+
+    public func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
+        if let cmpl = completion {
+            objc_setAssociatedObject(self, &associatedCallbackKey, cmpl, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            self.delegate = self
+        }
+        self.numberOfLoops = numberOfLoops
+        return play()
+    }
+
+    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        let cmpl = objc_getAssociatedObject(self, &associatedCallbackKey) as? PlayerCompletion
+        cmpl?(flag)
+        objc_removeAssociatedObjects(self)
+        self.delegate = nil
+    }
+
+    public func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        print("SwiftySound playback error: \(String(describing: error))")
+    }
+
+}
 
 #if os(iOS) || os(tvOS)
 /// Session protocol. It duplicates `setCategory` method of `AVAudioSession` class.

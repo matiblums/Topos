@@ -1,13 +1,13 @@
 PODS:
   - AudioPlayerSwift (1.5.1)
   - DragDropUI (1.0.1)
-  - IQKeyboardManagerSwift (4.0.10)
+  - IQKeyboardManagerSwift (4.0.12)
   - KDEAudioPlayer (1.1.0)
   - LNICoverFlowLayout (1.0.1)
   - NVActivityIndicatorView (3.7.0):
     - NVActivityIndicatorView/Presenter (= 3.7.0)
   - NVActivityIndicatorView/Presenter (3.7.0)
-  - SwiftySound (0.4.0)
+  - SwiftySound (0.7.0)
 
 DEPENDENCIES:
   - AudioPlayerSwift
@@ -21,11 +21,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AudioPlayerSwift: 042b801cc88c3ed2ab01ca14ec75eb0cc47f7f14
   DragDropUI: a830fd319f99e75e393af532222da0a18e0d49aa
-  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  IQKeyboardManagerSwift: 3c66bea62a7d955b67b0eef0e31522b46261336b
   KDEAudioPlayer: b3787f02b6718c2416589a7726f2633cde2cd60e
   LNICoverFlowLayout: e2b3f35b92b343f22fb494f0460989e9f5a55fa1
   NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
-  SwiftySound: 4897b230859801982700bb08ec40fa000ea2e59a
+  SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
 
 PODFILE CHECKSUM: 0b865649ce0ccfe84da588840ab7833d03877958
 
