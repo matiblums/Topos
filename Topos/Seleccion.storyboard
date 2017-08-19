@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edicion05_fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mpo-ge-zNU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edicion05_fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mpo-ge-zNU">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -70,22 +70,6 @@
                                     <outlet property="delegate" destination="cNr-Hu-wUR" id="3yx-8J-fdX"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-li-CcV">
-                                <rect key="frame" x="196" y="337" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-dK-P8e">
-                                <rect key="frame" x="284" y="337" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="aky-uw-Nl4">
-                                <rect key="frame" x="366" y="337" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ok_verde" translatesAutoresizingMaskIntoConstraints="NO" id="FgN-ru-2GU">
-                                <rect key="frame" x="459" y="345" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="Fondo Vacio">
                                 <rect key="frame" x="174" y="289" width="74" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -105,21 +89,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="Musica Vacio">
-                                <rect key="frame" x="359" y="278" width="44" height="50"/>
+                                <rect key="frame" x="357" y="285" width="44" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="bt_musica_vacio"/>
                                 <connections>
                                     <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="9jJ-vt-ZpF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
-                                <rect key="frame" x="455" y="286" width="39" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
-                                <connections>
-                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I">
@@ -152,7 +127,7 @@
                                 <rect key="frame" x="583" y="137" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="edicion05_flecha_der.png"/>
+                                <state key="normal" backgroundImage="edicion05_flecha_derNegro.png"/>
                                 <connections>
                                     <action selector="btnDer:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="QBU-e7-dpf"/>
                                 </connections>
@@ -175,7 +150,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK" userLabel="btn eliminar">
-                                <rect key="frame" x="463" y="59" width="46" height="46"/>
+                                <rect key="frame" x="467" y="68" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="edicion05_borrar_pg.png">
@@ -194,9 +169,18 @@
                                 <rect key="frame" x="40" y="138" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="edicion05_flecha_izq.png"/>
+                                <state key="normal" backgroundImage="edicion05_flecha_izqNegro.png"/>
                                 <connections>
                                     <action selector="btnIzq:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="cvC-fa-CyS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="Audio Vacio">
+                                <rect key="frame" x="433" y="290" width="39" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="bt_grabar_vacio"/>
+                                <connections>
+                                    <action selector="elijeAudio:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="KUA-fu-FyG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,10 +196,6 @@
                         <outlet property="btnPlay" destination="Pwb-5x-S06" id="blk-dj-Hrf"/>
                         <outlet property="btnTapa" destination="Qpp-Gq-s1I" id="8Dt-Ur-VyR"/>
                         <outlet property="btnTopoVacio" destination="IBb-Vt-4Pa" id="uSN-2k-F6L"/>
-                        <outlet property="checkAudio" destination="FgN-ru-2GU" id="dqn-3J-1p2"/>
-                        <outlet property="checkFondo" destination="LvE-li-CcV" id="bHR-dt-jIb"/>
-                        <outlet property="checkMusica" destination="aky-uw-Nl4" id="6Jb-oF-C7j"/>
-                        <outlet property="checkTopo" destination="8Ha-dK-P8e" id="Vf4-0u-QGD"/>
                         <outlet property="flowLayout" destination="Xid-LQ-Z7v" id="mCk-W5-FIr"/>
                         <outlet property="myView" destination="gN7-zK-jOG" id="Ehp-n2-OKw"/>
                     </connections>
@@ -233,12 +213,11 @@
         <image name="edicion05-01_ref.jpg" width="1334" height="750"/>
         <image name="edicion05_borrar_pg.png" width="93" height="93"/>
         <image name="edicion05_cerrar_libro.png" width="73" height="90"/>
-        <image name="edicion05_flecha_der.png" width="88" height="89"/>
-        <image name="edicion05_flecha_izq.png" width="88" height="89"/>
+        <image name="edicion05_flecha_derNegro.png" width="88" height="89"/>
+        <image name="edicion05_flecha_izqNegro.png" width="88" height="89"/>
         <image name="edicion05_fondo.png" width="1334" height="750"/>
         <image name="edicion05_play.png" width="136" height="136"/>
         <image name="edicion05_salir.png" width="94" height="90"/>
         <image name="exit" width="300" height="300"/>
-        <image name="ok_verde" width="130" height="130"/>
     </resources>
 </document>

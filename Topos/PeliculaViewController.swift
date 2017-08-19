@@ -86,6 +86,13 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         print(from)
         print(state)
         
+        if(state == AudioPlayerState.stopped){
+            
+            Sound.stopAll()
+            dismiss(animated: true, completion: nil)
+            
+        }
+        
     }
     
     func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
@@ -132,7 +139,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
     }
 
     @IBAction func btnPlay(_ sender: Any) {
-        
+        /*
         let musicaGuardada = self.pagina?.musica
         
         let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaGuardada, ofType: "wav")!)
@@ -152,6 +159,10 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         
         //sound2?.play()
+        */
+        
+        
+        Sound.stopAll()
         
                 
     }
@@ -191,6 +202,22 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         miTopo.frame.origin = pointTopo
     
+        
+        let musicaGuardada = self.pagina?.musica
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaGuardada, ofType: "wav")!)
+        //Sound.play(url: playYoda as URL, numberOfLoops: 10)
+        
+        let mySound = Sound(url: playYoda as URL)
+        mySound?.play()
+        //mySound.volume = 0.5
+        
+        
+        
+        
+        let itemGrabado = AudioItem(mediumQualitySoundURL: self.directoryURL()! as URL)
+        playerGrabado.play(item: itemGrabado!)
+        playerGrabado.volume = 1.0
+
     
     }
     

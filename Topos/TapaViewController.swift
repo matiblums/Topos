@@ -128,13 +128,19 @@ class TapaViewController: UIViewController {
     }
     
     func irBiblioteca () {
-        
+        /*
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
         
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
+        */
         
+        let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
+        controller.libro = self.libro
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
     }
 
 }

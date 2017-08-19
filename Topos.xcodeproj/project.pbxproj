@@ -18,6 +18,9 @@
 		16193BC81F2652FD003B2C09 /* TA7_espacio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC01F2652FD003B2C09 /* TA7_espacio.wav */; };
 		16193BC91F2652FD003B2C09 /* TA8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC11F2652FD003B2C09 /* TA8.wav */; };
 		161D21531F0345650098ADA3 /* Pagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D21521F0345650098ADA3 /* Pagina.swift */; };
+		1626684A1F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 162668481F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png */; };
+		1626684B1F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 162668491F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png */; };
+		1626684D1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 1626684C1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png */; };
 		163BB7B11F06C95400ECA352 /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BB7B01F06C95400ECA352 /* Libro.swift */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
@@ -157,6 +160,9 @@
 		16193BC01F2652FD003B2C09 /* TA7_espacio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA7_espacio.wav; sourceTree = "<group>"; };
 		16193BC11F2652FD003B2C09 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
 		161D21521F0345650098ADA3 /* Pagina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagina.swift; sourceTree = "<group>"; };
+		162668481F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_derNegro.png; sourceTree = "<group>"; };
+		162668491F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_izqNegro.png; sourceTree = "<group>"; };
+		1626684C1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pgNegro.png; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
@@ -387,6 +393,9 @@
 				16FFD7411F1D781900B4B2C3 /* topos */,
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
 				16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */,
+				162668481F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png */,
+				1626684C1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png */,
+				162668491F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png */,
 				16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */,
 				16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */,
 				16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */,
@@ -717,10 +726,12 @@
 				16981A411F3AB224006CEDAA /* edicion05_personajes.png in Resources */,
 				16FFD7AC1F1D7A6100B4B2C3 /* fondo5.jpg in Resources */,
 				16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */,
+				1626684B1F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
 				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
+				1626684A1F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png in Resources */,
 				16FFD7A81F1D7A6100B4B2C3 /* fondo1.jpg in Resources */,
 				16FFD7AD1F1D7A6100B4B2C3 /* fondo6.jpg in Resources */,
 				16981A2C1F3A970B006CEDAA /* edicion05-01_ref.jpg in Resources */,
@@ -736,6 +747,7 @@
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16193BC51F2652FD003B2C09 /* TA4_selva.wav in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
+				1626684D1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png in Resources */,
 				16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */,
 				16193BC71F2652FD003B2C09 /* TA6.wav in Resources */,
 				16AF170B1EE093D5008A9B17 /* WhatsApp Image 2017-05-19 at 17.06.27.jpeg in Resources */,

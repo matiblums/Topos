@@ -844,7 +844,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijeVolver(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca") as! BibliotecaViewController
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
         
     }
     
