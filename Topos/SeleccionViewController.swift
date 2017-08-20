@@ -156,6 +156,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     @IBAction func elijeBiblioteca(_ sender: Any) {
         
+        alerta2 ()
+        
+    }
+    
+    func Biblioteca () {
+        
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
         
@@ -164,8 +170,25 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
-    
     @IBAction func elijeTapa(_ sender: Any) {
+        
+        if((UserDefaults.standard.string(forKey: "fondo")) != nil || (UserDefaults.standard.string(forKey: "topo")) != nil || (UserDefaults.standard.string(forKey: "musica")) != nil || (UserDefaults.standard.string(forKey: "fondo")) != nil || (UserDefaults.standard.string(forKey: "audio")) != nil){
+            
+            alerta ()
+        
+        }
+        else{
+            
+            Tapa ()
+            
+        }
+        
+        
+        
+    }
+    
+    
+    func Tapa () {
         
         let storyboard = UIStoryboard(name: "Tapa", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Tapa") as! TapaViewController
@@ -174,8 +197,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(controller, animated: true, completion: nil)
         
         UserDefaults.standard.removeObject(forKey: "tapa")
+        
     }
-    
     
     @IBAction func playPagina(_ sender: Any) {
         
@@ -632,6 +655,104 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             
         }
+        
+    }
+    
+    
+    
+    func alerta (){
+        let alertController = UIAlertController(title: "Tienes Paginas Pendientes", message: "Deseas cerrar el libro, de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+         let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+           (result : UIAlertAction) -> Void in
+            
+            print("Destructive")
+            
+         }
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+            self.Tapa ()
+            
+        }
+        
+        alertController.addAction(DestructiveAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    
+    func alerta2 (){
+        let alertController = UIAlertController(title: "Si sales de la edicion se borra el libro", message: "Deses continuar de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+            (result : UIAlertAction) -> Void in
+            
+            print("Destructive")
+            
+        }
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+            self.borrar ()
+            self.Biblioteca()
+            
+        }
+        
+        alertController.addAction(DestructiveAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func borrar () {
+        
+        let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
+        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            
+            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+            
+            
+            do {
+                try fetchResultsController.performFetch()
+                self.libros = fetchResultsController.fetchedObjects!
+                
+                
+                for name in libros {
+                    
+                    //let libro = name
+                    //print (libro.autor)
+                    
+                    context.delete(name)
+                    
+                }
+                
+                do {
+                    try context.save()
+                    print("borrado!")
+                } catch let error as NSError  {
+                    print("Could not save \(error), \(error.userInfo)")
+                } catch {
+                    
+                }
+                
+                
+                
+            } catch {
+                print("Error: \(error)")
+            }
+            
+        }
+        
+        
+        //return name
         
     }
     

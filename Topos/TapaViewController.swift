@@ -64,14 +64,17 @@ class TapaViewController: UIViewController {
         
         
         if(titulo == ""){
+            alerta ()
             return
         }
         
         if(autor == ""){
+            alerta ()
             return
         }
         
         if(tapa == nil){
+            alerta ()
             return
         }
         
@@ -143,4 +146,25 @@ class TapaViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
 
+    func alerta (){
+        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "Ok para continuar", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        //let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+        //    (result : UIAlertAction) -> Void in
+            
+        //    print("Destructive")
+            
+       // }
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+            //self.Tapa ()
+            
+        }
+        
+        //alertController.addAction(DestructiveAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
