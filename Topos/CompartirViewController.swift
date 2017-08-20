@@ -333,6 +333,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let aVideoAssetTrack : AVAssetTrack = aVideoAsset.tracks(withMediaType: AVMediaTypeVideo)[0]
         
         let aAudioAssetTrack : AVAssetTrack = aAudioAsset.tracks(withMediaType: AVMediaTypeAudio)[0]
+        
         let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaTypeAudio)[0]
         
         
@@ -729,8 +730,22 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         playerLayer.frame = self.viewVideo.bounds
         playerLayer.backgroundColor = UIColor.clear.cgColor
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+        } catch let error as NSError {
+            print("audioSession error: \(error.localizedDescription)")
+        }
+         
+        
         self.viewVideo.layer.addSublayer(playerLayer)
         avPlayer.play()
+        
+        
+        
         
         
         //NotificationCenter.default.addObserver(self, selector: Selector(("playerDidFinishPlaying:")),
@@ -842,6 +857,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     @IBAction func elijeVolver(_ sender: Any) {
+        
+        avPlayer.pause()
+        avPlayer = nil
         
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca") as! BibliotecaViewController
