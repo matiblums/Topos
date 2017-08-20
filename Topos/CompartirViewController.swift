@@ -21,7 +21,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     @IBOutlet weak var viewVideo: UIView!
     
     @IBOutlet weak var viewTapa: UIView!
-    
     @IBOutlet weak var btnPlayTotal: UIButton!
     
     @IBOutlet weak var btnPlay: UIButton!
