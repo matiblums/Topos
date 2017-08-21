@@ -696,7 +696,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             print("OK")
-            self.borrar ()
+            self.borrarLibro()
             self.Biblioteca()
             
         }
@@ -706,54 +706,23 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func borrar () {
-        
-        let fetchRequest : NSFetchRequest<Libro> = NSFetchRequest(entityName: "Libro")
-        let sortDescriptor = NSSortDescriptor(key: "fecha", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+    func borrarLibro () {
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
             let context = container.viewContext
             
-            self.fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            
-            self.fetchResultsController.delegate = self as? NSFetchedResultsControllerDelegate
-            
+            context.delete(self.libro!)
             
             do {
-                try fetchResultsController.performFetch()
-                self.libros = fetchResultsController.fetchedObjects!
-                
-                
-                for name in libros {
-                    
-                    //let libro = name
-                    //print (libro.autor)
-                    
-                    context.delete(name)
-                    
-                }
-                
-                do {
-                    try context.save()
-                    print("borrado!")
-                } catch let error as NSError  {
-                    print("Could not save \(error), \(error.userInfo)")
-                } catch {
-                    
-                }
-                
-                
-                
+                try context.save()
+                print("borrado!")
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
             } catch {
-                print("Error: \(error)")
+                
             }
             
         }
         
-        
-        //return name
-        
     }
-    
 }

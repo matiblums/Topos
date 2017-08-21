@@ -24,6 +24,9 @@ class TapaViewController: UIViewController {
     var fetchResultsController : NSFetchedResultsController<Libro>!
     var libro : Libro?
     
+    var paginas : [Pagina] = []
+    var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
+    var pagina : Pagina?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +122,7 @@ class TapaViewController: UIViewController {
             do {
                 try context.save()
                 print("Grabo OK")
+                grabarTapa()
                 irBiblioteca ()
                 
             } catch {
@@ -167,4 +171,140 @@ class TapaViewController: UIViewController {
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func grabarTapa() {
+        
+        let miLibro = self.libro
+        let miPagina = miLibro!.paginas![0] as! Pagina
+        
+        let txtTitulo = self.libro?.titulo
+        let txtAutor = self.libro?.autor
+        let imgFondo = self.libro?.tapa
+        let nuevaImagen = textToImage(drawText1: txtTitulo! as NSString, drawText2: txtAutor! as NSString, inImage: UIImage(named:imgFondo!)!)
+        
+        let random = randomString(length: 8)
+        let nombreArchivo = random
+        
+        if let data = UIImagePNGRepresentation(nuevaImagen) {
+            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
+            try? data.write(to: filename)
+        }
+        
+        let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
+        
+        let topo = "topos0.png"
+        let topox = "0"
+        let topoy = "0"
+        
+        let urlString: String = filename.relativePath
+        let fondo = urlString
+        let musica = "TA1_Intro"
+        let audio = miPagina.audio
+        
+        let isoDate = "2016-04-14T10:44:00+0000"
+        
+        let dateFormatter = ISO8601DateFormatter()
+        let date = dateFormatter.date(from:isoDate)!
+        
+        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+            let context = container.viewContext
+            
+            self.pagina = NSEntityDescription.insertNewObject(forEntityName: "Pagina", into: context) as? Pagina
+            
+                
+            self.pagina?.fileAudio = ""
+            self.pagina?.filePng = ""
+            self.pagina?.fileVideo1 = ""
+            self.pagina?.fileVideo2 = ""
+            
+            self.pagina?.topo = topo
+            self.pagina?.topox = "\(topox)"
+            self.pagina?.topoy = "\(topoy)"
+            self.pagina?.fondo = fondo
+            self.pagina?.musica = musica
+            self.pagina?.audio = audio
+            self.pagina?.fecha = date
+            
+            
+            
+            
+            // let fitEntity = NSEntityDescription.entity(forEntityName: "FitSession", in: managedContext)
+            // let fitSession = FitSession(entity: fitEntity!, insertInto: managedContext)
+            // fitSession.date = Date()
+            
+            
+            let fitnessSessions = self.libro?.paginas!.mutableCopy() as! NSMutableOrderedSet
+            fitnessSessions.add(self.pagina as Any)
+            
+            self.libro?.paginas = fitnessSessions.copy() as? NSOrderedSet
+            
+            
+            
+            
+            
+            do {
+                try context.save()
+                print("Grabo OK")
+                
+                
+                
+                //let sincronizarcaso = SincronizarCaso()
+                //sincronizarcaso.Iniciar()
+                
+            } catch {
+                print("Ha habido un error al guardar el lugar en Core Data")
+            }
+            
+            
+        }
+        
+    }
+    
+    func textToImage(drawText1 text1: NSString, drawText2 text2: NSString, inImage image: UIImage) -> UIImage {
+        let textColor = UIColor.white
+        let textFont = UIFont(name: "Helvetica", size: 300)!
+        
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
+        
+        let textFontAttributes = [
+            NSFontAttributeName: textFont,
+            NSForegroundColorAttributeName: textColor,
+            ] as [String : Any]
+        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
+        
+        let rect1 = CGRect(origin: CGPoint(x: 20,y :20), size: image.size)
+        let rect2 = CGRect(origin: CGPoint(x: 20,y :300), size: image.size)
+        
+        text1.draw(in: rect1, withAttributes: textFontAttributes)
+        text2.draw(in: rect2, withAttributes: textFontAttributes)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+
 }

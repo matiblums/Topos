@@ -129,13 +129,36 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let totales = miLibro?.paginas?.count
         
         let num = totales
-        //var imagesArray = [NSString]()
-        //var musicaArray = [NSString]()
-        //var audioArray = [NSString]()
         
-    
+        //****************************  primero carga tapa ******************************************************************
+
+        let miPagina = miLibro!.paginas![num!-1] as! Pagina
+        //******************************************************************************************************
+        let miFondo = miPagina.fondo
+        let miTopo = miPagina.topo
+        let miTopoX = miPagina.topox
+        let miTopoY = miPagina.topoy
+        let cgFloatTopoX : CGFloat? = Double(miTopoX).map{ CGFloat($0) }
+        let cgFloatTopoY : CGFloat? = Double(miTopoY).map{ CGFloat($0) }
+        let random = randomString(length: 8)
+        let nombreArchivo = random
+        //******************************************************************************************************
+        var miImagen : UIImage
+        miImagen = UIImage.init(contentsOfFile: miFondo)!
+        let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: miImagen, Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
+        if let data = UIImagePNGRepresentation(imageOK) {
+            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
+            try? data.write(to: filename)
+        }
+        let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
+        imagesArray.append(filename.path as NSString)
+        musicaArray.append(miPagina.musica as NSString)
+        audioArray.append(miPagina.audio as NSString)
+        //******************************************************************************************************
+
         
-        for i in 0...Int(num!)-1{
+        
+        for i in 0...Int(num!)-2{
  
             let miPagina = miLibro!.paginas![i] as! Pagina
             //******************************************************************************************************
@@ -151,7 +174,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let random = randomString(length: 8)
             let nombreArchivo = random
             //******************************************************************************************************
-            let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: UIImage.init(named: miFondo), Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
+            
+            var miImagen : UIImage
+            miImagen = UIImage.init(named: miFondo)!
+            
+            let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: miImagen, Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
             
             if let data = UIImagePNGRepresentation(imageOK) {
                 let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
@@ -171,13 +198,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         creaLoop(i : 0)
-        
-        /*
-        for i in 0 ..< imagesArray.count {
-        
-            createVideo(image: imagesArray[i] as NSString, musicaUrl: musicaArray[i] as NSString, audioUrl:audioArray[i] as NSString, num: i, numTotal: imagesArray.count)
-        }
-        */
         
         
     }
@@ -210,7 +230,19 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         var photosArray = [String]()
         
         let asset = AVURLAsset(url: playAudio1!)
-        let duration = Int(CMTimeGetSeconds(asset.duration))
+        var duration : Int
+        
+        if(num == 0){
+            
+            duration = 5
+            
+        }
+        
+        else{
+            
+            duration = Int(CMTimeGetSeconds(asset.duration))
+            
+        }
         
         
         for _ in 0...duration {
@@ -337,17 +369,33 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaTypeAudio)[0]
         
         
-        do{
-            try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aVideoAssetTrack, at: kCMTimeZero)
+        if(num == 0){
             
-            try mutableCompositionAudioTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack, at: kCMTimeZero)
-            
-            try mutableCompositionAudioTrack2[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration),   of: aAudioAssetTrack2, at: kCMTimeZero)
-            
-            
-        }catch{
+            do{
+                try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aVideoAssetTrack, at: kCMTimeZero)
+                
+                try mutableCompositionAudioTrack2[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack2, at: kCMTimeZero)
+                
+            }catch{
+                
+            }
             
         }
+        else{
+            
+            do{
+                try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aVideoAssetTrack, at: kCMTimeZero)
+                
+                try mutableCompositionAudioTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack, at: kCMTimeZero)
+                
+                try mutableCompositionAudioTrack2[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack2, at: kCMTimeZero)
+                
+            }catch{
+                
+            }
+            
+        }
+        
         
         let miWidthFondo = self.view.frame.size.width
         let miHeightFondo = self.view.frame.size.height
@@ -426,7 +474,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //*******************************************************************************************************
     
-    //var cuentaVideos = 0
+    
     func almacenaVideos(miVideo: NSURL, position: Int, total: Int){
         
         videosArray.append(miVideo)
@@ -437,38 +485,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
-        
-        
-     /*
-        if(cuentaVideos == 0){
-            
-            for _ in 0...99 {
-                videosArray.append(miVideo)
-            }
-            
-        }
-        videosArray.remove(at: position)
-        videosArray.insert(miVideo, at: position)
-        cuentaVideos = cuentaVideos + 1
-        
-        
-        if(cuentaVideos == total){
-            
-            let  mas = videosArray.count - 1
-            let  menos = total
-            
-            var i = mas
-            
-            for _ in menos...mas{
-                videosArray.remove(at: i)
-                i = i - 1
-            }
-            
-            mergeVideoFiles(videoFileUrls: videosArray as NSArray)
-            
-        }
  
-         */
  
     }
     
@@ -495,36 +512,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
             
         duracionDesde = duracionDesde + firstAsset.duration
-            
-        
-        
-            
-            /*
-            
-            if(i == 0){
-                
-                let firstAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
-                
-                do {
-                    try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: kCMTimeZero)
-                } catch _ {
-                    print("Failed to load first track")
-                }
-            }
-            else{
-                
-                let firstAsset = AVURLAsset(url: videoFileUrls[i - 1] as! URL)
-                let secondAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
-                
-                do {
-                    try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, secondAsset.duration), of: secondAsset, at: firstAsset.duration)
-                } catch _ {
-                    print("Failed to load second track")
-                }
-                
-                
-            }
-            */
+  
         }
         
       
@@ -858,8 +846,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijeVolver(_ sender: Any) {
         
-        avPlayer.pause()
-        avPlayer = nil
+        if(avPlayer != nil){
+            avPlayer.pause()
+            avPlayer = nil
+        }
+        
+        
         
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca") as! BibliotecaViewController
@@ -904,7 +896,15 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
         
         borrar ()
-        dismiss(animated: true, completion: nil)
+        
+        avPlayer.pause()
+        avPlayer = nil
+        
+        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca") as! BibliotecaViewController
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
         
     }
     

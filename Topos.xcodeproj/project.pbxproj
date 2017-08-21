@@ -22,6 +22,9 @@
 		1626684B1F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 162668491F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png */; };
 		1626684D1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 1626684C1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png */; };
 		163BB7B11F06C95400ECA352 /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BB7B01F06C95400ECA352 /* Libro.swift */; };
+		1672660A1F4A465700D154AA /* TextoAImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167266091F4A465700D154AA /* TextoAImagenViewController.swift */; };
+		1672660C1F4A466300D154AA /* TextoAImagenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */; };
+		1672660E1F4A886800D154AA /* topos0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1672660D1F4A886800D154AA /* topos0.png */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
@@ -164,6 +167,9 @@
 		162668491F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_izqNegro.png; sourceTree = "<group>"; };
 		1626684C1F3B8F33003B9C41 /* edicion05_agregar_pgNegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pgNegro.png; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		167266091F4A465700D154AA /* TextoAImagenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoAImagenViewController.swift; sourceTree = "<group>"; };
+		1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextoAImagenViewController.storyboard; sourceTree = "<group>"; };
+		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16FFD7D81F1D95B600B4B2C3 /* Prueba.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
+				1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -370,6 +377,7 @@
 				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
 				16CB0A8C1F1C55CB0076F381 /* UIImageExtension.swift */,
 				16BCBEA21F05B9F4001DDC07 /* ViewController.swift */,
+				167266091F4A465700D154AA /* TextoAImagenViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -515,6 +523,7 @@
 		16FFD7411F1D781900B4B2C3 /* topos */ = {
 			isa = PBXGroup;
 			children = (
+				1672660D1F4A886800D154AA /* topos0.png */,
 				16FFD7B21F1D7A6C00B4B2C3 /* topos1.png */,
 				16FFD7B31F1D7A6C00B4B2C3 /* topos2.png */,
 				16FFD7B41F1D7A6C00B4B2C3 /* topos3.png */,
@@ -713,6 +722,7 @@
 				16FFD7CE1F1D7A6C00B4B2C3 /* topos10.png in Resources */,
 				16AF170D1EE093E5008A9B17 /* pelicula.jpeg in Resources */,
 				16AF16FF1EE09371008A9B17 /* WhatsApp Image 2017-05-19 at 17.04.56.jpeg in Resources */,
+				1672660E1F4A886800D154AA /* topos0.png in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
 				16AF16F51EE092A0008A9B17 /* Seleccion.jpeg in Resources */,
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
@@ -729,6 +739,7 @@
 				1626684B1F3B8EC4003B9C41 /* edicion05_flecha_izqNegro.png in Resources */,
 				16AF16F31EE09228008A9B17 /* tapa.jpeg in Resources */,
 				16AF16F91EE0934A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.55.jpeg in Resources */,
+				1672660C1F4A466300D154AA /* TextoAImagenViewController.storyboard in Resources */,
 				16AF170F1EE093F0008A9B17 /* biblioteca.jpeg in Resources */,
 				16AF17011EE0938C008A9B17 /* WhatsApp Image 2017-05-19 at 17.05.11.jpeg in Resources */,
 				1626684A1F3B8EC4003B9C41 /* edicion05_flecha_derNegro.png in Resources */,
@@ -938,6 +949,7 @@
 				169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */,
+				1672660A1F4A465700D154AA /* TextoAImagenViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16FFD7DB1F1D95D000B4B2C3 /* PruebaViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
