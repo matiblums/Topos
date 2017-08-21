@@ -34,22 +34,24 @@ class TextoAImagenViewController: UIViewController {
 
     func textToImage(drawText1 text1: NSString, drawText2 text2: NSString, inImage image: UIImage) -> UIImage {
         let textColor = UIColor.white
-        let textFont = UIFont(name: "Helvetica", size: 300)!
+        let textColorBack = UIColor.black
+        let textFont = UIFont(name: "Helvetica", size: 200)!
+        let textAlinea = NSMutableParagraphStyle()
+        textAlinea.alignment = .center
         
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
         
-        let textFontAttributes = [
-            NSFontAttributeName: textFont,
-            NSForegroundColorAttributeName: textColor,
-            ] as [String : Any]
+        let textFontAttributes = [NSFontAttributeName: textFont, NSForegroundColorAttributeName: textColor, NSBackgroundColorAttributeName: textColorBack, NSParagraphStyleAttributeName : textAlinea] as [String : Any]
+        
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
-        let rect1 = CGRect(origin: CGPoint(x: 20,y :20), size: image.size)
-        let rect2 = CGRect(origin: CGPoint(x: 20,y :300), size: image.size)
+        let rect1 = CGRect(origin: CGPoint(x: 0 ,y :20), size: image.size)
+        let rect2 = CGRect(origin: CGPoint(x: 0 ,y :300), size: image.size)
         
         text1.draw(in: rect1, withAttributes: textFontAttributes)
         text2.draw(in: rect2, withAttributes: textFontAttributes)
+        
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
