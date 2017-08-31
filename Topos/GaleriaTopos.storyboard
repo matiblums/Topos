@@ -108,6 +108,7 @@
                         <outlet property="miFondoBotonera" destination="FWq-C2-N0h" id="TdI-W4-9Z1"/>
                         <outlet property="miGaleria" destination="krc-nQ-ARO" id="e62-cI-cRe"/>
                         <outlet property="miTopo" destination="6aP-4K-x4V" id="ri4-pS-oWs"/>
+                        <outlet property="viewFondo" destination="3ns-Jk-RMO" id="U75-5C-xbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRm-p1-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>

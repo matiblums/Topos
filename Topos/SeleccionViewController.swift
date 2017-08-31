@@ -30,10 +30,16 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnPlay: UIButton!
     @IBOutlet var btnEliminar: UIButton!
     
-    @IBOutlet var btnTapa: UIButton!
+    @IBOutlet var btnCerrar: UIButton!
+    @IBOutlet var btnSalir: UIButton!
+    
+    @IBOutlet var lblCerrar: UILabel!
+    @IBOutlet var lblSalir: UILabel!
     
     @IBOutlet var btnIzq: UIButton!
     @IBOutlet var btnDer: UIButton!
+    
+    @IBOutlet var lblPagina: UILabel!
     
     var paginas : [Pagina] = []
     var fetchResultsControllerPagina : NSFetchedResultsController<Pagina>!
@@ -70,6 +76,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         contPagina = paginasTotales - 2
         
         myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
+        
+        lblPagina.text = ""
         
     }
     
@@ -232,7 +240,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             tocaGaleria ()
             
         }
-
+        
+        
     }
     
     @IBAction func btnDer(_ sender: Any) {
@@ -246,6 +255,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             tocaGaleria ()
             
         }
+        
+        
+        
     }
     
     func Borrar () {
@@ -297,6 +309,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func tocaGaleria () {
+        lblPagina.text = "Página \(contPagina)"
+        
         myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
         let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
@@ -315,6 +329,46 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
             
         }
+        
+        if(contPagina == 1){
+            
+            btnIzq.isHidden = true
+            
+        }
+        
+        else{
+            
+            btnIzq.isHidden = false
+            
+        }
+        
+        
+        
+        if(contPagina == paginasTotales - 2){
+            
+            btnDer.isHidden = true
+            
+        }
+        
+        else{
+            
+            btnDer.isHidden = false
+            
+        }
+        
+        
+        if(contPagina == paginasTotales - 3){
+            
+            btnDer.setBackgroundImage(UIImage(named: "edicion05_agregar_pg.png"), for: UIControlState.normal)
+            
+        }
+        
+        else{
+            
+            btnDer.setBackgroundImage(UIImage(named: "edicion05_flecha_der.png"), for: UIControlState.normal)
+            
+        }
+        
         
     }
     //*****************************************************************************************
@@ -498,10 +552,16 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let miLibro = self.libro
         
         if((miLibro!.paginas?.count)! > 0){
-            btnTapa.isHidden = false
+            
+            btnCerrar.isHidden = false
+            lblCerrar.isHidden = false
+            
         }
         else{
-            btnTapa.isHidden = true
+            
+            btnCerrar.isHidden = true
+            lblCerrar.isHidden = true
+          
         }
         
         
@@ -519,7 +579,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                 if((UserDefaults.standard.string(forKey: "musica")) != nil){
                     
                     if((UserDefaults.standard.string(forKey: "audio")) != nil){
-                        btnTapa.isHidden = false
+                        btnCerrar.isHidden = false
+                        lblCerrar.isHidden = false
                         cerrar ()
                         borraDatos()
                         

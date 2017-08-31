@@ -21,7 +21,11 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
-     @IBOutlet weak var miFondoBotonera: UIView!
+    @IBOutlet weak var miFondoBotonera: UIView!
+    
+    @IBOutlet weak var viewFondo: UIView!
+    
+    
     
     
     var items = ["topos1.png", "topos2.png", "topos3.png", "topos4.png", "topos5.png", "topos6.png", "topos7.png", "topos8.png", "topos9.png", "topos10.png", "topos11.png", "topos12.png", "topos13.png", "topos14.png", "topos15.png", "topos16.png", "topos17.png", "topos18.png", "topos19.png"]
@@ -51,6 +55,8 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miGaleria.isHidden = false
         miFondoBotonera.isHidden = true
         miTopo.isHidden = true
+        
+        viewFondo.isHidden = false
         
         
     }
@@ -86,6 +92,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     @IBAction func muestraTopos(_ sender: Any) {
         
         miGaleria.isHidden = false
+        viewFondo.isHidden = false
         miFondoBotonera.isHidden = true
         miTopo.isHidden = true
         
@@ -133,6 +140,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         miTopo.image = image
         
         miGaleria.isHidden = true
+        viewFondo.isHidden = true
         miFondoBotonera.isHidden = false
         miTopo.isHidden = false
         
