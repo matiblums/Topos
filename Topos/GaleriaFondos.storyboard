@@ -81,14 +81,6 @@
                                             <action selector="btnSalir:" destination="gxf-UW-ubR" eventType="touchUpInside" id="azW-5z-raG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-d4-MVU">
-                                        <rect key="frame" x="20" y="23" width="78" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="galeria_fondo_blanco"/>
-                                        <connections>
-                                            <action selector="muestraFondo:" destination="gxf-UW-ubR" eventType="touchUpInside" id="hKU-1D-Xyk"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -108,7 +100,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="galeria_fondo_blanco" width="152" height="90"/>
         <image name="ok_verde" width="130" height="130"/>
         <image name="sombra_abajo_fondos" width="1921" height="406"/>
     </resources>

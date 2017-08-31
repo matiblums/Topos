@@ -539,7 +539,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             //checkFondo.isHidden = false
             
-            btnFondoVacio.alpha = 0.3
+            btnFondoVacio.alpha = 0.1
             
         }
         else{
@@ -551,7 +551,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
            // checkTopo.isHidden = false
             
-            btnTopoVacio.alpha = 0.3
+            btnTopoVacio.alpha = 0.1
             
         }
         else{
@@ -565,7 +565,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
            // checkMusica.isHidden = false
             
-            btnMusicaVacio.alpha = 0.3
+            btnMusicaVacio.alpha = 0.1
             
         }
         else{
@@ -577,7 +577,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
            // checkAudio.isHidden = false
             
-            btnAudioVacio.alpha = 0.3
+            btnAudioVacio.alpha = 0.1
             
         }
         else{

@@ -344,8 +344,8 @@
 				16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */,
 				16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */,
 				167678921EE4D2F900EED638 /* GrabarAudio.storyboard */,
-				16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */,
 				160F45471EE4E9A400980DEB /* Pelicula.storyboard */,
+				16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */,
 				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
 				16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */,
 				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
@@ -1128,6 +1128,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1147,6 +1148,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
