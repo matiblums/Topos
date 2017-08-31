@@ -102,7 +102,8 @@ class TapaViewController: UIViewController {
     
     func grabar() {
         let file = ""
-        let titulo = txtTitulo.text
+        let titulo = txtTitulo.text?.uppercased()
+        
         let autor = txtAutor.text
         let tapa = UserDefaults.standard.string(forKey: "tapa")
         let fecha = Date()

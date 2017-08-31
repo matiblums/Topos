@@ -72,9 +72,11 @@ class GaleriaTapasViewController: UIViewController , UICollectionViewDataSource,
         
         UserDefaults.standard.set(imgSel, forKey: "tapa")
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.white.cgColor
+        dismiss(animated: true, completion: nil)
+        
+        //let cell = collectionView.cellForItem(at: indexPath)
+        //cell?.layer.borderWidth = 2.0
+        //cell?.layer.borderColor = UIColor.white.cgColor
  
     }
     

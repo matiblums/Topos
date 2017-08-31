@@ -28,6 +28,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edicion05_fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mpo-ge-zNU">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
                                 <rect key="frame" x="0.0" y="80" width="667" height="215"/>
@@ -201,6 +202,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5jV-yv-ldy" appends="YES" id="gJc-tM-jI2"/>
+                            <outletCollection property="gestureRecognizers" destination="7m3-bC-1oe" appends="YES" id="7ae-Ul-6wo"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="btnAudioVacio" destination="vuc-ao-P4Z" id="q3V-hn-RzO"/>
@@ -221,6 +227,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9D-4o-7iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="7m3-bC-1oe" userLabel="Swipe Gesture Recognizer Der">
+                    <connections>
+                        <action selector="btnDer:" destination="cNr-Hu-wUR" id="zN3-v9-kxa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="5jV-yv-ldy" userLabel="Swipe Gesture Recognizer Izq">
+                    <connections>
+                        <action selector="btnIzq:" destination="cNr-Hu-wUR" id="95x-GG-cEb"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="371.06446776611699" y="61.600000000000001"/>
         </scene>

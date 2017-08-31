@@ -255,9 +255,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             tocaGaleria ()
             
         }
-        
-        
-        
+    
     }
     
     func Borrar () {

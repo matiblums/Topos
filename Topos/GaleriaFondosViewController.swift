@@ -42,7 +42,7 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
         miFondo.image = image
         
         miGaleria.isHidden = false
-        miFondoBotonera.isHidden = true
+        //miFondoBotonera.isHidden = true
         miFondo.isHidden = true
         
     }
@@ -62,7 +62,7 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
     @IBAction func muestraFondo(_ sender: Any) {
         
         miGaleria.isHidden = false
-        miFondoBotonera.isHidden = true
+        //miFondoBotonera.isHidden = true
         miFondo.isHidden = true
         
     }
@@ -97,19 +97,18 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let imgSel = self.items[indexPath.item]
-        let image: UIImage = UIImage(named: imgSel)!
-        miFondo.image = image
+       // let image: UIImage = UIImage(named: imgSel)!
+       // miFondo.image = image
         
-        miGaleria.isHidden = true
-        miFondoBotonera.isHidden = false
-        miFondo.isHidden = false
+       // miGaleria.isHidden = true
+       // miFondoBotonera.isHidden = false
+       // miFondo.isHidden = false
         
         UserDefaults.standard.set(imgSel, forKey: "fondo")
         
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.white.cgColor
+               
+        dismiss(animated: true, completion: nil)
         
     }
     

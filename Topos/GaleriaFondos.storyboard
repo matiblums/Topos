@@ -64,32 +64,11 @@
                                     <outlet property="delegate" destination="gxf-UW-ubR" id="sqN-pQ-L1g"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbD-mq-4Zn">
-                                <rect key="frame" x="0.0" y="320" width="736" height="92"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_abajo_fondos" translatesAutoresizingMaskIntoConstraints="NO" id="TlH-aN-Ndh">
-                                        <rect key="frame" x="0.0" y="0.0" width="736" height="92"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nji-G0-u0m">
-                                        <rect key="frame" x="667" y="21" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" backgroundImage="ok_verde"/>
-                                        <connections>
-                                            <action selector="btnSalir:" destination="gxf-UW-ubR" eventType="touchUpInside" id="azW-5z-raG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="miFondo" destination="9ZQ-IQ-lVB" id="HNw-oy-I2d"/>
-                        <outlet property="miFondoBotonera" destination="wbD-mq-4Zn" id="3vL-nO-9jJ"/>
                         <outlet property="miGaleria" destination="a6G-r4-23r" id="uk7-T5-F8B"/>
                         <outlet property="miTopo" destination="OsY-B1-pfW" id="jfq-pN-wCP"/>
                     </connections>
@@ -99,8 +78,4 @@
             <point key="canvasLocation" x="155.70652173913044" y="-513.04347826086962"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ok_verde" width="130" height="130"/>
-        <image name="sombra_abajo_fondos" width="1921" height="406"/>
-    </resources>
 </document>
