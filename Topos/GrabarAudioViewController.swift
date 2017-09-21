@@ -176,7 +176,7 @@ class GrabarAudioViewController: UIViewController ,AVAudioRecorderDelegate, AVAu
     
  
     
-    func step(updater: CADisplayLink) {
+    @objc func step(updater: CADisplayLink) {
         //print(updater.timestamp)
         let normalizedTime = Float(audioPlayer.currentTime * 1.0 / audioPlayer.duration)
         

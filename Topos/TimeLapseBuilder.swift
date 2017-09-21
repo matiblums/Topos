@@ -68,7 +68,7 @@ open class TimeLapseBuilder: NSObject {
       }
     }
     
-    guard let videoWriter = try? AVAssetWriter(outputURL: videoOutputURL, fileType: AVFileTypeQuickTimeMovie) else{
+        guard let videoWriter = try? AVAssetWriter(outputURL: videoOutputURL, fileType: AVFileType.mov) else{
       fatalError("AVAssetWriter error")
     }
     
@@ -78,11 +78,11 @@ open class TimeLapseBuilder: NSObject {
       AVVideoHeightKey : NSNumber(value: Float(outputSize.height) as Float),
     ] as [String : Any]
     
-    guard videoWriter.canApply(outputSettings: outputSettings, forMediaType: AVMediaTypeVideo) else {
+        guard videoWriter.canApply(outputSettings: outputSettings, forMediaType: AVMediaType.video) else {
       fatalError("Negative : Can't apply the Output settings...")
     }
     
-    let videoWriterInput = AVAssetWriterInput(mediaType: AVMediaTypeVideo, outputSettings: outputSettings)
+        let videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: outputSettings)
     
     let sourcePixelBufferAttributesDictionary = [
       kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: kCVPixelFormatType_32ARGB as UInt32),

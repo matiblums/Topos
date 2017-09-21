@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "DragDropUI.h"
 
 FOUNDATION_EXPORT double DragDropUIVersionNumber;
 FOUNDATION_EXPORT const unsigned char DragDropUIVersionString[];

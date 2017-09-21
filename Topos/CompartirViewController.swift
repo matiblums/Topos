@@ -356,17 +356,17 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let aAudioAsset : AVAsset = AVAsset(url: playAudio1 as URL)
         let aAudioAsset2 : AVAsset = AVAsset(url: soundURL!)
         
-        mutableCompositionVideoTrack.append(mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid))
+        mutableCompositionVideoTrack.append(mixComposition.addMutableTrack(withMediaType: AVMediaType.video, preferredTrackID: kCMPersistentTrackID_Invalid)!)
         
-        mutableCompositionAudioTrack.append( mixComposition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid))
+        mutableCompositionAudioTrack.append( mixComposition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: kCMPersistentTrackID_Invalid)!)
         
-        mutableCompositionAudioTrack2.append( mixComposition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid))
+        mutableCompositionAudioTrack2.append( mixComposition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: kCMPersistentTrackID_Invalid)!)
         
-        let aVideoAssetTrack : AVAssetTrack = aVideoAsset.tracks(withMediaType: AVMediaTypeVideo)[0]
+        let aVideoAssetTrack : AVAssetTrack = aVideoAsset.tracks(withMediaType: AVMediaType.video)[0]
         
-        let aAudioAssetTrack : AVAssetTrack = aAudioAsset.tracks(withMediaType: AVMediaTypeAudio)[0]
+        let aAudioAssetTrack : AVAssetTrack = aAudioAsset.tracks(withMediaType: AVMediaType.audio)[0]
         
-        let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaTypeAudio)[0]
+        let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaType.audio)[0]
         
         
         if(num == 0){
@@ -415,7 +415,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         let assetExport: AVAssetExportSession = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)!
-        assetExport.outputFileType = AVFileTypeMPEG4
+        assetExport.outputFileType = AVFileType.mp4
         assetExport.outputURL = mergedAudioVideoURl as URL
         //removeFileAtURLIfExists(url: mergedAudioVideoURl)
         assetExport.shouldOptimizeForNetworkUse = true
@@ -521,7 +521,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let nombreArchivo = random + ".mp4"
         mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
         let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
-        assetExport?.outputFileType = AVFileTypeMPEG4
+        assetExport?.outputFileType = AVFileType.mp4
         assetExport?.outputURL = mergeVideoURL as URL
         removeFileAtURLIfExists(url: mergeVideoURL)
         
@@ -602,11 +602,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         //for i in 0 ..< audioFileUrls.count {
             
             
-            let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: CMPersistentTrackID())
+        let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: CMPersistentTrackID())!
             
             let asset = AVURLAsset(url: (audioFileUrls[0] as! NSURL) as URL)
             
-            let track = asset.tracks(withMediaType: AVMediaTypeAudio)[0]
+        let track = asset.tracks(withMediaType: AVMediaType.audio)[0]
         
             let timeRange = CMTimeRange(start: CMTimeMake(0, 600), duration: track.timeRange.duration)
         
@@ -621,7 +621,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         mergeAudioURL = documentDirectoryURL.appendingPathComponent("Merge Audio.m4a")! as URL as NSURL
         
         let assetExport = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetAppleM4A)
-        assetExport?.outputFileType = AVFileTypeAppleM4A
+        assetExport?.outputFileType = AVFileType.m4a
         assetExport?.outputURL = mergeAudioURL as URL
         removeFileAtURLIfExists(url: mergeAudioURL)
         assetExport?.exportAsynchronously(completionHandler:
@@ -717,7 +717,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         playerLayer.player = avPlayer
         playerLayer.frame = self.viewVideo.bounds
         playerLayer.backgroundColor = UIColor.clear.cgColor
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -756,7 +756,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     
     
-    func playerDidFinishPlaying(note: NSNotification) {
+    @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
         
         viewTapa.isHidden = false
@@ -765,7 +765,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
     
-    func playerDidStartPlaying(note: NSNotification) {
+    @objc func playerDidStartPlaying(note: NSNotification) {
         
         
     }

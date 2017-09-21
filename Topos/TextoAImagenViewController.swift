@@ -42,15 +42,15 @@ class TextoAImagenViewController: UIViewController {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
         
-        let textFontAttributes = [NSFontAttributeName: textFont, NSForegroundColorAttributeName: textColor, NSBackgroundColorAttributeName: textColorBack, NSParagraphStyleAttributeName : textAlinea] as [String : Any]
+        let textFontAttributes = [NSAttributedStringKey.font.rawValue: textFont, NSAttributedStringKey.foregroundColor: textColor, NSAttributedStringKey.backgroundColor: textColorBack, NSAttributedStringKey.paragraphStyle : textAlinea] as [AnyHashable : NSObject]
         
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
         let rect1 = CGRect(origin: CGPoint(x: 0 ,y :20), size: image.size)
         let rect2 = CGRect(origin: CGPoint(x: 0 ,y :300), size: image.size)
         
-        text1.draw(in: rect1, withAttributes: textFontAttributes)
-        text2.draw(in: rect2, withAttributes: textFontAttributes)
+        text1.draw(in: rect1, withAttributes: textFontAttributes as? [NSAttributedStringKey : Any])
+        text2.draw(in: rect2, withAttributes: textFontAttributes as? [NSAttributedStringKey : Any])
         
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

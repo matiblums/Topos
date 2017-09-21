@@ -115,7 +115,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource
     }
     
     
-    func goToNextPage(){
+    @objc func goToNextPage(){
         
         guard let currentViewController = self.viewControllers?.first
             else {

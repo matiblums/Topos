@@ -91,7 +91,6 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AudioPlayerSwift/AudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DragDropUI/DragDropUI.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KDEAudioPlayer/KDEAudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LNICoverFlowLayout/LNICoverFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NVActivityIndicatorView/NVActivityIndicatorView.framework"
@@ -100,7 +99,6 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AudioPlayerSwift/AudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DragDropUI/DragDropUI.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KDEAudioPlayer/KDEAudioPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LNICoverFlowLayout/LNICoverFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NVActivityIndicatorView/NVActivityIndicatorView.framework"

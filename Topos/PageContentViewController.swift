@@ -82,7 +82,7 @@ class PageContentViewController: UIViewController {
             repeats     : true)
     }
     
-    func timerActionTest() {
+    @objc func timerActionTest() {
         
         timer = timer + 1
         

@@ -1,18 +1,16 @@
 PODS:
   - AudioPlayerSwift (1.5.1)
-  - DragDropUI (1.0.1)
-  - IQKeyboardManagerSwift (4.0.12)
+  - DragDropUI (1.0.2)
   - KDEAudioPlayer (1.1.0)
-  - LNICoverFlowLayout (1.0.1)
-  - NVActivityIndicatorView (3.7.0):
-    - NVActivityIndicatorView/Presenter (= 3.7.0)
-  - NVActivityIndicatorView/Presenter (3.7.0)
+  - LNICoverFlowLayout (1.0.2)
+  - NVActivityIndicatorView (4.0.0):
+    - NVActivityIndicatorView/Presenter (= 4.0.0)
+  - NVActivityIndicatorView/Presenter (4.0.0)
   - SwiftySound (0.7.0)
 
 DEPENDENCIES:
   - AudioPlayerSwift
   - DragDropUI
-  - IQKeyboardManagerSwift
   - KDEAudioPlayer
   - LNICoverFlowLayout
   - NVActivityIndicatorView
@@ -20,13 +18,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AudioPlayerSwift: 042b801cc88c3ed2ab01ca14ec75eb0cc47f7f14
-  DragDropUI: a830fd319f99e75e393af532222da0a18e0d49aa
-  IQKeyboardManagerSwift: 3c66bea62a7d955b67b0eef0e31522b46261336b
+  DragDropUI: 0a38aeca5be6f80ebaa8e1ca0d581baca6ee8dde
   KDEAudioPlayer: b3787f02b6718c2416589a7726f2633cde2cd60e
-  LNICoverFlowLayout: e2b3f35b92b343f22fb494f0460989e9f5a55fa1
-  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  LNICoverFlowLayout: 6b3ab0dfbb7d2eb7448abf49262f4eb178f5659e
+  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
 
-PODFILE CHECKSUM: 0b865649ce0ccfe84da588840ab7833d03877958
+PODFILE CHECKSUM: 184c44eda51f2e92a03dbb86ce30b834b1101872
 
 COCOAPODS: 1.2.0
