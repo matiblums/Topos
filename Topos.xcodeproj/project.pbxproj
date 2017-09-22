@@ -39,8 +39,6 @@
 		16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A361F3AB224006CEDAA /* edicion05_play.png */; };
 		16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A371F3AB224006CEDAA /* edicion05_salir.png */; };
 		16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A381F3AB224006CEDAA /* edicion05_voz.png */; };
-		16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */; };
-		16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */; };
 		16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */; };
 		16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */; };
 		16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */; };
@@ -165,8 +163,6 @@
 		16981A361F3AB224006CEDAA /* edicion05_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_play.png; sourceTree = "<group>"; };
 		16981A371F3AB224006CEDAA /* edicion05_salir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_salir.png; sourceTree = "<group>"; };
 		16981A381F3AB224006CEDAA /* edicion05_voz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_voz.png; sourceTree = "<group>"; };
-		16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.02.49.jpeg"; sourceTree = "<group>"; };
-		16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WhatsApp Image 2017-05-19 at 17.03.02.jpeg"; sourceTree = "<group>"; };
 		16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GaleriaMusica.jpeg; sourceTree = "<group>"; };
 		16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaFondos.storyboard; sourceTree = "<group>"; };
 		16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +200,8 @@
 		16EA3D491EDD971800B30D72 /* ToposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposUITests.swift; sourceTree = "<group>"; };
 		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F256F11F75387F0010420A /* fondocuentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondocuentos.png; sourceTree = "<group>"; };
+		16F256F21F7539A20010420A /* fondoPantalla0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoPantalla0.png; sourceTree = "<group>"; };
 		16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Libreria.storyboard; sourceTree = "<group>"; };
 		16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreriaViewController.swift; sourceTree = "<group>"; };
 		16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo0.png; sourceTree = "<group>"; };
@@ -363,6 +361,7 @@
 				16FFD7411F1D781900B4B2C3 /* topos */,
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
 				16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */,
+				16F256F11F75387F0010420A /* fondocuentos.png */,
 				16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */,
 				16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */,
 				16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */,
@@ -374,9 +373,8 @@
 				16981A361F3AB224006CEDAA /* edicion05_play.png */,
 				16981A371F3AB224006CEDAA /* edicion05_salir.png */,
 				16981A381F3AB224006CEDAA /* edicion05_voz.png */,
-				16AF16EC1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg */,
-				16AF16EE1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg */,
 				16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */,
+				16F256F21F7539A20010420A /* fondoPantalla0.png */,
 			);
 			name = imagenes;
 			sourceTree = "<group>";
@@ -637,7 +635,6 @@
 			files = (
 				16FFD7CA1F1D7A6C00B4B2C3 /* topos6.png in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
-				16AF16ED1EE07D5B008A9B17 /* WhatsApp Image 2017-05-19 at 17.02.49.jpeg in Resources */,
 				16193BC41F2652FD003B2C09 /* TA3_mar.wav in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
@@ -650,7 +647,6 @@
 				16FFD7AA1F1D7A6100B4B2C3 /* fondo3.jpg in Resources */,
 				16FFD7C71F1D7A6C00B4B2C3 /* topos3.png in Resources */,
 				16FFD7C81F1D7A6C00B4B2C3 /* topos4.png in Resources */,
-				16AF16EF1EE07F2A008A9B17 /* WhatsApp Image 2017-05-19 at 17.03.02.jpeg in Resources */,
 				16FFD7AB1F1D7A6100B4B2C3 /* fondo4.jpg in Resources */,
 				16FFD7D01F1D7A6C00B4B2C3 /* topos12.png in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
