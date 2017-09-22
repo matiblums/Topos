@@ -14,7 +14,7 @@ class GaleriaTapasViewController: UIViewController , UICollectionViewDataSource,
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
-    var items = ["fondo1.jpg", "fondo2.jpg", "fondo3.jpg", "fondo4.jpg", "fondo5.jpg", "fondo6.jpg", "fondo7.jpg", "fondo8.jpg", "fondo9.jpg", "fondo10.jpg"]
+    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

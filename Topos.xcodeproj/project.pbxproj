@@ -202,6 +202,7 @@
 		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F256F11F75387F0010420A /* fondocuentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondocuentos.png; sourceTree = "<group>"; };
 		16F256F21F7539A20010420A /* fondoPantalla0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoPantalla0.png; sourceTree = "<group>"; };
+		16F256F31F753E690010420A /* fondomiscuentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondomiscuentos.png; sourceTree = "<group>"; };
 		16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Libreria.storyboard; sourceTree = "<group>"; };
 		16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreriaViewController.swift; sourceTree = "<group>"; };
 		16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo0.png; sourceTree = "<group>"; };
@@ -375,6 +376,7 @@
 				16981A381F3AB224006CEDAA /* edicion05_voz.png */,
 				16AF17021EE09395008A9B17 /* GaleriaMusica.jpeg */,
 				16F256F21F7539A20010420A /* fondoPantalla0.png */,
+				16F256F31F753E690010420A /* fondomiscuentos.png */,
 			);
 			name = imagenes;
 			sourceTree = "<group>";

@@ -33,8 +33,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var btnCerrar: UIButton!
     @IBOutlet var btnSalir: UIButton!
     
-    @IBOutlet var lblCerrar: UILabel!
-    @IBOutlet var lblSalir: UILabel!
+    
     
     @IBOutlet var btnIzq: UIButton!
     @IBOutlet var btnDer: UIButton!
@@ -552,13 +551,11 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         if((miLibro!.paginas?.count)! > 0){
             
             btnCerrar.isHidden = false
-            lblCerrar.isHidden = false
             
         }
         else{
             
             btnCerrar.isHidden = true
-            lblCerrar.isHidden = true
           
         }
         
@@ -578,7 +575,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                     
                     if((UserDefaults.standard.string(forKey: "audio")) != nil){
                         btnCerrar.isHidden = false
-                        lblCerrar.isHidden = false
                         cerrar ()
                         borraDatos()
                         
