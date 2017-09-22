@@ -105,7 +105,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         }
         else{
             
-            let image: UIImage = UIImage(named: "galeriacell")!
+            let image: UIImage = UIImage(named: "tapa")!
             cell.imgGaleria.image = image
             
         }
@@ -123,7 +123,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             
             
             
-            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "galeriacell"){
+            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "tapa0"){
                 
                 let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
@@ -280,7 +280,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     func grabarLibro() -> Libro {
         let titulo = "Incompleto"
         let autor = "Incompleto"
-        let tapa = "galeriacell"
+        let tapa = "tapa0"
         let fecha = Date()
         
         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
