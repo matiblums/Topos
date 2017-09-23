@@ -57,6 +57,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     var controlaCantidad = Int()
     
+    var isPlay = false
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -897,8 +899,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         borrar ()
         
-        avPlayer.pause()
-        avPlayer = nil
+        if(isPlay){
+            avPlayer.pause()
+            avPlayer = nil
+        }
         
         let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca") as! BibliotecaViewController
@@ -914,7 +918,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let videoFinal = NSURL(string: videoGuardado!)!
         
         verVideo(url: videoFinal)
-        
+        isPlay = true
     }
     
     @IBAction func elijePlay(_ sender: Any){

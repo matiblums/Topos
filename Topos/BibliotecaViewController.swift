@@ -15,7 +15,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
-    var masPaginas = 1
+    var masPaginas = 0
     
     var libros : [Libro] = []
     var fetchResultsController : NSFetchedResultsController<Libro>!
@@ -56,6 +56,17 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     }
 
+    @IBAction func btnCrear(_ sender: Any) {
+    
+        let miLibro = grabarLibro ()
+        
+        let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
+        controller.libro = miLibro
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    
+    }
     
 
      @IBAction func elijeCompartir(_ sender: Any) {
