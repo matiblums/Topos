@@ -22,6 +22,7 @@
 		1672660A1F4A465700D154AA /* TextoAImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167266091F4A465700D154AA /* TextoAImagenViewController.swift */; };
 		1672660C1F4A466300D154AA /* TextoAImagenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */; };
 		1672660E1F4A886800D154AA /* topos0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1672660D1F4A886800D154AA /* topos0.png */; };
+		1673200D1F75DF5C00565D37 /* tapaPrueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1673200C1F75DF5B00565D37 /* tapaPrueba.storyboard */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
@@ -146,6 +147,7 @@
 		167266091F4A465700D154AA /* TextoAImagenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoAImagenViewController.swift; sourceTree = "<group>"; };
 		1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextoAImagenViewController.storyboard; sourceTree = "<group>"; };
 		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
+		1673200C1F75DF5B00565D37 /* tapaPrueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tapaPrueba.storyboard; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				16FFD7D81F1D95B600B4B2C3 /* Prueba.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
 				1672660B1F4A466300D154AA /* TextoAImagenViewController.storyboard */,
+				1673200C1F75DF5B00565D37 /* tapaPrueba.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				16193BC41F2652FD003B2C09 /* TA3_mar.wav in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
+				1673200D1F75DF5C00565D37 /* tapaPrueba.storyboard in Resources */,
 				16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */,
 				16FFD7C51F1D7A6C00B4B2C3 /* topos1.png in Resources */,
 				16FFD7C91F1D7A6C00B4B2C3 /* topos5.png in Resources */,

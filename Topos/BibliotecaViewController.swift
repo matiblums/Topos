@@ -123,7 +123,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             
             
             
-            if(self.libros[myIndex].autor == "Incompleto" || self.libros[myIndex].titulo == "Incompleto" || self.libros[myIndex].tapa == "tapa0"){
+            if(self.libros[myIndex].autor == "" || self.libros[myIndex].titulo == "" || self.libros[myIndex].tapa == "tapa0"){
                 
                 let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
@@ -278,8 +278,8 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func grabarLibro() -> Libro {
-        let titulo = "Incompleto"
-        let autor = "Incompleto"
+        let titulo = ""
+        let autor = ""
         let tapa = "tapa0"
         let fecha = Date()
         
