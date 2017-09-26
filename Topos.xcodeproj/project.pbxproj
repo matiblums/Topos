@@ -59,6 +59,7 @@
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
 		16E8E1701F08987000DE1255 /* GaleriaTapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */; };
 		16EA074E1F7AC2A30005C816 /* TextoAImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA074D1F7AC2A30005C816 /* TextoAImagenViewController.swift */; };
+		16EA07511F7AC4270005C816 /* TextoAImagenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */; };
 		16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */; };
 		16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */; };
 		16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D341EDD971700B30D72 /* Assets.xcassets */; };
@@ -176,7 +177,7 @@
 		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
 		16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasViewController.swift; sourceTree = "<group>"; };
 		16EA074D1F7AC2A30005C816 /* TextoAImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoAImagenViewController.swift; sourceTree = "<group>"; };
-		16EA074F1F7AC2AB0005C816 /* TextoAImagenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextoAImagenViewController.storyboard; sourceTree = "<group>"; };
+		16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextoAImagenViewController.storyboard; sourceTree = "<group>"; };
 		16EA3D271EDD971700B30D72 /* Topos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16EA3D321EDD971700B30D72 /* Topos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Topos.xcdatamodel; sourceTree = "<group>"; };
@@ -286,7 +287,6 @@
 		167678961EE4E1B000EED638 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				16EA074F1F7AC2AB0005C816 /* TextoAImagenViewController.storyboard */,
 				169346221F08669E00BAE79D /* Biblioteca.storyboard */,
 				16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */,
 				16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */,
@@ -299,6 +299,7 @@
 				16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */,
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
+				16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -643,6 +644,7 @@
 				16FFD7CE1F1D7A6C00B4B2C3 /* topos10.png in Resources */,
 				1672660E1F4A886800D154AA /* topos0.png in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
+				16EA07511F7AC4270005C816 /* TextoAImagenViewController.storyboard in Resources */,
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
