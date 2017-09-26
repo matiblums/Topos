@@ -133,7 +133,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         let num = totales
         
-        //****************************  primero carga tapa ******************************************************************
+        //****************************  primero carga tapa ********************************************
 
         let miPagina = miLibro!.paginas![num!-1] as! Pagina
         //******************************************************************************************************
