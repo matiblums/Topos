@@ -750,16 +750,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
         
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidStartPlaying(note:)),name: NSNotification.Name.AVPlayerItemNewAccessLogEntry, object: avPlayer.currentItem)
-        
-        
-        /*
-        //let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        avPlayer = AVPlayer(url: url as URL)
-        let playerLayer = AVPlayerLayer(player: avPlayer)
-        playerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 3.0 / 4.0)
-        self.view.layer.addSublayer(playerLayer)
-        avPlayer.play()
-        */
+    
     }
     
     
@@ -965,11 +956,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let documentsDirectory = paths[0]
         let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
         let filePathURL = URL(fileURLWithPath: videoDataPath)
-        
-        
-        //verVideo(url: filePathURL as NSURL)
-        
-        //let videoGuardado = self.libro?.file
         
         comparteVideo(url: filePathURL as NSURL)
         
