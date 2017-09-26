@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Topos/PeliculaViewController.swift"
-            timestampString = "528059753.798252"
+            filePath = "Topos/CompartirViewController.swift"
+            timestampString = "528136643.994053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "930"
+            endingLineNumber = "930"
+            landmarkName = "elijePlayTotal(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

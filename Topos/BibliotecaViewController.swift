@@ -15,7 +15,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
-    var masPaginas = 0
+    var masPaginas = 1
     
     var libros : [Libro] = []
     var fetchResultsController : NSFetchedResultsController<Libro>!
@@ -24,7 +24,6 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,11 +101,17 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! BibliotecaCollectionViewCell
         
+        if(indexPath.row == 0){
+            
+            let image: UIImage = UIImage(named: "tapa")!
+            cell.imgGaleria.image = image
+            
+        }
         
-        if(indexPath.row < libros.count){
+        else{
             
             let libro : Libro!
-            libro = self.libros[indexPath.row]
+            libro = self.libros[indexPath.row - masPaginas]
             let imgSel = libro.tapa
             let image: UIImage = UIImage(named: imgSel)!
             cell.imgGaleria.image = image
@@ -114,12 +119,12 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             cell.lblAutor.text = libro.autor
             
         }
-        else{
+        if(indexPath.row < libros.count){
             
-            let image: UIImage = UIImage(named: "tapa")!
-            cell.imgGaleria.image = image
+            
             
         }
+       
         
         
         return cell
@@ -127,12 +132,21 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let myIndex = indexPath.row
-        print(myIndex)
+        let myIndex = indexPath.row - masPaginas
+         
         
-        if(indexPath.row < libros.count){
+        if(indexPath.row == 0){
             
+            let miLibro = grabarLibro ()
             
+            let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
+            controller.libro = miLibro
+            controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(controller, animated: true, completion: nil)
+        
+        }
+        else{
             
             if(self.libros[myIndex].autor == "" || self.libros[myIndex].titulo == "" || self.libros[myIndex].tapa == "tapa0"){
                 
@@ -144,13 +158,6 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
                 
             }
             else{
-                /*
-                let storyboard = UIStoryboard(name: "Video", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! ViewController
-                controller.libro = self.libros[myIndex]
-                controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-                self.present(controller, animated: true, completion: nil)
-                */
                 
                 let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
@@ -160,18 +167,6 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
                 
             }
             
-        }
-        else{
-            let miLibro = grabarLibro ()
-            
-            let storyboard = UIStoryboard(name: "Seleccion", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Seleccion") as! SeleccionViewController
-            controller.libro = miLibro
-            controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            self.present(controller, animated: true, completion: nil)
-            
-            
-         
         }
         
     }

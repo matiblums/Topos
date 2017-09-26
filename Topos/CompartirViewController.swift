@@ -17,6 +17,7 @@ import NVActivityIndicatorView
 class CompartirViewController: UIViewController , NVActivityIndicatorViewable, AVAudioPlayerDelegate{
     
     
+    @IBOutlet weak var viewFondoBotones: UIView!
     
     @IBOutlet weak var viewVideo: UIView!
     
@@ -63,8 +64,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
         super.viewDidLoad()
         
-        btnPlay.isHidden = true
-        btnPause.isHidden = true
+        //btnPlay.isHidden = true
+        //btnPause.isHidden = true
         viewTapa.isHidden = true
         
         controlaCantidad = 0
@@ -549,9 +550,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                         if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
                             let context = container.viewContext
                             
-                            let url = mergeVideoURL.absoluteString! as NSString
+                            //let url = mergeVideoURL.absoluteString! as NSString
                             
-                            self.libro?.file = url as String
+                            let url2 = nombreArchivo
+                            
+                            //self.libro?.file = url as String
+                            
+                            self.libro?.file = url2
                             
                             do {
                                 try context.save()
@@ -708,11 +713,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //***************************************************************************************************************************
     func verVideo(url: NSURL){
-        btnPlay.isHidden = true
-        btnPause.isHidden = false
+        //btnPlay.isHidden = true
+       // btnPause.isHidden = false
         viewTapa.isHidden = true
         
-        //let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         
         avPlayer = AVPlayer(url: url as URL)
         let playerLayer = AVPlayerLayer()
@@ -721,15 +725,17 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         playerLayer.backgroundColor = UIColor.clear.cgColor
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         
-        
+        /*
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
             try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
         } catch let error as NSError {
             print("audioSession error: \(error.localizedDescription)")
+            //viewTapa.isHidden = false
+
         }
-         
+         */
         
         self.viewVideo.layer.addSublayer(playerLayer)
         avPlayer.play()
@@ -762,8 +768,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         print("Video Finished")
         
         viewTapa.isHidden = false
-        btnPlay.isHidden = true
-        btnPause.isHidden = true
+        //btnPlay.isHidden = true
+        //btnPause.isHidden = true
         
     }
     
@@ -914,10 +920,20 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePlayTotal(_ sender: Any){
         
-        let videoGuardado = self.libro?.file
-        let videoFinal = NSURL(string: videoGuardado!)!
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
         
-        verVideo(url: videoFinal)
+        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
+        
+        let filePathURL = URL(fileURLWithPath: videoDataPath)
+        
+        
+        
+        //let videoGuardado = self.libro?.file
+        //let videoFinal = NSURL(string: videoGuardado!)!
+        
+        verVideo(url: filePathURL as NSURL)
+       // verVideo(url: videoFinal)
         isPlay = true
     }
     
@@ -945,11 +961,17 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     @IBAction func elijeComparte(_ sender: Any){
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
+        let filePathURL = URL(fileURLWithPath: videoDataPath)
         
-        let videoGuardado = self.libro?.file
-        let videoFinal = NSURL(string: videoGuardado!)!
         
-        comparteVideo(url: videoFinal)
+        //verVideo(url: filePathURL as NSURL)
+        
+        //let videoGuardado = self.libro?.file
+        
+        comparteVideo(url: filePathURL as NSURL)
         
     }
     

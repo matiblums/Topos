@@ -19,7 +19,6 @@
 		16193BC91F2652FD003B2C09 /* TA8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC11F2652FD003B2C09 /* TA8.wav */; };
 		161D21531F0345650098ADA3 /* Pagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D21521F0345650098ADA3 /* Pagina.swift */; };
 		163BB7B11F06C95400ECA352 /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BB7B01F06C95400ECA352 /* Libro.swift */; };
-		1672660A1F4A465700D154AA /* TextoAImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167266091F4A465700D154AA /* TextoAImagenViewController.swift */; };
 		1672660E1F4A886800D154AA /* topos0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1672660D1F4A886800D154AA /* topos0.png */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
@@ -50,9 +49,6 @@
 		16BC26F51EE49CB0009C2688 /* GaleriaMusicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */; };
 		16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */; };
 		16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */; };
-		16BCBEA31F05B9F4001DDC07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEA21F05B9F4001DDC07 /* ViewController.swift */; };
-		16BCBEA51F05B9FE001DDC07 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEA41F05B9FE001DDC07 /* PageContentViewController.swift */; };
-		16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB01F05BF8C001DDC07 /* Video.storyboard */; };
 		16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */; };
 		16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */; };
 		16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A7D1F1C55430076F381 /* Compartir.storyboard */; };
@@ -139,7 +135,6 @@
 		16193BC11F2652FD003B2C09 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
 		161D21521F0345650098ADA3 /* Pagina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagina.swift; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
-		167266091F4A465700D154AA /* TextoAImagenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoAImagenViewController.swift; sourceTree = "<group>"; };
 		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
@@ -170,9 +165,6 @@
 		16BC26F41EE49CB0009C2688 /* GaleriaMusicaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaMusicaViewController.swift; sourceTree = "<group>"; };
 		16BC26F61EE49CCF009C2688 /* GaleriaMusica.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaMusica.storyboard; sourceTree = "<group>"; };
 		16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaMusicaCollectionViewCell.swift; sourceTree = "<group>"; };
-		16BCBEA21F05B9F4001DDC07 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		16BCBEA41F05B9FE001DDC07 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
-		16BCBEB01F05BF8C001DDC07 /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tapa.storyboard; sourceTree = "<group>"; };
 		16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapaViewController.swift; sourceTree = "<group>"; };
 		16CB0A7D1F1C55430076F381 /* Compartir.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compartir.storyboard; sourceTree = "<group>"; };
@@ -301,7 +293,6 @@
 				16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */,
 				16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */,
 				16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */,
-				16BCBEB01F05BF8C001DDC07 /* Video.storyboard */,
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
 			);
@@ -320,13 +311,10 @@
 				16BC26F21EE49A81009C2688 /* GaleriaToposViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
 				16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */,
-				16BCBEA41F05B9FE001DDC07 /* PageContentViewController.swift */,
 				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
 				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */,
-				167266091F4A465700D154AA /* TextoAImagenViewController.swift */,
 				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
-				16BCBEA21F05B9F4001DDC07 /* ViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -685,7 +673,6 @@
 				16193BC21F2652FD003B2C09 /* TA1_Intro.wav in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */,
-				16BCBEB11F05BF8C001DDC07 /* Video.storyboard in Resources */,
 				16193BC61F2652FD003B2C09 /* TA5.wav in Resources */,
 				16FFD7CD1F1D7A6C00B4B2C3 /* topos9.png in Resources */,
 				16193BC31F2652FD003B2C09 /* TA2_cuarto .wav in Resources */,
@@ -851,8 +838,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16BCBEA31F05B9F4001DDC07 /* ViewController.swift in Sources */,
-				16BCBEA51F05B9FE001DDC07 /* PageContentViewController.swift in Sources */,
 				1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */,
 				161D21531F0345650098ADA3 /* Pagina.swift in Sources */,
 				163BB7B11F06C95400ECA352 /* Libro.swift in Sources */,
@@ -860,7 +845,6 @@
 				169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */,
-				1672660A1F4A465700D154AA /* TextoAImagenViewController.swift in Sources */,
 				167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */,
 				16BC26F11EE45D02009C2688 /* GaleriaFondosViewController.swift in Sources */,
 				16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */,
