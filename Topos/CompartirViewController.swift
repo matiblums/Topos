@@ -721,7 +721,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         playerLayer.backgroundColor = UIColor.clear.cgColor
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         
-        /*
+        
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
@@ -731,7 +731,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             //viewTapa.isHidden = false
 
         }
-         */
+         
         
         self.viewVideo.layer.addSublayer(playerLayer)
         avPlayer.play()

@@ -19,6 +19,9 @@
 		16193BC91F2652FD003B2C09 /* TA8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC11F2652FD003B2C09 /* TA8.wav */; };
 		161D21531F0345650098ADA3 /* Pagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D21521F0345650098ADA3 /* Pagina.swift */; };
 		163BB7B11F06C95400ECA352 /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BB7B01F06C95400ECA352 /* Libro.swift */; };
+		163FCC9E1F7C0669007337E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */; };
+		163FCCA01F7C08FC007337E2 /* Descripcion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */; };
+		163FCCA31F7C0920007337E2 /* DescripcionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */; };
 		1672660E1F4A886800D154AA /* topos0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1672660D1F4A886800D154AA /* topos0.png */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
@@ -137,7 +140,9 @@
 		16193BC11F2652FD003B2C09 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
 		161D21521F0345650098ADA3 /* Pagina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagina.swift; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
-		163FCC9C1F7C0520007337E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Descripcion.storyboard; sourceTree = "<group>"; };
+		163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripcionViewController.swift; sourceTree = "<group>"; };
 		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
@@ -301,6 +306,7 @@
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
 				16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */,
+				163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */,
 				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
+				163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -406,7 +413,7 @@
 				16EA3D341EDD971700B30D72 /* Assets.xcassets */,
 				16EA3D391EDD971700B30D72 /* Info.plist */,
 				16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */,
-				163FCC9C1F7C0520007337E2 /* GoogleService-Info.plist */,
+				163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */,
 			);
 			path = Topos;
 			sourceTree = "<group>";
@@ -647,6 +654,7 @@
 				1672660E1F4A886800D154AA /* topos0.png in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
 				16EA07511F7AC4270005C816 /* TextoAImagenViewController.storyboard in Resources */,
+				163FCC9E1F7C0669007337E2 /* GoogleService-Info.plist in Resources */,
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
@@ -674,6 +682,7 @@
 				16193BC71F2652FD003B2C09 /* TA6.wav in Resources */,
 				16FFD7D41F1D7A6C00B4B2C3 /* topos16.png in Resources */,
 				16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */,
+				163FCCA01F7C08FC007337E2 /* Descripcion.storyboard in Resources */,
 				16FFD7AF1F1D7A6100B4B2C3 /* fondo8.jpg in Resources */,
 				16FFD7AE1F1D7A6100B4B2C3 /* fondo7.jpg in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
@@ -851,6 +860,7 @@
 				161D21531F0345650098ADA3 /* Pagina.swift in Sources */,
 				163BB7B11F06C95400ECA352 /* Libro.swift in Sources */,
 				16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */,
+				163FCCA31F7C0920007337E2 /* DescripcionViewController.swift in Sources */,
 				169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */,
 				160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */,
 				16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */,
