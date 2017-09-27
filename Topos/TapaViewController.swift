@@ -199,7 +199,7 @@ class TapaViewController: UIViewController {
         
         let urlString: String = filename.relativePath
         let fondo = urlString
-        let musica = "TA1_Intro"
+        let musica = "TA1"
         let audio = miPagina.audio
         
         let isoDate = "2016-04-14T10:44:00+0000"
