@@ -9,9 +9,13 @@
 import UIKit
 import CoreData
 
+import AVKit
+
 private let reuseIdentifier = "Cell"
 
 class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var audioPlayer : AVAudioPlayer!
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
@@ -26,6 +30,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
 
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -33,6 +38,19 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         Ver ()
         self.miGaleria?.reloadData()
         
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "TA1", ofType: "wav")!)
+        audioPlayer = try! AVAudioPlayer(contentsOf: playYoda as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.volume = 1.0
+        audioPlayer.numberOfLoops = 99
+        audioPlayer.play()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        audioPlayer.stop()
     }
     
     @IBAction func elijeBorrar(_ sender: Any) {

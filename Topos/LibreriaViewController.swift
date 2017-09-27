@@ -7,13 +7,47 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+//import SwiftySound
+//import KDEAudioPlayer
+
+import CoreMedia
+import Foundation
+import CoreData
+
+//import KDEAudioPlayer
 
 class LibreriaViewController: UIViewController {
-
+    
+    var audioPlayer : AVAudioPlayer!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "TA1", ofType: "wav")!)
+        audioPlayer = try! AVAudioPlayer(contentsOf: playYoda as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.volume = 1.0
+        audioPlayer.numberOfLoops = 99
+        audioPlayer.play()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        audioPlayer.stop()
     }
 
     override func didReceiveMemoryWarning() {
