@@ -72,10 +72,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="i8R-YN-MPk" appends="YES" id="hqp-ql-55Y"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="btnCompartir" destination="xoK-Zs-UH8" id="hAu-hb-MbU"/>
@@ -85,6 +90,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3S-gW-Pyl" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="i8R-YN-MPk">
+                    <connections>
+                        <action selector="elijePausa:" destination="S3u-yD-3vm" id="s1R-Jh-hVS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="230.28169014084509" y="135"/>
         </scene>

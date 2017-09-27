@@ -758,10 +758,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
-        self.viewTapa.isHidden = false
+        //self.viewTapa.isHidden = false
         //viewTapa.isHidden = false
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
+        
+        self.cargaVideo()
         
     }
     
