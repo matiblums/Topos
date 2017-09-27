@@ -15,6 +15,7 @@ target 'Topos' do
   pod 'LNICoverFlowLayout'
   pod 'IQKeyboardManagerSwift'
   pod 'NVActivityIndicatorView'
+  pod 'Firebase/Core'
   
 
   target 'ToposTests' do

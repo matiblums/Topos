@@ -137,6 +137,7 @@
 		16193BC11F2652FD003B2C09 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
 		161D21521F0345650098ADA3 /* Pagina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagina.swift; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		163FCC9C1F7C0520007337E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
@@ -405,6 +406,7 @@
 				16EA3D341EDD971700B30D72 /* Assets.xcassets */,
 				16EA3D391EDD971700B30D72 /* Info.plist */,
 				16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */,
+				163FCC9C1F7C0520007337E2 /* GoogleService-Info.plist */,
 			);
 			path = Topos;
 			sourceTree = "<group>";

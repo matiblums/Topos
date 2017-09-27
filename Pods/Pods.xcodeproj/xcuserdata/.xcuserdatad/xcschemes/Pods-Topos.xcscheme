@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4CC03D7FA8AF83B53B6841422D8EBBDF'
+               BlueprintIdentifier = 'C7DD200217913B71D3CAD44986FD95C7'
                BlueprintName = 'Pods-Topos'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Topos.framework'>
