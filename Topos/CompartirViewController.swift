@@ -69,13 +69,15 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         //viewTapa.isHidden = true
         
         controlaCantidad = 0
-        self.viewTapa.isHidden = true
+        //self.viewTapa.isHidden = false
+        
+        verificaVIdeo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        verificaVIdeo()
+        
         
     }
     
@@ -97,13 +99,16 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     func cargaVideo(){
-        self.viewTapa.isHidden = true
+        self.viewTapa.isHidden = false
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
         let filePathURL = URL(fileURLWithPath: videoDataPath)
         verVideo(url: filePathURL as NSURL)
         isPlay = true
+        avPlayer.play()
+        avPlayer.pause()
+        
     }
     
     func creaVideo(){
@@ -907,8 +912,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePlayTotal(_ sender: Any){
         
-        cargaVideo()
-        
+        //cargaVideo()
+        self.viewTapa.isHidden = true
+        avPlayer.play()
     }
     
     @IBAction func elijePlay(_ sender: Any){
@@ -921,8 +927,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePausa(_ sender: Any){
         
-        btnPlay.isHidden = false
-        btnPause.isHidden = true
+        self.viewTapa.isHidden = false
         avPlayer.pause()
         
     }

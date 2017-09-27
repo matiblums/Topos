@@ -31,5 +31,15 @@ class LibreriaViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
         
     }
+    
+    @IBAction func elijeDesc(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Descripcion", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Descripcion") as! DescripcionViewController
+        
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+        
+    }
 
 }
