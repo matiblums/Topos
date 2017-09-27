@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F45451EE4E99500980DEB /* PeliculaViewController.swift */; };
 		160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160F45471EE4E9A400980DEB /* Pelicula.storyboard */; };
-		16193BC21F2652FD003B2C09 /* TA1_Intro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBA1F2652FD003B2C09 /* TA1_Intro.wav */; };
-		16193BC31F2652FD003B2C09 /* TA2_cuarto .wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBB1F2652FD003B2C09 /* TA2_cuarto .wav */; };
-		16193BC41F2652FD003B2C09 /* TA3_mar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBC1F2652FD003B2C09 /* TA3_mar.wav */; };
-		16193BC51F2652FD003B2C09 /* TA4_selva.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBD1F2652FD003B2C09 /* TA4_selva.wav */; };
+		16193BC21F2652FD003B2C09 /* TA1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBA1F2652FD003B2C09 /* TA1.wav */; };
+		16193BC31F2652FD003B2C09 /* TA2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBB1F2652FD003B2C09 /* TA2.wav */; };
+		16193BC41F2652FD003B2C09 /* TA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBC1F2652FD003B2C09 /* TA3.wav */; };
+		16193BC51F2652FD003B2C09 /* TA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBD1F2652FD003B2C09 /* TA4.wav */; };
 		16193BC61F2652FD003B2C09 /* TA5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBE1F2652FD003B2C09 /* TA5.wav */; };
 		16193BC71F2652FD003B2C09 /* TA6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BBF1F2652FD003B2C09 /* TA6.wav */; };
-		16193BC81F2652FD003B2C09 /* TA7_espacio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC01F2652FD003B2C09 /* TA7_espacio.wav */; };
+		16193BC81F2652FD003B2C09 /* TA7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC01F2652FD003B2C09 /* TA7.wav */; };
 		16193BC91F2652FD003B2C09 /* TA8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16193BC11F2652FD003B2C09 /* TA8.wav */; };
 		161D21531F0345650098ADA3 /* Pagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D21521F0345650098ADA3 /* Pagina.swift */; };
 		163BB7B11F06C95400ECA352 /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BB7B01F06C95400ECA352 /* Libro.swift */; };
@@ -127,13 +127,13 @@
 		0A638369653C76C1B1A5257E /* Pods-ToposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToposTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToposTests/Pods-ToposTests.debug.xcconfig"; sourceTree = "<group>"; };
 		160F45451EE4E99500980DEB /* PeliculaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeliculaViewController.swift; sourceTree = "<group>"; };
 		160F45471EE4E9A400980DEB /* Pelicula.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pelicula.storyboard; sourceTree = "<group>"; };
-		16193BBA1F2652FD003B2C09 /* TA1_Intro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA1_Intro.wav; sourceTree = "<group>"; };
-		16193BBB1F2652FD003B2C09 /* TA2_cuarto .wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "TA2_cuarto .wav"; sourceTree = "<group>"; };
-		16193BBC1F2652FD003B2C09 /* TA3_mar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA3_mar.wav; sourceTree = "<group>"; };
-		16193BBD1F2652FD003B2C09 /* TA4_selva.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA4_selva.wav; sourceTree = "<group>"; };
+		16193BBA1F2652FD003B2C09 /* TA1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA1.wav; sourceTree = "<group>"; };
+		16193BBB1F2652FD003B2C09 /* TA2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA2.wav; sourceTree = "<group>"; };
+		16193BBC1F2652FD003B2C09 /* TA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA3.wav; sourceTree = "<group>"; };
+		16193BBD1F2652FD003B2C09 /* TA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA4.wav; sourceTree = "<group>"; };
 		16193BBE1F2652FD003B2C09 /* TA5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA5.wav; sourceTree = "<group>"; };
 		16193BBF1F2652FD003B2C09 /* TA6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA6.wav; sourceTree = "<group>"; };
-		16193BC01F2652FD003B2C09 /* TA7_espacio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA7_espacio.wav; sourceTree = "<group>"; };
+		16193BC01F2652FD003B2C09 /* TA7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA7.wav; sourceTree = "<group>"; };
 		16193BC11F2652FD003B2C09 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
 		161D21521F0345650098ADA3 /* Pagina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagina.swift; sourceTree = "<group>"; };
 		163BB7B01F06C95400ECA352 /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
@@ -272,13 +272,13 @@
 		165A0C4A1EE71B22000A6788 /* sonidos */ = {
 			isa = PBXGroup;
 			children = (
-				16193BBA1F2652FD003B2C09 /* TA1_Intro.wav */,
-				16193BBB1F2652FD003B2C09 /* TA2_cuarto .wav */,
-				16193BBC1F2652FD003B2C09 /* TA3_mar.wav */,
-				16193BBD1F2652FD003B2C09 /* TA4_selva.wav */,
+				16193BBA1F2652FD003B2C09 /* TA1.wav */,
+				16193BBB1F2652FD003B2C09 /* TA2.wav */,
+				16193BBC1F2652FD003B2C09 /* TA3.wav */,
+				16193BBD1F2652FD003B2C09 /* TA4.wav */,
 				16193BBE1F2652FD003B2C09 /* TA5.wav */,
 				16193BBF1F2652FD003B2C09 /* TA6.wav */,
-				16193BC01F2652FD003B2C09 /* TA7_espacio.wav */,
+				16193BC01F2652FD003B2C09 /* TA7.wav */,
 				16193BC11F2652FD003B2C09 /* TA8.wav */,
 			);
 			name = sonidos;
@@ -619,7 +619,7 @@
 			files = (
 				16FFD7CA1F1D7A6C00B4B2C3 /* topos6.png in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
-				16193BC41F2652FD003B2C09 /* TA3_mar.wav in Resources */,
+				16193BC41F2652FD003B2C09 /* TA3.wav in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
 				16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */,
@@ -663,10 +663,10 @@
 				16FFD7B01F1D7A6100B4B2C3 /* fondo9.jpg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
-				16193BC81F2652FD003B2C09 /* TA7_espacio.wav in Resources */,
+				16193BC81F2652FD003B2C09 /* TA7.wav in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
-				16193BC51F2652FD003B2C09 /* TA4_selva.wav in Resources */,
+				16193BC51F2652FD003B2C09 /* TA4.wav in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
 				16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */,
 				16193BC71F2652FD003B2C09 /* TA6.wav in Resources */,
@@ -677,12 +677,12 @@
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */,
 				16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */,
-				16193BC21F2652FD003B2C09 /* TA1_Intro.wav in Resources */,
+				16193BC21F2652FD003B2C09 /* TA1.wav in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */,
 				16193BC61F2652FD003B2C09 /* TA5.wav in Resources */,
 				16FFD7CD1F1D7A6C00B4B2C3 /* topos9.png in Resources */,
-				16193BC31F2652FD003B2C09 /* TA2_cuarto .wav in Resources */,
+				16193BC31F2652FD003B2C09 /* TA2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
