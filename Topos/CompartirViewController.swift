@@ -66,10 +66,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
-        viewTapa.isHidden = true
+        //viewTapa.isHidden = true
         
         controlaCantidad = 0
-        
+        self.viewTapa.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,19 +97,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     func cargaVideo(){
-        
-        let miAutor = self.libro?.autor
-        let miTitulo = self.libro?.titulo
-        let miTapa = self.libro?.tapa
-        lblAutor.text = miAutor
-        lblTitulo.text = miTitulo
-        let image: UIImage = UIImage(named: miTapa!)!
-        imgTapa.image = image
-
-        
-        self.viewTapa.isHidden = false
-        
-        
+        self.viewTapa.isHidden = true
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
+        let filePathURL = URL(fileURLWithPath: videoDataPath)
+        verVideo(url: filePathURL as NSURL)
+        isPlay = true
     }
     
     func creaVideo(){
@@ -119,13 +113,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         let miLibro = self.libro
  
-        let miAutor = self.libro?.autor
-        let miTitulo = self.libro?.titulo
-        let miTapa = self.libro?.tapa
-        lblAutor.text = miAutor
-        lblTitulo.text = miTitulo
-        let image: UIImage = UIImage(named: miTapa!)!
-        imgTapa.image = image
+        //let miAutor = self.libro?.autor
+        //let miTitulo = self.libro?.titulo
+        //let miTapa = self.libro?.tapa
+        //lblAutor.text = miAutor
+        //lblTitulo.text = miTitulo
+        //let image: UIImage = UIImage(named: miTapa!)!
+        //imgTapa.image = image
         
         
         
@@ -574,7 +568,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                             
                         
                             self.stopAnimating()
-                            self.viewTapa.isHidden = false
+                            //self.viewTapa.isHidden = false
+                            
+                            self.cargaVideo()
                         }
                     }
             })
@@ -715,7 +711,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     func verVideo(url: NSURL){
         //btnPlay.isHidden = true
        // btnPause.isHidden = false
-        viewTapa.isHidden = true
+        //viewTapa.isHidden = true
         
         
         avPlayer = AVPlayer(url: url as URL)
@@ -757,8 +753,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
-        
-        viewTapa.isHidden = false
+        self.viewTapa.isHidden = false
+        //viewTapa.isHidden = false
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
         
@@ -911,21 +907,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePlayTotal(_ sender: Any){
         
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
+        cargaVideo()
         
-        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
-        
-        let filePathURL = URL(fileURLWithPath: videoDataPath)
-        
-        
-        
-        //let videoGuardado = self.libro?.file
-        //let videoFinal = NSURL(string: videoGuardado!)!
-        
-        verVideo(url: filePathURL as NSURL)
-       // verVideo(url: videoFinal)
-        isPlay = true
     }
     
     @IBAction func elijePlay(_ sender: Any){

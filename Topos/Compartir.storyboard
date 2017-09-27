@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ArialRoundedMTBold.ttf">
-            <string>ArialRoundedMTBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Compartir View Controller-->
         <scene sceneID="ZJ5-Bd-L2A">
@@ -35,10 +30,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tapa1" translatesAutoresizingMaskIntoConstraints="NO" id="VGi-fe-940">
-                                        <rect key="frame" x="89" y="53" width="391" height="214"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzD-dF-loN">
                                         <rect key="frame" x="251" y="127" width="67" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -47,33 +38,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="elijePlayTotal:" destination="S3u-yD-3vm" eventType="touchUpInside" id="4kR-T2-h4D"/>
+                                            <action selector="elijePlayTotal:" destination="S3u-yD-3vm" eventType="touchUpInside" id="bze-Hg-g9Y"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRh-DN-TI0">
-                                        <rect key="frame" x="135" y="69" width="305" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="2" height="1"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K17-Af-pTz">
-                                        <rect key="frame" x="2" y="0.0" width="565" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-PU-qRp" userLabel="Button Salir">
-                                                <rect key="frame" x="8" y="18" width="64" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="btnSalir"/>
-                                                <connections>
-                                                    <action selector="elijeVolver:" destination="S3u-yD-3vm" eventType="touchUpInside" id="alC-IZ-Gqr"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.60266285211267601" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoK-Zs-UH8" userLabel="Btn Guardar">
                                         <rect key="frame" x="29" y="275" width="105" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -96,28 +63,23 @@
                                             <action selector="elijeBorrar:" destination="S3u-yD-3vm" eventType="touchUpInside" id="19P-bJ-p9t"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-mh-J6e">
-                                        <rect key="frame" x="181" y="193" width="207" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="2" height="1"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-PU-qRp" userLabel="Button Salir">
+                                        <rect key="frame" x="29" y="15" width="64" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btnSalir"/>
+                                        <connections>
+                                            <action selector="elijeVolver:" destination="S3u-yD-3vm" eventType="touchUpInside" id="alC-IZ-Gqr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="btnCompartir" destination="xoK-Zs-UH8" id="hAu-hb-MbU"/>
-                        <outlet property="btnPlayTotal" destination="QzD-dF-loN" id="nTv-rd-1ez"/>
-                        <outlet property="imgTapa" destination="VGi-fe-940" id="FOH-yx-I95"/>
-                        <outlet property="lblAutor" destination="V0V-mh-J6e" id="h30-xH-ieJ"/>
-                        <outlet property="lblTitulo" destination="oRh-DN-TI0" id="7Z9-8P-EMh"/>
-                        <outlet property="viewFondoBotones" destination="K17-Af-pTz" id="7nO-XS-WeT"/>
+                        <outlet property="btnPlayTotal" destination="QzD-dF-loN" id="lVN-fP-8Ae"/>
                         <outlet property="viewTapa" destination="3uF-be-ifa" id="mXW-YS-9BG"/>
                         <outlet property="viewVideo" destination="K83-5P-ZLR" id="HpV-ah-Uix"/>
                     </connections>
@@ -132,6 +94,5 @@
         <image name="btnCompartir" width="235" height="68"/>
         <image name="btnPlayVideo" width="136" height="135"/>
         <image name="btnSalir" width="141" height="55"/>
-        <image name="tapa1" width="1338" height="754"/>
     </resources>
 </document>
