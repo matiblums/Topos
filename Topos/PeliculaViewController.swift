@@ -193,7 +193,7 @@ class PeliculaViewController: UIViewController, AudioPlayerDelegate {
         
         let itemFondo = AudioItem(mediumQualitySoundURL: playYoda as URL)
         playerFondo.play(item: itemFondo!)
-        playerFondo.volume = 0.1
+        playerFondo.volume = 1.0
         
         let itemGrabado = AudioItem(mediumQualitySoundURL: self.directoryURL()! as URL)
         playerGrabado.play(item: itemGrabado!)
