@@ -74,7 +74,7 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
     @IBAction func btnPlay(_ sender: Any) {
         
         //Sound.play(file: tocado)
-        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: tocado, ofType: "wav")!)
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: tocado, ofType: "mp3")!)
         let itemFondo = AudioItem(mediumQualitySoundURL: playYoda as URL)
         
         playerFondo.play(item: itemFondo!)
@@ -132,7 +132,7 @@ class GaleriaMusicaViewController: UIViewController, UICollectionViewDataSource,
         
         //Sound.play(file: tocado)
         
-        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: tocado, ofType: "wav")!)
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: tocado, ofType: "mp3")!)
         let itemFondo = AudioItem(mediumQualitySoundURL: playYoda as URL)
         
         playerFondo.play(item: itemFondo!)

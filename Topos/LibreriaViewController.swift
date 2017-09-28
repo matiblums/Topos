@@ -36,7 +36,7 @@ class LibreriaViewController: UIViewController {
         super.viewWillAppear(animated)
         
         
-        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "TA1", ofType: "wav")!)
+        let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "TA1", ofType: "mp3")!)
         audioPlayer = try! AVAudioPlayer(contentsOf: playYoda as URL)
         audioPlayer.prepareToPlay()
         audioPlayer.volume = 1.0

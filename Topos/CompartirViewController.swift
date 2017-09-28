@@ -60,6 +60,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     var isPlay = false
     
+    let playerLayer = AVPlayerLayer()
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -99,6 +101,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     func cargaVideo(){
+        
+        self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 391 / 2, y: self.view.frame.size.height / 2 - 214 / 2, width:391, height:214)
+        
         self.viewTapa.isHidden = false
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
@@ -333,7 +338,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         var mergedAudioVideoURl = NSURL()
         
-        let playAudio1 = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaUrl as String, ofType: "wav")!)
+        let playAudio1 = NSURL(fileURLWithPath: Bundle.main.path(forResource: musicaUrl as String, ofType: "mp3")!)
         
         let sonidoGuardado = audioUrl
         
@@ -720,7 +725,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         avPlayer = AVPlayer(url: url as URL)
-        let playerLayer = AVPlayerLayer()
+        
         playerLayer.player = avPlayer
         playerLayer.frame = self.viewVideo.bounds
         playerLayer.backgroundColor = UIColor.clear.cgColor
@@ -916,6 +921,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         //cargaVideo()
         self.viewTapa.isHidden = true
+        
+        self.viewVideo.frame = CGRect(x: 0, y: 0, width:self.view.frame.size.width, height:self.view.frame.size.height)
+        
+        playerLayer.frame = self.viewVideo.bounds
+        
         avPlayer.play()
     }
     
