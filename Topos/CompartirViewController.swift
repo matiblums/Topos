@@ -34,6 +34,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var lblAutor: UILabel!
     
+    @IBOutlet weak var lblCargando: UILabel!
+    
     var documentController : UIDocumentInteractionController!
     
     var avPlayer: AVPlayer!
@@ -71,8 +73,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         //viewTapa.isHidden = true
         
         controlaCantidad = 0
-        //self.viewTapa.isHidden = false
-        
+        self.viewTapa.isHidden = true
+        self.lblCargando.isHidden = false
         verificaVIdeo()
     }
     
@@ -104,7 +106,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 391 / 2, y: self.view.frame.size.height / 2 - 214 / 2, width:391, height:214)
         
-        self.viewTapa.isHidden = false
+        
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
@@ -113,13 +115,18 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         isPlay = true
         avPlayer.play()
         avPlayer.pause()
-        
+        self.lblCargando.isHidden = true
+        self.viewTapa.isHidden = false
     }
     
     func creaVideo(){
         
         NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
-        self.startAnimating()
+        NVActivityIndicatorView.DEFAULT_COLOR = .white
+        NVActivityIndicatorView.DEFAULT_TEXT_COLOR = .white
+        
+        
+        //self.startAnimating()
         
         let miLibro = self.libro
  
@@ -577,7 +584,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                             //self.videoFinal = NSURL(string: self.videoFinalStr as String)!
                             
                         
-                            self.stopAnimating()
+                             //self.stopAnimating()
                             //self.viewTapa.isHidden = false
                             
                             self.cargaVideo()
