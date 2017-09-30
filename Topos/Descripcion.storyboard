@@ -23,28 +23,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tituloentrada" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-6f-ids">
-                                <rect key="frame" x="127" y="35" width="314" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zha-xT-2Zv">
-                                <rect key="frame" x="20" y="170" width="528" height="150"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-vF-Fph">
-                                <rect key="frame" x="20" y="20" width="73" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-vF-Fph">
+                                <rect key="frame" x="20" y="20" width="93" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="0P0-Tb-rgd"/>
+                                    <constraint firstAttribute="height" constant="30" id="uIf-zJ-cZ4"/>
+                                </constraints>
                                 <state key="normal" image="btnVolver"/>
                                 <connections>
                                     <action selector="elijeVolver:" destination="fhp-Lw-uWw" eventType="touchUpInside" id="Igm-Fc-JfQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tituloentrada" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-6f-ids">
+                                <rect key="frame" x="127" y="35" width="314" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="Fxj-4U-xIp"/>
+                                    <constraint firstAttribute="width" constant="314" id="UzN-Xi-md7"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zha-xT-2Zv">
+                                <rect key="frame" x="20" y="170" width="528" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zha-xT-2Zv" firstAttribute="leading" secondItem="xIM-L6-0hh" secondAttribute="leading" constant="20" id="EC6-f2-48X"/>
+                            <constraint firstItem="6Kd-6f-ids" firstAttribute="centerX" secondItem="N9e-le-B6E" secondAttribute="centerX" id="GtJ-VW-jwy"/>
+                            <constraint firstItem="6Kd-6f-ids" firstAttribute="top" secondItem="xIM-L6-0hh" secondAttribute="top" constant="35" id="H7q-0e-jib"/>
+                            <constraint firstItem="i8t-vF-Fph" firstAttribute="top" secondItem="xIM-L6-0hh" secondAttribute="top" constant="20" id="OCu-ya-Vfp"/>
+                            <constraint firstItem="xIM-L6-0hh" firstAttribute="trailing" secondItem="zha-xT-2Zv" secondAttribute="trailing" constant="20" id="bU0-Er-hjN"/>
+                            <constraint firstItem="zha-xT-2Zv" firstAttribute="bottom" secondItem="xIM-L6-0hh" secondAttribute="bottom" id="ePF-Mt-J3u"/>
+                            <constraint firstItem="zha-xT-2Zv" firstAttribute="top" secondItem="6Kd-6f-ids" secondAttribute="bottom" constant="8" id="f17-rH-4GN"/>
+                            <constraint firstItem="i8t-vF-Fph" firstAttribute="leading" secondItem="xIM-L6-0hh" secondAttribute="leading" constant="20" id="oIG-B3-jqN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xIM-L6-0hh"/>
                     </view>
                     <connections>
@@ -53,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fq2-YB-Os4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="216"/>
+            <point key="canvasLocation" x="67.605633802816897" y="215.625"/>
         </scene>
     </scenes>
     <resources>
