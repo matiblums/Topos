@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,58 +27,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-j8-U2u">
-                                <rect key="frame" x="314" y="270" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" image="btnTerminar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="elijeBiblioteca:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="iM9-QN-qQe"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tapa" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-L7-vgU">
-                                <rect key="frame" x="89" y="53" width="391" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tituloTapa" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-WD-M5v">
-                                <rect key="frame" x="254.5" y="27" width="60" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Cuento" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-7m-Kfg" userLabel="Cuento">
-                                <rect key="frame" x="165" y="74.5" width="239" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-3A-zPp" userLabel="btnTapa">
-                                <rect key="frame" x="131" y="270" width="147" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-RI-muc">
+                                <rect key="frame" x="73" y="0.0" width="421" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tituloTapa" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-WD-M5v" userLabel="titulo">
+                                        <rect key="frame" x="180" y="21" width="60" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tapa" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-L7-vgU">
+                                        <rect key="frame" x="15" y="53" width="391" height="214"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Cuento" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-7m-Kfg" userLabel="Cuento">
+                                        <rect key="frame" x="91" y="71" width="239" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEB-cJ-40c" userLabel="cambia tapa">
+                                        <rect key="frame" x="180" y="105" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="jg0-aG-Otm"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Autor" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="MWx-ie-Fy8" userLabel="Autor">
+                                        <rect key="frame" x="91" y="173" width="239" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-j8-U2u" userLabel="terminar">
+                                        <rect key="frame" x="289" y="275" width="110" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="btnTerminar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="elijeBiblioteca:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="iM9-QN-qQe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-3A-zPp" userLabel="cambia tapa">
+                                        <rect key="frame" x="23" y="275" width="147" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="brtCambiarFondo"/>
+                                        <connections>
+                                            <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="xi3-Ob-U0E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="brtCambiarFondo"/>
-                                <connections>
-                                    <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="xi3-Ob-U0E"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Autor" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="MWx-ie-Fy8" userLabel="Autor">
-                                <rect key="frame" x="165" y="175" width="239" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEB-cJ-40c">
-                                <rect key="frame" x="254" y="109" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="jg0-aG-Otm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-Qn-U1B">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="421" id="vW7-vQ-CE9"/>
+                                    <constraint firstAttribute="height" constant="320" id="zk4-US-sXC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-Qn-U1B" userLabel="salir">
                                 <rect key="frame" x="20" y="20" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IvP-1j-iku"/>
+                                    <constraint firstAttribute="width" constant="78" id="zIR-y6-4JV"/>
+                                </constraints>
                                 <state key="normal" image="btnSalir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -87,6 +101,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7WD-Qn-U1B" firstAttribute="top" secondItem="3Z0-CD-oIK" secondAttribute="bottom" constant="20" id="3C0-jb-sRZ"/>
+                            <constraint firstItem="7WD-Qn-U1B" firstAttribute="leading" secondItem="uBQ-bK-twh" secondAttribute="leadingMargin" id="FJE-Tq-TSw"/>
+                            <constraint firstItem="VOg-RI-muc" firstAttribute="centerX" secondItem="uBQ-bK-twh" secondAttribute="centerX" id="RPY-6V-w9I"/>
+                            <constraint firstItem="VOg-RI-muc" firstAttribute="centerY" secondItem="uBQ-bK-twh" secondAttribute="centerY" id="WBI-75-ZFZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="miFondo" destination="ztl-L7-vgU" id="GKm-1J-4pa"/>
