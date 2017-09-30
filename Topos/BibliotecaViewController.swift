@@ -43,7 +43,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         audioPlayer.prepareToPlay()
         audioPlayer.volume = 1.0
         audioPlayer.numberOfLoops = 99
-        audioPlayer.play()
+        //audioPlayer.play()
     }
     
     
