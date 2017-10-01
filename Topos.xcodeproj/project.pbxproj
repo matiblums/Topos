@@ -67,8 +67,6 @@
 		16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */; };
 		16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D341EDD971700B30D72 /* Assets.xcassets */; };
 		16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */; };
-		16EA3D431EDD971800B30D72 /* ToposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D421EDD971800B30D72 /* ToposTests.swift */; };
-		16EA3D4E1EDD971800B30D72 /* ToposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */; };
 		16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */; };
 		16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */; };
 		16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */; };
@@ -101,27 +99,8 @@
 		16FFD7D51F1D7A6C00B4B2C3 /* topos17.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7C21F1D7A6C00B4B2C3 /* topos17.png */; };
 		16FFD7D61F1D7A6C00B4B2C3 /* topos18.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7C31F1D7A6C00B4B2C3 /* topos18.png */; };
 		16FFD7D71F1D7A6C00B4B2C3 /* topos19.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD7C41F1D7A6C00B4B2C3 /* topos19.png */; };
-		C401907662A20D37A2552CF0 /* Pods_ToposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A4A2B8BBDDA8CD7924CA2E /* Pods_ToposUITests.framework */; };
-		CD94E1C1E18A562C64F27470 /* Pods_ToposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5762CC9574420B77C63DFB3A /* Pods_ToposTests.framework */; };
 		FF6DEC4EB6E2846A3C726354 /* Pods_Topos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2662A8CDC72B3C983ECF85A3 /* Pods_Topos.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		16EA3D3F1EDD971800B30D72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16EA3D1F1EDD971700B30D72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16EA3D261EDD971700B30D72;
-			remoteInfo = Topos;
-		};
-		16EA3D4A1EDD971800B30D72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16EA3D1F1EDD971700B30D72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16EA3D261EDD971700B30D72;
-			remoteInfo = Topos;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		004AD28EA184FB5FCF16C814 /* Pods-Topos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Topos/Pods-Topos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,10 +169,8 @@
 		16EA3D341EDD971700B30D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EA3D371EDD971700B30D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16EA3D391EDD971700B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16EA3D3E1EDD971800B30D72 /* ToposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D421EDD971800B30D72 /* ToposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposTests.swift; sourceTree = "<group>"; };
 		16EA3D441EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16EA3D491EDD971800B30D72 /* ToposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposUITests.swift; sourceTree = "<group>"; };
 		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F256F11F75387F0010420A /* fondocuentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondocuentos.png; sourceTree = "<group>"; };
@@ -244,22 +221,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6DEC4EB6E2846A3C726354 /* Pods_Topos.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16EA3D3B1EDD971800B30D72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD94E1C1E18A562C64F27470 /* Pods_ToposTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16EA3D461EDD971800B30D72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C401907662A20D37A2552CF0 /* Pods_ToposUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				16EA3D271EDD971700B30D72 /* Topos.app */,
-				16EA3D3E1EDD971800B30D72 /* ToposTests.xctest */,
-				16EA3D491EDD971800B30D72 /* ToposUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -527,48 +486,6 @@
 			productReference = 16EA3D271EDD971700B30D72 /* Topos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		16EA3D3D1EDD971800B30D72 /* ToposTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16EA3D551EDD971800B30D72 /* Build configuration list for PBXNativeTarget "ToposTests" */;
-			buildPhases = (
-				D31B336AD96572A3931093E7 /* [CP] Check Pods Manifest.lock */,
-				16EA3D3A1EDD971800B30D72 /* Sources */,
-				16EA3D3B1EDD971800B30D72 /* Frameworks */,
-				16EA3D3C1EDD971800B30D72 /* Resources */,
-				3C5A66D11BDB7F35956E35F0 /* [CP] Embed Pods Frameworks */,
-				F00977219C9A67447521420A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16EA3D401EDD971800B30D72 /* PBXTargetDependency */,
-			);
-			name = ToposTests;
-			productName = ToposTests;
-			productReference = 16EA3D3E1EDD971800B30D72 /* ToposTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		16EA3D481EDD971800B30D72 /* ToposUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16EA3D581EDD971800B30D72 /* Build configuration list for PBXNativeTarget "ToposUITests" */;
-			buildPhases = (
-				ADD77D3FE84A6B9DED5BDFEC /* [CP] Check Pods Manifest.lock */,
-				16EA3D451EDD971800B30D72 /* Sources */,
-				16EA3D461EDD971800B30D72 /* Frameworks */,
-				16EA3D471EDD971800B30D72 /* Resources */,
-				9DF8C30474A3A9B0BE7BA857 /* [CP] Embed Pods Frameworks */,
-				7C2FC7EF8A4F710977E4C98C /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16EA3D4B1EDD971800B30D72 /* PBXTargetDependency */,
-			);
-			name = ToposUITests;
-			productName = ToposUITests;
-			productReference = 16EA3D491EDD971800B30D72 /* ToposUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -584,20 +501,6 @@
 						DevelopmentTeam = 82M5R9Y24F;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
-					};
-					16EA3D3D1EDD971800B30D72 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 82M5R9Y24F;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 16EA3D261EDD971700B30D72;
-					};
-					16EA3D481EDD971800B30D72 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 82M5R9Y24F;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 16EA3D261EDD971700B30D72;
 					};
 				};
 			};
@@ -615,8 +518,6 @@
 			projectRoot = "";
 			targets = (
 				16EA3D261EDD971700B30D72 /* Topos */,
-				16EA3D3D1EDD971800B30D72 /* ToposTests */,
-				16EA3D481EDD971800B30D72 /* ToposUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -697,20 +598,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16EA3D3C1EDD971800B30D72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16EA3D471EDD971800B30D72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -727,21 +614,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3C5A66D11BDB7F35956E35F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToposTests/Pods-ToposTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B1D02F3CBEC1FBDB88FA72F /* [CP] Copy Pods Resources */ = {
@@ -772,81 +644,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Topos/Pods-Topos-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C2FC7EF8A4F710977E4C98C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToposUITests/Pods-ToposUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DF8C30474A3A9B0BE7BA857 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToposUITests/Pods-ToposUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADD77D3FE84A6B9DED5BDFEC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D31B336AD96572A3931093E7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F00977219C9A67447521420A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToposTests/Pods-ToposTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -883,36 +680,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16EA3D3A1EDD971800B30D72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16EA3D431EDD971800B30D72 /* ToposTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16EA3D451EDD971800B30D72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16EA3D4E1EDD971800B30D72 /* ToposUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		16EA3D401EDD971800B30D72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16EA3D261EDD971700B30D72 /* Topos */;
-			targetProxy = 16EA3D3F1EDD971800B30D72 /* PBXContainerItemProxy */;
-		};
-		16EA3D4B1EDD971800B30D72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16EA3D261EDD971700B30D72 /* Topos */;
-			targetProxy = 16EA3D4A1EDD971800B30D72 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */ = {
@@ -954,8 +722,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matias Blum (RR4L87K98V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matias Blum (RR4L87K98V)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 82M5R9Y24F;
@@ -1013,8 +781,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matias Blum (RR4L87K98V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matias Blum (RR4L87K98V)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 82M5R9Y24F;
@@ -1044,6 +812,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82M5R9Y24F;
 				INFOPLIST_FILE = Topos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1052,9 +821,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1065,6 +834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82M5R9Y24F;
 				INFOPLIST_FILE = Topos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1073,71 +843,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		16EA3D561EDD971800B30D72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A638369653C76C1B1A5257E /* Pods-ToposTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ToposTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blums.ToposTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Topos.app/Topos";
-			};
-			name = Debug;
-		};
-		16EA3D571EDD971800B30D72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1EBEB92471C41608B013373 /* Pods-ToposTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ToposTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blums.ToposTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Topos.app/Topos";
-			};
-			name = Release;
-		};
-		16EA3D591EDD971800B30D72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7942D4813709BAA01003A004 /* Pods-ToposUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = ToposUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blums.ToposUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = Topos;
-			};
-			name = Debug;
-		};
-		16EA3D5A1EDD971800B30D72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 006FAFFEB787FCC8DE8BBE18 /* Pods-ToposUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = ToposUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blums.ToposUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = Topos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1158,24 +866,6 @@
 			buildConfigurations = (
 				16EA3D531EDD971800B30D72 /* Debug */,
 				16EA3D541EDD971800B30D72 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16EA3D551EDD971800B30D72 /* Build configuration list for PBXNativeTarget "ToposTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16EA3D561EDD971800B30D72 /* Debug */,
-				16EA3D571EDD971800B30D72 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16EA3D581EDD971800B30D72 /* Build configuration list for PBXNativeTarget "ToposUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16EA3D591EDD971800B30D72 /* Debug */,
-				16EA3D5A1EDD971800B30D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

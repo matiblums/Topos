@@ -2,4 +2,86 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/TimeLapseBuilder.swift"
+            timestampString = "528576691.604823"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "fillPixelBufferFromImage(_:pixelBuffer:contentMode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/CompartirViewController.swift"
+            timestampString = "528576691.605618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "createVideo(image:musicaUrl:audioUrl:num:numTotal:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Topos.CompartirViewController.createVideo(image: __ObjC.NSString, musicaUrl: __ObjC.NSString, audioUrl: __ObjC.NSString, num: Swift.Int, numTotal: Swift.Int) -&gt; ()"
+                  moduleName = "Topos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matias.blum/Documents/Topos/Topos/CompartirViewController.swift"
+                  timestampString = "528573366.6201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "2477">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.Progress) -&gt; () in Topos.CompartirViewController.createVideo(image: __ObjC.NSString, musicaUrl: __ObjC.NSString, audioUrl: __ObjC.NSString, num: Swift.Int, numTotal: Swift.Int) -&gt; ()"
+                  moduleName = "Topos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matias.blum/Documents/Topos/Topos/CompartirViewController.swift"
+                  timestampString = "528573366.622976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/CompartirViewController.swift"
+            timestampString = "528576691.60683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
+            landmarkName = "mergeMutableVideoWithAudio(videoUrl:musicaUrl:audioUrl:num:numTotal:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
