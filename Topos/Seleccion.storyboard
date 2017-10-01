@@ -119,7 +119,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F97-sW-zFd">
-                                                <rect key="frame" x="13.5" y="77" width="46" height="46"/>
+                                                <rect key="frame" x="18.5" y="77" width="46" height="46"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="GNY-Yt-4Op"/>
@@ -133,11 +133,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="F97-sW-zFd" firstAttribute="centerY" secondItem="tVx-Cb-ThS" secondAttribute="centerY" id="1Nd-4i-2wI"/>
                                             <constraint firstItem="O8i-Pg-R9M" firstAttribute="top" secondItem="tVx-Cb-ThS" secondAttribute="top" id="EDK-pB-NRg"/>
                                             <constraint firstAttribute="trailing" secondItem="O8i-Pg-R9M" secondAttribute="trailing" id="SaQ-Wd-X7R"/>
                                             <constraint firstAttribute="bottom" secondItem="O8i-Pg-R9M" secondAttribute="bottom" id="adm-be-VLV"/>
-                                            <constraint firstItem="F97-sW-zFd" firstAttribute="centerX" secondItem="tVx-Cb-ThS" secondAttribute="centerX" constant="-5" id="wuv-au-FCS"/>
+                                            <constraint firstItem="F97-sW-zFd" firstAttribute="centerY" secondItem="tVx-Cb-ThS" secondAttribute="centerY" id="hVT-0G-T8w"/>
+                                            <constraint firstItem="F97-sW-zFd" firstAttribute="centerX" secondItem="tVx-Cb-ThS" secondAttribute="centerX" id="i0w-RM-vqE"/>
                                             <constraint firstItem="O8i-Pg-R9M" firstAttribute="leading" secondItem="tVx-Cb-ThS" secondAttribute="leading" id="yte-uN-L5O"/>
                                         </constraints>
                                     </view>
@@ -193,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-yy-Q9S">
-                                                <rect key="frame" x="13.5" y="77" width="46" height="46"/>
+                                                <rect key="frame" x="18.5" y="77" width="46" height="46"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="7Hn-fj-f3h"/>
@@ -207,13 +207,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerY" secondItem="BwQ-yL-Twx" secondAttribute="centerY" id="03V-Vx-Rde"/>
                                             <constraint firstItem="9r2-wV-PwC" firstAttribute="leading" secondItem="BwQ-yL-Twx" secondAttribute="leading" id="KXu-n7-Lvm"/>
-                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerX" secondItem="BwQ-yL-Twx" secondAttribute="centerX" constant="-5" id="Qvu-6i-PY9"/>
-                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerX" secondItem="BwQ-yL-Twx" secondAttribute="centerX" constant="-5" id="bIi-Qn-nEA"/>
+                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerX" secondItem="BwQ-yL-Twx" secondAttribute="centerX" id="Zor-YV-KjZ"/>
                                             <constraint firstAttribute="bottom" secondItem="9r2-wV-PwC" secondAttribute="bottom" id="hLV-XN-RMV"/>
+                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerY" secondItem="BwQ-yL-Twx" secondAttribute="centerY" id="t34-wc-thk"/>
                                             <constraint firstAttribute="trailing" secondItem="9r2-wV-PwC" secondAttribute="trailing" id="v9R-6Z-W6W"/>
-                                            <constraint firstItem="xwS-yy-Q9S" firstAttribute="centerY" secondItem="BwQ-yL-Twx" secondAttribute="centerY" id="wcE-WA-W2f"/>
                                             <constraint firstItem="9r2-wV-PwC" firstAttribute="top" secondItem="BwQ-yL-Twx" secondAttribute="top" id="wzK-HX-xg9"/>
                                         </constraints>
                                     </view>
