@@ -119,7 +119,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F97-sW-zFd">
-                                                <rect key="frame" x="18" y="76.5" width="46" height="46.5"/>
+                                                <rect key="frame" x="18" y="76.5" width="46.5" height="46.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="GNY-Yt-4Op"/>
@@ -234,8 +234,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-2u-L8v" userLabel="Botonera Abajo">
                                 <rect key="frame" x="0.0" y="260" width="568" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="fondo">
-                                        <rect key="frame" x="154" y="5" width="78" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="fondo">
+                                        <rect key="frame" x="162" y="5" width="78" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="78" id="1Cl-jS-Xfi"/>
@@ -246,8 +246,8 @@
                                             <action selector="elijeFondo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="DGa-UC-aba"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="topo">
-                                        <rect key="frame" x="240" y="5" width="68" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="topo">
+                                        <rect key="frame" x="250" y="5" width="68" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="EgP-nN-Cpr"/>
@@ -258,8 +258,8 @@
                                             <action selector="elijeTopo:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="bhU-DI-mGL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="musica">
-                                        <rect key="frame" x="316" y="5" width="44" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="musica">
+                                        <rect key="frame" x="328" y="5" width="44" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BwH-Ov-LPP"/>
@@ -270,8 +270,8 @@
                                             <action selector="elijeMusica:" destination="cNr-Hu-wUR" eventType="touchUpInside" id="9jJ-vt-ZpF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="audio">
-                                        <rect key="frame" x="368" y="5" width="47" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="audio">
+                                        <rect key="frame" x="382" y="5" width="47" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="1zC-EH-xfV"/>
@@ -283,11 +283,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.35128123220000002" blue="0.46898413259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nAd-O6-fUr" firstAttribute="centerY" secondItem="zcX-2u-L8v" secondAttribute="centerY" id="1Zx-PN-Ft7"/>
                                     <constraint firstItem="NEA-ew-ncR" firstAttribute="centerY" secondItem="zcX-2u-L8v" secondAttribute="centerY" id="AoV-pg-mLZ"/>
+                                    <constraint firstItem="IBb-Vt-4Pa" firstAttribute="leading" secondItem="nAd-O6-fUr" secondAttribute="trailing" constant="10" id="NI2-3T-1fC"/>
+                                    <constraint firstItem="NEA-ew-ncR" firstAttribute="leading" secondItem="IBb-Vt-4Pa" secondAttribute="trailing" constant="10" id="TGU-jg-AXC"/>
+                                    <constraint firstItem="vuc-ao-P4Z" firstAttribute="leading" secondItem="NEA-ew-ncR" secondAttribute="trailing" constant="10" id="VPg-Eh-Usd"/>
                                     <constraint firstItem="IBb-Vt-4Pa" firstAttribute="centerY" secondItem="zcX-2u-L8v" secondAttribute="centerY" id="lIk-mO-pzy"/>
+                                    <constraint firstItem="IBb-Vt-4Pa" firstAttribute="centerX" secondItem="zcX-2u-L8v" secondAttribute="centerX" id="liJ-c3-zyt"/>
                                     <constraint firstItem="vuc-ao-P4Z" firstAttribute="centerY" secondItem="zcX-2u-L8v" secondAttribute="centerY" id="mQG-zb-oVU"/>
                                 </constraints>
                             </view>
