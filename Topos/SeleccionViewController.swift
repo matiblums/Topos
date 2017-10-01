@@ -52,17 +52,13 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     var contPagina = 0
     
+    var CargaPrimeraVez = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         myView?.dataSource = self
         
-        //flowLayout?.maxCoverDegree = 0
-        //flowLayout?.coverDensity = 0.25
-        //flowLayout?.minCoverScale = 0.20
-        //flowLayout?.minCoverOpacity = 0.7
-        
-         //btnCierraPagina.isHidden = false
         
         borraDatos()
         btnPlay.isHidden = true
@@ -74,7 +70,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         contPagina = paginasTotales - 2
         
-        myView?.scrollToItem(at: IndexPath(item: paginasTotales - 2, section: 0), at: .centeredHorizontally, animated: true)
         
         lblPagina.text = ""
         
@@ -82,6 +77,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         
         
     }
@@ -92,6 +88,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
         cargaBotones()
         tocaGaleria ()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -232,7 +229,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     @IBAction func btnIzq(_ sender: Any) {
-        
+        myView?.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: true)
         if(contPagina > 1){
             
             contPagina -= 1
@@ -308,7 +305,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     func tocaGaleria () {
         lblPagina.text = "Página \(contPagina)"
         
-        myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
+        //myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
         let miLibro = self.libro
         let paginasTotales = (miLibro?.paginas?.count)! + masPaginas
         
@@ -462,6 +459,10 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
         }
         
+        if(CargaPrimeraVez){
+            myView?.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+            CargaPrimeraVez = false
+        }
         
         return cell
     }
