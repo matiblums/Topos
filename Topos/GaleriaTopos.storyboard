@@ -87,7 +87,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-4K-x4V" customClass="DDImageView" customModule="DragDropUI">
-                                <rect key="frame" x="208.5" y="74" width="150" height="171"/>
+                                <rect key="frame" x="208.5" y="74" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -119,6 +119,6 @@
     <resources>
         <image name="ok_verde" width="130" height="130"/>
         <image name="sombra_abajo_fondos" width="1921" height="406"/>
-        <image name="topos1.png" width="926" height="1049"/>
+        <image name="topos1.png" width="1000" height="1000"/>
     </resources>
 </document>
