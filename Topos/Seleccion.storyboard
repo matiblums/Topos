@@ -67,30 +67,30 @@
                                 <rect key="frame" x="0.0" y="60" width="568" height="200"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="202"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="200"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
-                                            <size key="itemSize" width="387" height="200"/>
+                                            <size key="itemSize" width="400" height="200"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6zr-kG-8aV" customClass="SeleccionCollectionViewCell" customModule="Topos" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1" width="387" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-tZ-rgx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="387" height="200"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-uW-fPf">
-                                                            <rect key="frame" x="118" y="45" width="112.5" height="109"/>
+                                                            <rect key="frame" x="121" y="44.5" width="116.5" height="108"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
@@ -360,6 +360,6 @@
         <image name="edicion05_personajes.png" width="136" height="100"/>
         <image name="edicion05_play.png" width="136" height="136"/>
         <image name="edicion05_voz.png" width="125" height="133"/>
-        <image name="fondo10.jpg" width="3000" height="1506"/>
+        <image name="fondo10.jpg" width="3000" height="1500"/>
     </resources>
 </document>
