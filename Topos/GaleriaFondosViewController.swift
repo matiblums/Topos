@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
 
     @IBOutlet weak var miFondo: UIImageView!
@@ -93,6 +93,20 @@ class GaleriaFondosViewController: UIViewController, UICollectionViewDataSource,
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let miAncho = self.view.frame.size.width / 3 - 10
+        let miAlto = miAncho / 2;
+        
+        
+        
+        return CGSize(width: miAncho, height: miAlto);
+    }
+ 
+    
+
+
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

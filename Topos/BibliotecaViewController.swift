@@ -13,7 +13,7 @@ import AVKit
 
 private let reuseIdentifier = "Cell"
 
-class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     var audioPlayer : AVAudioPlayer!
     
@@ -101,7 +101,14 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let miAncho = self.view.frame.size.width / 3 - 10
+        let miAlto = miAncho / 2;
+        
+        
+        
+        return CGSize(width: miAncho, height: miAlto);
+    }
    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
