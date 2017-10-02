@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class GaleriaTapasViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+class GaleriaTapasViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
@@ -57,6 +57,15 @@ class GaleriaTapasViewController: UIViewController , UICollectionViewDataSource,
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let miAncho = self.view.frame.size.width / 3 - 10
+        let miAlto = miAncho / 2;
+        
+        
+        
+        return CGSize(width: miAncho, height: miAlto);
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

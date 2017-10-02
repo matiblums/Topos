@@ -21,35 +21,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LzI-KB-r50">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LzI-KB-r50">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yG8-xH-Ib7">
-                                <rect key="frame" x="20" y="20" width="528" height="280"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yG8-xH-Ib7">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MOY-gN-vAi">
-                                    <size key="itemSize" width="201" height="113"/>
+                                    <size key="itemSize" width="200" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="L7q-1m-3Fd" customClass="GaleriaTapasCollectionViewCell" customModule="Topos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="201" height="113"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="201" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tapa1" translatesAutoresizingMaskIntoConstraints="NO" id="rEJ-Oo-cVD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapa1" translatesAutoresizingMaskIntoConstraints="NO" id="rEJ-Oo-cVD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <size key="customSize" width="201" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rEJ-Oo-cVD" secondAttribute="bottom" id="B6Z-l7-cAR"/>
+                                            <constraint firstItem="rEJ-Oo-cVD" firstAttribute="top" secondItem="L7q-1m-3Fd" secondAttribute="top" id="GcB-iU-BDP"/>
+                                            <constraint firstAttribute="trailing" secondItem="rEJ-Oo-cVD" secondAttribute="trailing" id="Tkw-Qp-4dr"/>
+                                            <constraint firstItem="rEJ-Oo-cVD" firstAttribute="leading" secondItem="L7q-1m-3Fd" secondAttribute="leading" id="vk3-gv-PTp"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imgGaleria" destination="rEJ-Oo-cVD" id="Gbm-dU-80j"/>
                                         </connections>
@@ -62,6 +64,16 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yG8-xH-Ib7" firstAttribute="top" secondItem="L68-57-9cf" secondAttribute="bottom" id="1wc-D4-g3u"/>
+                            <constraint firstItem="1GZ-6E-Wlq" firstAttribute="top" secondItem="yG8-xH-Ib7" secondAttribute="bottom" id="AbU-wg-XUV"/>
+                            <constraint firstAttribute="trailing" secondItem="LzI-KB-r50" secondAttribute="trailing" id="RZj-pQ-bVc"/>
+                            <constraint firstItem="LzI-KB-r50" firstAttribute="leading" secondItem="vya-hF-DRL" secondAttribute="leading" id="US2-cV-qXf"/>
+                            <constraint firstItem="1GZ-6E-Wlq" firstAttribute="top" secondItem="LzI-KB-r50" secondAttribute="bottom" id="Y2S-fm-fzS"/>
+                            <constraint firstAttribute="trailing" secondItem="yG8-xH-Ib7" secondAttribute="trailing" id="lUU-lJ-6Lt"/>
+                            <constraint firstItem="yG8-xH-Ib7" firstAttribute="leading" secondItem="vya-hF-DRL" secondAttribute="leading" id="ren-Wo-Euo"/>
+                            <constraint firstItem="LzI-KB-r50" firstAttribute="top" secondItem="L68-57-9cf" secondAttribute="bottom" id="wCl-FH-zMK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZl-hz-7hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,6 +82,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tapa1" width="1338" height="754"/>
+        <image name="tapa1" width="1500" height="750"/>
     </resources>
 </document>
