@@ -122,7 +122,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let miAncho = self.view.frame.size.width / 3 - 0
+        let miAncho = self.view.frame.size.width / 2 - 0
         let miAlto = miAncho / 2;
         
         

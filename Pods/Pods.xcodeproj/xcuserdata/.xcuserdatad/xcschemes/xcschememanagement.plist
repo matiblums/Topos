@@ -44,12 +44,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ToposTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ToposUITests.xcscheme</key>
+		<key>Protobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

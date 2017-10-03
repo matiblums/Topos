@@ -27,6 +27,27 @@
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
 		168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168169E51F83C5E00075ACC9 /* prueba.storyboard */; };
+		168169FC1F8411130075ACC9 /* topos0Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F41F840C7C0075ACC9 /* topos0Chico.png */; };
+		168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169E81F840C780075ACC9 /* topos1Chico.png */; };
+		168169FE1F8411130075ACC9 /* topos2Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EA1F840C790075ACC9 /* topos2Chico.png */; };
+		168169FF1F8411130075ACC9 /* topos3Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169FB1F840C7E0075ACC9 /* topos3Chico.png */; };
+		16816A001F8411130075ACC9 /* topos4Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169ED1F840C7A0075ACC9 /* topos4Chico.png */; };
+		16816A011F8411130075ACC9 /* topos5Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EE1F840C7B0075ACC9 /* topos5Chico.png */; };
+		16816A021F8411130075ACC9 /* topos6Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169E91F840C790075ACC9 /* topos6Chico.png */; };
+		16816A031F8411130075ACC9 /* topos7Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F11F840C7C0075ACC9 /* topos7Chico.png */; };
+		16816A041F8411130075ACC9 /* topos8Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EF1F840C7B0075ACC9 /* topos8Chico.png */; };
+		16816A051F8411130075ACC9 /* topos9Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F21F840C7C0075ACC9 /* topos9Chico.png */; };
+		16816A061F8411130075ACC9 /* topos10Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EC1F840C790075ACC9 /* topos10Chico.png */; };
+		16816A071F8411130075ACC9 /* topos11Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F31F840C7C0075ACC9 /* topos11Chico.png */; };
+		16816A081F8411130075ACC9 /* topos12Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F51F840C7C0075ACC9 /* topos12Chico.png */; };
+		16816A091F8411130075ACC9 /* topos13Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F81F840C7D0075ACC9 /* topos13Chico.png */; };
+		16816A0A1F8411130075ACC9 /* topos14Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F91F840C7D0075ACC9 /* topos14Chico.png */; };
+		16816A0B1F8411130075ACC9 /* topos15Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F01F840C7B0075ACC9 /* topos15Chico.png */; };
+		16816A0C1F8411130075ACC9 /* topos16Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F61F840C7C0075ACC9 /* topos16Chico.png */; };
+		16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EB1F840C790075ACC9 /* topos17Chico.png */; };
+		16816A0E1F8411130075ACC9 /* topos18Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169FA1F840C7D0075ACC9 /* topos18Chico.png */; };
+		16816A0F1F8411130075ACC9 /* topos19Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F71F840C7D0075ACC9 /* topos19Chico.png */; };
+		16816A111F8422730075ACC9 /* ServiceAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 16816A101F84226D0075ACC9 /* ServiceAccount.json */; };
 		169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169346221F08669E00BAE79D /* Biblioteca.storyboard */; };
 		169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169346241F0866B600BAE79D /* BibliotecaViewController.swift */; };
 		16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */; };
@@ -148,6 +169,7 @@
 		168169F91F840C7D0075ACC9 /* topos14Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos14Chico.png; sourceTree = "<group>"; };
 		168169FA1F840C7D0075ACC9 /* topos18Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos18Chico.png; sourceTree = "<group>"; };
 		168169FB1F840C7E0075ACC9 /* topos3Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos3Chico.png; sourceTree = "<group>"; };
+		16816A101F84226D0075ACC9 /* ServiceAccount.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ServiceAccount.json; sourceTree = "<group>"; };
 		169346221F08669E00BAE79D /* Biblioteca.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Biblioteca.storyboard; sourceTree = "<group>"; };
 		169346241F0866B600BAE79D /* BibliotecaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaViewController.swift; sourceTree = "<group>"; };
 		16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pg.png; sourceTree = "<group>"; };
@@ -395,6 +417,7 @@
 		16EA3D1E1EDD971700B30D72 = {
 			isa = PBXGroup;
 			children = (
+				16816A101F84226D0075ACC9 /* ServiceAccount.json */,
 				16EA3D291EDD971700B30D72 /* Topos */,
 				16EA3D411EDD971800B30D72 /* ToposTests */,
 				16EA3D4C1EDD971800B30D72 /* ToposUITests */,
@@ -527,6 +550,7 @@
 				16EA3D251EDD971700B30D72 /* Resources */,
 				7A947492E4BA15DD8AF8962B /* [CP] Embed Pods Frameworks */,
 				4B1D02F3CBEC1FBDB88FA72F /* [CP] Copy Pods Resources */,
+				164EC5F41F84238A00A77C77 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -579,13 +603,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1602E1B71F7C8492001E3B7F /* TA6.mp3 in Resources */,
+				16816A031F8411130075ACC9 /* topos7Chico.png in Resources */,
 				16FFD7CA1F1D7A6C00B4B2C3 /* topos6.png in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
+				168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
 				1602E1B21F7C8492001E3B7F /* TA1.mp3 in Resources */,
+				168169FE1F8411130075ACC9 /* topos2Chico.png in Resources */,
 				16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */,
 				16FFD7C51F1D7A6C00B4B2C3 /* topos1.png in Resources */,
+				16816A0C1F8411130075ACC9 /* topos16Chico.png in Resources */,
 				16FFD7C91F1D7A6C00B4B2C3 /* topos5.png in Resources */,
 				16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */,
 				16FFD7D31F1D7A6C00B4B2C3 /* topos15.png in Resources */,
@@ -594,30 +622,40 @@
 				16FFD7C71F1D7A6C00B4B2C3 /* topos3.png in Resources */,
 				16FFD7C81F1D7A6C00B4B2C3 /* topos4.png in Resources */,
 				16FFD7AB1F1D7A6100B4B2C3 /* fondo4.jpg in Resources */,
+				168169FF1F8411130075ACC9 /* topos3Chico.png in Resources */,
+				16816A021F8411130075ACC9 /* topos6Chico.png in Resources */,
 				16FFD7D01F1D7A6C00B4B2C3 /* topos12.png in Resources */,
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
 				1602E1B51F7C8492001E3B7F /* TA7.mp3 in Resources */,
 				16FFD7D21F1D7A6C00B4B2C3 /* topos14.png in Resources */,
 				16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */,
 				16FFD7D11F1D7A6C00B4B2C3 /* topos13.png in Resources */,
+				16816A0A1F8411130075ACC9 /* topos14Chico.png in Resources */,
 				16FFD7B11F1D7A6100B4B2C3 /* fondo10.jpg in Resources */,
 				16981A3C1F3AB224006CEDAA /* edicion05_flecha_der.png in Resources */,
 				16FFD7D51F1D7A6C00B4B2C3 /* topos17.png in Resources */,
 				16FFD7CE1F1D7A6C00B4B2C3 /* topos10.png in Resources */,
+				16816A061F8411130075ACC9 /* topos10Chico.png in Resources */,
 				1672660E1F4A886800D154AA /* topos0.png in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
 				16EA07511F7AC4270005C816 /* TextoAImagenViewController.storyboard in Resources */,
 				163FCC9E1F7C0669007337E2 /* GoogleService-Info.plist in Resources */,
+				16816A041F8411130075ACC9 /* topos8Chico.png in Resources */,
 				1602E1B91F7C8492001E3B7F /* TA8.mp3 in Resources */,
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
 				168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
+				16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,
+				16816A0B1F8411130075ACC9 /* topos15Chico.png in Resources */,
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */,
+				16816A051F8411130075ACC9 /* topos9Chico.png in Resources */,
+				16816A001F8411130075ACC9 /* topos4Chico.png in Resources */,
 				1602E1B81F7C8492001E3B7F /* TA4.mp3 in Resources */,
 				16981A3F1F3AB224006CEDAA /* edicion05_fondos.png in Resources */,
+				16816A081F8411130075ACC9 /* topos12Chico.png in Resources */,
 				16981A411F3AB224006CEDAA /* edicion05_personajes.png in Resources */,
 				16FFD7AC1F1D7A6100B4B2C3 /* fondo5.jpg in Resources */,
 				16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */,
@@ -628,22 +666,29 @@
 				1602E1B41F7C8492001E3B7F /* TA5.mp3 in Resources */,
 				1602E1B31F7C8492001E3B7F /* TA2.mp3 in Resources */,
 				16FFD7D61F1D7A6C00B4B2C3 /* topos18.png in Resources */,
+				16816A011F8411130075ACC9 /* topos5Chico.png in Resources */,
 				16FFD7B01F1D7A6100B4B2C3 /* fondo9.jpg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
 				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
+				16816A0F1F8411130075ACC9 /* topos19Chico.png in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
 				169346231F08669E00BAE79D /* Biblioteca.storyboard in Resources */,
 				16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */,
+				16816A0E1F8411130075ACC9 /* topos18Chico.png in Resources */,
 				16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */,
 				16FFD7D41F1D7A6C00B4B2C3 /* topos16.png in Resources */,
+				16816A111F8422730075ACC9 /* ServiceAccount.json in Resources */,
 				16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */,
 				163FCCA01F7C08FC007337E2 /* Descripcion.storyboard in Resources */,
 				16FFD7AF1F1D7A6100B4B2C3 /* fondo8.jpg in Resources */,
+				168169FC1F8411130075ACC9 /* topos0Chico.png in Resources */,
+				16816A091F8411130075ACC9 /* topos13Chico.png in Resources */,
 				16FFD7AE1F1D7A6100B4B2C3 /* fondo7.jpg in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				1602E1B61F7C8492001E3B7F /* TA3.mp3 in Resources */,
 				16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */,
 				16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */,
+				16816A071F8411130075ACC9 /* topos11Chico.png in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */,
 				16FFD7CD1F1D7A6C00B4B2C3 /* topos9.png in Resources */,
@@ -653,6 +698,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		164EC5F41F84238A00A77C77 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "GOOGLE_APP_ID=1:266150621103:ios:341857d8c1e51173\n\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"/Users/matias.blum/Documents/Topos/ServiceAccount.json\"";
+		};
 		3C4E1D43859ABC8B4A7C7C10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

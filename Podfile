@@ -16,16 +16,8 @@ target 'Topos' do
   pod 'IQKeyboardManagerSwift'
   pod 'NVActivityIndicatorView'
   pod 'Firebase/Core'
+  pod 'Firebase/Crash'
+
   
-
-  target 'ToposTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'ToposUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end

@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         FirebaseApp.configure()
         
+        //FirebaseCrashMessage("Cause Crash button clicked")
+        //fatalError()
         
         return true
     }

@@ -94,6 +94,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
 		<key>Recorder-Recorder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
