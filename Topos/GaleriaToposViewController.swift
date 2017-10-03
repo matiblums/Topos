@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 
 
-class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, DDViewDelegate {
+class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, DDViewDelegate {
     
     @IBOutlet weak var miTopo: DDImageView!
     
@@ -21,7 +21,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var miGaleria: UICollectionView!
     
-    @IBOutlet weak var miFondoBotonera: UIView!
+    @IBOutlet weak var miFondoBotonera: UIButton!
     
     @IBOutlet weak var viewFondo: UIView!
     
@@ -29,6 +29,8 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
     
     
     var items = ["topos1.png", "topos2.png", "topos3.png", "topos4.png", "topos5.png", "topos6.png", "topos7.png", "topos8.png", "topos9.png", "topos10.png", "topos11.png", "topos12.png", "topos13.png", "topos14.png", "topos15.png", "topos16.png", "topos17.png", "topos18.png", "topos19.png"]
+    
+    var itemsChico = ["topos1Chico.png", "topos2Chico.png", "topos3Chico.png", "topos4Chico.png", "topos5Chico.png", "topos6Chico.png", "topos7Chico.png", "topos8Chico.png", "topos9Chico.png", "topos10Chico.png", "topos11Chico.png", "topos12Chico.png", "topos13Chico.png", "topos14Chico.png", "topos15Chico.png", "topos16Chico.png", "topos17Chico.png", "topos18Chico.png", "topos19Chico.png"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +71,7 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         print("Dropped Point : ", droppedPoint)
         
         
-        
+        self.view.bringSubview(toFront: miFondoBotonera)
         
         
        
@@ -119,12 +121,21 @@ class GaleriaToposViewController: UIViewController, UICollectionViewDataSource, 
         return items.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let miAncho = self.view.frame.size.width / 3 - 0
+        let miAlto = miAncho / 2;
+        
+        
+        
+        return CGSize(width: miAncho, height: miAlto);
+    }
+    
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! GaleriaToposCollectionViewCell
         
-        let imgSel = self.items[indexPath.item]
+        let imgSel = self.itemsChico[indexPath.item]
         let image: UIImage = UIImage(named: imgSel)!
         
         cell.imgGaleria.image = image

@@ -806,8 +806,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let miWidthFondo = self.view.frame.size.width
         let miHeightFondo = self.view.frame.size.height
         
-        let miWidthTopo = 176
-        let miHeightTopo = 200
+        let miWidthTopo = self.view.frame.size.width
+        let miHeightTopo = self.view.frame.size.height
         
         let size = CGSize(width: miWidthFondo, height: miHeightFondo)
         

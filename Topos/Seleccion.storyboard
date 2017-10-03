@@ -89,9 +89,9 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-uW-fPf">
-                                                            <rect key="frame" x="121" y="44.5" width="100" height="100"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topos10.png" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-uW-fPf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                     </subviews>
                                                 </view>
@@ -361,5 +361,6 @@
         <image name="edicion05_play.png" width="136" height="136"/>
         <image name="edicion05_voz.png" width="125" height="133"/>
         <image name="fondo10.jpg" width="3000" height="1500"/>
+        <image name="topos10.png" width="3000" height="1500"/>
     </resources>
 </document>

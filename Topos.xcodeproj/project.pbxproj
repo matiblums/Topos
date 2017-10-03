@@ -128,6 +128,26 @@
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
 		168169E51F83C5E00075ACC9 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
+		168169E81F840C780075ACC9 /* topos1Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos1Chico.png; sourceTree = "<group>"; };
+		168169E91F840C790075ACC9 /* topos6Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos6Chico.png; sourceTree = "<group>"; };
+		168169EA1F840C790075ACC9 /* topos2Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos2Chico.png; sourceTree = "<group>"; };
+		168169EB1F840C790075ACC9 /* topos17Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos17Chico.png; sourceTree = "<group>"; };
+		168169EC1F840C790075ACC9 /* topos10Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos10Chico.png; sourceTree = "<group>"; };
+		168169ED1F840C7A0075ACC9 /* topos4Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos4Chico.png; sourceTree = "<group>"; };
+		168169EE1F840C7B0075ACC9 /* topos5Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos5Chico.png; sourceTree = "<group>"; };
+		168169EF1F840C7B0075ACC9 /* topos8Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos8Chico.png; sourceTree = "<group>"; };
+		168169F01F840C7B0075ACC9 /* topos15Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos15Chico.png; sourceTree = "<group>"; };
+		168169F11F840C7C0075ACC9 /* topos7Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos7Chico.png; sourceTree = "<group>"; };
+		168169F21F840C7C0075ACC9 /* topos9Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos9Chico.png; sourceTree = "<group>"; };
+		168169F31F840C7C0075ACC9 /* topos11Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos11Chico.png; sourceTree = "<group>"; };
+		168169F41F840C7C0075ACC9 /* topos0Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0Chico.png; sourceTree = "<group>"; };
+		168169F51F840C7C0075ACC9 /* topos12Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos12Chico.png; sourceTree = "<group>"; };
+		168169F61F840C7C0075ACC9 /* topos16Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos16Chico.png; sourceTree = "<group>"; };
+		168169F71F840C7D0075ACC9 /* topos19Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos19Chico.png; sourceTree = "<group>"; };
+		168169F81F840C7D0075ACC9 /* topos13Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos13Chico.png; sourceTree = "<group>"; };
+		168169F91F840C7D0075ACC9 /* topos14Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos14Chico.png; sourceTree = "<group>"; };
+		168169FA1F840C7D0075ACC9 /* topos18Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos18Chico.png; sourceTree = "<group>"; };
+		168169FB1F840C7E0075ACC9 /* topos3Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos3Chico.png; sourceTree = "<group>"; };
 		169346221F08669E00BAE79D /* Biblioteca.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Biblioteca.storyboard; sourceTree = "<group>"; };
 		169346241F0866B600BAE79D /* BibliotecaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaViewController.swift; sourceTree = "<group>"; };
 		16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pg.png; sourceTree = "<group>"; };
@@ -297,6 +317,33 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
+		168169E71F840AC50075ACC9 /* toposChico */ = {
+			isa = PBXGroup;
+			children = (
+				168169F41F840C7C0075ACC9 /* topos0Chico.png */,
+				168169E81F840C780075ACC9 /* topos1Chico.png */,
+				168169EA1F840C790075ACC9 /* topos2Chico.png */,
+				168169FB1F840C7E0075ACC9 /* topos3Chico.png */,
+				168169ED1F840C7A0075ACC9 /* topos4Chico.png */,
+				168169EE1F840C7B0075ACC9 /* topos5Chico.png */,
+				168169E91F840C790075ACC9 /* topos6Chico.png */,
+				168169F11F840C7C0075ACC9 /* topos7Chico.png */,
+				168169EF1F840C7B0075ACC9 /* topos8Chico.png */,
+				168169F21F840C7C0075ACC9 /* topos9Chico.png */,
+				168169EC1F840C790075ACC9 /* topos10Chico.png */,
+				168169F31F840C7C0075ACC9 /* topos11Chico.png */,
+				168169F51F840C7C0075ACC9 /* topos12Chico.png */,
+				168169F81F840C7D0075ACC9 /* topos13Chico.png */,
+				168169F91F840C7D0075ACC9 /* topos14Chico.png */,
+				168169F01F840C7B0075ACC9 /* topos15Chico.png */,
+				168169F61F840C7C0075ACC9 /* topos16Chico.png */,
+				168169EB1F840C790075ACC9 /* topos17Chico.png */,
+				168169FA1F840C7D0075ACC9 /* topos18Chico.png */,
+				168169F71F840C7D0075ACC9 /* topos19Chico.png */,
+			);
+			name = toposChico;
+			sourceTree = "<group>";
+		};
 		16AC4A581EF18251004011F5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +360,7 @@
 		16AF16EB1EE07B27008A9B17 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				168169E71F840AC50075ACC9 /* toposChico */,
 				16FFD7411F1D781900B4B2C3 /* topos */,
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
 				16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */,
