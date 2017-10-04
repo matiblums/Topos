@@ -418,8 +418,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                 
                 let imgTopo = UserDefaults.standard.string(forKey: "topo")
                 
-                let mix : Double = Double(self.view.frame.size.width / 400)
-                let miy : Double = Double(self.view.frame.size.height / 200)
+                let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
+                let miy : Double = Double(self.view.frame.size.height / cell.imgGaleria.frame.size.height)
                 
                 let topoxGuardada: Double = Double(UserDefaults.standard.integer(forKey: "topox"))
                 let topoyGuardada: Double = Double(UserDefaults.standard.integer(forKey: "topoy"))
@@ -463,11 +463,30 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             
             let imgTopo = miPagina.topo
-            let topoxGuardada = Int(miPagina.topox)! / 2
-            let topoyGuardada = Int(miPagina.topoy)! / 2
             
             
-            let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
+            //*****************************************************************************
+            let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
+            let miy : Double = Double(self.view.frame.size.height / cell.imgGaleria.frame.size.height)
+            
+            let topoxGuardada0 = Int(miPagina.topox)!
+            let topoyGuardada0 = Int(miPagina.topoy)!
+            
+            let topoxGuardada: Double = Double(topoxGuardada0)
+            let topoyGuardada: Double = Double(topoyGuardada0)
+            
+            let finalx: Double = topoxGuardada / mix
+            let finaly: Double = topoyGuardada / miy
+            
+            let pointTopo = CGPoint(x: finalx, y: finaly)
+            
+            //*****************************************************************************
+            
+            //let topoxGuardada = Int(miPagina.topox)! / 2
+            //let topoyGuardada = Int(miPagina.topoy)! / 2
+            
+            
+            //let pointTopo = CGPoint(x: topoxGuardada, y: topoyGuardada)
             let imageTopo: UIImage = UIImage(named: imgTopo)!
             cell.imgTopo.image = imageTopo
             cell.imgTopo.frame.origin = pointTopo

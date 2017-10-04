@@ -17,7 +17,7 @@ let kFailedToAppendPixelBufferError = 1
 open class TimeLapseBuilder: NSObject {
   let photoURLs: [String]
   var videoWriter: AVAssetWriter?
-  var outputSize = CGSize(width: 1920, height: 1080)
+  var outputSize = CGSize(width: 0, height: 0)
   
   public init(photoURLs: [String]) {
     self.photoURLs = photoURLs

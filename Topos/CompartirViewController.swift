@@ -181,6 +181,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let miTopoX = miPagina.topox
             let miTopoY = miPagina.topoy
             
+            
+            
             let cgFloatTopoX : CGFloat? = Double(miTopoX).map{ CGFloat($0) }
             let cgFloatTopoY : CGFloat? = Double(miTopoY).map{ CGFloat($0) }
             
@@ -267,8 +269,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let tlb = TimeLapseBuilder(photoURLs: photosArray)
         
         
-        let miWidthFondo = self.view.frame.size.width
-        let miHeightFondo = self.view.frame.size.height
+        //let miWidthFondo = self.view.frame.size.width
+        //let miHeightFondo = self.view.frame.size.height
+        
+        let miWidthFondo = 2000
+        let miHeightFondo = 1000
         
         tlb.build(file: image, outputSize: CGSize(width: miWidthFondo, height: miHeightFondo), progress: {
             
@@ -411,8 +416,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
         
         
-        let miWidthFondo = self.view.frame.size.width
-        let miHeightFondo = self.view.frame.size.height
+        //let miWidthFondo = self.view.frame.size.width
+        //let miHeightFondo = self.view.frame.size.height
+        
+        let miWidthFondo = 2000
+        let miHeightFondo = 1000
         
         totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero,aVideoAssetTrack.timeRange.duration )
         let mutableVideoComposition : AVMutableVideoComposition = AVMutableVideoComposition()
@@ -794,8 +802,32 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?, Topox: CGFloat, Topoy: CGFloat) -> UIImage{
         
-        let topox = Topox
-        let topoy = Topoy
+        let miW = 2000
+        let miH = 1000
+        
+        let miWParcial = self.view.frame.size.width
+        let miHParcial = self.view.frame.size.height
+        
+       
+        //*****************************************************************************
+        let mix : Double = Double(CGFloat(miW) / miWParcial)
+        let miy : Double = Double(CGFloat(miH) / miHParcial)
+        
+        let topoxGuardada0 = Int(Topox)
+        let topoyGuardada0 = Int(Topoy)
+        
+        let topoxGuardada: Double = Double(topoxGuardada0)
+        let topoyGuardada: Double = Double(topoyGuardada0)
+        
+        let finalx: Double = topoxGuardada * mix
+        let finaly: Double = topoyGuardada * miy
+        
+        //let pointTopo = CGPoint(x: finalx, y: finaly)
+        
+        //*****************************************************************************
+        
+        let topox = CGFloat(finalx)
+        let topoy = CGFloat(finaly)
         
         if (backgroundImage == nil) {
             return frontImage!
@@ -803,11 +835,17 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         //let size = self.view.frame.size
         
-        let miWidthFondo = self.view.frame.size.width
-        let miHeightFondo = self.view.frame.size.height
+        //let miWidthFondo = self.view.frame.size.width
+        //let miHeightFondo = self.view.frame.size.height
         
-        let miWidthTopo = self.view.frame.size.width
-        let miHeightTopo = self.view.frame.size.height
+        let miWidthFondo = miW
+        let miHeightFondo = miH
+        
+        //let miWidthTopo = self.view.frame.size.width
+        //let miHeightTopo = self.view.frame.size.height
+        
+        let miWidthTopo = miW
+        let miHeightTopo = miH
         
         let size = CGSize(width: miWidthFondo, height: miHeightFondo)
         
