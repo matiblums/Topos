@@ -415,11 +415,12 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
                 
                 
                 
-                
                 let imgTopo = UserDefaults.standard.string(forKey: "topo")
                 
                 let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
-                let miy : Double = Double(self.view.frame.size.height / cell.imgGaleria.frame.size.height)
+                let ancho = 3000 / self.view.frame.size.width
+                let alto = (((1500 / ancho)))
+                let miy : Double = Double(alto / cell.imgGaleria.frame.size.height)
                 
                 let topoxGuardada: Double = Double(UserDefaults.standard.integer(forKey: "topox"))
                 let topoyGuardada: Double = Double(UserDefaults.standard.integer(forKey: "topoy"))
@@ -467,7 +468,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
             
             //*****************************************************************************
             let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
-            let miy : Double = Double(self.view.frame.size.height / cell.imgGaleria.frame.size.height)
+            let ancho = 3000 / self.view.frame.size.width
+            let alto = (((1500 / ancho)))
+            let miy : Double = Double(alto / cell.imgGaleria.frame.size.height)
             
             let topoxGuardada0 = Int(miPagina.topox)!
             let topoyGuardada0 = Int(miPagina.topoy)!

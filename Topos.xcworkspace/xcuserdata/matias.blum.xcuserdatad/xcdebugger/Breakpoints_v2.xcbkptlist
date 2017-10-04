@@ -10,12 +10,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "528823733.410554"
+            timestampString = "528843384.274827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "863"
-            endingLineNumber = "863"
-            landmarkName = "mergedImageWith(frontImage:backgroundImage:Topox:Topoy:)"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
+            landmarkName = "mergeMutableVideoWithAudio(videoUrl:musicaUrl:audioUrl:num:numTotal:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Topos.CompartirViewController.mergeMutableVideoWithAudio(videoUrl: __ObjC.NSURL, musicaUrl: __ObjC.NSString, audioUrl: __ObjC.NSString, num: Swift.Int, numTotal: Swift.Int) -&gt; ()"
+                  moduleName = "Topos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matias.blum/Documents/Topos/Topos/CompartirViewController.swift"
+                  timestampString = "528836966.988689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "444"
+                  endingLineNumber = "444"
+                  offsetFromSymbolStart = "12211">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 () -&gt; () in Topos.CompartirViewController.mergeMutableVideoWithAudio(videoUrl: __ObjC.NSURL, musicaUrl: __ObjC.NSString, audioUrl: __ObjC.NSString, num: Swift.Int, numTotal: Swift.Int) -&gt; ()"
+                  moduleName = "Topos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matias.blum/Documents/Topos/Topos/CompartirViewController.swift"
+                  timestampString = "528836966.991465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "445"
+                  endingLineNumber = "445"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/SeleccionViewController.swift"
+            timestampString = "528843384.276194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "414"
+            endingLineNumber = "414"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/SeleccionViewController.swift"
+            timestampString = "528843384.278142"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/SeleccionViewController.swift"
+            timestampString = "528843384.279743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "433"
+            endingLineNumber = "433"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/SeleccionViewController.swift"
+            timestampString = "528843384.281563"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

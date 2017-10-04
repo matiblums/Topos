@@ -808,10 +808,21 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let miWParcial = self.view.frame.size.width
         let miHParcial = self.view.frame.size.height
         
-       
+        let ancho = 3000 / self.view.frame.size.width
+        let alto = (((1500 / ancho)))
+        //let miy2 : Double = Double(alto / miHParcial)
+        
+       /*
+         let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
+         let ancho = 3000 / self.view.frame.size.width
+         let alto = (((1500 / ancho)))
+         let miy : Double = Double(alto / cell.imgGaleria.frame.size.height)
+         */
         //*****************************************************************************
         let mix : Double = Double(CGFloat(miW) / miWParcial)
-        let miy : Double = Double(CGFloat(miH) / miHParcial)
+        let miy : Double = Double(CGFloat(miH) / alto)
+        
+   
         
         let topoxGuardada0 = Int(Topox)
         let topoyGuardada0 = Int(Topoy)
