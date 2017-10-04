@@ -503,6 +503,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         if(position == total - 1){
+           
             
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
@@ -511,8 +512,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
  
     }
     
-    
-    
+   
     func mergeVideoFiles(videoFileUrls: NSArray) {
         
         var mergeVideoURL = NSURL()
@@ -532,6 +532,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             } catch _ {
                 print("Failed to load first track")
         }
+            
+       
             
         duracionDesde = duracionDesde + firstAsset.duration
   
