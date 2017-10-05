@@ -76,6 +76,8 @@
 		16BC26F91EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */; };
 		16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */; };
 		16BCBEB51F06BE08001DDC07 /* TapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */; };
+		16C5FC471F86C524007814B1 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16C5FC461F86C520007814B1 /* video.mp4 */; };
+		16C5FC491F86C8A8007814B1 /* videoRealizado.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16C5FC481F86C8A5007814B1 /* videoRealizado.mp4 */; };
 		16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A7D1F1C55430076F381 /* Compartir.storyboard */; };
 		16CB0A8D1F1C55CB0076F381 /* CompartirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */; };
 		16CB0A8E1F1C55CB0076F381 /* TimeLapseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */; };
@@ -198,6 +200,8 @@
 		16BC26F81EE49D85009C2688 /* GaleriaMusicaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaMusicaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16BCBEB21F06BDF0001DDC07 /* Tapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tapa.storyboard; sourceTree = "<group>"; };
 		16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapaViewController.swift; sourceTree = "<group>"; };
+		16C5FC461F86C520007814B1 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		16C5FC481F86C8A5007814B1 /* videoRealizado.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoRealizado.mp4; sourceTree = "<group>"; };
 		16CB0A7D1F1C55430076F381 /* Compartir.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compartir.storyboard; sourceTree = "<group>"; };
 		16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartirViewController.swift; sourceTree = "<group>"; };
 		16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLapseBuilder.swift; sourceTree = "<group>"; };
@@ -408,6 +412,8 @@
 		16CB0A7F1F1C559D0076F381 /* assests */ = {
 			isa = PBXGroup;
 			children = (
+				16C5FC461F86C520007814B1 /* video.mp4 */,
+				16C5FC481F86C8A5007814B1 /* videoRealizado.mp4 */,
 				165A0C4A1EE71B22000A6788 /* sonidos */,
 				16AF16EB1EE07B27008A9B17 /* imagenes */,
 			);
@@ -648,6 +654,7 @@
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
 				16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,
+				16C5FC471F86C524007814B1 /* video.mp4 in Resources */,
 				16816A0B1F8411130075ACC9 /* topos15Chico.png in Resources */,
 				16AF17031EE09395008A9B17 /* GaleriaMusica.jpeg in Resources */,
 				16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */,
@@ -688,6 +695,7 @@
 				1602E1B61F7C8492001E3B7F /* TA3.mp3 in Resources */,
 				16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */,
 				16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */,
+				16C5FC491F86C8A8007814B1 /* videoRealizado.mp4 in Resources */,
 				16816A071F8411130075ACC9 /* topos11Chico.png in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,
 				16FFD7A91F1D7A6100B4B2C3 /* fondo2.jpg in Resources */,

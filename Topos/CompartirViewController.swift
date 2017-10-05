@@ -46,6 +46,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     //var videoFinalStr = NSString()
     
+    
     var paginas : [Pagina] = []
     var fetchResultsController : NSFetchedResultsController<Pagina>!
     var pagina : Pagina?
@@ -64,9 +65,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     let playerLayer = AVPlayerLayer()
     
+    var nombreArchivoFinal = NSURL()
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        videoFinal ()
         
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
@@ -504,7 +509,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(position == total - 1){
            
-            
+            //videosArray.append(nombreArchivoFinal)
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
@@ -536,21 +541,26 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             }
          
             duracionDesde = duracionDesde + firstAsset.duration
+            
         }
         /*
-        guard let path = Bundle.main.path(forResource: "videoFinal", ofType:"mp4") else {
+        guard let path = Bundle.main.path(forResource: "videoRealizado", ofType:"mp4") else {
             debugPrint("video.m4v not found")
             return
         }
+ 
+        //firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
         
-        let firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
+        let firstAsset = AVURLAsset(url: nombreArchivoFinal as URL)
         
         do {
             try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
         } catch _ {
             print("Failed to load first track")
         }
-        */
+         */
+        
+        
         let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
         let random = randomString(length: 8)
         let nombreArchivo = random + ".mp4"
@@ -616,7 +626,68 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
 
     
     //*******************************************************************************************************************
-    
+    func videoFinal () {
+        
+        var mergeVideoURL = NSURL()
+        
+        
+        let mixComposition = AVMutableComposition()
+        
+        let duracionDesde = kCMTimeZero
+        
+        
+        guard let path = Bundle.main.path(forResource: "video", ofType:"mp4") else {
+            debugPrint("video.m4v not found")
+            return
+        }
+        
+        let firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
+        
+        
+        do {
+            try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
+        } catch _ {
+            print("Failed to load first track")
+        }
+        
+        
+        
+        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let random = randomString(length: 8)
+        let nombreArchivo = random + ".mp4"
+        mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
+        let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
+        assetExport?.outputFileType = AVFileType.mp4
+        assetExport?.outputURL = mergeVideoURL as URL
+        removeFileAtURLIfExists(url: mergeVideoURL)
+        
+        
+        
+        assetExport?.exportAsynchronously(completionHandler:{
+            
+            switch assetExport!.status{
+                
+            case AVAssetExportSessionStatus.failed:
+                print("failed \(String(describing: assetExport?.error))")
+            case AVAssetExportSessionStatus.cancelled:
+                print("cancelled \(String(describing: assetExport?.error))")
+            case AVAssetExportSessionStatus.unknown:
+                print("unknown\(String(describing: assetExport?.error))")
+            case AVAssetExportSessionStatus.waiting:
+                print("waiting\(String(describing: assetExport?.error))")
+            case AVAssetExportSessionStatus.exporting:
+                print("exporting\(String(describing: assetExport?.error))")
+            default:
+                DispatchQueue.main.async() {
+                    // print("-----Merge Video exportation complete.\(mergeVideoURL)")
+                   
+                    self.nombreArchivoFinal = mergeVideoURL
+                  
+                }
+            }
+        })
+        
+    }
     
     
     func randomString(length: Int) -> String {
