@@ -104,7 +104,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func cargaVideo(){
         
-        self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 391 / 2, y: self.view.frame.size.height / 2 - 214 / 2, width:391, height:214)
+        self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 400 / 2, y: self.view.frame.size.height / 2 - 200 / 2, width:400, height:200)
         
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -522,24 +522,35 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         var duracionDesde = kCMTimeZero
         
-        for i in 0 ..< videoFileUrls.count {
+        for i in 0 ..< videoFileUrls.count{
             
             
-            let firstAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
+            
+            var firstAsset : AVURLAsset
+            firstAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
             
             do {
                 try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
-            } catch _ {
+                } catch _ {
                 print("Failed to load first track")
+            }
+         
+            duracionDesde = duracionDesde + firstAsset.duration
         }
-            
-       
-            
-        duracionDesde = duracionDesde + firstAsset.duration
-  
+        /*
+        guard let path = Bundle.main.path(forResource: "videoFinal", ofType:"mp4") else {
+            debugPrint("video.m4v not found")
+            return
         }
         
-      
+        let firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
+        
+        do {
+            try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
+        } catch _ {
+            print("Failed to load first track")
+        }
+        */
         let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
         let random = randomString(length: 8)
         let nombreArchivo = random + ".mp4"
@@ -604,7 +615,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
 
     
-    //******************************************************************************************************************************
+    //*******************************************************************************************************************
     
     
     
@@ -997,8 +1008,10 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePausa(_ sender: Any){
         
-        self.viewTapa.isHidden = false
-        avPlayer.pause()
+        if(isPlay){
+            self.viewTapa.isHidden = false
+            avPlayer.pause()
+        }
         
     }
     

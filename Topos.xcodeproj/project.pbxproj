@@ -79,7 +79,6 @@
 		16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB0A7D1F1C55430076F381 /* Compartir.storyboard */; };
 		16CB0A8D1F1C55CB0076F381 /* CompartirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */; };
 		16CB0A8E1F1C55CB0076F381 /* TimeLapseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */; };
-		16E6466C1F858B330051C871 /* videoFinal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16E6466B1F858B2D0051C871 /* videoFinal.mp4 */; };
 		16E8E1681F088A6600DE1255 /* BibliotecaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */; };
 		16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */; };
 		16E8E16C1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */; };
@@ -202,7 +201,6 @@
 		16CB0A7D1F1C55430076F381 /* Compartir.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compartir.storyboard; sourceTree = "<group>"; };
 		16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartirViewController.swift; sourceTree = "<group>"; };
 		16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLapseBuilder.swift; sourceTree = "<group>"; };
-		16E6466B1F858B2D0051C871 /* videoFinal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoFinal.mp4; sourceTree = "<group>"; };
 		16E8E1671F088A6600DE1255 /* BibliotecaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaCollectionViewCell.swift; sourceTree = "<group>"; };
 		16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTapas.storyboard; sourceTree = "<group>"; };
 		16E8E16B1F0896EE00DE1255 /* GaleriaTapasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaTapasCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -410,7 +408,6 @@
 		16CB0A7F1F1C559D0076F381 /* assests */ = {
 			isa = PBXGroup;
 			children = (
-				16E6466B1F858B2D0051C871 /* videoFinal.mp4 */,
 				165A0C4A1EE71B22000A6788 /* sonidos */,
 				16AF16EB1EE07B27008A9B17 /* imagenes */,
 			);
@@ -663,7 +660,6 @@
 				16FFD7AC1F1D7A6100B4B2C3 /* fondo5.jpg in Resources */,
 				16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */,
 				16FFD7A81F1D7A6100B4B2C3 /* fondo1.jpg in Resources */,
-				16E6466C1F858B330051C871 /* videoFinal.mp4 in Resources */,
 				16FFD7AD1F1D7A6100B4B2C3 /* fondo6.jpg in Resources */,
 				16FFD7D71F1D7A6C00B4B2C3 /* topos19.png in Resources */,
 				16981A3E1F3AB224006CEDAA /* edicion05_fondo.png in Resources */,
