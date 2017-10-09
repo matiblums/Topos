@@ -67,6 +67,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     var nombreArchivoFinal = NSURL()
     
+    let AnchoTotal = 1920
+    let AltoTotal = 960
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -126,24 +129,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func creaVideo(){
         
-        NVActivityIndicatorView.DEFAULT_TYPE = .ballClipRotate
-        NVActivityIndicatorView.DEFAULT_COLOR = .white
-        NVActivityIndicatorView.DEFAULT_TEXT_COLOR = .white
-        
-        
-        //self.startAnimating()
-        
         let miLibro = self.libro
  
-        //let miAutor = self.libro?.autor
-        //let miTitulo = self.libro?.titulo
-        //let miTapa = self.libro?.tapa
-        //lblAutor.text = miAutor
-        //lblTitulo.text = miTitulo
-        //let image: UIImage = UIImage(named: miTapa!)!
-        //imgTapa.image = image
-        
-        
         
         let totales = miLibro?.paginas?.count
         
@@ -277,8 +264,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         //let miWidthFondo = self.view.frame.size.width
         //let miHeightFondo = self.view.frame.size.height
         
-        let miWidthFondo = 2000
-        let miHeightFondo = 1000
+        let miWidthFondo = AnchoTotal
+        let miHeightFondo = AltoTotal
         
         tlb.build(file: image, outputSize: CGSize(width: miWidthFondo, height: miHeightFondo), progress: {
             
@@ -424,8 +411,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         //let miWidthFondo = self.view.frame.size.width
         //let miHeightFondo = self.view.frame.size.height
         
-        let miWidthFondo = 2000
-        let miHeightFondo = 1000
+        let miWidthFondo = AnchoTotal
+        let miHeightFondo = AltoTotal
         
         totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero,aVideoAssetTrack.timeRange.duration )
         let mutableVideoComposition : AVMutableVideoComposition = AVMutableVideoComposition()
@@ -886,11 +873,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func mergedImageWith(frontImage:UIImage?, backgroundImage: UIImage?, Topox: CGFloat, Topoy: CGFloat) -> UIImage{
         
-        let miW = 2000
-        let miH = 1000
+        let miW = AnchoTotal
+        let miH = AltoTotal
         
         let miWParcial = self.view.frame.size.width
-        let miHParcial = self.view.frame.size.height
+        //let miHParcial = self.view.frame.size.height
         
         let ancho = 3000 / self.view.frame.size.width
         let alto = (((1500 / ancho)))
