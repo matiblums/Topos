@@ -217,6 +217,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
    
+    //***************************** crea Video en Time Lapse *******************************************
     
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
@@ -504,7 +505,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
  
     }
     
-   
+   //***************************** juntas los videos finales *******************************************
+    
     func mergeVideoFiles(videoFileUrls: NSArray) {
         
         var mergeVideoURL = NSURL()

@@ -49,40 +49,26 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapa1" translatesAutoresizingMaskIntoConstraints="NO" id="cEd-p8-pYh">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-2s-sZ0">
-                                                    <rect key="frame" x="7" y="10" width="186" height="0.0"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-ZX-yzd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEu-uF-FPe">
-                                                    <rect key="frame" x="2" y="30" width="197" height="16"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="ACT-Zy-Fkr"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="zJi-ZX-yzd" firstAttribute="leading" secondItem="S8i-Fd-UAB" secondAttribute="leading" id="2FN-XH-sMU"/>
                                             <constraint firstItem="cEd-p8-pYh" firstAttribute="leading" secondItem="S8i-Fd-UAB" secondAttribute="leading" id="5C1-dk-Ebl"/>
                                             <constraint firstItem="cEd-p8-pYh" firstAttribute="top" secondItem="S8i-Fd-UAB" secondAttribute="top" id="9e1-pL-7j0"/>
                                             <constraint firstAttribute="trailing" secondItem="cEd-p8-pYh" secondAttribute="trailing" id="DLH-dS-yOb"/>
                                             <constraint firstAttribute="bottom" secondItem="cEd-p8-pYh" secondAttribute="bottom" id="Q1q-kB-n8T"/>
-                                            <constraint firstItem="mEu-uF-FPe" firstAttribute="top" secondItem="FCV-2s-sZ0" secondAttribute="bottom" constant="20" id="UPC-cZ-ASE"/>
-                                            <constraint firstItem="FCV-2s-sZ0" firstAttribute="leading" secondItem="S8i-Fd-UAB" secondAttribute="leading" constant="7" id="ZzR-QG-h3m"/>
-                                            <constraint firstAttribute="trailing" secondItem="FCV-2s-sZ0" secondAttribute="trailing" constant="7" id="ez0-aa-RSp"/>
-                                            <constraint firstItem="mEu-uF-FPe" firstAttribute="leading" secondItem="S8i-Fd-UAB" secondAttribute="leading" constant="2" id="kSd-Rs-zzK"/>
-                                            <constraint firstAttribute="trailing" secondItem="mEu-uF-FPe" secondAttribute="trailing" constant="1" id="mlM-hn-1Zk"/>
-                                            <constraint firstItem="FCV-2s-sZ0" firstAttribute="top" secondItem="S8i-Fd-UAB" secondAttribute="top" constant="10" id="yY2-ww-Nun"/>
+                                            <constraint firstAttribute="bottom" secondItem="zJi-ZX-yzd" secondAttribute="bottom" id="aWa-cO-D1Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="zJi-ZX-yzd" secondAttribute="trailing" id="det-mD-CSq"/>
+                                            <constraint firstItem="zJi-ZX-yzd" firstAttribute="top" secondItem="S8i-Fd-UAB" secondAttribute="top" id="tPL-Rx-MDc"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imgGaleria" destination="cEd-p8-pYh" id="oag-uh-z3o"/>
-                                            <outlet property="lblAutor" destination="mEu-uF-FPe" id="k6k-3s-oMk"/>
-                                            <outlet property="lblTitulo" destination="FCV-2s-sZ0" id="pro-Dv-mp6"/>
+                                            <outlet property="miView" destination="zJi-ZX-yzd" id="AXk-mS-GD3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

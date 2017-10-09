@@ -13,7 +13,7 @@ import AVKit
 
 private let reuseIdentifier = "Cell"
 
-class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate {
     
     var audioPlayer : AVAudioPlayer!
     
@@ -138,10 +138,48 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             let libro : Libro!
             libro = self.libros[indexPath.row - masPaginas]
             let imgSel = libro.tapa
-            let image: UIImage = UIImage(named: imgSel)!
-            cell.imgGaleria.image = image
-            cell.lblTitulo.text = libro.titulo
-            cell.lblAutor.text = libro.autor
+            
+            if(libro?.file == ""){
+                let image: UIImage = UIImage(named: imgSel)!
+                cell.imgGaleria.image = image
+            }
+            
+            else{
+                cell.imgGaleria.image = nil
+                
+                cell.miView.frame = CGRect(x:0, y: 0, width:cell.frame.size.width, height:cell.frame.size.height)
+                
+                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                let documentsDirectory = paths[0]
+                let videoDataPath = documentsDirectory + "/" + (libro?.file)!
+                let filePathURL = URL(fileURLWithPath: videoDataPath)
+                let playerLayer = AVPlayerLayer()
+                var avPlayer: AVPlayer!
+                avPlayer = AVPlayer(url: filePathURL as URL)
+                
+                playerLayer.player = avPlayer
+                playerLayer.frame = cell.miView.bounds
+                playerLayer.backgroundColor = UIColor.clear.cgColor
+                playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+                
+                
+                
+                let audioSession = AVAudioSession.sharedInstance()
+                
+                do {
+                    try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+                } catch let error as NSError {
+                    print("audioSession error: \(error.localizedDescription)")
+                    //viewTapa.isHidden = false
+                    
+                }
+                cell.miView.layer.addSublayer(playerLayer)
+                avPlayer.play()
+                avPlayer.pause()
+            }
+            
+            
+            
             
         }
         if(indexPath.row < libros.count){
