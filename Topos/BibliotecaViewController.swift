@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import CoreImage
 import AVKit
 
 private let reuseIdentifier = "Cell"
@@ -145,6 +145,30 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             }
             
             else{
+                
+                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                let documentsDirectory = paths[0]
+                let videoDataPath = documentsDirectory + "/" + (libro?.file)!
+                let filePathURL = URL(fileURLWithPath: videoDataPath)
+                let asset = AVURLAsset(url: filePathURL)
+                
+                let imageGenerator = AVAssetImageGenerator(asset: asset)
+                let time = CMTimeMakeWithSeconds(0.5, 1000)
+                var actualTime = kCMTimeZero
+                var thumbnail : CGImage?
+                do {
+                    thumbnail = try imageGenerator.copyCGImage(at: time, actualTime: &actualTime)
+                }
+                catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+                let image:UIImage = UIImage.init(cgImage: thumbnail!)
+                cell.imgGaleria.image = image
+                
+                
+                // lay out this image view, or if it already exists, set its image property to uiImage
+                
+                /*
                 cell.imgGaleria.image = nil
                 
                 cell.miView.frame = CGRect(x:0, y: 0, width:cell.frame.size.width, height:cell.frame.size.height)
@@ -176,6 +200,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
                 cell.miView.layer.addSublayer(playerLayer)
                 avPlayer.play()
                 avPlayer.pause()
+                */
             }
             
             
