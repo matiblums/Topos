@@ -130,11 +130,17 @@ class TapaViewController: UIViewController {
                 
                 let txtTitulo2 = ""
                 let txtAutor2 = ""
-                let imgFondo2 = "placa.jpg"
+                let imgFondo2 = "fin.jpg"
+                
+                let txtTitulo3 = ""
+                let txtAutor3 = ""
+                let imgFondo3 = "placa.jpg"
                 
                 grabarTapa(txtTitulo: txtTitulo! as NSString, txtAutor: txtAutor! as NSString, imgFondo: imgFondo! as NSString)
                 
                 grabarTapa(txtTitulo: txtTitulo2 as NSString, txtAutor: txtAutor2 as NSString, imgFondo: imgFondo2 as NSString)
+                
+                grabarTapa(txtTitulo: txtTitulo3 as NSString, txtAutor: txtAutor3 as NSString, imgFondo: imgFondo3 as NSString)
                 
                 irBiblioteca ()
                 
@@ -247,20 +253,28 @@ class TapaViewController: UIViewController {
         let textAlinea = NSMutableParagraphStyle()
         textAlinea.alignment = .center
         
+        let textColor2 = UIColor.black
+        let textColorBack2 = UIColor.clear
+        let textFont2 = UIFont(name: "ArialRoundedMTBold", size: 80)!
+        let textAlinea2 = NSMutableParagraphStyle()
+        textAlinea2.alignment = .center
+        
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
         
         let textFontAttributes = [NSAttributedStringKey.font: textFont, NSAttributedStringKey.foregroundColor: textColor, NSAttributedStringKey.backgroundColor: textColorBack, NSAttributedStringKey.paragraphStyle : textAlinea] as [AnyHashable : NSObject]
         
+        let textFontAttributes2 = [NSAttributedStringKey.font: textFont2, NSAttributedStringKey.foregroundColor: textColor2, NSAttributedStringKey.backgroundColor: textColorBack2, NSAttributedStringKey.paragraphStyle : textAlinea2] as [AnyHashable : NSObject]
+        
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
         
-        let rect1 = CGRect(origin: CGPoint(x: 0 ,y :70), size: CGSize(width: image.size.width, height: 300))
-        let rect2 = CGRect(origin: CGPoint(x: 0 ,y :400), size: CGSize(width: image.size.width, height: 300))
+        let rect1 = CGRect(origin: CGPoint(x: 0 ,y :image.size.height / 2 - 100), size: CGSize(width: image.size.width, height: 300))
+        let rect2 = CGRect(origin: CGPoint(x: 0 ,y :450), size: CGSize(width: image.size.width, height: 300))
         
         
         text1.draw(in: rect1, withAttributes: textFontAttributes as? [NSAttributedStringKey : Any])
-        text2.draw(in: rect2, withAttributes: textFontAttributes as? [NSAttributedStringKey : Any])
+        text2.draw(in: rect2, withAttributes: textFontAttributes2 as? [NSAttributedStringKey : Any])
         
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

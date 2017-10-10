@@ -26,7 +26,6 @@
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
-		16808EB21F8D11C300535758 /* placa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16808EB11F8D0E9000535758 /* placa.jpg */; };
 		168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168169E51F83C5E00075ACC9 /* prueba.storyboard */; };
 		168169FC1F8411130075ACC9 /* topos0Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F41F840C7C0075ACC9 /* topos0Chico.png */; };
 		168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169E81F840C780075ACC9 /* topos1Chico.png */; };
@@ -66,6 +65,8 @@
 		16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */; };
 		16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */; };
 		16B5CFCD1F8D309800133AD9 /* TA0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16B5CFCC1F8D309500133AD9 /* TA0.mp3 */; };
+		16B5CFD01F8D439D00133AD9 /* fin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16B5CFCE1F8D439900133AD9 /* fin.jpg */; };
+		16B5CFD11F8D43A000133AD9 /* placa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16B5CFCF1F8D439900133AD9 /* placa.jpg */; };
 		16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */; };
 		16BC26C21EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */; };
 		16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */; };
@@ -149,7 +150,6 @@
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
-		16808EB11F8D0E9000535758 /* placa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placa.jpg; sourceTree = "<group>"; };
 		168169E51F83C5E00075ACC9 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
 		168169E81F840C780075ACC9 /* topos1Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos1Chico.png; sourceTree = "<group>"; };
 		168169E91F840C790075ACC9 /* topos6Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos6Chico.png; sourceTree = "<group>"; };
@@ -189,6 +189,8 @@
 		16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaFondos.storyboard; sourceTree = "<group>"; };
 		16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosCollectionViewCell.swift; sourceTree = "<group>"; };
 		16B5CFCC1F8D309500133AD9 /* TA0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA0.mp3; sourceTree = "<group>"; };
+		16B5CFCE1F8D439900133AD9 /* fin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fin.jpg; sourceTree = "<group>"; };
+		16B5CFCF1F8D439900133AD9 /* placa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placa.jpg; sourceTree = "<group>"; };
 		16BC26BF1EE36A52009C2688 /* GaleriaTopos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaTopos.storyboard; sourceTree = "<group>"; };
 		16BC26C11EE36A6E009C2688 /* GaleriaToposCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaToposCollectionViewCell.swift; sourceTree = "<group>"; };
 		16BC26EC1EE459DF009C2688 /* Seleccion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Seleccion.storyboard; sourceTree = "<group>"; };
@@ -382,7 +384,8 @@
 		16AF16EB1EE07B27008A9B17 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
-				16808EB11F8D0E9000535758 /* placa.jpg */,
+				16B5CFCE1F8D439900133AD9 /* fin.jpg */,
+				16B5CFCF1F8D439900133AD9 /* placa.jpg */,
 				168169E71F840AC50075ACC9 /* toposChico */,
 				16FFD7411F1D781900B4B2C3 /* topos */,
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
@@ -604,7 +607,6 @@
 				16FFD7CA1F1D7A6C00B4B2C3 /* topos6.png in Resources */,
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
 				168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */,
-				16808EB21F8D11C300535758 /* placa.jpg in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
 				1602E1B21F7C8492001E3B7F /* TA1.mp3 in Resources */,
@@ -633,6 +635,7 @@
 				16981A3C1F3AB224006CEDAA /* edicion05_flecha_der.png in Resources */,
 				16FFD7D51F1D7A6C00B4B2C3 /* topos17.png in Resources */,
 				16FFD7CE1F1D7A6C00B4B2C3 /* topos10.png in Resources */,
+				16B5CFD11F8D43A000133AD9 /* placa.jpg in Resources */,
 				16816A061F8411130075ACC9 /* topos10Chico.png in Resources */,
 				1672660E1F4A886800D154AA /* topos0.png in Resources */,
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
@@ -643,6 +646,7 @@
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
 				168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */,
+				16B5CFD01F8D439D00133AD9 /* fin.jpg in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
 				16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,

@@ -205,12 +205,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let asset = AVURLAsset(url: playAudio1!)
         var duration : Int
         
-        if(num == numTotal-1 || num == numTotal-2){
+        if(num == numTotal-1 || num == numTotal-2 || num == numTotal-3){
             
             duration = 3
             
         }
-        
+
         else{
             
             duration = Int(CMTimeGetSeconds(asset.duration))
@@ -345,7 +345,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaType.audio)[0]
         
         
-        if(num == numTotal-1 || num == numTotal-2){
+        if(num == numTotal-1 || num == numTotal-2 || num == numTotal-3){
             
             do{
                 try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aVideoAssetTrack, at: kCMTimeZero)
@@ -461,7 +461,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(position == total - 1){
            
-            videosArray.swapAt(0, total - 2)
+            videosArray.swapAt(0, total - 3)
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }

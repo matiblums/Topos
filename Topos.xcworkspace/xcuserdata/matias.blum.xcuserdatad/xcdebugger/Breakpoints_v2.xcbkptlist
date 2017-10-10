@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529349536.387233"
+            timestampString = "529352811.739569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "496"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529349536.388014"
+            timestampString = "529352811.740261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "490"
@@ -42,12 +42,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529349536.388684"
+            timestampString = "529352811.740803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "348"
             endingLineNumber = "348"
             landmarkName = "mergeMutableVideoWithAudio(videoUrl:musicaUrl:audioUrl:num:numTotal:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Topos/TapaViewController.swift"
+            timestampString = "529352811.741349"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "textToImage(drawText1:drawText2:inImage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
