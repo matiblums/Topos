@@ -74,7 +74,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
         super.viewDidLoad()
         
-        videoFinal ()
+        //videoFinal ()
         
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
