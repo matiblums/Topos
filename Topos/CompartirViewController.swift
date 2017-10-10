@@ -397,7 +397,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         assetExport.outputFileType = AVFileType.mp4
         assetExport.outputURL = mergedAudioVideoURl as URL
         //removeFileAtURLIfExists(url: mergedAudioVideoURl)
-        assetExport.shouldOptimizeForNetworkUse = true
+        //assetExport.shouldOptimizeForNetworkUse = true
         assetExport.exportAsynchronously { () -> Void in
             switch assetExport.status {
             case AVAssetExportSessionStatus.completed:
@@ -460,9 +460,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         if(position == total - 1){
-           
-            //videosArray.swapAt(total - 3, 0)
-            //videosArray.swapAt(total - 3, 0)
             
             let element = videosArray.remove(at: total - 3)
             videosArray.insert(element, at: 0)
