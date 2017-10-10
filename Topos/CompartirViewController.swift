@@ -461,7 +461,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(position == total - 1){
            
-            videosArray.swapAt(0, total - 3)
+            //videosArray.swapAt(total - 3, 0)
+            //videosArray.swapAt(total - 3, 0)
+            
+            let element = videosArray.remove(at: total - 3)
+            videosArray.insert(element, at: 0)
+            
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
