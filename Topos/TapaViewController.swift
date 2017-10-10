@@ -123,7 +123,19 @@ class TapaViewController: UIViewController {
             do {
                 try context.save()
                 print("Grabo OK")
-                grabarTapa()
+                
+                let txtTitulo = self.libro?.titulo
+                let txtAutor = self.libro?.autor
+                let imgFondo = self.libro?.tapa
+                
+                let txtTitulo2 = ""
+                let txtAutor2 = ""
+                let imgFondo2 = "placa.jpg"
+                
+                grabarTapa(txtTitulo: txtTitulo! as NSString, txtAutor: txtAutor! as NSString, imgFondo: imgFondo! as NSString)
+                
+                grabarTapa(txtTitulo: txtTitulo2 as NSString, txtAutor: txtAutor2 as NSString, imgFondo: imgFondo2 as NSString)
+                
                 irBiblioteca ()
                 
             } catch {
@@ -135,53 +147,17 @@ class TapaViewController: UIViewController {
         
     }
     
-    func irBiblioteca () {
-        /*
-        let storyboard = UIStoryboard(name: "Biblioteca", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Biblioteca")
-        
-        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        self.present(controller, animated: true, completion: nil)
-        */
-        
-        let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
-        controller.libro = self.libro
-        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        self.present(controller, animated: true, completion: nil)
-    }
 
-    func alerta (){
-        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "Ok para continuar", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
-        //let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
-        //    (result : UIAlertAction) -> Void in
-            
-        //    print("Destructive")
-            
-       // }
-        
-        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
-        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
-            (result : UIAlertAction) -> Void in
-            print("OK")
-            //self.Tapa ()
-            
-        }
-        
-        //alertController.addAction(DestructiveAction)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
     
-    func grabarTapa() {
+    func grabarTapa(txtTitulo: NSString, txtAutor: NSString, imgFondo: NSString) {
         
         let miLibro = self.libro
         let miPagina = miLibro!.paginas![0] as! Pagina
         
-        let txtTitulo = self.libro?.titulo
-        let txtAutor = self.libro?.autor
-        let imgFondo = self.libro?.tapa
-        let nuevaImagen = textToImage(drawText1: txtTitulo! as NSString, drawText2: txtAutor! as NSString, inImage: UIImage(named:imgFondo!)!)
+        let txtTitulo = txtTitulo
+        let txtAutor = txtAutor
+        let imgFondo = imgFondo
+        let nuevaImagen = textToImage(drawText1: txtTitulo as NSString, drawText2: txtAutor as NSString, inImage: UIImage(named:imgFondo as String)!)
         
         let random = randomString(length: 8)
         let nombreArchivo = random
@@ -199,7 +175,7 @@ class TapaViewController: UIViewController {
         
         let urlString: String = filename.relativePath
         let fondo = urlString
-        let musica = "TA1"
+        let musica = "TA0"
         let audio = miPagina.audio
         
         let isoDate = "2016-04-14T10:44:00+0000"
@@ -261,11 +237,13 @@ class TapaViewController: UIViewController {
         
     }
     
+   
+    
     func textToImage(drawText1 text1: NSString, drawText2 text2: NSString, inImage image: UIImage) -> UIImage {
         
         let textColor = UIColor.black
         let textColorBack = UIColor.clear
-        let textFont = UIFont(name: "ArialRoundedMTBold", size: 50)!
+        let textFont = UIFont(name: "ArialRoundedMTBold", size: 100)!
         let textAlinea = NSMutableParagraphStyle()
         textAlinea.alignment = .center
         
@@ -278,7 +256,7 @@ class TapaViewController: UIViewController {
         
         
         let rect1 = CGRect(origin: CGPoint(x: 0 ,y :70), size: CGSize(width: image.size.width, height: 300))
-        let rect2 = CGRect(origin: CGPoint(x: 0 ,y :500), size: CGSize(width: image.size.width, height: 300))
+        let rect2 = CGRect(origin: CGPoint(x: 0 ,y :400), size: CGSize(width: image.size.width, height: 300))
         
         
         text1.draw(in: rect1, withAttributes: textFontAttributes as? [NSAttributedStringKey : Any])
@@ -312,5 +290,34 @@ class TapaViewController: UIViewController {
         
         return randomString
     }
-
+    
+    func irBiblioteca () {
+        let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
+        controller.libro = self.libro
+        controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    func alerta (){
+        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "Ok para continuar", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        //let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+        //    (result : UIAlertAction) -> Void in
+        
+        //    print("Destructive")
+        
+        // }
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+            //self.Tapa ()
+            
+        }
+        
+        //alertController.addAction(DestructiveAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

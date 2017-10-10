@@ -66,15 +66,13 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     let playerLayer = AVPlayerLayer()
     
     var nombreArchivoFinal = NSURL()
-    
+
     let AnchoTotal = 1920
     let AltoTotal = 960
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
-        //videoFinal ()
         
         //btnPlay.isHidden = true
         //btnPause.isHidden = true
@@ -130,41 +128,11 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     func creaVideo(){
         
         let miLibro = self.libro
- 
-        
         let totales = miLibro?.paginas?.count
+        let num = Int(totales!)
         
-        let num = totales
-        
-        //****************************  primero carga tapa ********************************************
-
-        let miPagina = miLibro!.paginas![num!-1] as! Pagina
-        //******************************************************************************************************
-        let miFondo = miPagina.fondo
-        let miTopo = miPagina.topo
-        let miTopoX = miPagina.topox
-        let miTopoY = miPagina.topoy
-        let cgFloatTopoX : CGFloat? = Double(miTopoX).map{ CGFloat($0) }
-        let cgFloatTopoY : CGFloat? = Double(miTopoY).map{ CGFloat($0) }
-        let random = randomString(length: 8)
-        let nombreArchivo = random
-        //******************************************************************************************************
-        var miImagen : UIImage
-        miImagen = UIImage.init(contentsOfFile: miFondo)!
-        let imageOK = self.mergedImageWith(frontImage: UIImage.init(named: miTopo), backgroundImage: miImagen, Topox: cgFloatTopoX!, Topoy: cgFloatTopoY!)
-        if let data = UIImagePNGRepresentation(imageOK) {
-            let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
-            try? data.write(to: filename)
-        }
-        let filename = getDocumentsDirectory().appendingPathComponent("\(nombreArchivo)-.png")
-        imagesArray.append(filename.path as NSString)
-        musicaArray.append(miPagina.musica as NSString)
-        audioArray.append(miPagina.audio as NSString)
-        //******************************************************************************************************
-
-        
-        
-        for i in 0...Int(num!)-2{
+ 
+        for i in 0..<num{
  
             let miPagina = miLibro!.paginas![i] as! Pagina
             //******************************************************************************************************
@@ -173,11 +141,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let miTopoX = miPagina.topox
             let miTopoY = miPagina.topoy
             
-            
-            
             let cgFloatTopoX : CGFloat? = Double(miTopoX).map{ CGFloat($0) }
             let cgFloatTopoY : CGFloat? = Double(miTopoY).map{ CGFloat($0) }
-            
             
             let random = randomString(length: 8)
             let nombreArchivo = random
@@ -198,10 +163,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             //******************************************************************************************************
             
             imagesArray.append(filename.path as NSString)
-
             musicaArray.append(miPagina.musica as NSString)
             audioArray.append(miPagina.audio as NSString)
-            
         }
         
         
@@ -219,6 +182,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
    
     //***************************** crea Video en Time Lapse *******************************************
     
+
     func createVideo(image: NSString, musicaUrl:NSString, audioUrl:NSString, num: Int, numTotal: Int){
         
         //print(image, " -- ", num)
@@ -241,9 +205,9 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let asset = AVURLAsset(url: playAudio1!)
         var duration : Int
         
-        if(num == 0){
+        if(num == numTotal-1 || num == numTotal-2){
             
-            duration = 5
+            duration = 3
             
         }
         
@@ -381,7 +345,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let aAudioAssetTrack2 : AVAssetTrack = aAudioAsset2.tracks(withMediaType: AVMediaType.audio)[0]
         
         
-        if(num == 0){
+        if(num == numTotal-1 || num == numTotal-2){
             
             do{
                 try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aVideoAssetTrack, at: kCMTimeZero)
@@ -497,7 +461,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(position == total - 1){
            
-            //videosArray.append(nombreArchivoFinal)
+            videosArray.swapAt(0, total - 2)
             mergeVideoFiles(videoFileUrls: videosArray as NSArray)
             
         }
@@ -532,24 +496,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             duracionDesde = duracionDesde + firstAsset.duration
             
         }
-        /*
-        guard let path = Bundle.main.path(forResource: "videoRealizado", ofType:"mp4") else {
-            debugPrint("video.m4v not found")
-            return
-        }
- 
-        //firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
-        
-        let firstAsset = AVURLAsset(url: nombreArchivoFinal as URL)
-        
-        do {
-            try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
-        } catch _ {
-            print("Failed to load first track")
-        }
-         */
-        
-        
+
         let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
         let random = randomString(length: 8)
         let nombreArchivo = random + ".mp4"
@@ -615,70 +562,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
 
     
     //*******************************************************************************************************************
-    func videoFinal () {
-        
-        var mergeVideoURL = NSURL()
-        
-        
-        let mixComposition = AVMutableComposition()
-        
-        let duracionDesde = kCMTimeZero
-        
-        
-        guard let path = Bundle.main.path(forResource: "video", ofType:"mp4") else {
-            debugPrint("video.m4v not found")
-            return
-        }
-        
-        let firstAsset = AVURLAsset(url: URL(fileURLWithPath: path))
-        
-        
-        do {
-            try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
-        } catch _ {
-            print("Failed to load first track")
-        }
-        
-        
-        
-        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
-        let random = randomString(length: 8)
-        let nombreArchivo = random + ".mp4"
-        mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
-        let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
-        assetExport?.outputFileType = AVFileType.mp4
-        assetExport?.outputURL = mergeVideoURL as URL
-        removeFileAtURLIfExists(url: mergeVideoURL)
-        
-        
-        
-        assetExport?.exportAsynchronously(completionHandler:{
-            
-            switch assetExport!.status{
-                
-            case AVAssetExportSessionStatus.failed:
-                print("failed \(String(describing: assetExport?.error))")
-            case AVAssetExportSessionStatus.cancelled:
-                print("cancelled \(String(describing: assetExport?.error))")
-            case AVAssetExportSessionStatus.unknown:
-                print("unknown\(String(describing: assetExport?.error))")
-            case AVAssetExportSessionStatus.waiting:
-                print("waiting\(String(describing: assetExport?.error))")
-            case AVAssetExportSessionStatus.exporting:
-                print("exporting\(String(describing: assetExport?.error))")
-            default:
-                DispatchQueue.main.async() {
-                    // print("-----Merge Video exportation complete.\(mergeVideoURL)")
-                   
-                    self.nombreArchivoFinal = mergeVideoURL
-                  
-                }
-            }
-        })
-        
-    }
-    
-    
     func randomString(length: Int) -> String {
         
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"

@@ -46,7 +46,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapa1" translatesAutoresizingMaskIntoConstraints="NO" id="cEd-p8-pYh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapa" translatesAutoresizingMaskIntoConstraints="NO" id="cEd-p8-pYh">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-ZX-yzd">
@@ -113,6 +113,6 @@
     <resources>
         <image name="btnVolver" width="169" height="55"/>
         <image name="miscuentos" width="349" height="102"/>
-        <image name="tapa1" width="1500" height="750"/>
+        <image name="tapa" width="1500" height="750"/>
     </resources>
 </document>
