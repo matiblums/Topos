@@ -27,6 +27,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     var urlFileArray = [NSString]()
     var imageTapaArray = [NSString]()
+    var imageFileArray = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,42 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
             let imageTapa = libro.tapa
             urlFileArray.append(urlFile as NSString)
             imageTapaArray.append(imageTapa as NSString)
+            let image:UIImage
             
+            
+            if(urlFile == ""){
+                
+                image = UIImage(named: imageTapa)!
+                
+            }
+            else{
+                
+                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                let documentsDirectory = paths[0]
+                let videoDataPath = documentsDirectory + "/" + (urlFile as String)
+                let filePathURL = URL(fileURLWithPath: videoDataPath)
+                let asset = AVURLAsset(url: filePathURL)
+                
+                let imageGenerator = AVAssetImageGenerator(asset: asset)
+                let time = CMTimeMakeWithSeconds(0.5, 1000)
+                var actualTime = kCMTimeZero
+                var thumbnail : CGImage?
+                
+                do {
+                    thumbnail = try imageGenerator.copyCGImage(at: time, actualTime: &actualTime)
+                    image = UIImage.init(cgImage: thumbnail!)
+                    //imageFileArray.append(image as UIImage)
+                }
+                catch let error as NSError {
+                    print(error.localizedDescription)
+                    //image = nil
+                    image = UIImage(named: "tapa")!
+                    
+                }
+                
+            }
+            
+            imageFileArray.append(image)
         }
         
         
@@ -155,87 +191,12 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         
         else{
             
-            //let libro : Libro!
-            //libro = self.libros[indexPath.row - masPaginas]
-            //let imgSel = libro.tapa
-            
-            if(urlFileArray[indexPath.row - masPaginas] == ""){
-                let image: UIImage = UIImage(named: imageTapaArray[indexPath.row - masPaginas] as String)!
-                cell.imgGaleria.image = image
-            }
-            
-            else{
-                
-                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-                let documentsDirectory = paths[0]
-                let videoDataPath = documentsDirectory + "/" + (urlFileArray[indexPath.row - masPaginas] as String)
-                let filePathURL = URL(fileURLWithPath: videoDataPath)
-                let asset = AVURLAsset(url: filePathURL)
-                
-                let imageGenerator = AVAssetImageGenerator(asset: asset)
-                let time = CMTimeMakeWithSeconds(0.5, 1000)
-                var actualTime = kCMTimeZero
-                var thumbnail : CGImage?
-                do {
-                    thumbnail = try imageGenerator.copyCGImage(at: time, actualTime: &actualTime)
-                }
-                catch let error as NSError {
-                    print(error.localizedDescription)
-                }
-                let image:UIImage = UIImage.init(cgImage: thumbnail!)
-                cell.imgGaleria.image = image
-                
-                
-                // lay out this image view, or if it already exists, set its image property to uiImage
-                
-                /*
-                cell.imgGaleria.image = nil
-                
-                cell.miView.frame = CGRect(x:0, y: 0, width:cell.frame.size.width, height:cell.frame.size.height)
-                
-                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-                let documentsDirectory = paths[0]
-                let videoDataPath = documentsDirectory + "/" + (libro?.file)!
-                let filePathURL = URL(fileURLWithPath: videoDataPath)
-                let playerLayer = AVPlayerLayer()
-                var avPlayer: AVPlayer!
-                avPlayer = AVPlayer(url: filePathURL as URL)
-                
-                playerLayer.player = avPlayer
-                playerLayer.frame = cell.miView.bounds
-                playerLayer.backgroundColor = UIColor.clear.cgColor
-                playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-                
-                
-                
-                let audioSession = AVAudioSession.sharedInstance()
-                
-                do {
-                    try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-                } catch let error as NSError {
-                    print("audioSession error: \(error.localizedDescription)")
-                    //viewTapa.isHidden = false
-                    
-                }
-                cell.miView.layer.addSublayer(playerLayer)
-                avPlayer.play()
-                avPlayer.pause()
-                */
-            }
-            
-            
-            
-            
+            cell.imgGaleria.image = imageFileArray[indexPath.row - masPaginas]
+
         }
-        if(indexPath.row < libros.count){
-            
-            
-            
-        }
-       
-        
         
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
