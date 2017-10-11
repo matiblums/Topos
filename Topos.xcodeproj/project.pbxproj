@@ -217,10 +217,6 @@
 		16EA3D341EDD971700B30D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EA3D371EDD971700B30D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16EA3D391EDD971700B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16EA3D421EDD971800B30D72 /* ToposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposTests.swift; sourceTree = "<group>"; };
-		16EA3D441EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToposUITests.swift; sourceTree = "<group>"; };
-		16EA3D4F1EDD971800B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Libreria.storyboard; sourceTree = "<group>"; };
 		16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreriaViewController.swift; sourceTree = "<group>"; };
 		16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo0.png; sourceTree = "<group>"; };
@@ -419,8 +415,6 @@
 			children = (
 				16816A101F84226D0075ACC9 /* ServiceAccount.json */,
 				16EA3D291EDD971700B30D72 /* Topos */,
-				16EA3D411EDD971800B30D72 /* ToposTests */,
-				16EA3D4C1EDD971800B30D72 /* ToposUITests */,
 				16EA3D281EDD971700B30D72 /* Products */,
 				370FD09335035C513B9646E0 /* Pods */,
 				DB2789471311FC0CF438E546 /* Frameworks */,
@@ -449,24 +443,6 @@
 				163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */,
 			);
 			path = Topos;
-			sourceTree = "<group>";
-		};
-		16EA3D411EDD971800B30D72 /* ToposTests */ = {
-			isa = PBXGroup;
-			children = (
-				16EA3D421EDD971800B30D72 /* ToposTests.swift */,
-				16EA3D441EDD971800B30D72 /* Info.plist */,
-			);
-			path = ToposTests;
-			sourceTree = "<group>";
-		};
-		16EA3D4C1EDD971800B30D72 /* ToposUITests */ = {
-			isa = PBXGroup;
-			children = (
-				16EA3D4D1EDD971800B30D72 /* ToposUITests.swift */,
-				16EA3D4F1EDD971800B30D72 /* Info.plist */,
-			);
-			path = ToposUITests;
 			sourceTree = "<group>";
 		};
 		16FFD7401F1D77FE00B4B2C3 /* fondo */ = {

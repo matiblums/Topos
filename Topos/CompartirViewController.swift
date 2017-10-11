@@ -81,6 +81,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         controlaCantidad = 0
         self.viewTapa.isHidden = true
+        self.viewFondoBotones.isHidden = true
+        self.viewVideo.isHidden = true
         self.lblCargando.isHidden = false
         verificaVIdeo()
     }
