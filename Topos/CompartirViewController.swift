@@ -247,7 +247,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
 
         else{
             
-            duration = Int(CMTimeGetSeconds(asset.duration))
+            duration = Int(CMTimeGetSeconds(asset.duration)) + 1
             
         }
         
