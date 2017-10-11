@@ -56,7 +56,7 @@ open class TimeLapseBuilder: NSObject {
     
     let random = randomString(length: 8)
     
-    let nombreArchivo = random + ".mov"
+    let nombreArchivo = random + ".mp4"
     
     let videoOutputURL = documentDirectory.appendingPathComponent(nombreArchivo)
     
@@ -68,7 +68,7 @@ open class TimeLapseBuilder: NSObject {
       }
     }
     
-        guard let videoWriter = try? AVAssetWriter(outputURL: videoOutputURL, fileType: AVFileType.mov) else{
+        guard let videoWriter = try? AVAssetWriter(outputURL: videoOutputURL, fileType: AVFileType.mp4) else{
       fatalError("AVAssetWriter error")
     }
     

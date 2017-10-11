@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Photos
 import CoreData
+import CoreImage
 import NVActivityIndicatorView
 
 
@@ -110,6 +111,38 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     func cargaVideo(){
         
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
+        let filePathURL = URL(fileURLWithPath: videoDataPath)
+        let asset = AVURLAsset(url: filePathURL)
+        
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        let time = CMTimeMakeWithSeconds(0.5, 1000)
+        var actualTime = kCMTimeZero
+        var thumbnail : CGImage?
+        let image:UIImage
+        
+        do {
+            thumbnail = try imageGenerator.copyCGImage(at: time, actualTime: &actualTime)
+            image = UIImage.init(cgImage: thumbnail!)
+            //imageFileArray.append(image as UIImage)
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+            //image = nil
+            image = UIImage(named: "tapa")!
+            
+        }
+        
+        self.imgTapa.image = image
+        
+        self.lblCargando.isHidden = true
+        self.viewTapa.isHidden = false
+        self.viewVideo.isHidden = true
+        self.viewFondoBotones.isHidden = false
+        
+        /*
         self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 400 / 2, y: self.view.frame.size.height / 2 - 200 / 2, width:400, height:200)
         
         
@@ -123,6 +156,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         avPlayer.pause()
         self.lblCargando.isHidden = true
         self.viewTapa.isHidden = false
+         */
     }
     
     func creaVideo(){
@@ -207,7 +241,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         if(num == numTotal-1 || num == numTotal-2 || num == numTotal-3){
             
-            duration = 3
+            duration = 1
             
         }
 
@@ -933,20 +967,24 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     @IBAction func elijePlayTotal(_ sender: Any){
         
-        //cargaVideo()
+
         self.viewTapa.isHidden = true
+        self.viewVideo.isHidden = false
+        self.viewFondoBotones.isHidden = true
         
-        self.viewVideo.frame = CGRect(x: 0, y: 0, width:self.view.frame.size.width, height:self.view.frame.size.height)
-        
-        playerLayer.frame = self.viewVideo.bounds
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
+        let filePathURL = URL(fileURLWithPath: videoDataPath)
+        verVideo(url: filePathURL as NSURL)
+        isPlay = true
         
         avPlayer.play()
     }
     
     @IBAction func elijePlay(_ sender: Any){
         
-        btnPlay.isHidden = true
-        btnPause.isHidden = false
+        self.viewFondoBotones.isHidden = true
         avPlayer.play()
         
     }
@@ -954,7 +992,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     @IBAction func elijePausa(_ sender: Any){
         
         if(isPlay){
-            self.viewTapa.isHidden = false
+            self.viewFondoBotones.isHidden = false
             avPlayer.pause()
         }
         

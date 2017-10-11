@@ -274,7 +274,7 @@ class TapaViewController: UIViewController {
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
         
-        let rect1 = CGRect(origin: CGPoint(x: 0 ,y :image.size.height / 2 - 100), size: CGSize(width: image.size.width, height: 300))
+        let rect1 = CGRect(origin: CGPoint(x: 0 ,y :200), size: CGSize(width: image.size.width, height: 300))
         let rect2 = CGRect(origin: CGPoint(x: 0 ,y :450), size: CGSize(width: image.size.width, height: 300))
         
         

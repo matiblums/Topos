@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529386108.772004"
+            timestampString = "529439450.579585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "498"
-            endingLineNumber = "498"
+            startingLineNumber = "532"
+            endingLineNumber = "532"
             landmarkName = "mergeVideoFiles(videoFileUrls:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529386108.773466"
+            timestampString = "529439450.580495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "492"
-            endingLineNumber = "492"
+            startingLineNumber = "526"
+            endingLineNumber = "526"
             landmarkName = "mergeVideoFiles(videoFileUrls:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/CompartirViewController.swift"
-            timestampString = "529386108.774681"
+            timestampString = "529439450.58111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
             landmarkName = "mergeMutableVideoWithAudio(videoUrl:musicaUrl:audioUrl:num:numTotal:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Topos/TapaViewController.swift"
-            timestampString = "529386108.775888"
+            timestampString = "529439450.581706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "280"
