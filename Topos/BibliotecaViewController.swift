@@ -24,6 +24,9 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     var libros : [Libro] = []
     var fetchResultsController : NSFetchedResultsController<Libro>!
     var libro : Libro?
+    
+    var urlFileArray = [NSString]()
+    var imageTapaArray = [NSString]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewWillAppear(animated)
         
         Ver ()
-        self.miGaleria?.reloadData()
+        
         
         let playYoda = NSURL(fileURLWithPath: Bundle.main.path(forResource: "TA1", ofType: "mp3")!)
         audioPlayer = try! AVAudioPlayer(contentsOf: playYoda as URL)
@@ -44,6 +47,23 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         audioPlayer.volume = 1.0
         audioPlayer.numberOfLoops = 99
         //audioPlayer.play()
+        
+        var libro : Libro!
+        
+        
+        for i in 0 ..< self.libros.count {
+            
+            libro = self.libros[i]
+            let urlFile = libro.file
+            let imageTapa = libro.tapa
+            urlFileArray.append(urlFile as NSString)
+            imageTapaArray.append(imageTapa as NSString)
+            
+        }
+        
+        
+        self.miGaleria?.reloadData()
+        
     }
     
     
@@ -118,7 +138,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return libros.count + masPaginas
+        return self.libros.count + masPaginas
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -135,12 +155,12 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
         
         else{
             
-            let libro : Libro!
-            libro = self.libros[indexPath.row - masPaginas]
-            let imgSel = libro.tapa
+            //let libro : Libro!
+            //libro = self.libros[indexPath.row - masPaginas]
+            //let imgSel = libro.tapa
             
-            if(libro?.file == ""){
-                let image: UIImage = UIImage(named: imgSel)!
+            if(urlFileArray[indexPath.row - masPaginas] == ""){
+                let image: UIImage = UIImage(named: imageTapaArray[indexPath.row - masPaginas] as String)!
                 cell.imgGaleria.image = image
             }
             
@@ -148,7 +168,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
                 
                 let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
                 let documentsDirectory = paths[0]
-                let videoDataPath = documentsDirectory + "/" + (libro?.file)!
+                let videoDataPath = documentsDirectory + "/" + (urlFileArray[indexPath.row - masPaginas] as String)
                 let filePathURL = URL(fileURLWithPath: videoDataPath)
                 let asset = AVURLAsset(url: filePathURL)
                 
