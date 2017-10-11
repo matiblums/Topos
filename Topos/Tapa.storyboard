@@ -99,19 +99,43 @@
                                     <action selector="elijeVolver:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="aZX-oe-z3Q"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T3-O0-rjh">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creando el Video..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q5-f5-Ha0">
+                                        <rect key="frame" x="160.5" y="143" width="248.5" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="xZj-8M-zAY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8Q5-f5-Ha0" firstAttribute="centerX" secondItem="7T3-O0-rjh" secondAttribute="centerX" id="dHg-pz-2pL"/>
+                                    <constraint firstItem="8Q5-f5-Ha0" firstAttribute="centerY" secondItem="7T3-O0-rjh" secondAttribute="centerY" id="tMR-4P-vmL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7WD-Qn-U1B" firstAttribute="top" secondItem="3Z0-CD-oIK" secondAttribute="bottom" constant="20" id="3C0-jb-sRZ"/>
+                            <constraint firstItem="7T3-O0-rjh" firstAttribute="leading" secondItem="uBQ-bK-twh" secondAttribute="leading" id="5UP-AA-mhW"/>
+                            <constraint firstItem="7T3-O0-rjh" firstAttribute="top" secondItem="3Z0-CD-oIK" secondAttribute="bottom" id="C4M-pQ-LsL"/>
                             <constraint firstItem="7WD-Qn-U1B" firstAttribute="leading" secondItem="uBQ-bK-twh" secondAttribute="leadingMargin" id="FJE-Tq-TSw"/>
+                            <constraint firstAttribute="trailing" secondItem="7T3-O0-rjh" secondAttribute="trailing" id="NQZ-ht-oF3"/>
                             <constraint firstItem="VOg-RI-muc" firstAttribute="centerX" secondItem="uBQ-bK-twh" secondAttribute="centerX" id="RPY-6V-w9I"/>
                             <constraint firstItem="VOg-RI-muc" firstAttribute="centerY" secondItem="uBQ-bK-twh" secondAttribute="centerY" id="WBI-75-ZFZ"/>
+                            <constraint firstItem="Zsw-Ar-yQo" firstAttribute="top" secondItem="7T3-O0-rjh" secondAttribute="bottom" id="a3g-b8-jI4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="miFondo" destination="ztl-L7-vgU" id="GKm-1J-4pa"/>
                         <outlet property="txtAutor" destination="MWx-ie-Fy8" id="tKp-23-HWi"/>
                         <outlet property="txtTitulo" destination="ltV-7m-Kfg" id="WlL-0N-qnu"/>
+                        <outlet property="viewCargando" destination="7T3-O0-rjh" id="IDt-5D-B2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TJ-Zg-aVk" userLabel="First Responder" sceneMemberID="firstResponder"/>

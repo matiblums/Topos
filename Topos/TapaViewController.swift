@@ -19,6 +19,7 @@ class TapaViewController: UIViewController {
     
     @IBOutlet var miFondo: UIImageView!
 
+    @IBOutlet weak var viewCargando: UIView!
     
     var libros : [Libro] = []
     var fetchResultsController : NSFetchedResultsController<Libro>!
@@ -33,6 +34,7 @@ class TapaViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        viewCargando.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,20 +66,23 @@ class TapaViewController: UIViewController {
         let titulo = txtTitulo.text
         let autor = txtAutor.text
         let tapa = UserDefaults.standard.string(forKey: "tapa")
-        
+        viewCargando.isHidden = false
         
         if(titulo == ""){
             alerta ()
+            viewCargando.isHidden = true
             return
         }
         
         if(autor == ""){
             alerta ()
+            viewCargando.isHidden = true
             return
         }
         
         if(tapa == nil){
             alerta ()
+            viewCargando.isHidden = true
             return
         }
         
@@ -306,6 +311,8 @@ class TapaViewController: UIViewController {
     }
     
     func irBiblioteca () {
+        
+        
         let storyboard = UIStoryboard(name: "Compartir", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Compartir") as! CompartirViewController
         controller.libro = self.libro
