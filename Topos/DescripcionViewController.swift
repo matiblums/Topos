@@ -31,11 +31,11 @@ class DescripcionViewController: UIViewController {
         Equipo:
         
         Bien contenidos:
-        María Luisa Sánchez Chiappe
-        Bárbara Gelbaum
+        Lic. María Luisa Sánchez Chiappe
+        Lic. Bárbara Gelbaum
 
         Dibujos:
-        María Luisa Sánchez Chiappe
+        Lic. María Luisa Sánchez Chiappe
 
         Diseño:
         Nico Risso
@@ -47,10 +47,15 @@ class DescripcionViewController: UIViewController {
         Música original:
         Emiliano Khayat
 
+        Produccion de Sonido:
+        Franco Khayat
+
         (c) 2017 Bien Contenidos
         biencontenidos@gmail.com
-        Facebook: bien-contenidos
-        www.biencontenidos.com.ar
+        Facebook: Bien Contenidos
+        www.biencontenidos.com
+        
+        Se sugiere que está App sea ofrecida y utilizada dentro de una amplia variedad de opciones en las que también se priorice el juego con otros, el tiempo al aire libre y el contacto con los libros. La multiplicidad de ofertas lúdicas y recreativas favorecen al desarrollo integral de un niño.
 
         """
         

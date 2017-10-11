@@ -754,7 +754,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
     func alerta (){
-        let alertController = UIAlertController(title: "Tienes Paginas Pendientes", message: "Deseas cerrar el libro, de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let alertController = UIAlertController(title: "Tienes páginas pendientes", message: "Deseas cerrar el libro, de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
          let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
            (result : UIAlertAction) -> Void in
             
@@ -777,7 +777,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
 
     
     func alerta2 (){
-        let alertController = UIAlertController(title: "Si sales de la edición se borra el libro", message: "Deseas continuar de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let alertController = UIAlertController(title: "Si sales de la edición se borrará el libro", message: "Deseas continuar de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
         let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
             (result : UIAlertAction) -> Void in
             

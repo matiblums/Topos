@@ -321,7 +321,7 @@ class TapaViewController: UIViewController {
     }
     
     func alerta (){
-        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "Ok para continuar", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
         //let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
         //    (result : UIAlertAction) -> Void in
         
