@@ -67,6 +67,11 @@
                             <constraint firstItem="w2v-DU-Xmf" firstAttribute="centerX" secondItem="9fD-f3-ROV" secondAttribute="centerX" id="J64-dq-4hL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnDescripcion" destination="IEE-gD-viD" id="5M6-wv-0Sq"/>
+                        <outlet property="btnMisCuentos" destination="NrM-Cc-asw" id="Q92-XT-3WA"/>
+                        <outlet property="imgTitulo" destination="r3I-Hn-2Kn" id="c5N-7r-ymd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwE-95-bXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

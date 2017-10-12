@@ -75,9 +75,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
         super.viewDidLoad()
         
-        //btnPlay.isHidden = true
-        //btnPause.isHidden = true
-        //viewTapa.isHidden = true
+        self.lblCargando.text = (NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
         
         controlaCantidad = 0
         self.viewTapa.isHidden = true

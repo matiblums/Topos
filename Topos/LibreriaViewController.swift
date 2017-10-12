@@ -22,13 +22,19 @@ class LibreriaViewController: UIViewController {
     
     var audioPlayer : AVAudioPlayer!
     
+    @IBOutlet var imgTitulo: UIImageView!
+    @IBOutlet var btnMisCuentos: UIButton!
+    @IBOutlet var btnDescripcion: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tituloentrada
+        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_LIBRERIA", comment: ""))
+        let image: UIImage = UIImage(named: miImagenTitulo)!
+        self.imgTitulo.image = image
         
-        
-        
-        
+        let miImagenCuentos = (NSLocalizedString("BTN_MIS_CUENTOS_LIBRERIA", comment: ""))
+        btnMisCuentos.setImage(UIImage(named: miImagenCuentos), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

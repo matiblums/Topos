@@ -14,10 +14,19 @@ class DescripcionViewController: UIViewController {
     var audioPlayer : AVAudioPlayer!
     
     @IBOutlet var miTexVIew: UITextView!
+    @IBOutlet var imgTitulo: UIImageView!
+    @IBOutlet var btnVolver: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_LIBRERIA", comment: ""))
+        let image: UIImage = UIImage(named: miImagenTitulo)!
+        self.imgTitulo.image = image
+        
+        let miImagenVolver = (NSLocalizedString("BTN_VOLVER", comment: ""))
+        btnVolver.setImage(UIImage(named: miImagenVolver), for: .normal)
+        
         // Do any additional setup after loading the view.
         
         let miTexto : String =

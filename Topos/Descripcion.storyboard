@@ -63,6 +63,8 @@
                         <viewLayoutGuide key="safeArea" id="xIM-L6-0hh"/>
                     </view>
                     <connections>
+                        <outlet property="btnVolver" destination="i8t-vF-Fph" id="ygw-Vg-fxU"/>
+                        <outlet property="imgTitulo" destination="6Kd-6f-ids" id="sPL-0A-dqn"/>
                         <outlet property="miTexVIew" destination="zha-xT-2Zv" id="EaS-nW-thN"/>
                     </connections>
                 </viewController>

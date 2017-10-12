@@ -22,6 +22,8 @@
 		163FCC9E1F7C0669007337E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */; };
 		163FCCA01F7C08FC007337E2 /* Descripcion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */; };
 		163FCCA31F7C0920007337E2 /* DescripcionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */; };
+		164B5FDB1F8F9E7700050B19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 164B5FDD1F8F9E7700050B19 /* Localizable.strings */; };
+		164B5FE11F8FA77800050B19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164B5FE01F8FA77800050B19 /* LaunchScreen.storyboard */; };
 		1672660E1F4A886800D154AA /* topos0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1672660D1F4A886800D154AA /* topos0.png */; };
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
@@ -90,7 +92,6 @@
 		16EA3D2B1EDD971700B30D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */; };
 		16EA3D331EDD971700B30D72 /* Topos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EA3D311EDD971700B30D72 /* Topos.xcdatamodeld */; };
 		16EA3D351EDD971700B30D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D341EDD971700B30D72 /* Assets.xcassets */; };
-		16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */; };
 		16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */; };
 		16FCC9EC1F22941100DAFA5E /* LibreriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */; };
 		16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFD79C1F1D7A6100B4B2C3 /* fondo0.png */; };
@@ -146,6 +147,9 @@
 		163FCC9D1F7C0669007337E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Descripcion.storyboard; sourceTree = "<group>"; };
 		163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripcionViewController.swift; sourceTree = "<group>"; };
+		164B5FDC1F8F9E7700050B19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		164B5FDF1F8F9EF800050B19 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		164B5FE01F8FA77800050B19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1672660D1F4A886800D154AA /* topos0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos0.png; sourceTree = "<group>"; };
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
@@ -215,7 +219,6 @@
 		16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16EA3D321EDD971700B30D72 /* Topos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Topos.xcdatamodel; sourceTree = "<group>"; };
 		16EA3D341EDD971700B30D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		16EA3D371EDD971700B30D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16EA3D391EDD971700B30D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Libreria.storyboard; sourceTree = "<group>"; };
 		16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreriaViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +280,14 @@
 			name = clases;
 			sourceTree = "<group>";
 		};
+		164B5FD81F8F9DDF00050B19 /* Localizacion */ = {
+			isa = PBXGroup;
+			children = (
+				164B5FDD1F8F9E7700050B19 /* Localizable.strings */,
+			);
+			name = Localizacion;
+			sourceTree = "<group>";
+		};
 		165A0C4A1EE71B22000A6788 /* sonidos */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,7 +307,6 @@
 		167678961EE4E1B000EED638 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */,
 				16FCC9E91F228D7000DAFA5E /* Libreria.storyboard */,
 				163FCC9F1F7C08FC007337E2 /* Descripcion.storyboard */,
 				169346221F08669E00BAE79D /* Biblioteca.storyboard */,
@@ -311,6 +321,7 @@
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */,
 				168169E51F83C5E00075ACC9 /* prueba.storyboard */,
+				164B5FE01F8FA77800050B19 /* LaunchScreen.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -318,8 +329,9 @@
 		167678971EE4E1D000EED638 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				16EA074D1F7AC2A30005C816 /* TextoAImagenViewController.swift */,
 				16EA3D2A1EDD971700B30D72 /* AppDelegate.swift */,
+				16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */,
+				163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */,
 				169346241F0866B600BAE79D /* BibliotecaViewController.swift */,
 				16CB0A8A1F1C55CB0076F381 /* CompartirViewController.swift */,
 				16BC26F01EE45D02009C2688 /* GaleriaFondosViewController.swift */,
@@ -327,12 +339,11 @@
 				16E8E16F1F08987000DE1255 /* GaleriaTapasViewController.swift */,
 				16BC26F21EE49A81009C2688 /* GaleriaToposViewController.swift */,
 				167678941EE4D31100EED638 /* GrabarAudioViewController.swift */,
-				16FCC9EB1F22941100DAFA5E /* LibreriaViewController.swift */,
 				160F45451EE4E99500980DEB /* PeliculaViewController.swift */,
 				16BC26EE1EE45B6F009C2688 /* SeleccionViewController.swift */,
 				16BCBEB41F06BE08001DDC07 /* TapaViewController.swift */,
+				16EA074D1F7AC2A30005C816 /* TextoAImagenViewController.swift */,
 				16CB0A8B1F1C55CB0076F381 /* TimeLapseBuilder.swift */,
-				163FCCA21F7C0920007337E2 /* DescripcionViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -432,6 +443,7 @@
 		16EA3D291EDD971700B30D72 /* Topos */ = {
 			isa = PBXGroup;
 			children = (
+				164B5FD81F8F9DDF00050B19 /* Localizacion */,
 				16CB0A7F1F1C559D0076F381 /* assests */,
 				16AC4A581EF18251004011F5 /* Cell */,
 				163BB7AF1F06C93E00ECA352 /* clases */,
@@ -562,6 +574,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 16EA3D1E1EDD971700B30D72;
 			productRefGroup = 16EA3D281EDD971700B30D72 /* Products */;
@@ -594,6 +607,7 @@
 				16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */,
 				16FFD7D31F1D7A6C00B4B2C3 /* topos15.png in Resources */,
 				160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */,
+				164B5FDB1F8F9E7700050B19 /* Localizable.strings in Resources */,
 				16FFD7AA1F1D7A6100B4B2C3 /* fondo3.jpg in Resources */,
 				16FFD7C71F1D7A6C00B4B2C3 /* topos3.png in Resources */,
 				16FFD7C81F1D7A6C00B4B2C3 /* topos4.png in Resources */,
@@ -604,6 +618,7 @@
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
 				1602E1B51F7C8492001E3B7F /* TA7.mp3 in Resources */,
 				16FFD7D21F1D7A6C00B4B2C3 /* topos14.png in Resources */,
+				164B5FE11F8FA77800050B19 /* LaunchScreen.storyboard in Resources */,
 				16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */,
 				16FFD7D11F1D7A6C00B4B2C3 /* topos13.png in Resources */,
 				16816A0A1F8411130075ACC9 /* topos14Chico.png in Resources */,
@@ -646,7 +661,6 @@
 				16816A011F8411130075ACC9 /* topos5Chico.png in Resources */,
 				16FFD7B01F1D7A6100B4B2C3 /* fondo9.jpg in Resources */,
 				16BC26ED1EE459DF009C2688 /* Seleccion.storyboard in Resources */,
-				16EA3D381EDD971700B30D72 /* LaunchScreen.storyboard in Resources */,
 				16B5CFCD1F8D309800133AD9 /* TA0.mp3 in Resources */,
 				16816A0F1F8411130075ACC9 /* topos19Chico.png in Resources */,
 				167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */,
@@ -771,12 +785,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		16EA3D361EDD971700B30D72 /* LaunchScreen.storyboard */ = {
+		164B5FDD1F8F9E7700050B19 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				16EA3D371EDD971700B30D72 /* Base */,
+				164B5FDC1F8F9E7700050B19 /* en */,
+				164B5FDF1F8F9EF800050B19 /* es */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -786,6 +801,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -845,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
