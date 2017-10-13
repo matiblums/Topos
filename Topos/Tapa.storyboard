@@ -39,7 +39,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Cuento" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-7m-Kfg" userLabel="Cuento">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Cuento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-7m-Kfg" userLabel="Cuento">
                                         <rect key="frame" x="91" y="71" width="239" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,7 +53,7 @@
                                             <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="jg0-aG-Otm"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Autor" textAlignment="center" minimumFontSize="17" background="nombre_del_cuento" translatesAutoresizingMaskIntoConstraints="NO" id="MWx-ie-Fy8" userLabel="Autor">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre del Autor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWx-ie-Fy8" userLabel="Autor">
                                         <rect key="frame" x="91" y="173" width="239" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,7 +61,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-j8-U2u" userLabel="terminar">
-                                        <rect key="frame" x="289" y="275" width="110" height="30"/>
+                                        <rect key="frame" x="273" y="275" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="btnTerminar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,10 +71,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-3A-zPp" userLabel="cambia tapa">
-                                        <rect key="frame" x="23" y="275" width="147" height="30"/>
+                                        <rect key="frame" x="23" y="275" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="brtCambiarFondo"/>
+                                        <state key="normal" image="brtFondo"/>
                                         <connections>
                                             <action selector="elijeGaleriaTapas:" destination="HfV-RV-SRZ" eventType="touchUpInside" id="xi3-Ob-U0E"/>
                                         </connections>
@@ -87,10 +87,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-Qn-U1B" userLabel="salir">
-                                <rect key="frame" x="20" y="20" width="78" height="30"/>
+                                <rect key="frame" x="20" y="20" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IvP-1j-iku"/>
-                                    <constraint firstAttribute="width" constant="78" id="zIR-y6-4JV"/>
+                                    <constraint firstAttribute="width" constant="130" id="zIR-y6-4JV"/>
                                 </constraints>
                                 <state key="normal" image="btnSalir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,10 +144,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brtCambiarFondo" width="282" height="59"/>
-        <image name="btnSalir" width="141" height="55"/>
-        <image name="btnTerminar" width="204" height="59"/>
-        <image name="nombre_del_cuento" width="344" height="22"/>
+        <image name="brtFondo" width="250" height="55"/>
+        <image name="btnSalir" width="250" height="55"/>
+        <image name="btnTerminar" width="250" height="55"/>
         <image name="tapa" width="1500" height="750"/>
         <image name="tituloTapa" width="99" height="40"/>
     </resources>

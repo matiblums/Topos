@@ -41,7 +41,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ym-Zr-Q2b" userLabel="btn eliminar">
-                                        <rect key="frame" x="476" y="10" width="84" height="30"/>
+                                        <rect key="frame" x="427" y="10" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="btnBorrar">
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-PU-qRp" userLabel="Button Salir">
-                                        <rect key="frame" x="8" y="12" width="77" height="30"/>
+                                        <rect key="frame" x="8" y="12" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnSalir"/>
                                         <connections>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoK-Zs-UH8" userLabel="Btn Guardar">
-                                        <rect key="frame" x="232" y="10" width="105" height="30"/>
+                                        <rect key="frame" x="215" y="10" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="btnCompartir">
@@ -141,9 +141,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btnBorrar" width="167" height="60"/>
-        <image name="btnCompartir" width="235" height="68"/>
+        <image name="btnBorrar" width="250" height="55"/>
+        <image name="btnCompartir" width="250" height="55"/>
         <image name="btnPlayVideo" width="136" height="135"/>
-        <image name="btnSalir" width="141" height="55"/>
+        <image name="btnSalir" width="250" height="55"/>
     </resources>
 </document>

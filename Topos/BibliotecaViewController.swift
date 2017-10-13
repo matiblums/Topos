@@ -28,10 +28,20 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     var urlFileArray = [NSString]()
     var imageTapaArray = [NSString]()
     var imageFileArray = [UIImage]()
-
+    
+    @IBOutlet var btnVolver: UIButton!
+    @IBOutlet var imgTitulo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_LIBRERIA", comment: ""))
+        let image: UIImage = UIImage(named: miImagenTitulo)!
+        self.imgTitulo.image = image
+        
+        let miImagenVolver = (NSLocalizedString("BTN_VOLVER", comment: ""))
+        btnVolver.setImage(UIImage(named: miImagenVolver), for: .normal)
+        
     }
     
     

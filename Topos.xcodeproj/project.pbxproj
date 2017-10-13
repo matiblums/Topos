@@ -54,7 +54,6 @@
 		169346251F0866B600BAE79D /* BibliotecaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169346241F0866B600BAE79D /* BibliotecaViewController.swift */; };
 		16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */; };
 		16981A3A1F3AB224006CEDAA /* edicion05_borrar_pg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */; };
-		16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */; };
 		16981A3C1F3AB224006CEDAA /* edicion05_flecha_der.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */; };
 		16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */; };
 		16981A3E1F3AB224006CEDAA /* edicion05_fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A321F3AB224006CEDAA /* edicion05_fondo.png */; };
@@ -62,7 +61,6 @@
 		16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A341F3AB224006CEDAA /* edicion05_musica.png */; };
 		16981A411F3AB224006CEDAA /* edicion05_personajes.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A351F3AB224006CEDAA /* edicion05_personajes.png */; };
 		16981A421F3AB224006CEDAA /* edicion05_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A361F3AB224006CEDAA /* edicion05_play.png */; };
-		16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A371F3AB224006CEDAA /* edicion05_salir.png */; };
 		16981A441F3AB224006CEDAA /* edicion05_voz.png in Resources */ = {isa = PBXBuildFile; fileRef = 16981A381F3AB224006CEDAA /* edicion05_voz.png */; };
 		16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */; };
 		16AF172A1EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */; };
@@ -129,9 +127,6 @@
 
 /* Begin PBXFileReference section */
 		004AD28EA184FB5FCF16C814 /* Pods-Topos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Topos/Pods-Topos.debug.xcconfig"; sourceTree = "<group>"; };
-		006FAFFEB787FCC8DE8BBE18 /* Pods-ToposUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToposUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToposUITests/Pods-ToposUITests.release.xcconfig"; sourceTree = "<group>"; };
-		02A4A2B8BBDDA8CD7924CA2E /* Pods_ToposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToposUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A638369653C76C1B1A5257E /* Pods-ToposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToposTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToposTests/Pods-ToposTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1602E1AA1F7C8491001E3B7F /* TA1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA1.mp3; sourceTree = "<group>"; };
 		1602E1AB1F7C8491001E3B7F /* TA2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA2.mp3; sourceTree = "<group>"; };
 		1602E1AC1F7C8491001E3B7F /* TA5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA5.mp3; sourceTree = "<group>"; };
@@ -180,7 +175,6 @@
 		169346241F0866B600BAE79D /* BibliotecaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibliotecaViewController.swift; sourceTree = "<group>"; };
 		16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_agregar_pg.png; sourceTree = "<group>"; };
 		16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_borrar_pg.png; sourceTree = "<group>"; };
-		16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_cerrar_libro.png; sourceTree = "<group>"; };
 		16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_der.png; sourceTree = "<group>"; };
 		16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_flecha_izq.png; sourceTree = "<group>"; };
 		16981A321F3AB224006CEDAA /* edicion05_fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_fondo.png; sourceTree = "<group>"; };
@@ -188,7 +182,6 @@
 		16981A341F3AB224006CEDAA /* edicion05_musica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_musica.png; sourceTree = "<group>"; };
 		16981A351F3AB224006CEDAA /* edicion05_personajes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_personajes.png; sourceTree = "<group>"; };
 		16981A361F3AB224006CEDAA /* edicion05_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_play.png; sourceTree = "<group>"; };
-		16981A371F3AB224006CEDAA /* edicion05_salir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_salir.png; sourceTree = "<group>"; };
 		16981A381F3AB224006CEDAA /* edicion05_voz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edicion05_voz.png; sourceTree = "<group>"; };
 		16AF17251EE0F838008A9B17 /* GaleriaFondos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GaleriaFondos.storyboard; sourceTree = "<group>"; };
 		16AF17291EE0F8BA008A9B17 /* GaleriaFondosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleriaFondosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -254,9 +247,6 @@
 		16FFD7C41F1D7A6C00B4B2C3 /* topos19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos19.png; sourceTree = "<group>"; };
 		17496829FF09058168DC82A8 /* Pods-Topos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Topos/Pods-Topos.release.xcconfig"; sourceTree = "<group>"; };
 		2662A8CDC72B3C983ECF85A3 /* Pods_Topos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5762CC9574420B77C63DFB3A /* Pods_ToposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7942D4813709BAA01003A004 /* Pods-ToposUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToposUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToposUITests/Pods-ToposUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D1EBEB92471C41608B013373 /* Pods-ToposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToposTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToposTests/Pods-ToposTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,7 +388,6 @@
 				16FFD7401F1D77FE00B4B2C3 /* fondo */,
 				16981A2D1F3AB224006CEDAA /* edicion05_agregar_pg.png */,
 				16981A2E1F3AB224006CEDAA /* edicion05_borrar_pg.png */,
-				16981A2F1F3AB224006CEDAA /* edicion05_cerrar_libro.png */,
 				16981A301F3AB224006CEDAA /* edicion05_flecha_der.png */,
 				16981A311F3AB224006CEDAA /* edicion05_flecha_izq.png */,
 				16981A321F3AB224006CEDAA /* edicion05_fondo.png */,
@@ -406,7 +395,6 @@
 				16981A341F3AB224006CEDAA /* edicion05_musica.png */,
 				16981A351F3AB224006CEDAA /* edicion05_personajes.png */,
 				16981A361F3AB224006CEDAA /* edicion05_play.png */,
-				16981A371F3AB224006CEDAA /* edicion05_salir.png */,
 				16981A381F3AB224006CEDAA /* edicion05_voz.png */,
 			);
 			name = imagenes;
@@ -507,10 +495,6 @@
 			children = (
 				004AD28EA184FB5FCF16C814 /* Pods-Topos.debug.xcconfig */,
 				17496829FF09058168DC82A8 /* Pods-Topos.release.xcconfig */,
-				0A638369653C76C1B1A5257E /* Pods-ToposTests.debug.xcconfig */,
-				D1EBEB92471C41608B013373 /* Pods-ToposTests.release.xcconfig */,
-				7942D4813709BAA01003A004 /* Pods-ToposUITests.debug.xcconfig */,
-				006FAFFEB787FCC8DE8BBE18 /* Pods-ToposUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -519,8 +503,6 @@
 			isa = PBXGroup;
 			children = (
 				2662A8CDC72B3C983ECF85A3 /* Pods_Topos.framework */,
-				5762CC9574420B77C63DFB3A /* Pods_ToposTests.framework */,
-				02A4A2B8BBDDA8CD7924CA2E /* Pods_ToposUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -642,7 +624,6 @@
 				16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,
 				16816A0B1F8411130075ACC9 /* topos15Chico.png in Resources */,
-				16981A431F3AB224006CEDAA /* edicion05_salir.png in Resources */,
 				16816A051F8411130075ACC9 /* topos9Chico.png in Resources */,
 				16816A001F8411130075ACC9 /* topos4Chico.png in Resources */,
 				1602E1B81F7C8492001E3B7F /* TA4.mp3 in Resources */,
@@ -678,7 +659,6 @@
 				16FFD7AE1F1D7A6100B4B2C3 /* fondo7.jpg in Resources */,
 				16AF17261EE0F838008A9B17 /* GaleriaFondos.storyboard in Resources */,
 				1602E1B61F7C8492001E3B7F /* TA3.mp3 in Resources */,
-				16981A3B1F3AB224006CEDAA /* edicion05_cerrar_libro.png in Resources */,
 				16981A391F3AB224006CEDAA /* edicion05_agregar_pg.png in Resources */,
 				16816A071F8411130075ACC9 /* topos11Chico.png in Resources */,
 				16BC26F71EE49CCF009C2688 /* GaleriaMusica.storyboard in Resources */,

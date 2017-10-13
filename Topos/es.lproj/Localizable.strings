@@ -13,3 +13,6 @@
 "BTN_MIS_CUENTOS_LIBRERIA"="botonentrada";
 //******************** GENERALES ********************************
 "BTN_VOLVER"="btnVolver";
+//******************** DESCRIPCION VIEWCONTROLLER ********************************
+"IMG_TITULO_DESCRIPCION"="tituloentrada";
+

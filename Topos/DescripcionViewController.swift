@@ -20,7 +20,7 @@ class DescripcionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_LIBRERIA", comment: ""))
+        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_DESCRIPCION", comment: ""))
         let image: UIImage = UIImage(named: miImagenTitulo)!
         self.imgTitulo.image = image
         
