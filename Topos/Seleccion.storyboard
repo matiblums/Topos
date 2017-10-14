@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNr-Hu-wUR">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,19 +23,19 @@
                         <viewControllerLayoutGuide type="bottom" id="S3e-b3-8OT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="D4l-6t-05Q">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edicion05_fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mpo-ge-zNU" userLabel="fonde">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JT-UH-hqS" userLabel="Botonera Arriba">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-jz-3Vs" userLabel="salir">
-                                        <rect key="frame" x="8" y="15" width="136" height="30"/>
+                                        <rect key="frame" x="20" y="20" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnSalir"/>
                                         <connections>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-Gq-s1I" userLabel="terminar">
-                                        <rect key="frame" x="587" y="15" width="136" height="30"/>
+                                        <rect key="frame" x="410" y="20" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnTerminar"/>
                                         <connections>
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Página 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYW-YA-HdQ" userLabel="pagina">
-                                        <rect key="frame" x="318" y="20" width="101" height="21"/>
+                                        <rect key="frame" x="234" y="24" width="101" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,10 +64,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-oa-Nw4" userLabel="Botonera Centro">
-                                <rect key="frame" x="0.0" y="107" width="736" height="200"/>
+                                <rect key="frame" x="0.0" y="60" width="568" height="200"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-zK-jOG">
-                                        <rect key="frame" x="0.0" y="0.0" width="736" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="200"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xid-LQ-Z7v">
@@ -108,10 +108,10 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-Cb-ThS" userLabel="izq">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="200"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Pg-R9M" userLabel="Barra Izq">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <connections>
@@ -119,7 +119,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F97-sW-zFd">
-                                                <rect key="frame" x="60.000000000000007" y="76.666666666666657" width="46.666666666666679" height="46.333333333333343"/>
+                                                <rect key="frame" x="18" y="76.5" width="46.5" height="46.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="GNY-Yt-4Op"/>
@@ -142,10 +142,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-Yg-ngG" userLabel="centro">
-                                        <rect key="frame" x="167" y="0.0" width="402" height="200"/>
+                                        <rect key="frame" x="83" y="0.0" width="402" height="200"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-8j-bRK" userLabel="delete">
-                                                <rect key="frame" x="350.66666666666663" y="13" width="37.333333333333371" height="37.666666666666657"/>
+                                                <rect key="frame" x="350.5" y="13" width="37.5" height="37.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="WMr-Hv-BWw"/>
@@ -159,7 +159,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-5x-S06" userLabel="play">
-                                                <rect key="frame" x="167.66666666666669" y="66.666666666666657" width="67" height="67"/>
+                                                <rect key="frame" x="167.5" y="66.5" width="67" height="67"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="67" id="dxX-Gh-s5D"/>
@@ -182,10 +182,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwQ-yL-Twx" userLabel="der">
-                                        <rect key="frame" x="569" y="0.0" width="167" height="200"/>
+                                        <rect key="frame" x="485" y="0.0" width="83" height="200"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-wV-PwC" userLabel="barra Der">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <connections>
@@ -193,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-yy-Q9S">
-                                                <rect key="frame" x="60.666666666666629" y="77" width="46" height="46"/>
+                                                <rect key="frame" x="18.5" y="77" width="46" height="46"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="7Hn-fj-f3h"/>
@@ -232,10 +232,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-2u-L8v" userLabel="Botonera Abajo">
-                                <rect key="frame" x="0.0" y="307" width="736" height="107"/>
+                                <rect key="frame" x="0.0" y="260" width="568" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-O6-fUr" userLabel="fondo">
-                                        <rect key="frame" x="246" y="28.666666666666686" width="78" height="50"/>
+                                        <rect key="frame" x="162" y="5" width="78" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="78" id="1Cl-jS-Xfi"/>
@@ -247,7 +247,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-Vt-4Pa" userLabel="topo">
-                                        <rect key="frame" x="334" y="28.666666666666686" width="68" height="50"/>
+                                        <rect key="frame" x="250" y="5" width="68" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="EgP-nN-Cpr"/>
@@ -259,7 +259,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEA-ew-ncR" userLabel="musica">
-                                        <rect key="frame" x="412" y="28.666666666666686" width="44" height="50"/>
+                                        <rect key="frame" x="328" y="5" width="44" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BwH-Ov-LPP"/>
@@ -271,7 +271,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-ao-P4Z" userLabel="audio">
-                                        <rect key="frame" x="466" y="28.666666666666686" width="47" height="50"/>
+                                        <rect key="frame" x="382" y="5" width="47" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="1zC-EH-xfV"/>

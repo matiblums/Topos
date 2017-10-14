@@ -35,7 +35,7 @@ class BibliotecaViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_LIBRERIA", comment: ""))
+        let miImagenTitulo = (NSLocalizedString("IMG_TITULO_BIBLIOTECA", comment: ""))
         let image: UIImage = UIImage(named: miImagenTitulo)!
         self.imgTitulo.image = image
         

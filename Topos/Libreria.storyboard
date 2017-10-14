@@ -32,15 +32,11 @@
                                         <rect key="frame" x="515" y="25" width="45" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tituloentrada" translatesAutoresizingMaskIntoConstraints="NO" id="r3I-Hn-2Kn">
-                                        <rect key="frame" x="127" y="37" width="314" height="127"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-Cc-asw" userLabel="btnMiscuentos">
-                                        <rect key="frame" x="247" y="183" width="75" height="87"/>
+                                        <rect key="frame" x="224" y="172" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="botonentrada"/>
+                                        <state key="normal" image="btnMisCuentos"/>
                                         <connections>
                                             <action selector="elijeBiblioteca:" destination="jdk-WS-lfU" eventType="touchUpInside" id="zxg-fC-rW1"/>
                                         </connections>
@@ -53,6 +49,10 @@
                                             <action selector="elijeDesc:" destination="jdk-WS-lfU" eventType="touchUpInside" id="0TT-Ni-dX2"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tituloCuentos" translatesAutoresizingMaskIntoConstraints="NO" id="r3I-Hn-2Kn">
+                                        <rect key="frame" x="69" y="36" width="431" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -81,8 +81,8 @@
     <resources>
         <image name="barra" width="103" height="632"/>
         <image name="barraizq" width="104" height="632"/>
-        <image name="botonentrada" width="179" height="205"/>
+        <image name="btnMisCuentos" width="300" height="300"/>
         <image name="preguntaEntrada" width="51" height="78"/>
-        <image name="tituloentrada" width="750" height="220"/>
+        <image name="tituloCuentos" width="1000" height="300"/>
     </resources>
 </document>

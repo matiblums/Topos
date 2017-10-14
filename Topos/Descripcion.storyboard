@@ -34,11 +34,11 @@
                                     <action selector="elijeVolver:" destination="fhp-Lw-uWw" eventType="touchUpInside" id="Igm-Fc-JfQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tituloentrada" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-6f-ids">
-                                <rect key="frame" x="127" y="35" width="314" height="127"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tituloCuentos" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-6f-ids">
+                                <rect key="frame" x="69" y="35" width="431" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="Fxj-4U-xIp"/>
-                                    <constraint firstAttribute="width" constant="314" id="UzN-Xi-md7"/>
+                                    <constraint firstAttribute="height" constant="128" id="Fxj-4U-xIp"/>
+                                    <constraint firstAttribute="width" constant="431" id="UzN-Xi-md7"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zha-xT-2Zv">
@@ -57,7 +57,7 @@
                             <constraint firstItem="i8t-vF-Fph" firstAttribute="top" secondItem="xIM-L6-0hh" secondAttribute="top" constant="20" id="OCu-ya-Vfp"/>
                             <constraint firstItem="xIM-L6-0hh" firstAttribute="trailing" secondItem="zha-xT-2Zv" secondAttribute="trailing" constant="20" id="bU0-Er-hjN"/>
                             <constraint firstItem="zha-xT-2Zv" firstAttribute="bottom" secondItem="xIM-L6-0hh" secondAttribute="bottom" id="ePF-Mt-J3u"/>
-                            <constraint firstItem="zha-xT-2Zv" firstAttribute="top" secondItem="6Kd-6f-ids" secondAttribute="bottom" constant="8" id="f17-rH-4GN"/>
+                            <constraint firstItem="zha-xT-2Zv" firstAttribute="top" secondItem="6Kd-6f-ids" secondAttribute="bottom" constant="7" id="f17-rH-4GN"/>
                             <constraint firstItem="i8t-vF-Fph" firstAttribute="leading" secondItem="xIM-L6-0hh" secondAttribute="leading" constant="20" id="oIG-B3-jqN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xIM-L6-0hh"/>
@@ -75,6 +75,6 @@
     </scenes>
     <resources>
         <image name="btnVolver" width="250" height="55"/>
-        <image name="tituloentrada" width="750" height="220"/>
+        <image name="tituloCuentos" width="1000" height="300"/>
     </resources>
 </document>

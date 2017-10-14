@@ -9,10 +9,11 @@
 //******************** COMPARTIR VIEWCONTROLLER ********************************
 "LBL_CARGANDO_VIDEO"="Creando el video...";
 //******************** LIBRERIA VIEWCONTROLLER ********************************
-"IMG_TITULO_LIBRERIA"="tituloentrada";
-"BTN_MIS_CUENTOS_LIBRERIA"="botonentrada";
+"IMG_TITULO_LIBRERIA"="tituloCuentos";
+"BTN_MIS_CUENTOS_LIBRERIA"="btnMisCuentos";
 //******************** GENERALES ********************************
 "BTN_VOLVER"="btnVolver";
 //******************** DESCRIPCION VIEWCONTROLLER ********************************
-"IMG_TITULO_DESCRIPCION"="tituloentrada";
-
+"IMG_TITULO_DESCRIPCION"="tituloCuentos";
+//******************** BIBLIOTECA VIEWCONTROLLER ********************************
+"IMG_TITULO_BIBLIOTECA"="tituloMisCuentos";
