@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  Topos
+
+  Created by Matias Blum on 7/11/17.
+  Copyright © 2017 Matias Blum. All rights reserved.
+*/
+CFBundleDisplayName = "Stories";
+
+NSMicrophoneUsageDescription = "Authorization is needed to access the microphone";
+NSPhotoLibraryAddUsageDescription = "Authorization is needed to access to use photos";
+NSPhotoLibraryUsageDescription = "Authorization is needed to access to use photos";

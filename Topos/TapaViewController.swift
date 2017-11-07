@@ -137,11 +137,11 @@ class TapaViewController: UIViewController {
                 
                 let txtTitulo2 = ""
                 let txtAutor2 = ""
-                let imgFondo2 = "fin.jpg"
+                let imgFondo2 = (NSLocalizedString("IMG_FIN", comment: ""))
                 
                 let txtTitulo3 = ""
                 let txtAutor3 = ""
-                let imgFondo3 = "placa.jpg"
+                let imgFondo3 = (NSLocalizedString("IMG_PLACA", comment: ""))
                 
                 grabarTapa(txtTitulo: txtTitulo! as NSString, txtAutor: txtAutor! as NSString, imgFondo: imgFondo! as NSString)
                 
