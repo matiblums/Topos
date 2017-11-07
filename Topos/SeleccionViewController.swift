@@ -57,6 +57,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
+        
         myView?.dataSource = self
         
         
@@ -303,7 +306,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func tocaGaleria () {
-        lblPagina.text = "Página \(contPagina)"
+        let textPagina = (NSLocalizedString("SELECCION_PAGINA", comment: ""))
+        lblPagina.text = "\(textPagina) \(" ") \(contPagina)"
         
         //myView?.scrollToItem(at: IndexPath(item: contPagina, section: 0), at: .centeredHorizontally, animated: true)
         let miLibro = self.libro
@@ -754,8 +758,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
     func alerta (){
-        let alertController = UIAlertController(title: "Tienes páginas pendientes", message: "Deseas cerrar el libro, de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
-         let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+        //(NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
+        let alertController = UIAlertController(title: (NSLocalizedString("SELECCION_TITULO_PAGINAS_PENDIENTES", comment: "")), message: (NSLocalizedString("SELECCION_MENSAJE_PAGINAS_PENDIENTES", comment: "")), preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+         let DestructiveAction = UIAlertAction(title: (NSLocalizedString("SELECCION_CANCELAR_PAGINAS_PENDIENTES", comment: "")), style: UIAlertActionStyle.destructive) {
            (result : UIAlertAction) -> Void in
             
             print("Destructive")
@@ -763,7 +768,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
          }
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
-        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+        let okAction = UIAlertAction(title: (NSLocalizedString("SELECCION_ACEPTAR_PAGINAS_PENDIENTES", comment: "")), style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             print("OK")
             self.Tapa ()
@@ -777,8 +782,8 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
 
     
     func alerta2 (){
-        let alertController = UIAlertController(title: "Si sales de la edición se borrará el libro", message: "Deseas continuar de todos modos?", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
-        let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
+        let alertController = UIAlertController(title: (NSLocalizedString("SELECCION_TITULO_SE_BORRARA", comment: "")), message: (NSLocalizedString("SELECCION_MENSAJE_SE_BORRARA", comment: "")), preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let DestructiveAction = UIAlertAction(title: (NSLocalizedString("SELECCION_CANCELAR_SE_BORRARA", comment: "")), style: UIAlertActionStyle.destructive) {
             (result : UIAlertAction) -> Void in
             
             print("Destructive")
@@ -786,7 +791,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
-        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+        let okAction = UIAlertAction(title: (NSLocalizedString("SELECCION_ACEPTAR_SE_BORRARA", comment: "")), style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             print("OK")
             self.borrarLibro()

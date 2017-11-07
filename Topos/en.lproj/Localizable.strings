@@ -7,13 +7,30 @@
 */
 
 //******************** COMPARTIR VIEWCONTROLLER ********************************
-"LBL_CARGANDO_VIDEO"="Creando el video...";
+"LBL_CARGANDO_VIDEO"="Creating the Story..";
 //******************** LIBRERIA VIEWCONTROLLER ********************************
 "IMG_TITULO_LIBRERIA"="tituloTales";
 "BTN_MIS_CUENTOS_LIBRERIA"="btnMyStories";
 //******************** GENERALES ********************************
 "BTN_VOLVER"="btnBack";
+"BTN_SALIR"="btnExit";
+"BTN_COMPARTIR"="btnShare";
+"BTN_BORRAR"="btnDelete";
 //******************** DESCRIPCION VIEWCONTROLLER ********************************
 "IMG_TITULO_DESCRIPCION"="tituloTales";
 //******************** BIBLIOTECA VIEWCONTROLLER ********************************
 "IMG_TITULO_BIBLIOTECA"="tituloMyTales";
+//********************* DESCRIPCION **************************
+"TEXTO_DESCRIPCION"="EN";
+//********************* SELECCION **************************
+"SELECCION_PAGINA"="Page";
+
+"SELECCION_TITULO_PAGINAS_PENDIENTES"="You have pending pages";
+"SELECCION_MENSAJE_PAGINAS_PENDIENTES"="Do you wish to continue anyway?";
+"SELECCION_CANCELAR_PAGINAS_PENDIENTES"="Cancel";
+"SELECCION_ACEPTAR_PAGINAS_PENDIENTES"="Accept";
+
+"SELECCION_TITULO_SE_BORRARA"="If you leave edition the book will be deleted.";
+"SELECCION_MENSAJE_SE_BORRARA"="Do you wish to continue anyway?";
+"SELECCION_CANCELAR_SE_BORRARA"="Cancel";
+"SELECCION_ACEPTAR_SE_BORRARA"="Accept";

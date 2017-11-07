@@ -29,6 +29,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     @IBOutlet weak var btnPause: UIButton!
     @IBOutlet weak var btnGuardar: UIButton!
     @IBOutlet weak var btnCompartir: UIButton!
+    @IBOutlet weak var btnBorrar: UIButton!
     
     
     @IBOutlet weak var imgTapa: UIImageView!
@@ -36,6 +37,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     @IBOutlet weak var lblAutor: UILabel!
     
     @IBOutlet weak var lblCargando: UILabel!
+    
+    @IBOutlet var btnSalir: UIButton!
     
     var documentController : UIDocumentInteractionController!
     
@@ -76,6 +79,15 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         super.viewDidLoad()
         
         self.lblCargando.text = (NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
+        
+        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
+        
+        let miImagenCuentosCompartir = (NSLocalizedString("BTN_COMPARTIR", comment: ""))
+        btnCompartir.setImage(UIImage(named: miImagenCuentosCompartir), for: .normal)
+        
+        let miImagenCuentosBorrar = (NSLocalizedString("BTN_BORRAR", comment: ""))
+        btnBorrar.setImage(UIImage(named: miImagenCuentosBorrar), for: .normal)
         
         controlaCantidad = 0
         self.viewTapa.isHidden = true

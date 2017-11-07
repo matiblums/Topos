@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S3u-yD-3vm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S3u-yD-3vm">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -122,7 +122,9 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="btnBorrar" destination="2ym-Zr-Q2b" id="ee7-W4-w3C"/>
                         <outlet property="btnCompartir" destination="xoK-Zs-UH8" id="hAu-hb-MbU"/>
+                        <outlet property="btnSalir" destination="1nr-PU-qRp" id="UB4-BN-LfE"/>
                         <outlet property="imgTapa" destination="ZNr-dZ-KXq" id="H7d-1a-NIv"/>
                         <outlet property="lblCargando" destination="r6b-Yu-GrD" id="ExC-OV-f3a"/>
                         <outlet property="viewFondoBotones" destination="jBb-eS-5jy" id="LHk-ke-XsW"/>

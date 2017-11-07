@@ -18,6 +18,7 @@ class TapaViewController: UIViewController {
     @IBOutlet var txtAutor: UITextField!
     
     @IBOutlet var miFondo: UIImageView!
+    @IBOutlet var btnSalir: UIButton!
 
     @IBOutlet weak var viewCargando: UIView!
     
@@ -32,7 +33,8 @@ class TapaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
         viewCargando.isHidden = true
     }

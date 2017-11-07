@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0910"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "991C445B77F030F02D7F5422E59753F1"
+               BlueprintIdentifier = "43C49359AE8F43AB405F301C0884E15B"
                BuildableName = "DragDropUI.framework"
                BlueprintName = "DragDropUI"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "991C445B77F030F02D7F5422E59753F1"
+            BlueprintIdentifier = "43C49359AE8F43AB405F301C0884E15B"
             BuildableName = "DragDropUI.framework"
             BlueprintName = "DragDropUI"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -65,7 +65,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "991C445B77F030F02D7F5422E59753F1"
+            BlueprintIdentifier = "43C49359AE8F43AB405F301C0884E15B"
             BuildableName = "DragDropUI.framework"
             BlueprintName = "DragDropUI"
             ReferencedContainer = "container:Pods.xcodeproj">
