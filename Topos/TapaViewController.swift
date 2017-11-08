@@ -41,7 +41,7 @@ class TapaViewController: UIViewController {
         
         viewCargando.isHidden = true
         
-        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        let miImagenCuentos = (NSLocalizedString("BTN_VOLVER", comment: ""))
         btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
         let mibtnCover = (NSLocalizedString("BTN_TAPA", comment: ""))

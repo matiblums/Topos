@@ -57,7 +57,7 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        let miImagenCuentos = (NSLocalizedString("BTN_VOLVER", comment: ""))
         btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
         let miImagenCerrar = (NSLocalizedString("BTN_CERRAR", comment: ""))

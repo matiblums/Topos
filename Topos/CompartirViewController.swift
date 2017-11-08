@@ -80,7 +80,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         self.lblCargando.text = (NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
         
-        let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
+        let miImagenCuentos = (NSLocalizedString("BTN_VOLVER", comment: ""))
         btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
         let miImagenCuentosCompartir = (NSLocalizedString("BTN_COMPARTIR", comment: ""))
@@ -927,8 +927,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         self.present(controller, animated: true, completion: nil)
         
     }
-    
-    @IBAction func elijeBorrar(_ sender: Any) {
+    func funcBorrar(){
         
         let videoGuardado = self.libro?.file
         let videoFinal = NSURL(string: videoGuardado!)!
@@ -974,7 +973,12 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
+
         
+    }
+    @IBAction func elijeBorrar(_ sender: Any) {
+        
+        alerta()
     }
     
     @IBAction func elijePlayTotal(_ sender: Any){
@@ -1027,6 +1031,28 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
     }
     
+    func alerta (){
+        //(NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
+        let alertController = UIAlertController(title: (NSLocalizedString("COMPARTIR_TITULO_PAGINAS_PENDIENTES", comment: "")), message: (NSLocalizedString("COMPARTIR_MENSAJE_PAGINAS_PENDIENTES", comment: "")), preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let DestructiveAction = UIAlertAction(title: (NSLocalizedString("COMPARTIR_CANCELAR_PAGINAS_PENDIENTES", comment: "")), style: UIAlertActionStyle.destructive) {
+            (result : UIAlertAction) -> Void in
+            
+            print("Destructive")
+            
+        }
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: (NSLocalizedString("COMPARTIR_ACEPTAR_PAGINAS_PENDIENTES", comment: "")), style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+            self.funcBorrar()
+            
+        }
+        
+        alertController.addAction(DestructiveAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 

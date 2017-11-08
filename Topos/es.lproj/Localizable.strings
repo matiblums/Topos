@@ -8,6 +8,12 @@
 
 //******************** COMPARTIR VIEWCONTROLLER ********************************
 "LBL_CARGANDO_VIDEO"="Creando el cuento...";
+
+"COMPARTIR_TITULO_PAGINAS_PENDIENTES"="Estás seguro que quieres borrar el libro";
+"COMPARTIR_MENSAJE_PAGINAS_PENDIENTES"="Deseas continuar de todos modos?";
+"COMPARTIR_CANCELAR_PAGINAS_PENDIENTES"="Cancelar";
+"COMPARTIR_ACEPTAR_PAGINAS_PENDIENTES"="Aceptar";
+
 //******************** LIBRERIA VIEWCONTROLLER ********************************
 "IMG_TITULO_LIBRERIA"="tituloCuentos";
 "BTN_MIS_CUENTOS_LIBRERIA"="btnMisCuentos";
@@ -16,7 +22,7 @@
 "BTN_SALIR"="btnSalir";
 "BTN_COMPARTIR"="btnCompartir";
 "BTN_BORRAR"="btnBorrar";
-"BTN_CERRAR"="btnCerrar";
+"BTN_CERRAR"="btnTerminar";
 //******************** DESCRIPCION VIEWCONTROLLER ********************************
 "IMG_TITULO_DESCRIPCION"="tituloCuentos";
 //******************** BIBLIOTECA VIEWCONTROLLER ********************************
@@ -35,6 +41,8 @@
 "SELECCION_MENSAJE_SE_BORRARA"="Deseas continuar de todos modos?";
 "SELECCION_CANCELAR_SE_BORRARA"="Cancelar";
 "SELECCION_ACEPTAR_SE_BORRARA"="Aceptar";
+
+
 //********************* FIN **************************
 "IMG_PLACA"="fin_es.jpg";
 "IMG_FIN"="placa_es.jpg";
