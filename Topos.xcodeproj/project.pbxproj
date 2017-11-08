@@ -280,6 +280,7 @@
 		164B5FD81F8F9DDF00050B19 /* Localizacion */ = {
 			isa = PBXGroup;
 			children = (
+				161E4F641FB245E700440056 /* InfoPlist.strings */,
 				164B5FDD1F8F9E7700050B19 /* Localizable.strings */,
 			);
 			name = Localizacion;
@@ -421,7 +422,6 @@
 		16EA3D1E1EDD971700B30D72 = {
 			isa = PBXGroup;
 			children = (
-				161E4F641FB245E700440056 /* InfoPlist.strings */,
 				16816A101F84226D0075ACC9 /* ServiceAccount.json */,
 				16EA3D291EDD971700B30D72 /* Topos */,
 				16EA3D281EDD971700B30D72 /* Products */,
