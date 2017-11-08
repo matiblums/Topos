@@ -132,7 +132,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnFondo" destination="JkJ-3A-zPp" id="sgx-zN-lfe"/>
                         <outlet property="btnSalir" destination="7WD-Qn-U1B" id="wQR-Ft-djQ"/>
+                        <outlet property="btnTerminar" destination="2Fj-j8-U2u" id="DCj-9A-6sa"/>
+                        <outlet property="imgTapa" destination="T0W-WD-M5v" id="dva-Wq-Psk"/>
+                        <outlet property="lblCreando" destination="8Q5-f5-Ha0" id="32u-6y-63N"/>
                         <outlet property="miFondo" destination="ztl-L7-vgU" id="GKm-1J-4pa"/>
                         <outlet property="txtAutor" destination="MWx-ie-Fy8" id="tKp-23-HWi"/>
                         <outlet property="txtTitulo" destination="ltV-7m-Kfg" id="WlL-0N-qnu"/>

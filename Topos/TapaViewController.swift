@@ -18,7 +18,13 @@ class TapaViewController: UIViewController {
     @IBOutlet var txtAutor: UITextField!
     
     @IBOutlet var miFondo: UIImageView!
+    @IBOutlet var imgTapa: UIImageView!
     @IBOutlet var btnSalir: UIButton!
+    
+    @IBOutlet var btnTerminar: UIButton!
+    @IBOutlet var btnFondo: UIButton!
+    @IBOutlet var lblCreando: UILabel!
+    
 
     @IBOutlet weak var viewCargando: UIView!
     
@@ -32,11 +38,26 @@ class TapaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        viewCargando.isHidden = true
+        
         let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
         btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
-        viewCargando.isHidden = true
+        let mibtnCover = (NSLocalizedString("BTN_TAPA", comment: ""))
+        btnFondo.setImage(UIImage(named: mibtnCover), for: .normal)
+        
+        let mibtnTerminar = (NSLocalizedString("BTN_TERMINAR_COVER", comment: ""))
+        btnTerminar.setImage(UIImage(named: mibtnTerminar), for: .normal)
+        
+        self.lblCreando.text = (NSLocalizedString("LBL_CARGANDO_VIDEO_COVER", comment: ""))
+        
+        let miImagenTapa = (NSLocalizedString("IMG_TITULO_TAPA", comment: ""))
+        let imageTapa: UIImage = UIImage(named: miImagenTapa)!
+        self.imgTapa.image = imageTapa
+        
+        self.txtTitulo.placeholder = (NSLocalizedString("TEXT_TITULO", comment: ""))
+        self.txtAutor.placeholder = (NSLocalizedString("TEXT_AUTOR", comment: ""))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -323,7 +344,7 @@ class TapaViewController: UIViewController {
     }
     
     func alerta (){
-        let alertController = UIAlertController(title: "Debe Completar todos los campos", message: "", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let alertController = UIAlertController(title: (NSLocalizedString("TAPA_ALERT_TITULO", comment: "")), message: "", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
         //let DestructiveAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive) {
         //    (result : UIAlertAction) -> Void in
         
@@ -332,7 +353,7 @@ class TapaViewController: UIViewController {
         // }
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
-        let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default) {
+        let okAction = UIAlertAction(title: (NSLocalizedString("TAPA_ALERT_ACEPTAR", comment: "")), style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             print("OK")
             //self.Tapa ()

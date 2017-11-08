@@ -60,6 +60,9 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         let miImagenCuentos = (NSLocalizedString("BTN_SALIR", comment: ""))
         btnSalir.setImage(UIImage(named: miImagenCuentos), for: .normal)
         
+        let miImagenCerrar = (NSLocalizedString("BTN_CERRAR", comment: ""))
+        btnCerrar.setImage(UIImage(named: miImagenCerrar), for: .normal)
+        
         myView?.dataSource = self
         
         

@@ -16,6 +16,7 @@
 "BTN_SALIR"="btnSalir";
 "BTN_COMPARTIR"="btnCompartir";
 "BTN_BORRAR"="btnBorrar";
+"BTN_CERRAR"="btnCerrar";
 //******************** DESCRIPCION VIEWCONTROLLER ********************************
 "IMG_TITULO_DESCRIPCION"="tituloCuentos";
 //******************** BIBLIOTECA VIEWCONTROLLER ********************************
@@ -37,3 +38,17 @@
 //********************* FIN **************************
 "IMG_PLACA"="fin_es.jpg";
 "IMG_FIN"="placa_es.jpg";
+//********************* TAPA **************************
+"BTN_TAPA"="brtFondo";
+"BTN_TERMINAR_COVER"="btnTerminar";
+"LBL_CARGANDO_VIDEO_COVER"="Creando el cuento...";
+"IMG_TITULO_TAPA"="tituloTapa";
+"TEXT_TITULO"="Nombre del Cuento";
+"TEXT_AUTOR"="Nombre del Autor";
+"TAPA_ALERT_ACEPTAR"="Aceptar";
+"TAPA_ALERT_TITULO"="Debe Completar todos los campos";
+
+
+
+
+

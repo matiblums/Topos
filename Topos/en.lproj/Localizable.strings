@@ -16,6 +16,7 @@
 "BTN_SALIR"="btnExit";
 "BTN_COMPARTIR"="btnShare";
 "BTN_BORRAR"="btnDelete";
+"BTN_CERRAR"="btnFinish";
 //******************** DESCRIPCION VIEWCONTROLLER ********************************
 "IMG_TITULO_DESCRIPCION"="tituloTales";
 //******************** BIBLIOTECA VIEWCONTROLLER ********************************
@@ -37,3 +38,14 @@
 //********************* FIN **************************
 "IMG_PLACA"="fin_en.jpg";
 "IMG_FIN"="placa_en.jpg";
+//********************* TAPA **************************
+"BTN_TAPA"="btnCover";
+"BTN_TERMINAR_COVER"="btnFinish";
+"LBL_CARGANDO_VIDEO_COVER"="Creating the Story...";
+"IMG_TITULO_TAPA"="tituloCover";
+"TEXT_TITULO"="Name of the Story";
+"TEXT_AUTOR"="Name of the Author";
+"TAPA_ALERT_ACEPTAR"="Accept";
+"TAPA_ALERT_TITULO"="You must complete all fields to continue";
+
+
