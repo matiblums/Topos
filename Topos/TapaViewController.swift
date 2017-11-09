@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Foundation
 import CoreData
-
+import NVActivityIndicatorView
 
 class TapaViewController: UIViewController {
     
@@ -341,6 +341,8 @@ class TapaViewController: UIViewController {
         controller.libro = self.libro
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(controller, animated: true, completion: nil)
+        
+ 
     }
     
     func alerta (){

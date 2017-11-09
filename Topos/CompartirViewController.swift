@@ -90,10 +90,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         btnBorrar.setImage(UIImage(named: miImagenCuentosBorrar), for: .normal)
         
         controlaCantidad = 0
-        self.viewTapa.isHidden = true
-        self.viewFondoBotones.isHidden = true
-        self.viewVideo.isHidden = true
-        self.lblCargando.isHidden = false
+        
         verificaVIdeo()
     }
     
@@ -122,6 +119,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     }
     
     func cargaVideo(){
+
+        
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
@@ -140,6 +139,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             image = UIImage.init(cgImage: thumbnail!)
             //imageFileArray.append(image as UIImage)
             self.imgTapa.image = image
+            print("creo thumbnail")
         }
         catch let error as NSError {
             print(error.localizedDescription)
@@ -154,15 +154,18 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         
         
         
-        self.lblCargando.isHidden = true
-        self.viewTapa.isHidden = false
-        self.viewVideo.isHidden = true
-        self.viewFondoBotones.isHidden = false
+        
         
        
     }
     
     func creaVideo(){
+        
+        self.viewTapa.isHidden = true
+        self.viewFondoBotones.isHidden = true
+        self.viewVideo.isHidden = true
+        self.lblCargando.isHidden = false
+        
         
         let miLibro = self.libro
         let totales = miLibro?.paginas?.count
@@ -527,14 +530,21 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
                 do {
                     try context.save()
                     //print("Grabo OK")
-                    self.cargaVideo()
+                    
                     
                 } catch {
                     //print("Ha habido un error al guardar el lugar en Core Data")
                 }
                 
             }
+            print("se creo video final ok!!!!")
             
+            self.lblCargando.isHidden = true
+            self.viewTapa.isHidden = false
+            self.viewVideo.isHidden = true
+            self.viewFondoBotones.isHidden = false
+            
+            self.cargaVideo()
         }) { (error) in
             print(error)
         }
@@ -561,7 +571,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
     
     
     
-    //***************************************************************************************************************************
+    //********************************************************************************************************************
     
     func removeFileAtURLIfExists(url: NSURL) {
         if let filePath = url.path {
@@ -576,7 +586,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         }
     }
     
-    //***************************************************************************************************************************
+    //*********************************************************************************************************************
     
     func salvaVideo(url: NSURL){
         self.startAnimating()
@@ -615,7 +625,8 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         documentController.presentOptionsMenu(from: self.btnCompartir.frame, in: self.view, animated: true)
     }
     
-    //***************************************************************************************************************************
+    //*******************************************************************************************************************
+    
     func verVideo(url: NSURL){
         //btnPlay.isHidden = true
        // btnPause.isHidden = false
@@ -695,7 +706,7 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         let alto = (((1500 / ancho)))
         //let miy2 : Double = Double(alto / miHParcial)
         
-       /*
+         /*
          let mix : Double = Double(self.view.frame.size.width / cell.imgGaleria.frame.size.width)
          let ancho = 3000 / self.view.frame.size.width
          let alto = (((1500 / ancho)))
