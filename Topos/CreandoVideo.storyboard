@@ -9,17 +9,37 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Creando Video View Controller-->
         <scene sceneID="GTN-o3-4qM">
             <objects>
-                <viewController id="Im8-FO-0AK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreandoVideo" id="Im8-FO-0AK" customClass="CreandoVideoViewController" customModule="Topos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x1J-EA-li8">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creando el Video..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSg-5M-isY">
+                                <rect key="frame" x="160" y="144.5" width="248.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PSg-5M-isY" firstAttribute="centerX" secondItem="x1J-EA-li8" secondAttribute="centerX" id="O4j-gv-psV"/>
+                            <constraint firstItem="PSg-5M-isY" firstAttribute="centerY" secondItem="x1J-EA-li8" secondAttribute="centerY" id="tM2-56-Y0m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zBu-Pt-SfF"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCargando" destination="PSg-5M-isY" id="Rgb-9T-sgG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yor-Z9-Zhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
