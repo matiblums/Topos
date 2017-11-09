@@ -42,8 +42,8 @@
 "SELECCION_CANCELAR_SE_BORRARA"="Cancel";
 "SELECCION_ACEPTAR_SE_BORRARA"="Accept";
 //********************* FIN **************************
-"IMG_PLACA"="fin_en.jpg";
-"IMG_FIN"="placa_en.jpg";
+"IMG_FIN"="fin_en.jpg";
+"IMG_PLACA"="placa_en.jpg";
 //********************* TAPA **************************
 "BTN_TAPA"="btnCover";
 "BTN_TERMINAR_COVER"="btnFinish";

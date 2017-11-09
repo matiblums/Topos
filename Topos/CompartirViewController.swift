@@ -13,7 +13,7 @@ import CoreData
 import CoreImage
 import NVActivityIndicatorView
 
-
+import SwiftVideoGenerator
 
 class CompartirViewController: UIViewController , NVActivityIndicatorViewable, AVAudioPlayerDelegate{
     
@@ -139,36 +139,27 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             thumbnail = try imageGenerator.copyCGImage(at: time, actualTime: &actualTime)
             image = UIImage.init(cgImage: thumbnail!)
             //imageFileArray.append(image as UIImage)
+            self.imgTapa.image = image
         }
         catch let error as NSError {
             print(error.localizedDescription)
             //image = nil
             image = UIImage(named: "tapa")!
-            
+            self.imgTapa.image = image
         }
         
-        self.imgTapa.image = image
+       // DispatchQueue.global().async {
+         //   self.imgTapa.image = image
+       // }
+        
+        
         
         self.lblCargando.isHidden = true
         self.viewTapa.isHidden = false
         self.viewVideo.isHidden = true
         self.viewFondoBotones.isHidden = false
         
-        /*
-        self.viewVideo.frame = CGRect(x:self.view.frame.size.width / 2 - 400 / 2, y: self.view.frame.size.height / 2 - 200 / 2, width:400, height:200)
-        
-        
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let videoDataPath = documentsDirectory + "/" + (self.libro?.file)!
-        let filePathURL = URL(fileURLWithPath: videoDataPath)
-        verVideo(url: filePathURL as NSURL)
-        isPlay = true
-        avPlayer.play()
-        avPlayer.pause()
-        self.lblCargando.isHidden = true
-        self.viewTapa.isHidden = false
-         */
+       
     }
     
     func creaVideo(){
@@ -510,105 +501,47 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
             let element = videosArray.remove(at: total - 3)
             videosArray.insert(element, at: 0)
             
-            mergeVideoFiles(videoFileUrls: videosArray as NSArray)
-            
+           // mergeVideoFiles(videoFileUrls: videosArray as NSArray)
+            generaVIdeosNuevaLibreria(miArray: videosArray as NSArray)
         }
  
  
     }
-    
-   //***************************** juntas los videos finales *******************************************
-    
-    func mergeVideoFiles(videoFileUrls: NSArray) {
-        
-        var mergeVideoURL = NSURL()
-        
-        
-        let mixComposition = AVMutableComposition()
-        
-        var duracionDesde = kCMTimeZero
-        
-        for i in 0 ..< videoFileUrls.count{
-            
-            
-            
-            var firstAsset : AVURLAsset
-            firstAsset = AVURLAsset(url: videoFileUrls[i] as! URL)
-            
-            do {
-                try mixComposition.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset, at: duracionDesde)
-                } catch _ {
-                print("Failed to load first track")
-            }
-         
-            duracionDesde = duracionDesde + firstAsset.duration
-            
-        }
-
-        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+    //***************************** juntas los videos finales nueva libreria *******************************************
+    func generaVIdeosNuevaLibreria (miArray: NSArray){
         let random = randomString(length: 8)
-        let nombreArchivo = random + ".mp4"
-        mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
-        let assetExport = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
-        assetExport?.outputFileType = AVFileType.mp4
-        assetExport?.outputURL = mergeVideoURL as URL
-        removeFileAtURLIfExists(url: mergeVideoURL)
+        let nombreArchivo = random
+        
+        //mergeVideoURL = documentDirectoryURL.appendingPathComponent(nombreArchivo)! as URL as NSURL
+        //removeFileAtURLIfExists(url: mergeVideoURL)
         
         
-        
-        assetExport?.exportAsynchronously(completionHandler:{
-            
-                switch assetExport!.status{
+        VideoGenerator.mergeMovies(videoURLs: miArray as! [URL], andFileName: nombreArchivo, success: { (videoURL) in
+            print(videoURL)
+            if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+                let context = container.viewContext
+                
+                
+                self.libro?.file = nombreArchivo  + ".m4v"
+                
+                do {
+                    try context.save()
+                    //print("Grabo OK")
+                    self.cargaVideo()
                     
-                    case AVAssetExportSessionStatus.failed:
-                        print("failed \(String(describing: assetExport?.error))")
-                    case AVAssetExportSessionStatus.cancelled:
-                        print("cancelled \(String(describing: assetExport?.error))")
-                    case AVAssetExportSessionStatus.unknown:
-                        print("unknown\(String(describing: assetExport?.error))")
-                    case AVAssetExportSessionStatus.waiting:
-                        print("waiting\(String(describing: assetExport?.error))")
-                    case AVAssetExportSessionStatus.exporting:
-                        print("exporting\(String(describing: assetExport?.error))")
-                    default:
-                        DispatchQueue.main.async() {
-                           // print("-----Merge Video exportation complete.\(mergeVideoURL)")
-                        if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
-                            let context = container.viewContext
-                            
-                            //let url = mergeVideoURL.absoluteString! as NSString
-                            
-                            let url2 = nombreArchivo
-                            
-                            //self.libro?.file = url as String
-                            
-                            self.libro?.file = url2
-                            
-                            do {
-                                try context.save()
-                                //print("Grabo OK")
-                                
-                                
-                            } catch {
-                                //print("Ha habido un error al guardar el lugar en Core Data")
-                            }
-                            
-                        }
-                            
-                            //self.videoFinalStr = mergeVideoURL.absoluteString! as NSString
-                            //self.videoFinal = NSURL(string: self.videoFinalStr as String)!
-                            
-                        
-                             //self.stopAnimating()
-                            //self.viewTapa.isHidden = false
-                            
-                            self.cargaVideo()
-                        }
-                    }
-            })
+                } catch {
+                    //print("Ha habido un error al guardar el lugar en Core Data")
+                }
+                
+            }
+            
+        }) { (error) in
+            print(error)
         }
-
+        
+    }
     
+   
     //*******************************************************************************************************************
     func randomString(length: Int) -> String {
         
@@ -626,60 +559,6 @@ class CompartirViewController: UIViewController , NVActivityIndicatorViewable, A
         return randomString
     }
     
-    func mergeAudioFiles(audioFileUrls: NSArray) {
-        var mergeAudioURL = NSURL()
-        
-        let composition = AVMutableComposition()
-        
-        //for i in 0 ..< audioFileUrls.count {
-            
-            
-        let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: CMPersistentTrackID())!
-            
-            let asset = AVURLAsset(url: (audioFileUrls[0] as! NSURL) as URL)
-            
-        let track = asset.tracks(withMediaType: AVMediaType.audio)[0]
-        
-            let timeRange = CMTimeRange(start: CMTimeMake(0, 600), duration: track.timeRange.duration)
-        
-            try! compositionAudioTrack.insertTimeRange(timeRange, of: track, at: composition.duration)
-        
-        
-            
-            
-        //}
-        
-        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
-        mergeAudioURL = documentDirectoryURL.appendingPathComponent("Merge Audio.m4a")! as URL as NSURL
-        
-        let assetExport = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetAppleM4A)
-        assetExport?.outputFileType = AVFileType.m4a
-        assetExport?.outputURL = mergeAudioURL as URL
-        removeFileAtURLIfExists(url: mergeAudioURL)
-        assetExport?.exportAsynchronously(completionHandler:
-            {
-                switch assetExport!.status
-                {
-                case AVAssetExportSessionStatus.failed:
-                    print("failed \(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.cancelled:
-                    print("cancelled \(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.unknown:
-                    print("unknown\(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.waiting:
-                    print("waiting\(String(describing: assetExport?.error))")
-                case AVAssetExportSessionStatus.exporting:
-                    print("exporting\(String(describing: assetExport?.error))")
-                default:
-                    
-                    
-                    print("-----Merge audio exportation complete.\(mergeAudioURL)")
-                   
-                    
-                    
-                }
-        })
-    }
     
     
     //***************************************************************************************************************************

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '211CB682C238521F8C6558880B2C5C52'
-               BlueprintName = 'Pods-Topos'
+               BlueprintIdentifier = 'ECAE487E5C9D3C9307B8C70D8FC29697'
+               BlueprintName = 'SwiftVideoGenerator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Topos.framework'>
+               BuildableName = 'SwiftVideoGenerator.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

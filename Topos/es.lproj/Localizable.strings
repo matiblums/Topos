@@ -44,8 +44,8 @@
 
 
 //********************* FIN **************************
-"IMG_PLACA"="fin_es.jpg";
-"IMG_FIN"="placa_es.jpg";
+"IMG_FIN"="fin_es.jpg";
+"IMG_PLACA"="placa_es.jpg";
 //********************* TAPA **************************
 "BTN_TAPA"="brtFondo";
 "BTN_TERMINAR_COVER"="btnTerminar";

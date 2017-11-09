@@ -17,7 +17,7 @@ target 'Topos' do
   pod 'NVActivityIndicatorView'
   pod 'Firebase/Core'
   pod 'Firebase/Crash'
-
+  pod 'SwiftVideoGenerator'
   
 
 end
