@@ -758,8 +758,6 @@ class SeleccionViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
-    
-    
     func alerta (){
         //(NSLocalizedString("LBL_CARGANDO_VIDEO", comment: ""))
         let alertController = UIAlertController(title: (NSLocalizedString("SELECCION_TITULO_PAGINAS_PENDIENTES", comment: "")), message: (NSLocalizedString("SELECCION_MENSAJE_PAGINAS_PENDIENTES", comment: "")), preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
