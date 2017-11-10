@@ -15,6 +15,15 @@
 		1602E1B71F7C8492001E3B7F /* TA6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1602E1AF1F7C8492001E3B7F /* TA6.mp3 */; };
 		1602E1B81F7C8492001E3B7F /* TA4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1602E1B01F7C8492001E3B7F /* TA4.mp3 */; };
 		1602E1B91F7C8492001E3B7F /* TA8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1602E1B11F7C8492001E3B7F /* TA8.mp3 */; };
+		160A99C51FB64A7E001C9669 /* TA6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99BD1FB64A7C001C9669 /* TA6.wav */; };
+		160A99C61FB64A7E001C9669 /* TA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99BE1FB64A7C001C9669 /* TA3.wav */; };
+		160A99C71FB64A7E001C9669 /* TA8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99BF1FB64A7C001C9669 /* TA8.wav */; };
+		160A99C81FB64A7E001C9669 /* TA1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99C01FB64A7D001C9669 /* TA1.wav */; };
+		160A99C91FB64A7E001C9669 /* TA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99C11FB64A7D001C9669 /* TA4.wav */; };
+		160A99CA1FB64A7E001C9669 /* TA5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99C21FB64A7E001C9669 /* TA5.wav */; };
+		160A99CB1FB64A7E001C9669 /* TA7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99C31FB64A7E001C9669 /* TA7.wav */; };
+		160A99CC1FB64A7E001C9669 /* TA2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99C41FB64A7E001C9669 /* TA2.wav */; };
+		160A99CE1FB64AC6001C9669 /* TA0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 160A99CD1FB64AC5001C9669 /* TA0.wav */; };
 		160F45461EE4E99500980DEB /* PeliculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F45451EE4E99500980DEB /* PeliculaViewController.swift */; };
 		160F45481EE4E9A400980DEB /* Pelicula.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160F45471EE4E9A400980DEB /* Pelicula.storyboard */; };
 		16195C5D1FB50D8300D7E51B /* CreandoVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16195C5C1FB50D8300D7E51B /* CreandoVideo.storyboard */; };
@@ -35,7 +44,6 @@
 		1675095E1EF1B73300651818 /* SeleccionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */; };
 		167678931EE4D2F900EED638 /* GrabarAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167678921EE4D2F900EED638 /* GrabarAudio.storyboard */; };
 		167678951EE4D31100EED638 /* GrabarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167678941EE4D31100EED638 /* GrabarAudioViewController.swift */; };
-		168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168169E51F83C5E00075ACC9 /* prueba.storyboard */; };
 		168169FC1F8411130075ACC9 /* topos0Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169F41F840C7C0075ACC9 /* topos0Chico.png */; };
 		168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169E81F840C780075ACC9 /* topos1Chico.png */; };
 		168169FE1F8411130075ACC9 /* topos2Chico.png in Resources */ = {isa = PBXBuildFile; fileRef = 168169EA1F840C790075ACC9 /* topos2Chico.png */; };
@@ -140,6 +148,15 @@
 		1602E1AF1F7C8492001E3B7F /* TA6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA6.mp3; sourceTree = "<group>"; };
 		1602E1B01F7C8492001E3B7F /* TA4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA4.mp3; sourceTree = "<group>"; };
 		1602E1B11F7C8492001E3B7F /* TA8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TA8.mp3; sourceTree = "<group>"; };
+		160A99BD1FB64A7C001C9669 /* TA6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA6.wav; sourceTree = "<group>"; };
+		160A99BE1FB64A7C001C9669 /* TA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA3.wav; sourceTree = "<group>"; };
+		160A99BF1FB64A7C001C9669 /* TA8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA8.wav; sourceTree = "<group>"; };
+		160A99C01FB64A7D001C9669 /* TA1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA1.wav; sourceTree = "<group>"; };
+		160A99C11FB64A7D001C9669 /* TA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA4.wav; sourceTree = "<group>"; };
+		160A99C21FB64A7E001C9669 /* TA5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA5.wav; sourceTree = "<group>"; };
+		160A99C31FB64A7E001C9669 /* TA7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA7.wav; sourceTree = "<group>"; };
+		160A99C41FB64A7E001C9669 /* TA2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA2.wav; sourceTree = "<group>"; };
+		160A99CD1FB64AC5001C9669 /* TA0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TA0.wav; sourceTree = "<group>"; };
 		160F45451EE4E99500980DEB /* PeliculaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeliculaViewController.swift; sourceTree = "<group>"; };
 		160F45471EE4E9A400980DEB /* Pelicula.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pelicula.storyboard; sourceTree = "<group>"; };
 		16195C5C1FB50D8300D7E51B /* CreandoVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreandoVideo.storyboard; sourceTree = "<group>"; };
@@ -162,7 +179,6 @@
 		1675095D1EF1B73300651818 /* SeleccionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionCollectionViewCell.swift; sourceTree = "<group>"; };
 		167678921EE4D2F900EED638 /* GrabarAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrabarAudio.storyboard; sourceTree = "<group>"; };
 		167678941EE4D31100EED638 /* GrabarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabarAudioViewController.swift; sourceTree = "<group>"; };
-		168169E51F83C5E00075ACC9 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
 		168169E81F840C780075ACC9 /* topos1Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos1Chico.png; sourceTree = "<group>"; };
 		168169E91F840C790075ACC9 /* topos6Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos6Chico.png; sourceTree = "<group>"; };
 		168169EA1F840C790075ACC9 /* topos2Chico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topos2Chico.png; sourceTree = "<group>"; };
@@ -293,6 +309,15 @@
 		165A0C4A1EE71B22000A6788 /* sonidos */ = {
 			isa = PBXGroup;
 			children = (
+				160A99CD1FB64AC5001C9669 /* TA0.wav */,
+				160A99C01FB64A7D001C9669 /* TA1.wav */,
+				160A99C41FB64A7E001C9669 /* TA2.wav */,
+				160A99BE1FB64A7C001C9669 /* TA3.wav */,
+				160A99C11FB64A7D001C9669 /* TA4.wav */,
+				160A99C21FB64A7E001C9669 /* TA5.wav */,
+				160A99BD1FB64A7C001C9669 /* TA6.wav */,
+				160A99C31FB64A7E001C9669 /* TA7.wav */,
+				160A99BF1FB64A7C001C9669 /* TA8.wav */,
 				16B5CFCC1F8D309500133AD9 /* TA0.mp3 */,
 				1602E1AA1F7C8491001E3B7F /* TA1.mp3 */,
 				1602E1AB1F7C8491001E3B7F /* TA2.mp3 */,
@@ -322,7 +347,6 @@
 				16E8E1691F0896D000DE1255 /* GaleriaTapas.storyboard */,
 				16CB0A7D1F1C55430076F381 /* Compartir.storyboard */,
 				16EA07501F7AC4270005C816 /* TextoAImagenViewController.storyboard */,
-				168169E51F83C5E00075ACC9 /* prueba.storyboard */,
 				164B5FE01F8FA77800050B19 /* LaunchScreen.storyboard */,
 				16195C5C1FB50D8300D7E51B /* CreandoVideo.storyboard */,
 			);
@@ -596,12 +620,16 @@
 				16CB0A7E1F1C55430076F381 /* Compartir.storyboard in Resources */,
 				168169FD1F8411130075ACC9 /* topos1Chico.png in Resources */,
 				16BC26C01EE36A52009C2688 /* GaleriaTopos.storyboard in Resources */,
+				160A99C51FB64A7E001C9669 /* TA6.wav in Resources */,
+				160A99CE1FB64AC6001C9669 /* TA0.wav in Resources */,
 				16FFD7CC1F1D7A6C00B4B2C3 /* topos8.png in Resources */,
+				160A99C91FB64A7E001C9669 /* TA4.wav in Resources */,
 				1602E1B21F7C8492001E3B7F /* TA1.mp3 in Resources */,
 				168169FE1F8411130075ACC9 /* topos2Chico.png in Resources */,
 				16FCC9EA1F228D7000DAFA5E /* Libreria.storyboard in Resources */,
 				16FFD7C51F1D7A6C00B4B2C3 /* topos1.png in Resources */,
 				16816A0C1F8411130075ACC9 /* topos16Chico.png in Resources */,
+				160A99C61FB64A7E001C9669 /* TA3.wav in Resources */,
 				16FFD7C91F1D7A6C00B4B2C3 /* topos5.png in Resources */,
 				16E8E16A1F0896D000DE1255 /* GaleriaTapas.storyboard in Resources */,
 				16FFD7D31F1D7A6C00B4B2C3 /* topos15.png in Resources */,
@@ -610,6 +638,7 @@
 				164B5FDB1F8F9E7700050B19 /* Localizable.strings in Resources */,
 				16FFD7AA1F1D7A6100B4B2C3 /* fondo3.jpg in Resources */,
 				16FFD7C71F1D7A6C00B4B2C3 /* topos3.png in Resources */,
+				160A99C71FB64A7E001C9669 /* TA8.wav in Resources */,
 				16FFD7C81F1D7A6C00B4B2C3 /* topos4.png in Resources */,
 				16FFD7AB1F1D7A6100B4B2C3 /* fondo4.jpg in Resources */,
 				168169FF1F8411130075ACC9 /* topos3Chico.png in Resources */,
@@ -618,6 +647,7 @@
 				16BCBEB31F06BDF0001DDC07 /* Tapa.storyboard in Resources */,
 				1602E1B51F7C8492001E3B7F /* TA7.mp3 in Resources */,
 				16FFD7D21F1D7A6C00B4B2C3 /* topos14.png in Resources */,
+				160A99CA1FB64A7E001C9669 /* TA5.wav in Resources */,
 				164B5FE11F8FA77800050B19 /* LaunchScreen.storyboard in Resources */,
 				16981A401F3AB224006CEDAA /* edicion05_musica.png in Resources */,
 				16FFD7D11F1D7A6C00B4B2C3 /* topos13.png in Resources */,
@@ -632,16 +662,17 @@
 				16FFD7CB1F1D7A6C00B4B2C3 /* topos7.png in Resources */,
 				16EA07511F7AC4270005C816 /* TextoAImagenViewController.storyboard in Resources */,
 				163FCC9E1F7C0669007337E2 /* GoogleService-Info.plist in Resources */,
+				160A99C81FB64A7E001C9669 /* TA1.wav in Resources */,
 				16816A041F8411130075ACC9 /* topos8Chico.png in Resources */,
 				1602E1B91F7C8492001E3B7F /* TA8.mp3 in Resources */,
 				16981A3D1F3AB224006CEDAA /* edicion05_flecha_izq.png in Resources */,
 				16FFD7CF1F1D7A6C00B4B2C3 /* topos11.png in Resources */,
-				168169E61F83C5E10075ACC9 /* prueba.storyboard in Resources */,
 				16FFD7A71F1D7A6100B4B2C3 /* fondo0.png in Resources */,
 				16816A0D1F8411130075ACC9 /* topos17Chico.png in Resources */,
 				16FFD7C61F1D7A6C00B4B2C3 /* topos2.png in Resources */,
 				16816A0B1F8411130075ACC9 /* topos15Chico.png in Resources */,
 				16816A051F8411130075ACC9 /* topos9Chico.png in Resources */,
+				160A99CC1FB64A7E001C9669 /* TA2.wav in Resources */,
 				16816A001F8411130075ACC9 /* topos4Chico.png in Resources */,
 				1602E1B81F7C8492001E3B7F /* TA4.mp3 in Resources */,
 				161E4F5C1FB2424000440056 /* fin_en.jpg in Resources */,
@@ -654,6 +685,7 @@
 				16FFD7A81F1D7A6100B4B2C3 /* fondo1.jpg in Resources */,
 				16FFD7AD1F1D7A6100B4B2C3 /* fondo6.jpg in Resources */,
 				16FFD7D71F1D7A6C00B4B2C3 /* topos19.png in Resources */,
+				160A99CB1FB64A7E001C9669 /* TA7.wav in Resources */,
 				16981A3E1F3AB224006CEDAA /* edicion05_fondo.png in Resources */,
 				1602E1B41F7C8492001E3B7F /* TA5.mp3 in Resources */,
 				1602E1B31F7C8492001E3B7F /* TA2.mp3 in Resources */,

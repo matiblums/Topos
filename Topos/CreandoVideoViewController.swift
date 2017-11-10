@@ -324,7 +324,7 @@ class CreandoVideoViewController: UIViewController , NVActivityIndicatorViewable
                 
                 try mutableCompositionAudioTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack, at: kCMTimeZero)
                 
-                try mutableCompositionAudioTrack2[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack2, at: kCMTimeZero)
+                //try mutableCompositionAudioTrack2[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, aVideoAssetTrack.timeRange.duration), of: aAudioAssetTrack2, at: kCMTimeZero)
                 
             }catch{
                 
@@ -341,7 +341,8 @@ class CreandoVideoViewController: UIViewController , NVActivityIndicatorViewable
         
         totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero,aVideoAssetTrack.timeRange.duration )
         let mutableVideoComposition : AVMutableVideoComposition = AVMutableVideoComposition()
-        mutableVideoComposition.frameDuration = CMTimeMake(1, 30)
+        let fps: Int32 = 1
+        mutableVideoComposition.frameDuration = CMTimeMake(1, fps)
         mutableVideoComposition.renderSize = CGSize(width: miWidthFondo, height: miHeightFondo)
         
         let random = randomString(length: 8)
