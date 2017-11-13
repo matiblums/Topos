@@ -270,7 +270,7 @@ public class VideoGenerator: NSObject {
         if let exportSession = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) {
           exportSession.outputURL = completeMoviePath
           exportSession.outputFileType = AVFileType.mp4
-          exportSession.shouldOptimizeForNetworkUse = true
+          exportSession.shouldOptimizeForNetworkUse = false
           
           /// try to export the file and handle the status cases
           exportSession.exportAsynchronously(completionHandler: {
